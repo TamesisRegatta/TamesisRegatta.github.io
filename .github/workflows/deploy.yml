@@ -1,0 +1,68 @@
+name: Build and deploy site
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: true
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+
+      - uses: actions/setup-python@v6
+        with:
+          python-version: "3.12"
+          cache: pip
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      - name: Install Chromium (for PDF generation)
+        run: playwright install --with-deps chromium
+
+      - name: Build site with PDFs
+        run: mkdocs build --strict
+        env:
+          PDF_EXPORT: "true"
+          # Personal contact details are stored as repository secrets, never
+          # in the repo itself. Unset secrets render as "[withheld]".
+          PHONE_FERGUS_COOPER: ${{ secrets.PHONE_FERGUS_COOPER }}
+          PHONE_SYDNEY_ROSE: ${{ secrets.PHONE_SYDNEY_ROSE }}
+          PHONE_JOE_HITCHEN: ${{ secrets.PHONE_JOE_HITCHEN }}
+          PHONE_DAVID_SEALE: ${{ secrets.PHONE_DAVID_SEALE }}
+          EMAIL_SYDNEY_ROSE: ${{ secrets.EMAIL_SYDNEY_ROSE }}
+          EMAIL_DAVID_SEALE: ${{ secrets.EMAIL_DAVID_SEALE }}
+          PHONE_CHCH_LODGE: ${{ secrets.PHONE_CHCH_LODGE }}
+          PHONE_RIVERSIDE_CENTRE: ${{ secrets.PHONE_RIVERSIDE_CENTRE }}
+          PHONE_CITY_OF_OXFORD_RC: ${{ secrets.PHONE_CITY_OF_OXFORD_RC }}
+          PHONE_EA_DUTY_OFFICER: ${{ secrets.PHONE_EA_DUTY_OFFICER }}
+          PHONE_EA_INCIDENT_LINE: ${{ secrets.PHONE_EA_INCIDENT_LINE }}
+          PHONE_IFFLEY_LOCK: ${{ secrets.PHONE_IFFLEY_LOCK }}
+          PHONE_UNIVERSITY_SECURITY: ${{ secrets.PHONE_UNIVERSITY_SECURITY }}
+          PHONE_PRESS_OFFICE: ${{ secrets.PHONE_PRESS_OFFICE }}
+          PHONE_EPIONE_MEDICAL: ${{ secrets.PHONE_EPIONE_MEDICAL }}
+
+      - uses: actions/upload-pages-artifact@v5
+        with:
+          path: site
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - id: deployment
+        uses: actions/deploy-pages@v5

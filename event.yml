@@ -1,0 +1,60 @@
+# Event configuration for Tamesis Regatta: key dates and named role holders.
+#
+# Edit values here, not in the documents themselves: pages refer to them with
+# {{ dates.<name> }} and {{ roles.<role>.title }} / {{ roles.<role>.name }},
+# and the site is rebuilt automatically on push.
+#
+# Personal phone numbers and email addresses are deliberately NOT stored here
+# (or anywhere in the repository) — they are injected at build time from
+# GitHub Actions secrets. See "Contact details" in the README.
+
+# All dates are ISO 8601 (YYYY-MM-DD, times as HH:MM:SS); YAML parses them
+# into real date objects, so a typo like 2026-11-31 fails the build. Pages
+# choose how to render them with filters, e.g.
+# {{ dates.regatta_start | ukdate }} -> "Wed 25 Nov 2026".
+# ({{ dates.year }} is available too, taken from regatta_start.)
+dates:
+  regatta_start: 2026-11-25
+  regatta_end: 2026-11-28
+  novice_cutoff: 2026-10-01
+  entries_close: 2026-11-11 04:00:00
+  scratch_deadline: 2026-11-15
+  coxing_briefing: 2026-11-18
+  marshal_briefing: 2026-11-23
+
+contact:
+  # The generic regatta mailbox — safe to publish, rendered as a normal
+  # clickable mailto: link wherever it is used.
+  email: regatta@linacre.ox.ac.uk
+
+roles:
+  regatta_captains:
+    title: Regatta Captains
+    name: Fergus Cooper and Sydney Rose
+  safety_advisor:
+    title: Safety Advisor
+    name: Sophie Kubik
+  coordinating_senior_umpire:
+    title: Coordinating Senior Umpire
+    name: Joe Hitchen
+  senior_umpires:
+    title: Senior Umpires
+    name: Joe Hitchen and David Seale
+  senior_member:
+    title: Senior Member
+    name: David Seale
+  chief_marshal:
+    title: Chief Marshal
+    name: Emily Stone
+  captain_of_coxes:
+    title: Event Captain of Coxes
+    name: Sydney Rose
+  water_safety_advisor:
+    title: Water Safety Advisor
+    name: Sydney Rose
+  post_incident_coordinator:
+    title: Post-Incident Coordinator
+    name: David Seale
+  incident_controller:
+    title: Incident Controller
+    name: Sydney Rose

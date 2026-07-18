@@ -1,0 +1,48 @@
+/* Rules and other anchored paragraphs: keep the target clear of the header
+   when jumping to it, and briefly highlight it so the reader can see which
+   rule the link pointed at. */
+.md-content :is(p[id], li[id]) {
+  scroll-margin-top: 3.5rem;
+}
+
+.md-content :is(p[id], li[id]):target {
+  animation: tr-highlight 3s ease-out 1;
+  border-radius: 0.1rem;
+}
+
+@keyframes tr-highlight {
+  0%,
+  40% {
+    background-color: color-mix(in srgb, var(--md-accent-fg-color) 20%, transparent);
+    box-shadow: 0 0 0 0.3rem color-mix(in srgb, var(--md-accent-fg-color) 20%, transparent);
+  }
+  100% {
+    background-color: transparent;
+    box-shadow: none;
+  }
+}
+
+/* The ¶ permalink appended to each anchored rule by assets/anchors.js.
+   Mirrors the behaviour of Material's heading permalinks. */
+a.tr-rule-anchor {
+  margin-left: 0.35em;
+  color: var(--md-default-fg-color--lighter);
+  opacity: 0;
+  transition: opacity 0.125s;
+}
+
+.md-content :is(p[id], li[id]):hover > a.tr-rule-anchor,
+a.tr-rule-anchor:focus {
+  opacity: 1;
+}
+
+a.tr-rule-anchor:hover {
+  color: var(--md-accent-fg-color);
+}
+
+/* Don't show the interactive permalinks in generated PDFs. */
+@media print {
+  a.tr-rule-anchor {
+    display: none;
+  }
+}

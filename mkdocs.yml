@@ -1,0 +1,74 @@
+site_name: Tamesis Regatta
+site_url: https://tamesisregatta.github.io/
+site_description: Rules, event plan and safety documents for Tamesis Regatta
+repo_url: https://github.com/TamesisRegatta/TamesisRegatta.github.io
+repo_name: TamesisRegatta
+edit_uri: edit/main/docs/
+
+nav:
+  - Home: index.md
+  - Rules: rules.md
+  - Event Plan: event-plan.md
+
+theme:
+  name: material
+  icon:
+    logo: material/rowing
+    edit: material/pencil
+    view: material/eye
+  palette:
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: indigo
+      accent: deep orange
+      toggle:
+        icon: material/weather-night
+        name: Switch to dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: indigo
+      accent: deep orange
+      toggle:
+        icon: material/weather-sunny
+        name: Switch to light mode
+  features:
+    - content.action.edit
+    - content.action.view
+    - navigation.top
+    - navigation.footer
+    - search.suggest
+    - search.highlight
+    - toc.follow
+
+markdown_extensions:
+  - attr_list
+  - admonition
+  - md_in_html
+  - toc:
+      permalink: true
+
+extra_css:
+  - assets/extra.css
+extra_javascript:
+  - assets/anchors.js
+  - assets/contacts.js
+
+plugins:
+  - search
+  - macros:
+      include_yaml:
+        # Top-level keys of event.yml (dates, contact, roles) become template
+        # variables: {{ dates.entries_close }}, {{ roles.chief_marshal.name }}
+        - event.yml
+  - exporter:
+      formats:
+        pdf:
+          # PDF generation needs Playwright + Chromium and slows down builds, so
+          # it is off by default for local work. CI sets PDF_EXPORT=true.
+          enabled: !ENV [PDF_EXPORT, false]
+          concurrency: 4
+      buttons:
+        - title: Download as PDF
+          icon: !!python/name:mkdocs_exporter.formats.pdf.buttons.download.icon
+          enabled: !!python/name:mkdocs_exporter.formats.pdf.buttons.download.enabled
+          attributes: !!python/name:mkdocs_exporter.formats.pdf.buttons.download.attributes

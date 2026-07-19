@@ -5,12 +5,7 @@ Tamesis Regatta {{ dates.year }} · Linacre Boat Club
 !!! tip "Linking to a risk"
     Every risk has a permanent anchor on its Hazard row — hover over it and
     click the **¶** symbol to get a link directly to it, e.g.
-    `#capsize-submerge`. Anchors are named, not numbered, so links keep
-    working even if risks are added, removed, or renumbered.
-
-!!! note "Work in progress"
-    This page currently shows the first two risks per category, while the
-    rest of the risk assessment is transcribed.
+    `#capsize-submerge`.
 
 Each risk states a **severity** (1–5) and **probability** (A–E) only; the
 **residual risk** shown is always calculated from those two values using the
@@ -20,10 +15,10 @@ it.
 
 !!! info "What is residual risk?"
     The **residual risk** is the risk remaining *after* the listed controls
-    have been applied — not the risk before any mitigation. Its severity and
-    probability should already reflect the effect of those controls.
+    have been applied, and not the risk before any mitigation. Its severity and
+    probability already reflect the effect of those controls.
 
-## Water { #water }
+## Risk assessment: water-based risks
 
 Hazard
 :   Capsize or submerge — boats on the water for racing, or on rafts waiting
@@ -91,7 +86,209 @@ Residual risk
 
 ---
 
-## Weather { #weather }
+Hazard
+:   Collision into moored boats — boats on the water for racing, or on
+    rafts waiting to push off/land
+    { #collision-into-moored-boats }
+
+Consequences
+:   Damage to moored boats, Damage to rowing boats
+
+Persons at risk
+:   Competitors & moored boat owners
+
+Responsible
+:   Crews, Coxswains, Boat club committees, Marshals, Event committee
+
+Residual risk
+:   {{ risk(severity=2, probability='B') }}
+
+??? success "Controls"
+    - Circulation pattern sent to all crews in advance; competitors and bank
+      riders are expected to understand and follow it.
+    - In the event of an inevitable collision, marshals should sound the
+      klaxon and racing should immediately stop.
+    - In the event of a collision, the event committee will put the
+      offending club in contact with the moored boat owner to discuss
+      options.
+
+---
+
+Hazard
+:   Collision between a boat and a person in the water — boats on the water
+    for racing, or on rafts waiting to push off/land
+    { #collision-with-person-in-water }
+
+Consequences
+:   Injury, Unconsciousness, Drowning
+
+Persons at risk
+:   Competitors & river users
+
+Responsible
+:   Crews, Coxswains, Boat club committees, Marshals, Event committee
+
+Residual risk
+:   {{ risk(severity=4, probability='B') }}
+
+??? success "Controls"
+    - Rescue with launch. Administer first aid.
+    - Marshals to fire klaxon to immediately stop racing in the event anyone
+      is in the water.
+    - Circulation pattern sent to all crews in advance; competitors and bank
+      riders are expected to understand and follow it.
+    - Crews entered must be able to row all eight safely; crews deemed
+      unsafe may be asked to land at any point and may be pulled from
+      racing, at the discretion of the event committee.
+    - All competitors must have passed an OURC-approved swim test to
+      qualify for racing.
+
+---
+
+Hazard
+:   Over-exertion — boats on the water for racing, or on rafts waiting to
+    push off/land
+    { #over-exertion }
+
+Consequences
+:   Injury
+
+Persons at risk
+:   Competitors
+
+Responsible
+:   Crews, Coxswains, Boat club committees
+
+Residual risk
+:   {{ risk(severity=3, probability='B') }}
+
+??? success "Controls"
+    - Crews expected to fully warm up on land prior to boating.
+    - Captains/coaches expected to enter crews who are physically capable of
+      racing.
+    - Crews deemed unsafe may be asked to land at any point and may be
+      pulled from racing, or removed, at the discretion of the event
+      committee.
+
+---
+
+Hazard
+:   Faulty or poorly maintained equipment — boats on the water for racing,
+    or on rafts waiting to push off/land
+    { #faulty-equipment }
+
+Consequences
+:   Collision due to steering, Crews trapped in boats, Life jackets not
+    inflating
+
+Persons at risk
+:   Competitors & river users
+
+Responsible
+:   Crews, Coxswains, Boat club committees, Marshals
+
+Residual risk
+:   {{ risk(severity=2, probability='B') }}
+
+??? success "Controls"
+    - Competitors are expected to check their equipment is safe to race.
+    - Marshals to carry out boat checks prior to boating; information on
+      necessary boat checks will be available to marshals.
+    - In the case of a capsize or serious collision, a launch will assist
+      and first aid will be administered.
+
+---
+
+Hazard
+:   Pre-existing health conditions — boats on the water for racing, or on
+    rafts waiting to push off/land
+    { #pre-existing-health-conditions }
+
+Consequences
+:   Health implications
+
+Persons at risk
+:   Competitors
+
+Responsible
+:   Crews, Coxswains, Boat club committees
+
+Residual risk
+:   {{ risk(severity=3, probability='B') }}
+
+??? success "Controls"
+    - Crew members are responsible for carrying their own medication if
+      required (e.g. an inhaler).
+    - First aid to be administered if applicable.
+
+---
+
+Hazard
+:   Capsize, collision, or being caught in the propeller — launches on the
+    course
+    { #launch-incident }
+
+Consequences
+:   Damage to launch, Drowning
+
+Persons at risk
+:   Launch drivers, Passengers
+
+Responsible
+:   Launch drivers, Event committee
+
+Residual risk
+:   {{ risk(severity=2, probability='B') }}
+
+??? success "Controls"
+    - All launch drivers must have an RYA Powerboat Level 2 qualification
+      (or equivalent).
+    - All launch drivers and passengers must wear life jackets.
+    - A second launch will assist if needed.
+    - Drivers must wear kill cords at all times whilst operating a launch.
+
+---
+
+Hazard
+:   Capsize, collision, or crash — crews containing visually impaired
+    rowers (not coxswains)
+    { #visually-impaired-rowers }
+
+Consequences
+:   Visually impaired athletes may become disorientated in the event of a
+    capsize
+
+Persons at risk
+:   The visually impaired athlete, The crew
+
+Responsible
+:   Launch drivers, Event committee, Captains, Coxswains, Athletes, Boat
+    committees, SU
+
+Residual risk
+:   {{ risk(severity=4, probability='B') }}
+
+??? success "Controls"
+    - Crews containing visually impaired athletes must identify themselves
+      to the race secretary well in advance of the event. Attempts will be
+      made to schedule these crews to race in broad daylight.
+    - Crews should conduct their own risk assessment and have a capsize
+      procedure in place, ensuring the coxswain is confident what to do if
+      the risk occurs.
+    - Crews are advised to conduct a clear "numbering off" procedure in the
+      event of a capsize, to ensure all rowers are accounted for and not
+      injured.
+    - A launch, the event committee, and the SU will be made aware when
+      crews containing visually impaired athletes are racing, and a launch
+      will be on alert.
+    - In the event of a serious collision, capsize, or athlete in the
+      water, a klaxon will be sounded and crews will hold it up immediately
+      to allow a launch to access them. Administer first aid and warm the
+      athlete thoroughly as normal procedure dictates.
+
+---
+
+## Risk assessment: weather-related risks
 
 Hazard
 :   Conditions unrowable — high stream or bad weather leaving novice coxes
@@ -154,7 +351,137 @@ Residual risk
 
 ---
 
-## Land based { #land-based }
+Hazard
+:   Crews become too cold — extreme cold
+    { #extreme-cold-crews }
+
+Consequences
+:   Mild hypothermia, Cold muscles leading to injury, Delayed reaction
+    times
+
+Persons at risk
+:   All competitors, especially coxswains
+
+Responsible
+:   Crews, Coxswains, Marshals, Boat club committees
+
+Residual risk
+:   {{ risk(severity=2, probability='C') }}
+
+??? success "Controls"
+    - Rowers to complete a full warm-up on land prior to boating.
+    - Competitors to wear sufficient layers during warm-up and racing, and
+      bring a change of dry kit for afterwards.
+    - During the coxing briefing, it will be stressed that all crews should
+      bring a dry change of kit, and the signs of hypothermia will be
+      covered.
+    - SU and event committee to monitor conditions and make a judgement
+      call on extreme cold.
+
+---
+
+Hazard
+:   Marshals become too cold — extreme cold
+    { #extreme-cold-marshals }
+
+Consequences
+:   Mild hypothermia, Delayed reaction times
+
+Persons at risk
+:   Marshals and event committee
+
+Responsible
+:   Marshals, Event committee
+
+Residual risk
+:   {{ risk(severity=2, probability='D') }}
+
+??? success "Controls"
+    - Marshals advised to wear plenty of layers beforehand.
+    - Regular welfare checks for marshals, with warm drinks available at
+      race desk before and after shifts.
+    - Marshals made aware of the warning signs of hypothermia prior to
+      their shift.
+    - SU and event committee to monitor conditions and make a judgement
+      call on extreme cold.
+
+---
+
+Hazard
+:   Collision — ice on the water
+    { #ice-on-the-water }
+
+Consequences
+:   Equipment damage, Injury
+
+Persons at risk
+:   Competitors & river users
+
+Responsible
+:   Event committee, SU
+
+Residual risk
+:   {{ risk(severity=1, probability='B') }}
+
+??? success "Controls"
+    - SU and event committee to monitor conditions.
+    - Launches to clear very small quantities of ice.
+    - Racing cancelled if the ice cannot be cleared.
+
+---
+
+Hazard
+:   Collision, or the outcome of a race undetermined — low visibility (fog)
+    { #low-visibility-fog }
+
+Consequences
+:   Equipment damage, Injury
+
+Persons at risk
+:   Competitors & river users
+
+Responsible
+:   Crews, Coxswains, Boat club committees, Marshals, Event committee
+
+Residual risk
+:   {{ risk(severity=3, probability='B') }}
+
+??? success "Controls"
+    - SU and event committee to monitor conditions.
+    - Use adequate lighting on boats.
+    - If visibility is reduced to less than 100m on any part of the racing
+      course, racing is suspended or cancelled.
+
+---
+
+Hazard
+:   Collision, or the outcome of a race undetermined — low visibility
+    (failing light)
+    { #low-visibility-light }
+
+Consequences
+:   Equipment damage, Injury
+
+Persons at risk
+:   Competitors & river users
+
+Responsible
+:   Crews, Coxswains, Boat club committees, Marshals, Event committee
+
+Residual risk
+:   {{ risk(severity=3, probability='B') }}
+
+??? success "Controls"
+    - SU and event committee to monitor conditions. Use adequate lighting
+      on boats.
+    - All boats must have lights if they will be on the water 1 hour before
+      sunset.
+    - If visibility is reduced to less than 100m on any part of the racing
+      course, racing is suspended or cancelled.
+
+---
+
+## Risk assessment: land-based risks
 
 Hazard
 :   Collision or injury — boats being moved on the land
@@ -208,7 +535,31 @@ Residual risk
 
 ---
 
-## How levels are calculated { #how-levels-are-calculated }
+Hazard
+:   Collision, possible immersion, or falling off a bike — ice on the
+    towpath
+    { #ice-on-the-towpath }
+
+Consequences
+:   Injury to cyclists and pedestrians, Falling in the river
+
+Persons at risk
+:   Bank riders, Pedestrians
+
+Responsible
+:   SU and Event committee
+
+Residual risk
+:   {{ risk(severity=3, probability='B') }}
+
+??? success "Controls"
+    - SU and event committee to assess conditions.
+    - If deemed not bikeable, the event may be cancelled or restricted to
+      only X/S coxes, so bank riders are no longer required.
+
+---
+
+## How levels are calculated
 
 The level of risk is read off this matrix by severity (rows) and probability
 (columns). It is generated directly from `risk_matrix.yml`, the same file
@@ -238,9 +589,9 @@ the badges above are calculated from.
     - **Substantial** — {{ risk_matrix.definitions.substantial }}
     - **Intolerable** — {{ risk_matrix.definitions.intolerable }}
 
-## Changelog { #changelog }
+
+## Changelog
 
 | Version number | Date | Notes |
 | :--- | :--- | :--- |
-| 2026.1 | 2026-07-19 | First preview: one example risk per category, converted from the 2025 risk assessment |
-| 2026.2 | 2026-07-19 | Added second risk per category |
+| 2026.0 | 2026-07-19 | Converted from the 2025 risk assessment |

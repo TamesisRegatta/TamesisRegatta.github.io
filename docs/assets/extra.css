@@ -1,11 +1,11 @@
 /* Rules and other anchored paragraphs: keep the target clear of the header
    when jumping to it, and briefly highlight it so the reader can see which
    rule the link pointed at. */
-.md-content :is(p[id], li[id]) {
+.md-content :is(p[id], li[id], dd[id]) {
   scroll-margin-top: 3.5rem;
 }
 
-.md-content :is(p[id], li[id]):target {
+.md-content :is(p[id], li[id], dd[id]):target {
   animation: tr-highlight 3s ease-out 1;
   border-radius: 0.1rem;
 }
@@ -31,7 +31,7 @@ a.tr-rule-anchor {
   transition: opacity 0.125s;
 }
 
-.md-content :is(p[id], li[id]):hover > a.tr-rule-anchor,
+.md-content :is(p[id], li[id], dd[id]):hover > a.tr-rule-anchor,
 a.tr-rule-anchor:focus {
   opacity: 1;
 }
@@ -40,9 +40,120 @@ a.tr-rule-anchor:hover {
   color: var(--md-accent-fg-color);
 }
 
-/* Don't show the interactive permalinks in generated PDFs. */
+/* mkdocs-exporter (PDF generation) prints each page with Chromium's print
+   CSS media, so everything in this block only ever applies to PDFs — never
+   to the interactive site. */
 @media print {
+  /* Don't show the interactive permalinks in generated PDFs. */
   a.tr-rule-anchor {
     display: none;
   }
+
+  /* Force every collapsible admonition (e.g. "Controls") open, so a PDF
+     always contains the full content rather than just the collapsed
+     summary line. Overrides the browser's default closed-<details> styling
+     rather than the `open` attribute itself, since Playwright's PDF export
+     doesn't fire a real print event that JS could hook to toggle it. */
+  details:not([open]) > *:not(summary) {
+    display: block !important;
+    content-visibility: visible !important;
+  }
+
+  details:not([open]) summary {
+    cursor: default;
+  }
+}
+
+/* Risk assessment: "Level of risk" badge and the severity/probability
+   matrix table, both driven by risk_matrix.yml via the risk() and
+   risk_matrix_table() macros (main.py) so the colours always match. */
+.risk-badge {
+  display: inline-block;
+  padding: 0.15em 0.7em;
+  border-radius: 0.25em;
+  font-weight: 700;
+  font-size: 0.75rem;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  color: #fff;
+}
+
+.risk-meta {
+  font-size: 0.85em;
+  color: var(--md-default-fg-color--light);
+}
+
+.risk-low {
+  background-color: #2e7d32;
+}
+
+.risk-moderate {
+  background-color: #b8860b;
+}
+
+.risk-substantial {
+  background-color: #d2691e;
+}
+
+.risk-intolerable {
+  background-color: #c62828;
+}
+
+/* Per-category summary strip injected by risk-summary.js: one coloured
+   square per risk below the heading, linking straight to it. */
+.risk-summary {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.35em;
+  margin: 0.2em 0 1.2em;
+}
+
+.risk-summary-square {
+  display: inline-block;
+  width: 0.85em;
+  height: 0.85em;
+  border-radius: 0.15em;
+  transition: transform 0.1s ease;
+}
+
+.risk-summary-square:hover,
+.risk-summary-square:focus-visible {
+  transform: scale(1.3);
+}
+
+table.risk-matrix {
+  border-collapse: collapse;
+}
+
+table.risk-matrix th,
+table.risk-matrix td {
+  text-align: center;
+  padding: 0.5em 0.9em;
+  border: 1px solid var(--md-default-fg-color--lightest);
+}
+
+table.risk-matrix td {
+  color: #fff;
+  font-weight: 600;
+}
+
+/* Compact key/value layout for risk fields (Hazard, Consequences,
+   Residual risk, etc.): label and value share a row instead of each
+   stacking on its own line. Scoped to `dl` generically since def_list is
+   only used on this page. */
+.md-content dl {
+  display: grid;
+  grid-template-columns: max-content 1fr;
+  column-gap: 0.75em;
+  row-gap: 0.2em;
+  margin: 0.5em 0 0.75em;
+}
+
+.md-content dl dt {
+  font-weight: 600;
+  color: var(--md-default-fg-color--light);
+}
+
+.md-content dl dd {
+  margin: 0;
 }

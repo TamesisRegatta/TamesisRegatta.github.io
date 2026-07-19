@@ -1,18 +1,21 @@
 # TamesisRegatta.github.io
 
 Static website for Tamesis Regatta, containing the rules, event & safety plan,
-and other documents. Built with [MkDocs](https://www.mkdocs.org/) and the
-[Material](https://squidfunk.github.io/mkdocs-material/) theme, and deployed to
-GitHub Pages at <https://tamesisregatta.github.io/> on every push to `main`.
+risk assessment, and other documents. Built with
+[MkDocs](https://www.mkdocs.org/) and the
+[Material](https://squidfunk.github.io/mkdocs-material/) theme, and deployed
+to GitHub Pages at <https://tamesisregatta.github.io/> on every push to
+`main`.
 
 ## Layout
 
 | Path | Purpose |
 | :--- | :--- |
 | `event.yml` | Key dates and named role holders, in one place. Pages refer to them as `{{ dates.entries_close }}`, `{{ roles.chief_marshal.name }}` etc. |
-| `docs/` | The site content (Markdown). One file per page. |
+| `risk_matrix.yml` | The official severity × probability risk matrix (labels, level lookup, definitions). See [Risk assessment](#risk-assessment). |
+| `docs/` | The site content (Markdown), one file per page, plus `assets/` for CSS/JS/images. |
 | `mkdocs.yml` | Site configuration, navigation, theme, and plugins. |
-| `main.py` | Macros for build-time contact details (see below). |
+| `main.py` | Macros used by pages — dates, contact details, risk badges (see below). |
 | `.github/workflows/deploy.yml` | Builds the site (including PDFs) and deploys it to GitHub Pages. |
 
 ## Editing
@@ -22,17 +25,69 @@ GitHub Pages at <https://tamesisregatta.github.io/> on every push to `main`.
   linking straight to its source on GitHub.
 - **Dates are ISO 8601** (`2026-11-25`, times as `04:00:00`) and parsed into
   real date objects, so invalid dates fail the build. Every date is set
-  explicitly in `event.yml`. Pages control rendering with filters:
-  `{{ dates.regatta_start | ukdate }}` → "Wed 25 Nov 2026", `ukdatetime`
-  (24-hour clock) → "Wed 11 Nov 2026, 04:00", and
-  `{{ daterange(dates.regatta_start, dates.regatta_end) }}` →
+  explicitly in `event.yml`; nothing is calculated relative to another date.
+  Pages control rendering with filters: `{{ dates.regatta_start | ukdate }}`
+  → "Wed 25 Nov 2026", `ukdatetime` (24-hour clock) → "Wed 11 Nov 2026,
+  04:00", and `{{ daterange(dates.regatta_start, dates.regatta_end) }}` →
   "Wed 25 – Sat 28 Nov 2026".
-- **Rule anchors**: every rule has a permanent, *named* anchor so it can be
-  linked to (e.g. `/rules/#bow-balls`) even if rules are renumbered. Add one by
-  putting `{ #short-name }` on its own line directly beneath the rule text, at
-  the same indentation. Treat published anchor names as permanent.
+- **Permanent anchors**: rules and risk assessment entries each have a
+  stable, *named* anchor (e.g. `/rules/#bow-balls`,
+  `/risk-assessment/#capsize-submerge`) so links keep working even if items
+  are added, removed, or renumbered. Add one with `{ #short-name }` on its
+  own indented line directly beneath the anchored text (a rule's list item,
+  or a risk's Hazard field). Treat published anchor names as permanent.
 - **Changelog**: each document ends with a changelog table; add a row when
   making a meaningful change.
+
+## Risk assessment
+
+Each risk in `docs/risk-assessment.md` is a
+[definition list](https://python-markdown.github.io/extensions/definition_lists/)
+with exactly five fields — Hazard, Consequences, Persons at risk,
+Responsible, Residual risk — which `extra.css` renders as a compact
+label/value grid instead of Markdown's default stacked layout:
+
+```markdown
+Hazard
+:   Capsize or submerge — boats on the water for racing, or on rafts waiting
+    to push off/land
+    { #capsize-submerge }
+
+Consequences
+:   Hypothermia, Drowning, Infection, Trapped inside the boat, Collision
+
+Persons at risk
+:   Competitors & river users
+
+Responsible
+:   Crews, Coxswains, Boat club committees, Marshals, Event committee
+
+Residual risk
+:   {{ risk(severity=2, probability='B') }}
+
+??? success "Controls"
+    - Rescue with launch. Administer first aid. ...
+```
+
+- **Hazard** combines the original risk assessment's "Hazard" and
+  "Description of hazardous event" columns into one line, and carries the
+  entry's permanent anchor.
+- **Residual risk** is never written as text. `{{ risk(severity, probability)
+  }}` (a macro in `main.py`) looks the level up in `risk_matrix.yml` and
+  renders the colour-coded badge — so a risk's severity/probability can never
+  silently disagree with its stated level. An invalid combination fails
+  `mkdocs build --strict`. The matrix legend further down the page
+  (`risk_matrix_table()`) is generated from the same file, so it can't drift
+  from what the badges show either.
+- **Controls** go in a `??? success "Controls"` collapsible section. It uses
+  `success` rather than the ordinary `note` type so it gets a distinct
+  checkbox icon (set once in `mkdocs.yml`'s `theme.icon.admonition.success`);
+  print CSS in `extra.css` forces these open in generated PDFs, so nothing is
+  hidden in print.
+- Each `## Category` heading (Water, Weather, Land based) automatically gets
+  a strip of colour-coded squares linking to the risks beneath it —
+  `docs/assets/risk-summary.js` builds this from the rendered badges and
+  anchors after the page loads, so there's nothing to keep in sync by hand.
 
 ## Contact details
 

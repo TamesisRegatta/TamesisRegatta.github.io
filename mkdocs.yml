@@ -9,6 +9,7 @@ nav:
   - Home: index.md
   - Rules: rules.md
   - Event Plan: event-plan.md
+  - Risk Assessment: risk-assessment.md
 
 theme:
   name: material
@@ -16,6 +17,10 @@ theme:
     logo: material/rowing
     edit: material/pencil
     view: material/eye
+    admonition:
+      # "success" is otherwise unused on the site, so this only affects the
+      # "Controls" dropdowns on the risk assessment page.
+      success: material/checkbox-marked-outline
   palette:
     - media: "(prefers-color-scheme: light)"
       scheme: default
@@ -43,7 +48,9 @@ theme:
 markdown_extensions:
   - attr_list
   - admonition
+  - def_list
   - md_in_html
+  - pymdownx.details
   - toc:
       permalink: true
 
@@ -52,6 +59,7 @@ extra_css:
 extra_javascript:
   - assets/anchors.js
   - assets/contacts.js
+  - assets/risk-summary.js
 
 plugins:
   - search
@@ -60,6 +68,9 @@ plugins:
         # Top-level keys of event.yml (dates, contact, roles) become template
         # variables: {{ dates.entries_close }}, {{ roles.chief_marshal.name }}
         - event.yml
+        # Namespaced, so risk_matrix.yml's own top-level keys (severity,
+        # levels, etc.) can't collide with anything else: {{ risk_matrix.* }}
+        - risk_matrix: risk_matrix.yml
   - exporter:
       formats:
         pdf:

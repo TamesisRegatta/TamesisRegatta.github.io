@@ -35,9 +35,29 @@ def _ukdate(d: date) -> str:
     return f"{d:%a} {d.day} {d:%b} {d.year}"
 
 
+_RISK_LEVEL_LABELS = {
+    "low": "Low",
+    "moderate": "Moderate",
+    "substantial": "Substantial",
+    "intolerable": "Intolerable",
+}
+
+
 def define_env(env):
     dates = env.variables["dates"]
     dates["year"] = dates["regatta_start"].year
+
+    risk_matrix = env.variables["risk_matrix"]
+    probabilities = sorted(risk_matrix["probability"])
+    severities = sorted(risk_matrix["severity"])
+    for s in severities:
+        missing = [p for p in probabilities if p not in risk_matrix["levels"].get(s, {})]
+        if missing:
+            raise ValueError(f"risk_matrix.yml: severity {s} is missing probabilities {missing}")
+        for p in probabilities:
+            level = risk_matrix["levels"][s][p]
+            if level not in _RISK_LEVEL_LABELS:
+                raise ValueError(f"risk_matrix.yml: unknown level {level!r} at severity {s}, probability {p}")
 
     @env.filter
     def ukdate(d) -> str:
@@ -65,3 +85,38 @@ def define_env(env):
     def email(key: str) -> str:
         """A personal email address from the EMAIL_<KEY> environment variable."""
         return _contact("EMAIL", key, "email")
+
+    @env.macro
+    def risk(severity: int, probability: str) -> str:
+        """A colour-coded 'Level of Risk' badge, derived from severity and
+        probability via risk_matrix.yml — never pass a level in directly, so
+        it can't disagree with the severity/probability that produced it."""
+        probability = probability.upper()
+        try:
+            level = risk_matrix["levels"][severity][probability]
+        except KeyError:
+            raise ValueError(
+                f"risk(): no matrix entry for severity={severity!r}, probability={probability!r}"
+            )
+        label = _RISK_LEVEL_LABELS[level]
+        return (
+            f'<span class="risk-badge risk-{level}">{label}</span>'
+            f'<span class="risk-meta"> (severity {severity}, probability {probability})</span>'
+        )
+
+    @env.macro
+    def risk_matrix_table() -> str:
+        """The full severity x probability matrix, rendered from
+        risk_matrix.yml so the legend can never drift from what risk()
+        actually looks up."""
+        rows = ['<tr><th></th>']
+        for p in probabilities:
+            rows.append(f"<th>{p}</th>")
+        rows.append("</tr>")
+        for s in reversed(severities):
+            rows.append(f"<tr><th>{s}</th>")
+            for p in probabilities:
+                level = risk_matrix["levels"][s][p]
+                rows.append(f'<td class="risk-{level}">{_RISK_LEVEL_LABELS[level]}</td>')
+            rows.append("</tr>")
+        return f'<table class="risk-matrix">{"".join(rows)}</table>'

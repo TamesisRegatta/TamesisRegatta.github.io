@@ -1,0 +1,46 @@
+# The official Tamesis Regatta severity x probability risk matrix.
+#
+# Individual risks (see docs/risk-assessment.md) are NOT given a "Level of
+# Risk" field directly — that would let a transcription slip in either
+# severity or probability silently disagree with the stated level. Instead
+# each risk states only its severity and probability, and the `risk()`
+# macro (main.py) looks the level up here. An invalid severity/probability
+# combination fails `mkdocs build --strict`.
+
+probability:
+  A: "Highly improbable (has not been known to happen in rowing)"
+  B: "Improbable (has been known to happen in rowing)"
+  C: "Possible (could happen to about 1% of the club's active members per decade)"
+  D: "Probable (could happen to about 1% of the club's active members per year)"
+  E: "Highly probable (could happen to about 10% of the club's active members per year)"
+
+severity:
+  1:
+    injury: "Slight injury or health effect (requires little or no treatment; no need to take time off rowing or training)"
+    damage: "Minor damage to equipment (<£100)"
+  2:
+    injury: "Minor injury or health effect (requires First Aid or rest; potentially a few days off rowing or training)"
+    damage: "Damage repair costs low (£500)"
+  3:
+    injury: "Moderate injury or health effect (requires treatment beyond simple First Aid; potentially a week or so off rowing or training)"
+    damage: "High damage repair costs (>£1000)"
+  4:
+    injury: "Major injury or health effect (requires hospital treatment for more than one day; potentially a few weeks off rowing or training)"
+    damage: "Very high damage repair costs (loss of boat, 3rd party damage)"
+  5:
+    injury: "Fatality or life-threatening injury or health effect (could end a rowing career or cause hospitalisation for a few months)"
+    damage: "Major damage & major costs (loss of several boats, high 3rd party damage)"
+
+# severity (1-5) x probability (A-E) -> level
+levels:
+  1: { A: low, B: low, C: low, D: low, E: moderate }
+  2: { A: low, B: low, C: low, D: moderate, E: substantial }
+  3: { A: low, B: low, C: moderate, D: substantial, E: intolerable }
+  4: { A: low, B: moderate, C: substantial, D: intolerable, E: intolerable }
+  5: { A: moderate, B: substantial, C: intolerable, D: intolerable, E: intolerable }
+
+definitions:
+  low: "An acceptable level of risk. No additional barriers/controls are required. Start or continue the activity but check that the current barriers/controls remain effective."
+  moderate: "An acceptable level of risk that should be reviewed. Implement additional barriers/controls to reduce the risk if the opportunity arises. Start or continue the activity with care."
+  substantial: "An unacceptable level of risk. Improve the barriers/controls and allocate resources to reduce the risk. Do not start or continue the activity until the risk has been reduced."
+  intolerable: "An unacceptable level of risk. Improve the barriers/controls and allocate resources to reduce the risk. Do not start or continue the activity until the risk has been reduced. Prohibit the activity if it is not possible to reduce the risk."

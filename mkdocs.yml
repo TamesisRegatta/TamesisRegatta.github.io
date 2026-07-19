@@ -13,6 +13,7 @@ nav:
 
 theme:
   name: material
+  custom_dir: overrides
   icon:
     logo: material/rowing
     edit: material/pencil

@@ -1,3 +1,12 @@
+/* Row of external link icons in the header (overrides/partials/header.html),
+   replacing Material's single GitHub "source" link. Icons reuse Material's
+   own .md-header__button/.md-icon classes for consistent sizing, colour and
+   hover behaviour with the menu/search buttons either side of them. */
+.tr-header-links {
+  display: flex;
+  align-items: center;
+}
+
 /* Rules and other anchored paragraphs: keep the target clear of the header
    when jumping to it, and briefly highlight it so the reader can see which
    rule the link pointed at. */

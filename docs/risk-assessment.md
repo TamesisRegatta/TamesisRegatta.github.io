@@ -18,7 +18,7 @@ it.
     have been applied, and not the risk before any mitigation. Its severity and
     probability already reflect the effect of those controls.
 
-## Risk assessment: water-based risks
+## Risks: water-based
 
 Hazard
 :   Capsize or submerge — boats on the water for racing, or on rafts waiting
@@ -288,7 +288,7 @@ Residual risk
 
 ---
 
-## Risk assessment: weather-related risks
+## Risks: weather-related
 
 Hazard
 :   Conditions unrowable — high stream or bad weather leaving novice coxes
@@ -481,7 +481,7 @@ Residual risk
 
 ---
 
-## Risk assessment: land-based risks
+## Risks: land-based
 
 Hazard
 :   Collision or injury — boats being moved on the land

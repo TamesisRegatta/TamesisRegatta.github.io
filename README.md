@@ -4,7 +4,7 @@ Static website for Tamesis Regatta, containing the rules, event & safety plan,
 risk assessment, and other documents. Built with
 [MkDocs](https://www.mkdocs.org/) and the
 [Material](https://squidfunk.github.io/mkdocs-material/) theme, and deployed
-to GitHub Pages at <https://tamesisregatta.github.io/> on every push to
+to GitHub Pages at <https://tamesisregatta.org/> on every push to
 `main`.
 
 ## Layout

@@ -1,5 +1,5 @@
-site_name: Tamesis Regatta
-site_url: https://tamesisregatta.github.io/
+site_name: Tamesis Regatta by Linacre Boat Club
+site_url: https://tamesisregatta.org/
 site_description: Rules, event plan and safety documents for Tamesis Regatta
 repo_url: https://github.com/TamesisRegatta/TamesisRegatta.github.io
 repo_name: TamesisRegatta
@@ -14,8 +14,9 @@ nav:
 theme:
   name: material
   custom_dir: overrides
+  logo: assets/img/logo.svg
+  favicon: assets/img/logo.svg
   icon:
-    logo: material/rowing
     edit: material/pencil
     view: material/eye
     admonition:
@@ -23,17 +24,20 @@ theme:
       # "Controls" dropdowns on the risk assessment page.
       success: material/checkbox-marked-outline
   palette:
+    # "custom" opts out of Material's named palette so the actual colours
+    # come from the --md-primary-*/--md-accent-* variables defined per
+    # scheme in extra.css (see the "Brand palette" block there).
     - media: "(prefers-color-scheme: light)"
       scheme: default
-      primary: indigo
-      accent: deep orange
+      primary: custom
+      accent: custom
       toggle:
         icon: material/weather-night
         name: Switch to dark mode
     - media: "(prefers-color-scheme: dark)"
       scheme: slate
-      primary: indigo
-      accent: deep orange
+      primary: custom
+      accent: custom
       toggle:
         icon: material/weather-sunny
         name: Switch to light mode

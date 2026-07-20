@@ -14,8 +14,8 @@ nav:
 theme:
   name: material
   custom_dir: overrides
-  logo: assets/img/logo.svg
-  favicon: assets/img/logo.svg
+  logo: assets/img/tamesis_logo.svg
+  favicon: assets/img/favicon.svg
   icon:
     edit: material/pencil
     view: material/eye

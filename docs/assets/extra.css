@@ -79,11 +79,21 @@
   align-items: center;
 }
 
+/* Logo, larger than Material's default 1.2rem — the header has no fixed
+   height, so it grows to fit (2.4rem -> ~3.4rem). Scoped to the header
+   specifically so the (already larger) drawer/mobile-nav copy of the logo
+   is untouched. */
+.md-header .md-logo img {
+  height: 2.2rem;
+  width: auto;
+}
+
 /* Rules and other anchored paragraphs: keep the target clear of the header
    when jumping to it, and briefly highlight it so the reader can see which
-   rule the link pointed at. */
+   rule the link pointed at. 4.5rem = the taller ~3.4rem header (see the
+   logo rule above) plus the original ~1.1rem buffer. */
 .md-content :is(p[id], li[id], dd[id]) {
-  scroll-margin-top: 3.5rem;
+  scroll-margin-top: 4.5rem;
 }
 
 .md-content :is(p[id], li[id], dd[id]):target {

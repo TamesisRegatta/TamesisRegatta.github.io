@@ -1,9 +1,10 @@
-/* Brand palette: ink (a warm blackened-bronze, not flat #000) and brass/
-   bronze gold, in place of Material's built-in named colours (mkdocs.yml
+/* Brand palette, in place of Material's built-in named colours (mkdocs.yml
    sets primary/accent to "custom" so these variables are what actually
-   apply). Muted deliberately — a fully saturated yellow reads as hazard
-   tape and is uncomfortable as body text; a warm near-black is easier to
-   sit with than a true void black.
+   apply). One precise yellow ramp — all derived from #fbc117, the exact
+   fill used in the logo (docs/assets/img/tamesis_logo.svg) — over flat neutral
+   black, rather than several invented gold/bronze/amber shades. Fewer,
+   exact tones reads cleaner than a "vintage brass" mix, and a flat black
+   keeps it crisp instead of leaning warm/leather.
 
    IMPORTANT: --md-typeset-a-color (body links, and the current/active item
    in the table-of-contents nav) defaults to var(--md-primary-fg-color) in
@@ -13,24 +14,25 @@
    Every scheme below sets --md-typeset-a-color itself so links/active-TOC
    are never silently tied to the header colour again.
 
-   Primary (header/nav bar) is identical in both schemes: the ink bar stays
-   put regardless of light/dark toggle (deliberate branding), and brass gold
-   text on it clears WCAG AAA (8.25:1) either way. */
+   Primary (header/nav bar) is identical in both schemes: flat black stays
+   put regardless of light/dark toggle (deliberate branding), and the logo
+   yellow on it clears WCAG AAA (12.7:1) either way. */
 :root {
-  --md-primary-fg-color: #181510;
-  --md-primary-fg-color--light: #2c261b;
-  --md-primary-fg-color--dark: #0d0b08;
-  --md-primary-bg-color: #d8a73d;
-  --md-primary-bg-color--light: rgba(216, 167, 61, 0.7);
+  --md-primary-fg-color: #000000;
+  --md-primary-fg-color--light: #1f1f1f;
+  --md-primary-fg-color--dark: #000000;
+  --md-primary-bg-color: #fbc117;
+  --md-primary-bg-color--light: rgba(251, 193, 23, 0.7);
 }
 
-/* Body links / active TOC / hover, light scheme: a deep bronze rather than
-   the header's brighter brass, since it has to sit on a white page.
-   Base #8a6412 on white ≈ 5.4:1 (AA); hover deepens further, ≈ 7.7:1. */
+/* Body links / active TOC / hover, light scheme: the brand yellow's hue at
+   low lightness, since full-brightness yellow can't read on white at any
+   saturation — this is as light/clean as that hue goes and still clears
+   AA. Base #826202 on white ≈ 5.7:1; hover deepens further, ≈ 8.8:1. */
 [data-md-color-scheme="default"] {
-  --md-typeset-a-color: #8a6412;
-  --md-accent-fg-color: #6b4e0a;
-  --md-accent-fg-color--transparent: rgba(107, 78, 10, 0.1);
+  --md-typeset-a-color: #826202;
+  --md-accent-fg-color: #5f4702;
+  --md-accent-fg-color--transparent: rgba(95, 71, 2, 0.1);
   --md-accent-bg-color: #ffffff;
   --md-accent-bg-color--light: rgba(255, 255, 255, 0.7);
 }
@@ -39,19 +41,33 @@
    slate background is normally a *blue*-tinted near-black (--md-hue: 225,
    inherited from the light scheme's default) — independent of our
    primary/accent choices above, and the source of any residual "too blue"
-   feel in dark mode even after those are fixed. Re-hueing it warm (45,
-   toward brass) keeps the same gentle near-black reading surface Material
-   designed but in the brand's own warm-black family instead of cool grey.
+   feel in dark mode even after those are fixed. 45 is the brand yellow's
+   own hue (#fbc117 ≈ H45), so the reading surface gets the same faint,
+   deliberate warmth as the accent instead of an arbitrary tint.
 
-   Base #d8a73d (reused from the header brass) on that warmed background
-   ≈ 6.8:1 (AA); hover brightens further, ≈ 9:1. */
+   --md-hue only controls hue, not saturation — Material's own formula for
+   --md-default-bg-color hardcodes 15% saturation, tuned for their default
+   blue. The same 15% on a yellow hue reads as muddy olive-brown rather
+   than a clean near-black (a real quirk of HSL: yellow's max chroma sits
+   at a much higher lightness than blue's, so pushed down to a dark
+   background it reads as "dirty" rather than "neutral"). So the page
+   background is overridden directly, at a much lower 6% saturation —
+   same hue and lightness (barely perceptible warmth), just not muddy.
+   Lightness is unchanged, so contrast is unaffected either way.
+
+   Base is the exact logo yellow on that background ≈ 9.3:1; hover lightens
+   further, ≈ 10:1. */
 [data-md-color-scheme="slate"] {
   --md-hue: 45;
-  --md-typeset-a-color: #d8a73d;
-  --md-accent-fg-color: #f0c15c;
-  --md-accent-fg-color--transparent: rgba(240, 193, 92, 0.1);
-  --md-accent-bg-color: #181510;
-  --md-accent-bg-color--light: rgba(24, 21, 16, 0.7);
+  --md-default-bg-color: hsl(45deg, 6%, 14%);
+  --md-default-bg-color--light: hsla(45deg, 6%, 14%, 0.54);
+  --md-default-bg-color--lighter: hsla(45deg, 6%, 14%, 0.26);
+  --md-default-bg-color--lightest: hsla(45deg, 6%, 14%, 0.07);
+  --md-typeset-a-color: #fbc117;
+  --md-accent-fg-color: #fccd46;
+  --md-accent-fg-color--transparent: rgba(252, 205, 70, 0.1);
+  --md-accent-bg-color: #000000;
+  --md-accent-bg-color--light: rgba(0, 0, 0, 0.7);
 }
 
 /* Row of external link icons in the header (overrides/partials/header.html),

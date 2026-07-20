@@ -131,6 +131,18 @@ a.tr-rule-anchor:hover {
   color: var(--md-accent-fg-color);
 }
 
+/* PDF page size/margins. mkdocs-exporter renders with Chromium's
+   prefer_css_page_size, i.e. it reads this @page rule rather than using its
+   own default — which, left unset, is US Letter (612x792pt) with Chromium's
+   default ~1in margins. These PDFs are mainly read on a screen (emailed,
+   opened on a laptop/phone) rather than printed, so A4 (the expected size
+   outside the US) with a tighter-than-print margin reads cleanly without
+   the wasted border a physical-print margin needs. */
+@page {
+  size: A4;
+  margin: 16mm;
+}
+
 /* mkdocs-exporter (PDF generation) prints each page with Chromium's print
    CSS media, so everything in this block only ever applies to PDFs — never
    to the interactive site. */

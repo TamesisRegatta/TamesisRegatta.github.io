@@ -6,3 +6,8 @@ __pycache__/
 # addresses and must never be committed. The website version of the document
 # (docs/event-plan.md) references them via build-time secrets instead.
 /EventPlan.md
+
+# Bernard Tao's full Oxford Isis Maps source SVG is kept outside the
+# repository; scripts/strip_map.py extracts what the site needs from it.
+/IsisMap.svg
+*:Zone.Identifier

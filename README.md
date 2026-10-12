@@ -127,3 +127,31 @@ builds them. To build them locally:
 sudo .venv/bin/playwright install-deps chromium   # system libraries, once
 PDF_EXPORT=true .venv/bin/mkdocs build
 ```
+
+## Course map
+
+The Course Map page (`docs/map.md`) is built from Bernard Tao's Oxford Isis Maps, an Inkscape SVG with layers for every event on the river.
+That source file is not kept in this repository.
+`scripts/strip_map.py` extracts the layers Tamesis uses into `docs/assets/map/`:
+
+```bash
+.venv/bin/python scripts/strip_map.py path/to/IsisMap.svg docs/assets/map
+```
+
+Layers are found by their names in Inkscape's Layers panel, so a renamed layer stops the script with an error naming it.
+To add a course, add its layer to `OUTPUTS` in the script, rerun it, and add a `<figure>` for its print image to the print section of `docs/map.md`; the page's controls pick it up from the SVG.
+The page's downloadable PDF is assembled by `hooks/map_pdf.py`, one page per map, each sized to its map.
+
+## Third-party assets
+
+Everything the site needs is served from this repository, with no external CDNs or font services.
+Each item below keeps its licence alongside it, and the licence terms require those notices to stay with the files.
+
+| Asset | Location | Licence |
+| :- | :- | :- |
+| Noto Sans and Noto Sans Mono (from [Fontsource](https://fontsource.org/) 5.3.0) | `docs/assets/fonts/` | SIL Open Font License 1.1, see `OFL.txt` there |
+| [d3-zoom](https://github.com/d3/d3-zoom) and its eight D3 dependencies | `docs/assets/vendor/d3/` | ISC, and BSD-3-Clause for d3-ease; full texts in `LICENSE` there and at the top of `d3-zoom.min.js` |
+| Oxford Isis Maps by Bernard Tao | `docs/assets/map/tamesis-map.svg` | CC-BY 3.0; the attribution is drawn on the map and must stay visible |
+
+The D3 file is the official `dist/*.min.js` of each module, unmodified and concatenated in dependency order; the versions are listed in its header.
+To update it, download the newer files from each package and rebuild the header and `LICENSE` to match.

@@ -10,6 +10,7 @@ nav:
   - Rules: rules.md
   - Event Plan: event-plan.md
   - Risk Assessment: risk-assessment.md
+  - Course Map: map.md
 
 theme:
   name: material
@@ -67,6 +68,7 @@ extra_javascript:
   - assets/anchors.js
   - assets/contacts.js
   - assets/risk-summary.js
+  - assets/map.js
 
 plugins:
   - search

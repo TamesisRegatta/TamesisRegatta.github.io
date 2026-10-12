@@ -324,3 +324,280 @@ table.risk-matrix td {
 .md-content dl dd {
   margin: 0;
 }
+
+/* Course map (map.md, assets/map.js). The SVG's colours are written as
+   var(--map-*, original) by the extraction script, so the light values below
+   only restate the original artwork; the slate block retints it for dark mode.
+   Unlisted --map-c-RRGGBB colours (lanes, icons) keep their original value. */
+.tamesis-map-frame {
+  --map-ink: #000000;
+  --map-paper: #ffffff;
+  --map-building: #ffffcc;
+  --map-building-alt: #ffdd99;
+  --map-c-e5e5e5: #e5e5e5;
+  --map-c-ebfbff: #ebfbff;
+  --map-c-c8c8c8: #c8c8c8;
+  background-color: var(--map-paper);
+  border: 1px solid var(--md-default-fg-color--lightest);
+  border-radius: 0.2rem;
+}
+
+/* The map page has no table of contents (hide: toc in map.md), so let its
+   content widen beyond Material's 61rem grid, leaving a 10% gap on the right.
+   Only from 76.25em, Material's own breakpoint for showing the TOC; below
+   that the page is already full width. :has() scopes this to the page
+   containing the map; header and footer keep the normal width. */
+@media screen and (min-width: 76.25em) {
+  .md-main__inner.md-grid:has(.tamesis-map-frame) {
+    max-width: none;
+    margin-right: 10vw;
+  }
+}
+
+[data-md-color-scheme="slate"] .tamesis-map-frame {
+  --map-ink: #e8e6e1;
+  --map-paper: var(--md-default-bg-color);
+  --map-building: #4a4630;
+  --map-building-alt: #5c4a2a;
+  --map-c-e5e5e5: hsl(45deg, 6%, 20%);
+  --map-c-ebfbff: hsl(200deg, 15%, 22%);
+  --map-c-c8c8c8: #6b6b6b;
+}
+
+.tamesis-map-frame {
+  position: relative;
+  overflow: hidden;
+  /* Fits the window below the header and page title, so the whole map is
+     visible with no page scroll; shorter on phones so there is always page
+     outside the map to scroll by. */
+  height: max(20rem, calc(100dvh - 15rem));
+}
+
+@media screen and (max-width: 44.9375em) {
+  .tamesis-map-frame {
+    height: min(70dvh, 32rem);
+  }
+}
+
+/* Static figures size to their own drawing, after the frame heights above. */
+.tamesis-map-frame.tamesis-map-static {
+  height: auto;
+}
+
+.tamesis-map-frame.tamesis-map-static svg.tamesis-map {
+  height: auto;
+  cursor: auto;
+}
+
+.tamesis-map-frame:focus-visible {
+  outline: 0.1rem solid var(--md-accent-fg-color);
+  outline-offset: 0.1rem;
+}
+
+.tamesis-map-frame svg.tamesis-map {
+  cursor: grab;
+}
+
+.tamesis-map-frame.is-panning svg.tamesis-map {
+  cursor: grabbing;
+}
+
+.tamesis-map-controls {
+  position: absolute;
+  top: 0.5rem;
+  right: 0.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.tamesis-map-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 1.8rem;
+  height: 1.8rem;
+  padding: 0;
+  border: 1px solid var(--md-default-fg-color--lighter);
+  border-radius: 0.2rem;
+  background-color: var(--md-default-bg-color);
+  color: var(--md-default-fg-color);
+  cursor: pointer;
+}
+
+.tamesis-map-button:hover {
+  color: var(--md-accent-fg-color);
+}
+
+.tamesis-map-button:focus-visible {
+  outline: 0.1rem solid var(--md-accent-fg-color);
+}
+
+.tamesis-map-button svg {
+  width: 1.2rem;
+  height: 1.2rem;
+  fill: currentcolor;
+}
+
+@media print {
+  .tamesis-map-frame {
+    height: auto;
+  }
+
+  .tamesis-map-controls {
+    display: none;
+  }
+}
+
+/* Course and overlay controls above the map, built by map.js from the
+   SVG's data-course and data-overlay groups. */
+.tamesis-map-layers {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem 2rem;
+  margin-bottom: 0.6rem;
+}
+
+.tamesis-map-group {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.2rem 1rem;
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+.tamesis-map-group legend {
+  float: left;
+  margin-right: 0.2rem;
+  padding: 0;
+  font-weight: 700;
+}
+
+.tamesis-map-option {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+.tamesis-map-option input {
+  margin: 0;
+  accent-color: var(--md-accent-fg-color);
+  cursor: pointer;
+}
+
+.tamesis-map .is-hidden {
+  display: none;
+}
+
+/* Clickable map items (map.js enableSelect): a ring on the selected item
+   and an HTML popup, both sized in screen px so they ignore the zoom. */
+.tamesis-map-frame.is-over-item svg.tamesis-map {
+  cursor: pointer;
+}
+
+.tamesis-map [data-select]:focus {
+  outline: none;
+}
+
+.tamesis-map [data-select]:focus-visible {
+  outline: 2px solid var(--md-accent-fg-color);
+}
+
+.tamesis-map-marker {
+  position: absolute;
+  min-width: 1.4rem;
+  min-height: 1.4rem;
+  border: 0.15rem solid var(--md-accent-fg-color);
+  border-radius: 50%;
+  box-shadow: 0 0 0 0.15rem var(--md-default-bg-color);
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+}
+
+.tamesis-map-popup {
+  --arrow-x: 50%;
+  position: absolute;
+  max-width: min(18rem, calc(100% - 1rem));
+  padding: 0.5rem 2rem 0.5rem 0.7rem;
+  border: 1px solid var(--md-default-fg-color--lighter);
+  border-radius: 0.2rem;
+  background-color: var(--md-default-bg-color);
+  color: var(--md-default-fg-color);
+  box-shadow: var(--md-shadow-z2);
+  font-size: 0.75rem;
+  line-height: 1.4;
+}
+
+/* Arrow pointing at the item, above or below the popup. */
+.tamesis-map-popup::after {
+  content: "";
+  position: absolute;
+  left: calc(var(--arrow-x) - 0.4rem);
+  top: 100%;
+  border: 0.4rem solid transparent;
+  border-top-color: var(--md-default-bg-color);
+  filter: drop-shadow(0 1px 0 var(--md-default-fg-color--lighter));
+}
+
+.tamesis-map-popup.is-below::after {
+  top: auto;
+  bottom: 100%;
+  border-top-color: transparent;
+  border-bottom-color: var(--md-default-bg-color);
+  filter: drop-shadow(0 -1px 0 var(--md-default-fg-color--lighter));
+}
+
+.tamesis-map-popup-title {
+  display: block;
+}
+
+.md-typeset .tamesis-map-popup p {
+  margin: 0.2rem 0 0;
+}
+
+.tamesis-map-popup-close {
+  position: absolute;
+  top: 0.3rem;
+  right: 0.3rem;
+  display: flex;
+  width: 1.3rem;
+  height: 1.3rem;
+  padding: 0.1rem;
+  color: var(--md-default-fg-color--light);
+  cursor: pointer;
+}
+
+.tamesis-map-popup-close:hover {
+  color: var(--md-accent-fg-color);
+}
+
+.md-typeset .tamesis-map-popup-close svg {
+  width: 100%;
+  height: 100%;
+  fill: currentcolor;
+}
+
+@media print {
+  .tamesis-map-layers,
+  .tamesis-map-popup,
+  .tamesis-map-marker {
+    display: none;
+  }
+}
+
+/* Qualified with the frame to outrank Material's .md-typeset svg rule
+   (height: auto), which would otherwise keep the map at its own shape. */
+.tamesis-map-frame svg.tamesis-map {
+  display: block;
+  width: 100%;
+  height: 100%;
+  /* Text and shapes with no fill of their own default to the ink colour. */
+  fill: var(--map-ink);
+  /* The map is drawn large and scaled down; without this, Chromium snaps
+     each glyph to the pixel grid and the letter spacing goes uneven. */
+  text-rendering: geometricPrecision;
+}

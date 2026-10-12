@@ -70,6 +70,11 @@ extra_javascript:
   - assets/risk-summary.js
   - assets/map.js
 
+hooks:
+  # Replaces the course map page's PDF with one page per map, each sized to
+  # its map, after mkdocs-exporter has run.
+  - hooks/map_pdf.py
+
 plugins:
   - search
   - macros:

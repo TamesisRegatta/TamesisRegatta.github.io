@@ -449,6 +449,51 @@ table.risk-matrix td {
   }
 }
 
+/* Map page print (map.md): the interactive map is replaced by
+   .tamesis-map-print, one page per map, from images written by
+   scripts/strip_map.py, and the page title is hidden since each map has its
+   own. The downloadable PDF does not use this layout: hooks/map_pdf.py
+   rebuilds it from the same images, each page sized to its map. */
+.tamesis-map-print {
+  display: none;
+}
+
+@media print {
+  .tamesis-map-screen,
+  .md-content:has(.tamesis-map-print) h1 {
+    display: none;
+  }
+
+  .tamesis-map-print {
+    display: block;
+  }
+
+  .md-typeset .tamesis-map-print figure {
+    display: block;
+    width: auto;
+    max-width: none;
+    margin: 0;
+  }
+
+  .md-typeset .tamesis-map-print figure + figure {
+    break-before: page;
+  }
+
+  .md-typeset .tamesis-map-print figcaption {
+    max-width: none;
+    margin: 0 0 1rem;
+    font-style: normal;
+    text-align: left;
+  }
+
+  .tamesis-map-print img {
+    display: block;
+    width: 100%;
+    max-height: 180mm;
+    object-fit: contain;
+  }
+}
+
 /* Course and overlay controls above the map, built by map.js from the
    SVG's data-course and data-overlay groups. */
 .tamesis-map-layers {

@@ -7,8 +7,6 @@ on:
 
 permissions:
   contents: read
-  pages: write
-  id-token: write
 
 concurrency:
   group: pages
@@ -16,14 +14,21 @@ concurrency:
 
 jobs:
   build:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v7
+    name: Build
+    runs-on: ubuntu-26.04
+    timeout-minutes: 20
+    permissions:
+      contents: read
 
-      - uses: actions/setup-python@v6
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+
+      # No pip cache: a cache restored into a publishing workflow could be poisoned.
+      - uses: actions/setup-python@ece7cb06caefa5fff74198d8649806c4678c61a1 # v6.3.0
         with:
           python-version: "3.12"
-          cache: pip
 
       - name: Install dependencies
         run: pip install -r requirements.txt
@@ -53,16 +58,23 @@ jobs:
           PHONE_PRESS_OFFICE: ${{ secrets.PHONE_PRESS_OFFICE }}
           PHONE_EPIONE_MEDICAL: ${{ secrets.PHONE_EPIONE_MEDICAL }}
 
-      - uses: actions/upload-pages-artifact@v5
+      - uses: actions/upload-pages-artifact@fc324d3547104276b827a68afc52ff2a11cc49c9 # v5.0.0
         with:
           path: site
 
   deploy:
+    name: Deploy
     needs: build
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-26.04
+    timeout-minutes: 10
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
+    permissions:
+      pages: write # publish the uploaded site
+      id-token: write # deploy-pages proves the deployment's origin with an OIDC token
+
     steps:
-      - id: deployment
-        uses: actions/deploy-pages@v5
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@368f82528645a54fb793d4d04e342629a3f51346 # v5.0.1

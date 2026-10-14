@@ -59,6 +59,13 @@ markdown_extensions:
   - def_list
   - md_in_html
   - pymdownx.details
+  # Icon shortcodes such as :material-flag:, drawn as inline SVG from the
+  # icons bundled with Material: no font or CDN needed, so they render in
+  # the PDF export too. Only use bundled icon sets (material-, octicons-,
+  # fontawesome-, simple-): plain emoji shortcodes load images from a CDN.
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
   - toc:
       permalink: true
 

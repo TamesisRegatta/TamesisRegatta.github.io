@@ -195,6 +195,25 @@ a.tr-rule-anchor:hover {
   color: var(--md-accent-fg-color);
 }
 
+/* Coloured icons in the event plan's marshal key and table, e.g.
+   :material-flag:{ .tr-icon-red }. */
+.md-typeset .tr-icon-red {
+  color: #c62828;
+}
+
+.md-typeset .tr-icon-green {
+  color: #2e7d32;
+}
+
+/* Table cells of icons (event plan marshal table): keep the icons on
+   one line and the column wide enough for them. Without this the PDF
+   export, which lays out a table again on each page it continues onto,
+   squeezes the column until the icons shrink and stack. */
+.md-typeset td:has(> .twemoji) {
+  white-space: nowrap;
+  min-width: 4.5em;
+}
+
 /* PDF page size/margins. mkdocs-exporter renders with Chromium's
    prefer_css_page_size, i.e. it reads this @page rule rather than using its
    own default — which, left unset, is US Letter (612x792pt) with Chromium's
@@ -228,6 +247,12 @@ a.tr-rule-anchor:hover {
 
   details:not([open]) summary {
     cursor: default;
+  }
+
+  /* Each event plan appendix (## Appendix N ... { .tr-appendix }) starts on
+     a new page, so a title is never left at the foot of a page. */
+  .md-typeset .tr-appendix {
+    break-before: page;
   }
 }
 

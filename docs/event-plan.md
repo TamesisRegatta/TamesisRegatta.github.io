@@ -17,11 +17,12 @@ This Plan should be read in conjunction with OURCs Code of Conduct, the OURCs Ru
 
  
 
-| Race Desk | Racing is coordinated by the Event Organisers from Merton Small Boats bay. ) The Event Secretary, and Chief Marshal will be based at Race Desk. |
+| Term | Meaning |
 | :---- | :---- |
-| **County side/ County Station Towpath side/ Towpath Station** | These terms are interchangeable, and refer to the side of the river closest to the Towpath. Longbridges Boathouse and University College Boathouse can be considered to be on the County side of the River. |
-| **City side/ City Station** | These terms are interchangeable, and refers to the side of the river closest to Christ Church Meadow / Boathouse Island. For side-by-side racing, the City Station is the central buoyed lane, with the transit lane on the City side of the river. |
-| **Transit Lane/ Navigation Lane** | These terms are interchangeable. For side-by-side racing there will be 3 lanes marked by buoys. The lane on the City side of the river will be used for most river traffic heading downstream. |
+| **Race Desk** | Racing is coordinated by the Event Organisers from Merton Small Boats bay. The Event Secretary, and Chief Marshal will be based at Race Desk. |
+| **County side / County Station / Towpath side / Towpath Station** | These terms are interchangeable, and refer to the side of the river closest to the Towpath. Longbridges Boathouse and University College Boathouse can be considered to be on the County side of the River. |
+| **City side / City Station** | These terms are interchangeable, and refers to the side of the river closest to Christ Church Meadow / Boathouse Island. For side-by-side racing, the City Station is the central buoyed lane, with the transit lane on the City side of the river. |
+| **Transit Lane / Navigation Lane** | These terms are interchangeable. For side-by-side racing there will be 3 lanes marked by buoys. The lane on the City side of the river will be used for most river traffic heading downstream. |
 
 
 
@@ -88,7 +89,7 @@ In case they need to be contacted, the phone number for **City of Oxford Rowing 
 
 ## Marshals
 
-## Maps detailing the placement of marshals can be found in Appendix 3.
+Maps detailing the placement of marshals can be found in Appendix 3.
 
 Marshalls will be drawn from experienced rowers and coxes; Linacre Boat Club will provide experienced marshals for critical positions such as at position 9 (pairing marshal), 6 (tower marshal), and 7 (Univ marshal). The remaining balance to be provided by the clubs participating, with each club providing one experienced marshal per entry, in a similar manner to bumps racing. 
 
@@ -122,25 +123,20 @@ The Chief Marshal shall assign more experienced marshals to cover the most criti
 
 Marshals will be provided with:
 
-●       High visibility bib
-
-●      Two-way radio
-
-●  Clipboard, with a summary of duties for their assigned role, race schedule, a list of blade                 colours to aid in crew identification, and emergency contact numbers.
+* High visibility bib
+* Two-way radio
+* Clipboard, with a summary of duties for their assigned role, race schedule, a list of blade colours to aid in crew identification, and emergency contact numbers.
 
 Marshals will be required to provide:
 
-●  	Their own private mobile phone – and share the number with the Event Committee before their shift
+* Their own private mobile phone – and share the number with the Event Committee before their shift
 
 Some marshals, identified below, will additionally be provided with:
 
-●  	Klaxon
-
-●  	 Megaphone
-
-●  	 Flag
-
-●  	 Stopwatch / Timer
+* Klaxon
+* Megaphone
+* Flag
+* Stopwatch / Timer
 
 ### River Checks
 
@@ -166,9 +162,8 @@ Marshals may be requested to facilitate communication with the Regatta Organiser
 
 Marshals stationed by the boathouses; Boathouses A & B, Univ, and Longbridges marshals; shall undertake the following additional duties:
 
-●      Conduct equipment checks for every boat that crews are using.
-
-●    Check the identities of the rowers and coxes of crews when requested by the Chief Marshal or Event Secretary.
+* Conduct equipment checks for every boat that crews are using.
+* Check the identities of the rowers and coxes of crews when requested by the Chief Marshal or Event Secretary.
 
 Where possible, the raft marshals shall track which crews have boated from the rafts which they are monitoring.
 
@@ -176,17 +171,12 @@ Where possible, the raft marshals shall track which crews have boated from the r
 
 Checks will pay special attention to the following, in accordance with OURCs equipment rules, RowSafe, and the general practice at Torpids and Eights:
 
-●      Heel restraints – heels firmly secured and don’t rise above the lowest fixed point of the shoe.
-
-●       Bow ball is firmly attached, not just taped
-
-●      All backstays are in place
-
-●      All hatch covers are in place if the boat has watertight compartments fitted
-
-●       Coxswain wears a life jacket
-
-●      Switched-on 360° static white lights at front and rear at times applicable 
+* Heel restraints – heels firmly secured and don’t rise above the lowest fixed point of the shoe.
+* Bow ball is firmly attached, not just taped
+* All backstays are in place
+* All hatch covers are in place if the boat has watertight compartments fitted
+* Coxswain wears a life jacket
+* Switched-on 360° static white lights at front and rear at times applicable
 
 Crews whose equipment does not meet the above criteria will not be allowed to push off.
 
@@ -212,37 +202,33 @@ The Gut Marshal shall send crews towards the Senior Umpire when it is clear, in 
 
 Key:
 
-📢     	Marshal is provided with a loudhailer
-
-🛑     	Marshal is provided with a Klaxon
-
- 🚩    	Marshal is provided with a Flag
-
-⌚      	Marshal is provided with a Stopwatch / Timer for the time trial racing format
-
-✅    	Marshal participates in River Checks. Racing must stop if the posts of  marshals participating in River Checks become vacant.
+* :material-bullhorn: Marshal is provided with a loudhailer
+* :material-alarm-light:{ .tr-icon-red } Marshal is provided with a Klaxon
+* :material-flag:{ .tr-icon-red } Marshal is provided with a Flag
+* :material-timer-outline: Marshal is provided with a Stopwatch / Timer for the time trial racing format
+* :material-check-circle:{ .tr-icon-green } Marshal participates in River Checks. Racing must stop if the posts of  marshals participating in River Checks become vacant.
 
  
 
 | Equipment | Position | Specific Duties |
 | :---- | :---- | :---- |
-|   | **Chief Marshal** | Responsible for running marshalling briefings and assigning marshalling positions on race days and being on hand to answer any question or assist in marshalling-related matters. |
-| 📢 🚩  | **Senior Umpire (Start Marshal)** | Decides the stagger according to stream conditions on the day and gives the starting commands (“Attention\! Go\!”). They will also award a row-over to crews whose opponents are late without good reason. May disqualify any crews who start before the command is given. Conducts river check when required, or asks their assistant to do so. Location of the SU and their assistant is dependent on the racing format, and is shown on the maps in Appendix 9. |
-| 🛑⌚ | Senior Umpire’s Assistant Start Timer | **[side by side racing]** Responsible for listening to all radio traffic, alerts Senior Umpire about urgent or important situations. Conducts river checks on the Senior Umpire’s request.  **[time trials]** Notes the time each crew crosses the start line, below University College Boathouse. |
-| 🛑✅📢 | (1) Head | Located at the Head of the river. Liaises with other river users, asking them to move to Holding Point A and await the end the race in progress. Instructs crews who have finished to spin and return to the boathouses (via transit lane). Will note coxing protest and relay to the race desk. |
-| 🛑✅📢 ⌚ | (2) Finish Marshal | Determines who has won the race and sounds the finishing clacker when the bow of the winning boat passes the finishing line. Also ensures that crews are well clear of the finishing line before spinning. Will note coxing protests and relay results to race desk. This position will preferably be filled by a member of the race committee to ensure consistency. |
-| ⌚ | (2A) Finish Timer | *Used in Time Trials only.* Provides backup finish timing along with the finish marshal.  |
-| 🛑 | (3) Meadow | Stationed on the City Side between the humpback bridge, and the Finish Marshal. Advises crews moving away from the spinning area to land. Monitors the upstream end of the river is clear for racing. |
-| 🛑✅ | (4) Boathouses A | See Raft Marshals (above) Stationed at the upstream half of Boathouse Island |
-| 🛑✅ | (5) Boathouses B | See Raft Marshals (above) Stationed at the downstream half of Boathouse Island |
-| 🛑✅ | **(6) Tower** | Stationed on the roof of one of the boathouses. This marshal is to monitor racing for safety and fairness and shall liaise with the race committee regarding any appeals. This position will preferably be filled by a member of the race committee to ensure consistency. |
-| 🛑✅📢 | (7) Univ | See Raft Marshals (above) Stationed at University College Boathouse. This position will preferably be filled by a member of the race committee to ensure consistency. **[side by side racing]** Coordinates with Tower Marshal to hold crews that want to boat from Univ and sends them up in transit once the current race has gone past, but with sufficient distance (in case the boat racing on County station catches a crab or runs into other boat-stopping trouble). |
-| 🛑✅ | (8) Greenbanks | *Used in side by side racing only.* Stationed below the start on the County side of the river. Assisting crews to pair up before the start, ensuring crews are on the correct side (city/county). Advising crews in transit for landing at Univ, holding them back if race is in progress. |
-| 🛑✅📢 | (9) Longbridges | See Raft Marshals (above).  Stationed at Longbridges Boathouse During time trials, liaises with river traffic to show them Holding Point B, and advises when they can proceed upstream.  During side by side racing, advises crews in transit for landing at University College boathouse. This position will preferably be filled by a member of the race committee to ensure consistency. |
-| 🛑✅📢  | **(10) Gut** | **[side by side racing]** Stationed at Top Gut, just below Longbridges. They are responsible for liaising with other river users, asking them to hold at Holding Point B and await the end of the race in progress.  **[time trials]** To send crews towards the start when it is clear, in the correct order. Ask river traffic to tuck in at Holding Point B if necessary.  They are responsible for liaising with other river users, asking them to hold and await the end of the race in progress. Instructs crews where to spin. Ensures that crews are moving to the start in good time and are at the correct stations to ensure that no collisions occur. Responsible for holding any crews coming upstream through the gut until it is safe to cross into race circulation above the gut. |
-| 🛑✅📢 | (11) Donnington Bridge | Only in use when using an intermediate course; responsible for ensuring crews do not go below Donnington Bridge (unless landing at the Isis Boathouse). |
-| 🛑 | Launch Driver (Medical Response) | Launch drivers must hold RYA Powerboat L2 or equivalent qualification. Dedicated launch with a member of the medical team. Transports medics to emergency sites. |
-| 🛑 | Launch Driver (Transport Launch) | Launch drivers must hold RYA Powerboat L2 or equivalent qualification. Transports additional medical personnel as required for emergency response. |
+|  | **Chief Marshal** | Responsible for running marshalling briefings and assigning marshalling positions on race days and being on hand to answer any question or assist in marshalling-related matters. |
+| :material-bullhorn::material-flag:{ .tr-icon-red } | **Senior Umpire (Start Marshal)** | Decides the stagger according to stream conditions on the day and gives the starting commands (“Attention\! Go\!”). They will also award a row-over to crews whose opponents are late without good reason. May disqualify any crews who start before the command is given. Conducts river check when required, or asks their assistant to do so. Location of the SU and their assistant is dependent on the racing format, and is shown on the maps in Appendix 9. |
+| :material-alarm-light:{ .tr-icon-red }:material-timer-outline: | Senior Umpire’s Assistant Start Timer | **[side by side racing]** Responsible for listening to all radio traffic, alerts Senior Umpire about urgent or important situations. Conducts river checks on the Senior Umpire’s request.  **[time trials]** Notes the time each crew crosses the start line, below University College Boathouse. |
+| :material-alarm-light:{ .tr-icon-red }:material-check-circle:{ .tr-icon-green }:material-bullhorn: | (1) Head | Located at the Head of the river. Liaises with other river users, asking them to move to Holding Point A and await the end the race in progress. Instructs crews who have finished to spin and return to the boathouses (via transit lane). Will note coxing protest and relay to the race desk. |
+| :material-alarm-light:{ .tr-icon-red }:material-check-circle:{ .tr-icon-green }:material-bullhorn::material-timer-outline: | (2) Finish Marshal | Determines who has won the race and sounds the finishing clacker when the bow of the winning boat passes the finishing line. Also ensures that crews are well clear of the finishing line before spinning. Will note coxing protests and relay results to race desk. This position will preferably be filled by a member of the race committee to ensure consistency. |
+| :material-timer-outline: | (2A) Finish Timer | *Used in Time Trials only.* Provides backup finish timing along with the finish marshal.  |
+| :material-alarm-light:{ .tr-icon-red } | (3) Meadow | Stationed on the City Side between the humpback bridge, and the Finish Marshal. Advises crews moving away from the spinning area to land. Monitors the upstream end of the river is clear for racing. |
+| :material-alarm-light:{ .tr-icon-red }:material-check-circle:{ .tr-icon-green } | (4) Boathouses A | See Raft Marshals (above) Stationed at the upstream half of Boathouse Island |
+| :material-alarm-light:{ .tr-icon-red }:material-check-circle:{ .tr-icon-green } | (5) Boathouses B | See Raft Marshals (above) Stationed at the downstream half of Boathouse Island |
+| :material-alarm-light:{ .tr-icon-red }:material-check-circle:{ .tr-icon-green } | **(6) Tower** | Stationed on the roof of one of the boathouses. This marshal is to monitor racing for safety and fairness and shall liaise with the race committee regarding any appeals. This position will preferably be filled by a member of the race committee to ensure consistency. |
+| :material-alarm-light:{ .tr-icon-red }:material-check-circle:{ .tr-icon-green }:material-bullhorn: | (7) Univ | See Raft Marshals (above) Stationed at University College Boathouse. This position will preferably be filled by a member of the race committee to ensure consistency. **[side by side racing]** Coordinates with Tower Marshal to hold crews that want to boat from Univ and sends them up in transit once the current race has gone past, but with sufficient distance (in case the boat racing on County station catches a crab or runs into other boat-stopping trouble). |
+| :material-alarm-light:{ .tr-icon-red }:material-check-circle:{ .tr-icon-green } | (8) Greenbanks | *Used in side by side racing only.* Stationed below the start on the County side of the river. Assisting crews to pair up before the start, ensuring crews are on the correct side (city/county). Advising crews in transit for landing at Univ, holding them back if race is in progress. |
+| :material-alarm-light:{ .tr-icon-red }:material-check-circle:{ .tr-icon-green }:material-bullhorn: | (9) Longbridges | See Raft Marshals (above).  Stationed at Longbridges Boathouse During time trials, liaises with river traffic to show them Holding Point B, and advises when they can proceed upstream.  During side by side racing, advises crews in transit for landing at University College boathouse. This position will preferably be filled by a member of the race committee to ensure consistency. |
+| :material-alarm-light:{ .tr-icon-red }:material-check-circle:{ .tr-icon-green }:material-bullhorn: | **(10) Gut** | **[side by side racing]** Stationed at Top Gut, just below Longbridges. They are responsible for liaising with other river users, asking them to hold at Holding Point B and await the end of the race in progress.  **[time trials]** To send crews towards the start when it is clear, in the correct order. Ask river traffic to tuck in at Holding Point B if necessary.  They are responsible for liaising with other river users, asking them to hold and await the end of the race in progress. Instructs crews where to spin. Ensures that crews are moving to the start in good time and are at the correct stations to ensure that no collisions occur. Responsible for holding any crews coming upstream through the gut until it is safe to cross into race circulation above the gut. |
+| :material-alarm-light:{ .tr-icon-red }:material-check-circle:{ .tr-icon-green }:material-bullhorn: | (11) Donnington Bridge | Only in use when using an intermediate course; responsible for ensuring crews do not go below Donnington Bridge (unless landing at the Isis Boathouse). |
+| :material-alarm-light:{ .tr-icon-red } | Launch Driver (Medical Response) | Launch drivers must hold RYA Powerboat L2 or equivalent qualification. Dedicated launch with a member of the medical team. Transports medics to emergency sites. |
+| :material-alarm-light:{ .tr-icon-red } | Launch Driver (Transport Launch) | Launch drivers must hold RYA Powerboat L2 or equivalent qualification. Transports additional medical personnel as required for emergency response. |
 
 **Lights**
 
@@ -410,14 +396,11 @@ Should Race Desk and/or the Senior Umpire decide that racing must stop, the foll
 
 3. The head marshal then tells the boats which have finished to spin and land in normal circulation.
 
-4. [**side by side racing:**] Once crews which have finished have landed, the Incident Controller will direct crews waiting below the start to land upstream at their boathouses.
+4. Then, depending on the racing format:
+    * **Side-by-side racing:** Once crews which have finished have landed, the Incident Controller will direct crews waiting below the start to land upstream at their boathouses. Crews who boat from Longbridges will be directed to spin on the Green Bank, and may land in either direction.
+    * **Time trials:** Once all the boats in the Marshalling Zone are pointing upstream and the Incident Controller decides the top stretch is sufficiently clear, the Senior Umpire and marshals will instruct any crews waiting in the Marshalling Zone to proceed up the course, as safely as possible, and land upstream at their boathouses.
 
-i. Crews who boat from Longbridges will be directed to spin on the Green Bank, and may land in either direction.
-
-**OR**  
-5. **[in time trials:]** Once all the boats in the Marshalling Zone are pointing upstream and the Incident Controller decides the top stretch is sufficiently clear, the Senior Umpire and marshals will instruct any crews waiting in the Marshalling Zone to proceed up the course, as safely as possible, and land upstream at their boathouses.
-
-The whole process should take under 20 minutes.The operation being directed by the incident controller will keep crews safe and avoid collisions.   All marshals are to be briefed on this procedure in full prior to taking up their duties.
+The whole process should take under 20 minutes. The operation being directed by the incident controller will keep crews safe and avoid collisions.   All marshals are to be briefed on this procedure in full prior to taking up their duties.
 
 ## Dangerous Conditions
 
@@ -429,8 +412,8 @@ In the event that the river is running faster or higher than might normally allo
 
 Rowing in high stream shall be in accordance with the OURCs flag system (OURCs rule 2.9.g, “Rules specific to the Isis: The Isis flag”, available at [https://ourcs.co.uk/organisation/conduct/](https://ourcs.co.uk/organisation/conduct/)). If the flag is raised to dark blue then the regatta might proceed with an altered course; the organising committee reserves the right to change the start line location for any reason, including but not limited to river conditions.
 
-{#- Racing on Low Amber Flag: switched by amber_flag_racing in event.yml, as is the
-    matching exception in Appendix 1. Otherwise amber suspends racing. -#}
+{# Racing on Low Amber Flag: switched by amber_flag_racing in event.yml, as is the
+    matching exception in Appendix 1. Otherwise amber suspends racing. #}
 {% if amber_flag_racing %}
 ### Racing on Low Amber Flag
 
@@ -477,7 +460,7 @@ This concludes the Event Safety Plan for Tamesis {{ dates.year }}
 
  
 
-Appendix 1 - **Contingency Plans for Pre-Regatta Bad Weather** 
+## Appendix 1 – Contingency Plans for Pre-Regatta Bad Weather { .tr-appendix }
 
 IF THE ISIS IS UPGRADED TO BLUE, AMBER OR RED FLAG PRIOR TO THE REGATTA OR A DAY’S RACING.
 
@@ -503,8 +486,8 @@ If the flag status of the Isis is dark blue the following should be implemented:
 
 Racing may still continue, but S/X coxes only and notify entrants by 5pm the day before.
 
-{#- The one exception to amber suspending racing: switched by amber_flag_racing
-    in event.yml, like "Racing on Low Amber Flag". -#}
+{# The one exception to amber suspending racing: switched by amber_flag_racing
+    in event.yml, like "Racing on Low Amber Flag". #}
 {% if amber_flag_racing %}
 If the flag status of the Isis is Low Amber (≤ 4.5 bucks equivalent) on Day 3 or 4, and there was racing on both Days 1 and 2, racing may continue only as set out in [Racing on Low Amber Flag](#racing-on-low-amber-flag). Notify entrants by 5pm the day before, so that crews can arrange senior rowers at bow and 2 and an eligible cox.
 {% endif %}
@@ -519,7 +502,7 @@ The Tel. No. of Iffley Lock Keeper is {{ phone('iffley_lock') }}
 
  
 
-Appendix 2 – **Major Incident Reporting**
+## Appendix 2 – Major Incident Reporting { .tr-appendix }
 
 If a major incident occurs during racing, the committee should ensure that any injured person(s) receives emergency first aid from medical personnel, and that a decision is made by Race Desk on advice of the medical personnel to contact the relevant emergency services.
 
@@ -529,31 +512,21 @@ The University Security Services are to be contacted by calling {{ phone('univer
 
 Security Services will require the following information:
 
-•   	Your name;
-
-•   	The group you are with;
-
-•   	A brief description of the incident;
-
-•   	Location of the incident;
-
-•   	The telephone number from which you are calling;
-
-•   	Your location (It is important that you stay at this location);
-
-•   	Any other information which you feel is useful.
+* Your name;
+* The group you are with;
+* A brief description of the incident;
+* Location of the incident;
+* The telephone number from which you are calling;
+* Your location (It is important that you stay at this location);
+* Any other information which you feel is useful.
 
  You may be asked for:
 
-•   	The name(s) and number(s) of people involved.
-
-•   	Details of any injuries and/or fatalities.
-
-•   	The name of the hospital where any casualties have been taken.
-
-•   	Brief details of any vehicles involved if a road accident has occurred.
-
-•   	The name and number of any Police Officer involved with the incident with their contact details
+* The name(s) and number(s) of people involved.
+* Details of any injuries and/or fatalities.
+* The name of the hospital where any casualties have been taken.
+* Brief details of any vehicles involved if a road accident has occurred.
+* The name and number of any Police Officer involved with the incident with their contact details
 
 It is imperative that all relevant people are contacted as soon as possible, and that a record is kept of all bodies/persons contacted.
 
@@ -575,7 +548,7 @@ All enquiries from the media are to be directed to the University Press Officer 
 
 The details of any incident or accident are not to be discussed with any person outside of the University until a full investigation has taken place.
 
-**Contact Details**
+### Contact Details
 
 **General enquiries:** [{{ contact.email }}](mailto:{{ contact.email }})
 
@@ -584,7 +557,7 @@ The details of any incident or accident are not to be discussed with any person 
 **{{ roles.post_incident_coordinator.title }}:** {{ roles.post_incident_coordinator.name }}; {{ email('david_seale') }}; {{ phone('david_seale') }}
 
 
-**Appendix 3 – Circulation Patterns and Marshal Placements**
+## Appendix 3 – Circulation Patterns and Marshal Placements { .tr-appendix }
 
 <!-- Stopgap: these three maps are vector copies of the circulation PDFs,
      converted with mutool (text as outlines). Replace them with the course
@@ -598,7 +571,7 @@ The details of any incident or accident are not to be discussed with any person 
 
  
 
-**Appendix 4 – Important Phone numbers**
+## Appendix 4 – Important Phone Numbers { .tr-appendix }
 
 **General enquiries (non-urgent):** [{{ contact.email }}](mailto:{{ contact.email }})
 
@@ -626,7 +599,7 @@ Scott Houghton - {{ phone('scott_houghton') }}
 
 Epione Medical Services - {{ phone('epione_medical') }} 
 
-**EA Waterways Duty Officer - {{ phone('ea_duty_officer') }}** (Mon - Fri, 8 am - 6 pm) or {{ phone('ea_incident_line') }} (24 hours) 
+**EA Waterways Duty Officer -** {{ phone('ea_duty_officer') }} (Mon - Fri, 8 am - 6 pm) or {{ phone('ea_incident_line') }} (24 hours) 
 
 **Iffley Lock Keeper -** {{ phone('iffley_lock') }} 
 
@@ -642,11 +615,11 @@ Epione Medical Services - {{ phone('epione_medical') }}
 
 {{ roles.incident_controller.name }}, {{ roles.water_safety_advisor.title }}
 
-**Appendix 5 – Emergency Action Plan**
+## Appendix 5 – Emergency Action Plan
 
 [Please see additional documents] 
 
-**Appendix 6 – Risk Assessment**
+## Appendix 6 – Risk Assessment
 
 [Please see additional documents] 
 

@@ -321,7 +321,7 @@ Crews based on Boathouse Island must boat from the rafts at the downstream end o
 
 Crews boat with their bows pointed downstream and keep within the Transit Lane as they proceed past the start. Crews should be particularly aware that there may be crews joining the Transit Lane near the Cherwell Cut who have crossed having boated from Univ.
 
-Crews may into the Marshalling Zone, ensuring that they do not obstruct any other crews while they do so. 
+Crews may spin into the Marshalling Zone, ensuring that they do not obstruct any other crews while they do so. 
 
 Crews based on Boathouse Island must land at one of the rafts at the upstream end of the island (Rafts between St Anne’s Boathouse and Brasenose Boathouse).
 
@@ -329,7 +329,7 @@ Crews based on Boathouse Island must land at one of the rafts at the upstream en
 
 Crews boating from Longbridges boat directly into the marshaling zone and proceed as outlined above for Boathouse Island crews.
 
-When returning after a race, they must proceed along the Transit Lane, and may cross to land bows pointed downstream at Longbridges Raft. They must take care to avoid obstructing crews entering the Marshalling Zone.
+When returning after a race, they must proceed along the Transit Lane, and may spin to land with bows upstream or cross to land bows pointed downstream at Longbridges Raft. They must take care to avoid obstructing crews entering the Marshalling Zone.
 
 #### University Boathouse
 
@@ -455,7 +455,7 @@ If safety concerns (for example high water) lead to the cancellation of the enti
 
  
 
-This concludes the Event Safety Plan for Tamesis 2025
+This concludes the Event Safety Plan for Tamesis {{ dates.year }}
 
  
 

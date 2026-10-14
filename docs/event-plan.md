@@ -431,7 +431,25 @@ The whole process should take under 20 minutes.The operation being directed by t
 
 In the event that the river is running faster or higher than might normally allow for a full program of racing, the race organisers liaise with the Coordinating SU, the event Safety Advisors, Iffley lock keeper and the EA to decide how to proceed.  The EA Waterways Duty Officer can be contacted for advice regarding river conditions via {{ phone('ea_duty_officer') }} Monday to Friday 8am to 6pm or {{ phone('ea_incident_line') }} 24 hours. Should the river be at a level unsuitable for novice coxes (as registered with OURCs), they will not be permitted to race. This decision will be made in liaison with OURCs. Should the river be higher than this, a decision will be taken as to whether the Regatta will continue. The Novice Regattas in 2000, 2002, 2006, 2009, 2012 and 2019, 2023 and 2024 were all cancelled under such circumstances.
 
-Rowing in high stream shall be in accordance with the OURCs flag system (OURCs rule 2.9.g, “Rules specific to the Isis: The Isis flag”, available at [https://ourcs.co.uk/organisation/conduct/](https://ourcs.co.uk/organisation/conduct/)). If the flag is raised to dark blue then the regatta might proceed with an altered course; the organising committee reserves the right to change the start line location for any reason, including but not limited to river conditions. Amber Flag means that only senior crews are permitted to row; under these situations, racing will cease. 
+Rowing in high stream shall be in accordance with the OURCs flag system (OURCs rule 2.9.g, “Rules specific to the Isis: The Isis flag”, available at [https://ourcs.co.uk/organisation/conduct/](https://ourcs.co.uk/organisation/conduct/)). If the flag is raised to dark blue then the regatta might proceed with an altered course; the organising committee reserves the right to change the start line location for any reason, including but not limited to river conditions.
+
+{#- Racing on Low Amber Flag: switched by amber_flag_racing in event.yml, as is the
+    matching exception in Appendix 1. Otherwise amber suspends racing. -#}
+{% if amber_flag_racing %}
+### Racing on Low Amber Flag
+
+Racing may continue on Low Amber Flag (≤ 4.5 bucks equivalent) on Days 3 and 4 of the regatta only, and only if there was racing on both Days 1 and 2, so that the least proficient crews have already been eliminated. It is on the short course only, at the discretion of the Senior Umpires and the Event Committee, provided that no other condition adds to the safety concerns. For example, if the stream puts the river on Low Amber Flag but the wind and other conditions are fine, the organisers are more likely to judge it appropriate to continue; if any other condition compounds the risk, racing is likely to be suspended, as on Red Flag. Racing on Low Amber Flag is never guaranteed.
+
+Racing on Low Amber Flag requires all of the following:
+
+1. **Safety launches:** at least two launches on the water at all times, downstream of all marshalling crews, to assist any crew that needs help.
+2. **Bow pair:** every crew must have senior rowers (≥ 3 full terms of rowing experience) at bow and 2. This overrides any rule to the contrary, including the composition of [competitive](rules.md#competitive-crews) and [friendly](rules.md#friendly-crews) crews.
+3. **Coxes:** S status, or X status upgraded more than 12 months before the day of racing. N status coxes, and X status coxes upgraded within the last 12 months, may not cox on Low Amber Flag. This overrides the rule that [any crew may have a cox of any status](rules.md#cox-status).
+
+Crews must spin under the direction of race officials, well above the Longbridges raft, on Low Amber Flag.
+{% else %}
+Amber Flag means that only senior crews are permitted to row; under these situations, racing will cease.
+{% endif %}
 
 ### High stream conditions prior to Regatta:
 
@@ -476,6 +494,12 @@ This is a contingency plan for advanced changes to the regatta in the event of b
 If the flag status of the Isis is dark blue the following should be implemented:
 
 Racing may still continue, but S/X coxes only and notify entrants by 4pm the day before.
+
+{#- The one exception to amber suspending racing: switched by amber_flag_racing
+    in event.yml, like "Racing on Low Amber Flag". -#}
+{% if amber_flag_racing %}
+If the flag status of the Isis is Low Amber (≤ 4.5 bucks equivalent) on Day 3 or 4, and there was racing on both Days 1 and 2, racing may continue only as set out in [Racing on Low Amber Flag](#racing-on-low-amber-flag). Notify entrants by 4pm the day before, so that crews can arrange senior rowers at bow and 2 and an eligible cox.
+{% endif %}
 
 The Regatta Organisers should be in consultation with the Iffley Lock Keeper and the Environment Agency.
 

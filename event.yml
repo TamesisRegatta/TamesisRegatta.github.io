@@ -22,6 +22,12 @@ dates:
   coxing_briefing: 2026-11-18
   marshal_briefing: 2026-11-23
 
+# Racing on Low Amber Flag (≤ 4.5 bucks equivalent). Pending sign-off from the safety office: set to false
+# to withdraw it, and the event plan reverts to racing being suspended on
+# Amber Flag, as on Red. It switches the "Racing on Low Amber Flag" section of
+# docs/event-plan.md and the matching exception in its Appendix 1.
+amber_flag_racing: true
+
 contact:
   # The generic regatta mailbox — safe to publish, rendered as a normal
   # clickable mailto: link wherever it is used.

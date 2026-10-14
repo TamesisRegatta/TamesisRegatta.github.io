@@ -19,3 +19,10 @@ __pycache__/
 # contact details, and the risk assessment is sent alongside it.
 /Tamesis2026_EventPlan.pdf
 /Tamesis2026_RiskAssessment.pdf
+
+# Source documents kept beside the repo but never committed: the Word event
+# plan contains personal contact details, and the spreadsheet and circulation
+# PDFs are originals that the site's own versions are made from.
+*.docx
+*.xlsx
+/Tamesis 2026 Circulation *.pdf

@@ -250,9 +250,26 @@ a.tr-rule-anchor:hover {
   }
 
   /* Each event plan appendix (## Appendix N ... { .tr-appendix }) starts on
-     a new page, so a title is never left at the foot of a page. */
-  .md-typeset .tr-appendix {
+     a new page, so a title is never left at the foot of a page, as does the
+     body of the plan after its cover block and changelog (.tr-new-page). */
+  .md-typeset .tr-appendix,
+  .md-typeset .tr-new-page {
     break-before: page;
+  }
+
+  /* Keep headings with the text that follows them. Listed separately: the
+     PDF export (Paged.js) hangs on the same rule written with :is(). */
+  .md-typeset h2,
+  .md-typeset h3,
+  .md-typeset h4 {
+    break-after: avoid;
+  }
+
+  /* Likewise keep a lead-in line such as "Marshals will be provided with:"
+     with the list that follows it. */
+  .md-typeset p:has(+ ul),
+  .md-typeset p:has(+ ol) {
+    break-after: avoid;
   }
 }
 

@@ -1,7 +1,23 @@
-# Event & Safety Plan
+# Tamesis Regatta {{ dates.year }}: Event & Safety Plan
 
-Tamesis Regatta {{ dates.year }} · Linacre Boat Club
-## Opening Remarks
+<div class="tr-cover" markdown="1">
+
+**Linacre Boat Club**
+
+**Version {{ event_plan.version }}**, {{ event_plan.date | ukdate }}
+
+Prepared by {{ event_plan.prepared_by }}
+
+</div>
+
+### Changelog
+
+| Version | Date | Notes |
+| :--- | :--- | :--- |
+| 2026.0 | 2026-07-19 | 2025 plan converted to website format, with dates and officials updated for 2026 |
+| 2026.1 | 2026-10-14 | <ul>{% if amber_flag_racing %}<li>Add provision for limited racing on Low Amber Flag under strict safety controls</li>{% endif %}<li>Make contingencies for missed racing flexible, with example scenarios</li><li>Run time trials on the short course only</li><li>Standardise wording to racing finishing half an hour before sunset each day</li><li>Add this changelog</li></ul> |
+
+## Opening Remarks { .tr-new-page }
 
 The Tamesis Regatta is run from {{ daterange(dates.regatta_start, dates.regatta_end) }} (the traditional dates of Wednesday to Saturday of 7th week). Racing will be scheduled to take place from 12 pm on Wednesday to Friday, and from 11 am on Saturday, until half an hour before sunset each day. The course is from a start on the Greenbank to the finish near the Cox Stone. As with all water-based events, safety is the regatta's primary concern.
 

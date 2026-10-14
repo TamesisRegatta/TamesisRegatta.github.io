@@ -28,6 +28,14 @@ dates:
 # docs/event-plan.md and the matching exception in its Appendix 1.
 amber_flag_racing: true
 
+# The event plan's cover block (docs/event-plan.md). Bump the version and date
+# with each issued revision, and add a matching row to the changelog at the
+# top of the event plan. 2026.1 is the version submitted for safety approval.
+event_plan:
+  version: "2026.1"
+  date: 2026-10-14
+  prepared_by: Fergus Cooper and Sydney Rose
+
 contact:
   # The generic regatta mailbox — safe to publish, rendered as a normal
   # clickable mailto: link wherever it is used.

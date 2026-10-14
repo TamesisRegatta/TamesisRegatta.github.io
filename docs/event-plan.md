@@ -449,9 +449,9 @@ Amber Flag means that only senior crews are permitted to row; under these situat
 
 ### High stream conditions prior to Regatta:
 
-If the river remains high and unsuitable for novice crews (in accordance with the OURCs flag system) for long periods in the lead up to the regatta, the rowing experience and ability of the crews may be far lower than normal. Such conditions occurred in the lead up to the 2012 and 2023 regatta. In this case the first 2 days of the regatta will be replaced with a qualification time trial following the same plan as Torpids rowing on qualification. The fastest crews will then be placed into knock out rounds following the original regatta plan.
+If the river remains high and unsuitable for novice crews (in accordance with the OURCs flag system) for long periods in the lead up to the regatta, the rowing experience and ability of the crews may be far lower than normal. Such conditions occurred in the lead up to the 2012 and 2023 regatta. In this case the Event Committee may reconfigure the regatta to suit, for example by replacing the first 2 days of the regatta with a qualification time trial following the same plan as Torpids rowing on qualification, with the fastest crews then placed into knock out rounds following the original regatta plan.
 
-The Event Committee will make every endeavour to announce a decision to run the time trial at least 3 days before the regatta.
+The Event Committee will make every endeavour to announce any such change at least 3 days before the regatta.
 
 As in the event of a large entry it is already planned that a time trial element will be used in lieu of a repêchage, there should be no changes to the Event Plan or Risk Assessment necessitated by the change to a qualification time trial.
 
@@ -483,20 +483,30 @@ IF THE ISIS IS UPGRADED TO BLUE, AMBER OR RED FLAG PRIOR TO THE REGATTA OR A DAY
 
 This is a contingency plan for advanced changes to the regatta in the event of bad weather. Note: this is NOT to be used if weather turns bad during racing. The emergency contingency should then be used.
 
-**Red/Amber Flag** – Racing suspended.  
-**R/A on Day 1 –** scrap repêchage and start the regatta as normal on Day 2.  
-**R/A on Day 2 or 3** – scrap repêchage.  
-**R/A on two days out of Days 1-3** (i.e. two days’ racing) – Convert to a head race with no repêchage.  
-**R/A on three days** (i.e. one day’s racing) – only A crews in a head race.
+**Red/Amber Flag** – Racing suspended.
+
+If racing is lost on one or more days, the Event Committee will make its best efforts to reconfigure the remaining days with the goal of enabling as much safe racing as possible. Depending on how much racing is lost, this may include, for example:
+
+* scrapping the repêchage;
+* replacing some or all side-by-side racing with time trials;
+* converting to a head race;
+* racing only some crews, for example A crews only.
+
+Examples of scenarios the Event Committee might consider:
+
+* **No racing on Day 1:** scrap the repêchage and start the regatta as normal on Day 2.
+* **No racing on Day 2 or Day 3:** scrap the repêchage.
+* **No racing on two of Days 1-3** (i.e. two days' racing): convert to a head race with no repêchage.
+* **No racing on three days** (i.e. one day's racing): only A crews, in a head race.
 
 If the flag status of the Isis is dark blue the following should be implemented:
 
-Racing may still continue, but S/X coxes only and notify entrants by 4pm the day before.
+Racing may still continue, but S/X coxes only and notify entrants by 5pm the day before.
 
 {#- The one exception to amber suspending racing: switched by amber_flag_racing
     in event.yml, like "Racing on Low Amber Flag". -#}
 {% if amber_flag_racing %}
-If the flag status of the Isis is Low Amber (≤ 4.5 bucks equivalent) on Day 3 or 4, and there was racing on both Days 1 and 2, racing may continue only as set out in [Racing on Low Amber Flag](#racing-on-low-amber-flag). Notify entrants by 4pm the day before, so that crews can arrange senior rowers at bow and 2 and an eligible cox.
+If the flag status of the Isis is Low Amber (≤ 4.5 bucks equivalent) on Day 3 or 4, and there was racing on both Days 1 and 2, racing may continue only as set out in [Racing on Low Amber Flag](#racing-on-low-amber-flag). Notify entrants by 5pm the day before, so that crews can arrange senior rowers at bow and 2 and an eligible cox.
 {% endif %}
 
 The Regatta Organisers should be in consultation with the Iffley Lock Keeper and the Environment Agency.

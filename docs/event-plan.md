@@ -277,7 +277,7 @@ For time trials, crews may not do laps on the water to warm up. Crews must proce
 
 #### Boating:
 
-Boat with bow-balls pointing downstream, keeping close to the bank from which they boated down to the entrance of the Gut. 
+Boat with bow-balls pointing downstream, keeping close to the bank from which they boated down to the entrance of the Gut. The exception is crews boating from Longbridges, who should boat with bows facing upstream.
 
 Crews boating from Univ must listen to the Univ marshal and boat to cross immediately to county side at the direction of Marshals.
 
@@ -301,7 +301,7 @@ Crews returning to Boat House Island must stay on the non-towpath side and land 
 
 #### Return Circulation - crews landing at Univ, Longbridges, and the Isis Boathouse:
 
-Crews returning to Univ, Longbridges, and the Isis Boathouse must cross to the towpath side immediately downstream of the finish line, and then proceed along the towpath bank to land downstream without doing any further laps. If there is a strong stream at Longbridges, then crews landing at Longbridges may spin upstream of their raft, and drift back to land. Crews landing at the Isis Boathouse can land in any safe manner at their discretion.
+Crews returning to Univ, Longbridges, and the Isis Boathouse must stay on the towpath side downstream of the finish line, and then proceed along the towpath bank to land downstream without doing any further laps. If there is a strong stream at Longbridges, then crews landing at Longbridges may spin upstream of their raft, and drift back to land. Crews landing at the Isis Boathouse can land in any safe manner at their discretion.
 
 ### Side-By-Side
 
@@ -458,6 +458,8 @@ If the river remains high and unsuitable for novice crews (in accordance with th
 The Event Committee will make every endeavour to announce a decision to run the time trial at least 3 days before the regatta.
 
 As in the event of a large entry it is already planned that a time trial element will be used in lieu of a repêchage, there should be no changes to the Event Plan or Risk Assessment necessitated by the change to a qualification time trial.
+
+In the event of minimal training time due to high stream conditions in Michaelmas, we recommend that each novice rower has had no fewer than 5 training outings before racing. Crews that the Senior Umpires or the Event Committee deem unsafe to race may be disqualified.
 
 ### High Wind:
 

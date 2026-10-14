@@ -608,7 +608,7 @@ Sydney Rose - {{ phone('sydney_rose') }}
 
 Joe Hitchen - {{ phone('joe_hitchen') }}
 
-David Seale - {{ phone('david_seale') }}
+Scott Houghton - {{ phone('scott_houghton') }}
 
 **{{ roles.post_incident_coordinator.title }}**
 

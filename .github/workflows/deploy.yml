@@ -46,6 +46,7 @@ jobs:
           PHONE_SYDNEY_ROSE: ${{ secrets.PHONE_SYDNEY_ROSE }}
           PHONE_JOE_HITCHEN: ${{ secrets.PHONE_JOE_HITCHEN }}
           PHONE_DAVID_SEALE: ${{ secrets.PHONE_DAVID_SEALE }}
+          PHONE_SCOTT_HOUGHTON: ${{ secrets.PHONE_SCOTT_HOUGHTON }}
           EMAIL_SYDNEY_ROSE: ${{ secrets.EMAIL_SYDNEY_ROSE }}
           EMAIL_DAVID_SEALE: ${{ secrets.EMAIL_DAVID_SEALE }}
           PHONE_CHCH_LODGE: ${{ secrets.PHONE_CHCH_LODGE }}

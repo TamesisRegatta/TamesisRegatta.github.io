@@ -204,13 +204,9 @@ If the time trial format is chosen as a race for the repêchage or otherwise nee
 
 These timers act as race observers, and record the time each crew passes their position.
 
-Time trials run on the same course as the side by side races.
+Time trials always run on the short course, from the start below University College Boathouse to the finish near the Cox Stone.
 
-The Gut Marshal shall monitor which crews have passed downstream, and will send crews towards the Senior Umpire when it is clear in the correct order. To ensure there are no collisions in the Gut they may ask river traffic to tuck in at Holding Point B if necessary or require racing crews to give way and wait.
-
-An additional marshal will be stationed at Donnington Bridge, who will liaise with river users, to request any river users heading upstream to hold and await the end of the race before proceeding further upstream if their passage would impede the race.
-
-The Donnington Bridge marshal shall also instruct crews where to spin (i.e. before the ‘turn early’ post) and ensure crews move towards the start in good time, and in the correct order.  No racing crew is permitted below the ‘turn early post’ and a launch will be stationed there to ensure this occurs and provide aid to crews who fail to do so. 
+The Gut Marshal shall send crews towards the Senior Umpire when it is clear, in the correct order. They may ask river traffic to tuck in at Holding Point B if necessary, or require racing crews to give way and wait.
 
 ### Positions, Equipment, and specific duties
 
@@ -232,7 +228,7 @@ Key:
 | :---- | :---- | :---- |
 |   | **Chief Marshal** | Responsible for running marshalling briefings and assigning marshalling positions on race days and being on hand to answer any question or assist in marshalling-related matters. |
 | 📢 🚩  | **Senior Umpire (Start Marshal)** | Decides the stagger according to stream conditions on the day and gives the starting commands (“Attention\! Go\!”). They will also award a row-over to crews whose opponents are late without good reason. May disqualify any crews who start before the command is given. Conducts river check when required, or asks their assistant to do so. Location of the SU and their assistant is dependent on the racing format, and is shown on the maps in Appendix 9. |
-| 🛑⌚ | Senior Umpire’s Assistant Start Timer | **[side by side racing]** Responsible for listening to all radio traffic, alerts Senior Umpire about urgent or important situations. Conducts river checks on the Senior Umpire’s request.  **[time trials]** Notes the time each crew crosses the start line, just upstream of Longbridges boathouse. |
+| 🛑⌚ | Senior Umpire’s Assistant Start Timer | **[side by side racing]** Responsible for listening to all radio traffic, alerts Senior Umpire about urgent or important situations. Conducts river checks on the Senior Umpire’s request.  **[time trials]** Notes the time each crew crosses the start line, below University College Boathouse. |
 | 🛑✅📢 | (1) Head | Located at the Head of the river. Liaises with other river users, asking them to move to Holding Point A and await the end the race in progress. Instructs crews who have finished to spin and return to the boathouses (via transit lane). Will note coxing protest and relay to the race desk. |
 | 🛑✅📢 ⌚ | (2) Finish Marshal | Determines who has won the race and sounds the finishing clacker when the bow of the winning boat passes the finishing line. Also ensures that crews are well clear of the finishing line before spinning. Will note coxing protests and relay results to race desk. This position will preferably be filled by a member of the race committee to ensure consistency. |
 | ⌚ | (2A) Finish Timer | *Used in Time Trials only.* Provides backup finish timing along with the finish marshal.  |
@@ -242,7 +238,7 @@ Key:
 | 🛑✅ | **(6) Tower** | Stationed on the roof of one of the boathouses. This marshal is to monitor racing for safety and fairness and shall liaise with the race committee regarding any appeals. This position will preferably be filled by a member of the race committee to ensure consistency. |
 | 🛑✅📢 | (7) Univ | See Raft Marshals (above) Stationed at University College Boathouse. This position will preferably be filled by a member of the race committee to ensure consistency. **[side by side racing]** Coordinates with Tower Marshal to hold crews that want to boat from Univ and sends them up in transit once the current race has gone past, but with sufficient distance (in case the boat racing on County station catches a crab or runs into other boat-stopping trouble). |
 | 🛑✅ | (8) Greenbanks | *Used in side by side racing only.* Stationed below the start on the County side of the river. Assisting crews to pair up before the start, ensuring crews are on the correct side (city/county). Advising crews in transit for landing at Univ, holding them back if race is in progress. |
-| 🛑✅📢 | (9) Longbridges | See Raft Marshals (above).  Stationed at Longbridges Boathouse During time trials, liaises with river traffic to show them Holding Point B, and advise when they can proceed upstream and advises crews on pairing with their race competitor.  During side by side racing, advises crews in transit for landing at University College boathouse. This position will preferably be filled by a member of the race committee to ensure consistency. |
+| 🛑✅📢 | (9) Longbridges | See Raft Marshals (above).  Stationed at Longbridges Boathouse During time trials, liaises with river traffic to show them Holding Point B, and advises when they can proceed upstream.  During side by side racing, advises crews in transit for landing at University College boathouse. This position will preferably be filled by a member of the race committee to ensure consistency. |
 | 🛑✅📢  | **(10) Gut** | **[side by side racing]** Stationed at Top Gut, just below Longbridges. They are responsible for liaising with other river users, asking them to hold at Holding Point B and await the end of the race in progress.  **[time trials]** To send crews towards the start when it is clear, in the correct order. Ask river traffic to tuck in at Holding Point B if necessary.  They are responsible for liaising with other river users, asking them to hold and await the end of the race in progress. Instructs crews where to spin. Ensures that crews are moving to the start in good time and are at the correct stations to ensure that no collisions occur. Responsible for holding any crews coming upstream through the gut until it is safe to cross into race circulation above the gut. |
 | 🛑✅📢 | (11) Donnington Bridge | Only in use when using an intermediate course; responsible for ensuring crews do not go below Donnington Bridge (unless landing at the Isis Boathouse). |
 | 🛑 | Launch Driver (Medical Response) | Launch drivers must hold RYA Powerboat L2 or equivalent qualification. Dedicated launch with a member of the medical team. Transports medics to emergency sites. |
@@ -277,7 +273,7 @@ For time trials, crews may not do laps on the water to warm up. Crews must proce
 
 #### Boating:
 
-Boat with bow-balls pointing downstream, keeping close to the bank from which they boated down to the entrance of the Gut. The exception is crews boating from Longbridges, who should boat with bows facing upstream.
+Boat with bow-balls pointing downstream, keeping close to the bank from which they boated, down to the spinning area upstream of Longbridges. The exception is crews boating from Longbridges, who should boat with bows facing upstream.
 
 Crews boating from Univ must listen to the Univ marshal and boat to cross immediately to county side at the direction of Marshals.
 
@@ -419,7 +415,7 @@ Should Race Desk and/or the Senior Umpire decide that racing must stop, the foll
 i. Crews who boat from Longbridges will be directed to spin on the Green Bank, and may land in either direction.
 
 **OR**  
-5. **[in time trials:]** Once all the boats below the Gut are pointing upstream and the Incident Controller decides the top stretch is sufficiently clear, the Gut and Start Marshals will instruct any crews waiting in the Gut to proceed up the course, as safely as possible, and land upstream at their boathouses.
+5. **[in time trials:]** Once all the boats in the Marshalling Zone are pointing upstream and the Incident Controller decides the top stretch is sufficiently clear, the Senior Umpire and marshals will instruct any crews waiting in the Marshalling Zone to proceed up the course, as safely as possible, and land upstream at their boathouses.
 
 The whole process should take under 20 minutes.The operation being directed by the incident controller will keep crews safe and avoid collisions.   All marshals are to be briefed on this procedure in full prior to taking up their duties.
 

@@ -80,7 +80,7 @@ All **competitors (including coxswains) must have passed an OURCs swim test** be
 
 **Coxswains** 
 
-It is **compulsory for all coxswains to attend the Coxes’ Regatta safety briefing** which will be held in conjunction with OURCs. This year it will be held on {{ dates.coxing_briefing | ukdate }}. In cases of illness or academic clashes, exemptions may be given by the Regatta Captain of Coxes in consultation with OURCs. Exemptions have to be requested via email no later than 11am on the day the briefing will take place. However, exemptions, if at all, can only be given to coxes who are X or S status. Coxes who have been exempted from attending the briefing are required to review the relevant information, especially the circulation pattern, which will be made available on the regatta web page and circulated to all boat clubs via email. **ALL coxswains are required to wear life jackets.**
+It is **compulsory for all coxswains to attend the Coxes’ Regatta safety briefing** which will be held in conjunction with OURCs. The date is to be confirmed, but it is planned to be the Wednesday of Week 6 of Michaelmas Term ({{ dates.coxing_briefing | ukdate }}). In cases of illness or academic clashes, exemptions may be given by the Regatta Captain of Coxes in consultation with OURCs. Exemptions have to be requested via email no later than 11am on the day the briefing will take place. However, exemptions, if at all, can only be given to coxes who are X or S status. Coxes who have been exempted from attending the briefing are required to review the relevant information, especially the circulation pattern, which will be made available on the regatta web page and circulated to all boat clubs via email. **ALL coxswains are required to wear life jackets.**
 
 **Medical cover** 
 
@@ -424,7 +424,7 @@ The whole process should take under 20 minutes. The operation being directed by 
 
 ### High stream conditions:
 
-In the event that the river is running faster or higher than might normally allow for a full program of racing, the race organisers liaise with the Coordinating SU, the event Safety Advisors, Iffley lock keeper and the EA to decide how to proceed.  The EA Waterways Duty Officer can be contacted for advice regarding river conditions via {{ phone('ea_duty_officer') }} Monday to Friday 8am to 6pm or {{ phone('ea_incident_line') }} 24 hours. Should the river be at a level unsuitable for novice coxes (as registered with OURCs), they will not be permitted to race. This decision will be made in liaison with OURCs. Should the river be higher than this, a decision will be taken as to whether the Regatta will continue. The Novice Regattas in 2000, 2002, 2006, 2009, 2012 and 2019, 2023 and 2024 were all cancelled under such circumstances.
+In the event that the river is running faster or higher than might normally allow for a full program of racing, the race organisers liaise with the Coordinating SU, the event Safety Advisors, Iffley lock keeper and the EA to decide how to proceed.  The EA Waterways Duty Officer can be contacted for advice regarding river conditions via {{ phone('ea_duty_officer') }} Monday to Friday 8am to 6pm or {{ phone('ea_incident_line') }} 24 hours. Should the river be at a level considered to be unsuitable for novice coxes, they will not be permitted to race. This decision will be made in liaison with OURCs. Should the river be higher than this, a decision will be taken as to whether the Regatta will continue. The Novice Regattas in 2000, 2002, 2006, 2009, 2012 and 2019, 2023 and 2024 were all cancelled under such circumstances.
 
 Rowing in high stream shall be in accordance with the OURCs flag system (OURCs rule 2.9.g, “Rules specific to the Isis: The Isis flag”, available at [https://ourcs.co.uk/organisation/conduct/](https://ourcs.co.uk/organisation/conduct/)). If the flag is raised to dark blue then the regatta might proceed with an altered course; the organising committee reserves the right to change the start line location for any reason, including but not limited to river conditions.
 
@@ -633,10 +633,10 @@ Epione Medical Services - {{ phone('epione_medical') }}
 
 ## Appendix 5 – Emergency Action Plan
 
-[Please see additional documents] 
+Sent with this document. 
 
 ## Appendix 6 – Risk Assessment
 
-[Please see additional documents] 
+Sent with this document. 
 
 

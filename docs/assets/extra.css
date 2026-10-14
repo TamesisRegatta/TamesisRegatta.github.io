@@ -235,6 +235,11 @@ a.tr-rule-anchor:hover {
     display: none;
   }
 
+  /* Nor the "Linking to a rule/risk" tips, which are about those permalinks. */
+  .md-typeset .admonition.tip {
+    display: none;
+  }
+
   /* Force every collapsible admonition (e.g. "Controls") open, so a PDF
      always contains the full content rather than just the collapsed
      summary line. Overrides the browser's default closed-<details> styling

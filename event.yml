@@ -36,6 +36,13 @@ event_plan:
   date: 2026-10-14
   prepared_by: Fergus Cooper and Sydney Rose
 
+# The risk assessment's cover block (docs/risk-assessment.md), versioned
+# alongside the event plan: bump both together, with a changelog row.
+risk_assessment:
+  version: "2026.1"
+  date: 2026-10-14
+  prepared_by: Fergus Cooper and Sydney Rose
+
 contact:
   # The generic regatta mailbox — safe to publish, rendered as a normal
   # clickable mailto: link wherever it is used.

@@ -1,6 +1,23 @@
-# Risk Assessment
+# Tamesis Regatta {{ dates.year }}: Risk Assessment
 
-Tamesis Regatta {{ dates.year }} · Linacre Boat Club
+<div class="tr-cover" markdown="1">
+
+**Linacre Boat Club**
+
+**Version {{ risk_assessment.version }}**, {{ risk_assessment.date | ukdate }}
+
+Prepared by {{ risk_assessment.prepared_by }}
+
+Prior to the event, this risk assessment and the associated [Event Plan](event-plan.md) will be circulated to all involved boat club committees.
+
+</div>
+
+### Changelog
+
+| Version | Date | Notes |
+| :--- | :--- | :--- |
+| 2026.0 | 2026-07-19 | Converted from the 2025 risk assessment |
+| 2026.1 | 2026-10-14 | <ul>{% if amber_flag_racing %}<li>Add a risk for limited racing on Low Amber Flag, with its safety controls</li>{% endif %}<li>Add a risk for lack of training time before the regatta</li><li>Re-rate unrowable conditions after controls, and add rower status restrictions</li><li>Merge the two risks for ice on the water</li><li>Add this cover block and changelog</li></ul> |
 
 !!! tip "Linking to a risk"
     Every risk has a permanent anchor on its Hazard row — hover over it and
@@ -18,7 +35,7 @@ it.
     have been applied, and not the risk before any mitigation. Its severity and
     probability already reflect the effect of those controls.
 
-## Risks: water-based
+## Risks: water-based { .tr-new-page }
 
 Hazard
 :   Capsize or submerge — boats on the water for racing, or on rafts waiting
@@ -306,13 +323,55 @@ Responsible
 :   SU and Event committee
 
 Residual risk
-:   {{ risk(severity=3, probability='D') }}
+:   {{ risk(severity=3, probability='C') }}
 
 ??? success "Controls"
     - Senior Umpire to assess weather and conditions in consultation with
       the Event Committee to decide if racing is safe to occur.
-    - Implement coxing status restrictions at the discretion of the Event
-      Committee.
+    - Racing will not take place if the risk is judged unacceptable.
+    - Implement rower status restrictions and/or coxing status restrictions
+      at the discretion of the Event Committee.
+
+{% if amber_flag_racing %}
+---
+
+Hazard
+:   Racing in higher stream — racing on Low Amber Flag (≤ 4.5 bucks
+    equivalent)
+    { #racing-on-low-amber-flag }
+
+Consequences
+:   Crews unable to control their boat, Collision, Capsize, Crews carried
+    downstream towards the Gut and weir streams
+
+Persons at risk
+:   Competitors & river users
+
+Responsible
+:   SU and Event committee, Launch drivers, Coxswains, Boat club committees
+
+Residual risk
+:   {{ risk(severity=4, probability='B') }}
+
+??? success "Controls"
+    - Racing on Low Amber Flag only as set out in the
+      [Event Plan](event-plan.md#racing-on-low-amber-flag): on Days 3 and 4
+      only, and only if there was racing on both Days 1 and 2, so that the
+      least proficient crews have already been eliminated.
+    - Short course only, at the discretion of the Senior Umpires and the
+      Event Committee, and only if no other condition (such as wind or
+      visibility) adds to the safety concerns. Never guaranteed.
+    - At least two launches on the water at all times, downstream of all
+      marshalling crews, to assist any crew that needs help.
+    - Every crew must have senior rowers (≥ 3 full terms of rowing
+      experience) at bow and 2.
+    - Coxes must be S status, or X status upgraded more than 12 months
+      before the day of racing.
+    - Crews must spin under the direction of race officials, well above the
+      Longbridges raft.
+    - Entrants notified by 5pm the day before, so crews can arrange senior
+      bow pairs and eligible coxes.
+{% endif %}
 
 ---
 
@@ -421,12 +480,15 @@ Responsible
 :   Event committee, SU
 
 Residual risk
-:   {{ risk(severity=1, probability='B') }}
+:   {{ risk(severity=3, probability='B') }}
 
 ??? success "Controls"
-    - SU and event committee to monitor conditions.
-    - Launches to clear very small quantities of ice.
-    - Racing cancelled if the ice cannot be cleared.
+    - SU, event committee, race officials and marshals to monitor weather
+      conditions.
+    - Safety launches to clear small quantities of ice from the racing
+      course.
+    - Racing cancelled if launches cannot sufficiently clear the course of
+      ice.
 
 ---
 
@@ -478,6 +540,35 @@ Residual risk
       sunset.
     - If visibility is reduced to less than 100m on any part of the racing
       course, racing is suspended or cancelled.
+
+---
+
+Hazard
+:   Novice crews unable to race safely — high stream or bad weather leading
+    to a lack of training time before the regatta
+    { #lack-of-training-time }
+
+Consequences
+:   Equipment damage, Rowers injured, Collision
+
+Persons at risk
+:   Competitors & river users
+
+Responsible
+:   SU and Event committee
+
+Residual risk
+:   {{ risk(severity=3, probability='C') }}
+
+??? success "Controls"
+    - Senior Umpire to assess the recent history of weather and conditions
+      that allowed training, in consultation with the Event Committee, to
+      decide if racing is safe to occur.
+    - Each novice rower is recommended to have had no fewer than 5 training
+      outings before racing; crews that the Senior Umpires or the Event
+      Committee deem unsafe to race may be disqualified.
+    - Implement rower status restrictions and/or coxing status restrictions
+      at the discretion of the Event Committee.
 
 ---
 
@@ -589,9 +680,3 @@ the badges above are calculated from.
     - **Substantial** — {{ risk_matrix.definitions.substantial }}
     - **Intolerable** — {{ risk_matrix.definitions.intolerable }}
 
-
-## Changelog
-
-| Version number | Date | Notes |
-| :--- | :--- | :--- |
-| 2026.0 | 2026-07-19 | Converted from the 2025 risk assessment |

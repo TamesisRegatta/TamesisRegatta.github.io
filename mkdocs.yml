@@ -74,6 +74,8 @@ hooks:
   # Replaces the course map page's PDF with one page per map, each sized to
   # its map, after mkdocs-exporter has run.
   - hooks/map_pdf.py
+  # Stops mkdocs-exporter turning mailto: links into broken site URLs in PDFs.
+  - hooks/pdf_links.py
 
 plugins:
   - search

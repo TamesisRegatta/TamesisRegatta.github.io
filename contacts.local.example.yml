@@ -1,0 +1,29 @@
+# Contact details for LOCAL builds only.
+#
+# Copy this file to contacts.local.yml (git-ignored, never committed) and
+# fill in the values you want to see. main.py reads it when it exists;
+# anything left blank renders as "[withheld]", as before. The live site never
+# sees this file: CI takes its values from GitHub Actions secrets instead.
+#
+# Quote every value: phone numbers start with 0, which YAML would otherwise
+# treat as an octal number.
+
+phone:
+  fergus_cooper: ""
+  sydney_rose: ""
+  joe_hitchen: ""
+  scott_houghton: ""
+  david_seale: ""
+  chch_lodge: ""
+  riverside_centre: ""
+  city_of_oxford_rc: ""
+  ea_duty_officer: ""
+  ea_incident_line: ""
+  iffley_lock: ""
+  university_security: ""
+  press_office: ""
+  epione_medical: ""
+
+email:
+  sydney_rose: ""
+  david_seale: ""

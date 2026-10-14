@@ -11,3 +11,9 @@ __pycache__/
 # repository; scripts/strip_map.py extracts what the site needs from it.
 /IsisMap.svg
 *:Zone.Identifier
+
+# Real contact details for local builds (see contacts.local.example.yml).
+# Must never be committed.
+/contacts.local.yml
+# Locally built event plan PDF, which contains those real contact details.
+/Tamesis2026_EventPlan.pdf

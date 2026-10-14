@@ -6,8 +6,11 @@ CI) and rendered lightly obfuscated: the value is reversed and base64-encoded
 into a data attribute, and docs/assets/contacts.js decodes it in the browser.
 This keeps plain phone numbers and email addresses out of the page source,
 which defeats naive scrapers, while remaining readable to any visitor.
-When a variable is unset (e.g. local builds), a "[withheld]" placeholder is
-rendered instead.
+For local builds, the same values can instead come from contacts.local.yml
+at the repository root (git-ignored; see contacts.local.example.yml).
+Environment variables take precedence over it. CI never has that file, so it
+cannot put numbers on the live site. When a value is in neither place, a
+"[withheld]" placeholder is rendered instead.
 
 The generic mailbox (regatta@linacre.ox.ac.uk) is intentionally NOT
 obfuscated — it lives in event.yml and is rendered as a normal mailto: link.
@@ -16,6 +19,25 @@ obfuscated — it lives in event.yml and is rendered as a normal mailto: link.
 import base64
 import os
 from datetime import date
+from pathlib import Path
+
+import yaml
+
+# Local contact details for building with real numbers on your own machine.
+# Git-ignored, never committed; see contacts.local.example.yml.
+_LOCAL_CONTACTS = Path(__file__).parent / "contacts.local.yml"
+
+
+def _load_local_contacts() -> dict:
+    if not _LOCAL_CONTACTS.exists():
+        return {}
+    data = yaml.safe_load(_LOCAL_CONTACTS.read_text(encoding="utf-8")) or {}
+    # Keys as in the macros: phone: {fergus_cooper: ...}, email: {...}
+    return {kind: {k: str(v) for k, v in (data.get(kind) or {}).items() if v}
+            for kind in ("phone", "email")}
+
+
+_local_contacts = _load_local_contacts()
 
 
 def _obfuscate(value: str) -> str:
@@ -25,6 +47,8 @@ def _obfuscate(value: str) -> str:
 
 def _contact(prefix: str, key: str, placeholder: str) -> str:
     value = os.environ.get(f"{prefix}_{key.upper()}", "").strip()
+    if not value:
+        value = _local_contacts.get(prefix.lower(), {}).get(key, "").strip()
     if not value:
         return f'<em class="tr-withheld">[{placeholder} withheld]</em>'
     return _obfuscate(value)

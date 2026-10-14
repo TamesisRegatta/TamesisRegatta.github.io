@@ -101,8 +101,13 @@ the HTML and decoded by JavaScript in the browser — so the plain numbers do
 not appear in the page source for scrapers to harvest. Anyone can still read
 and dial them normally.
 
-If a secret is unset (including all local builds), the page shows
-`[number withheld]` / `[email withheld]` instead.
+If a secret is unset, the page shows `[number withheld]` / `[email withheld]` instead.
+
+To build locally with real contact details, copy `contacts.local.example.yml` to `contacts.local.yml` and fill in the values.
+That file is git-ignored and must never be committed.
+`main.py` reads it when it exists; environment variables take precedence over it, and anything in neither place is still withheld.
+CI never has the file, so it cannot put numbers on the live site.
+Restart `mkdocs serve` after editing it, as it is only read at startup.
 
 The generic mailbox in `event.yml` (`contact.email`) is public by design and
 rendered as a normal clickable link.

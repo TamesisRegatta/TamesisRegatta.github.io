@@ -17,7 +17,7 @@ Prior to the event, this risk assessment and the associated [Event Plan](event-p
 | Version | Date | Notes |
 | :--- | :--- | :--- |
 | 2026.0 | 2026-07-19 | Converted from the 2025 risk assessment |
-| 2026.1 | 2026-10-14 | <ul>{% if amber_flag_racing %}<li>Add a risk for limited racing on Low Amber Flag, with its safety controls</li>{% endif %}<li>Add a risk for lack of training time before the regatta</li><li>Re-rate unrowable conditions after controls, and add rower status restrictions</li><li>Merge the two risks for ice on the water</li><li>Add this cover block and changelog</li></ul> |
+| 2026.1 | 2026-10-14 | <ul>{% if amber_flag_racing %}<li>Add a risk for limited racing on Low Amber Flag, with its safety controls</li>{% endif %}<li>Add a risk for lack of training time before the regatta</li><li>Re-rate unrowable conditions after controls, and add rower status restrictions</li><li>Merge the two risks for ice on the water</li><li>Add risks for loss of safety cover, crews carried towards the Gut or weir streams, and slips on rafts</li><li>Re-rate capsize, launch incidents, lightning and pre-existing health conditions at their credible worst-case severity</li><li>Add this cover block and changelog</li></ul> |
 
 !!! tip "Linking to a risk"
     Every risk has a permanent anchor on its Hazard row: hover over it and
@@ -50,7 +50,7 @@ Responsible
 :   Crews, Coxswains, Boat club committees, Marshals, Event committee
 
 Residual risk
-:   {{ risk(severity=2, probability='B') }}
+:   {{ risk(severity=4, probability='B') }}
 
 ??? success "Controls"
     - Rescue with launch. Administer first aid. Warm casualty up slowly.
@@ -92,6 +92,9 @@ Residual risk
       impeding the racing line.
     - Marshals to carry out boat checks prior to boating (heel restraints,
       bow ball, hatch covers if applicable).
+    - Crews boating from or landing at Univ cross the racing lanes only
+      between races, under the direction of the Univ marshal and the Senior
+      Umpire.
     - Coxes to attend a briefing prior to the event. All novice coxes must
       have a bank rider.
     - Circulation pattern sent to all crews in advance; competitors and bank
@@ -229,7 +232,7 @@ Responsible
 :   Crews, Coxswains, Boat club committees
 
 Residual risk
-:   {{ risk(severity=3, probability='B') }}
+:   {{ risk(severity=4, probability='B') }}
 
 ??? success "Controls"
     - Crew members are responsible for carrying their own medication if
@@ -253,7 +256,7 @@ Responsible
 :   Launch drivers, Event committee
 
 Residual risk
-:   {{ risk(severity=2, probability='B') }}
+:   {{ risk(severity=4, probability='B') }}
 
 ??? success "Controls"
     - All launch drivers must have an RYA Powerboat Level 2 qualification
@@ -300,6 +303,67 @@ Residual risk
       water, a klaxon will be sounded and crews will hold it up immediately
       to allow a launch to access them. Administer first aid and warm the
       athlete thoroughly as normal procedure dictates.
+
+---
+
+Hazard
+:   Loss of safety cover: launch breakdown, or radio or klaxon failure,
+    during racing
+    { #loss-of-safety-cover }
+
+Consequences
+:   Delayed response to an incident, Racing not stopped in time
+
+Persons at risk
+:   Competitors, Marshals & river users
+
+Responsible
+:   Event committee, SU, Chief Marshal, Launch drivers
+
+Residual risk
+:   {{ risk(severity=4, probability='A') }}
+
+??? success "Controls"
+    - Three launches are available for the event, so a launch that breaks
+      down can be replaced. Racing is suspended while the dedicated medical
+      launch is unavailable.
+    - Radio checks and klaxon tests are carried out at the marshals'
+      briefing before racing.
+    - If a klaxon fails, the marshal says "KLAXON! KLAXON! KLAXON!" on the
+      radio, and all other marshals sound theirs.
+    - Marshals carry their own mobile phones, with emergency contact
+      numbers on their clipboards.
+    - Racing must stop if the posts of marshals participating in river
+      checks become vacant.
+
+---
+
+Hazard
+:   Crews carried towards the Gut or weir streams: boats on the water
+    below the start, near Longbridges
+    { #gut-and-weir-streams }
+
+Consequences
+:   Loss of control, Collision, Capsize, Entrapment
+
+Persons at risk
+:   Competitors & river users
+
+Responsible
+:   SU and Event committee, Marshals, Coxswains
+
+Residual risk
+:   {{ risk(severity=4, probability='B') }}
+
+??? success "Controls"
+    - Crews spin under marshal instruction, well clear of the Gut and weir
+      streams, and must not go through the Gut except when boating from or
+      landing at the Isis Boathouse.
+    - The Gut marshal controls crews and river traffic at the Gut, holding
+      them until it is safe to proceed.
+    - Rowing in high stream follows the OURCs flag system, and racing is
+      suspended when conditions are unsuitable.
+    - Launches on the water to assist any crew that needs help.
 
 ---
 
@@ -388,7 +452,7 @@ Responsible
 :   Coxswains, Boat club committees, Marshals, Event committee, SU
 
 Residual risk
-:   {{ risk(severity=3, probability='B') }}
+:   {{ risk(severity=5, probability='A') }}
 
 ??? success "Controls"
     - All crews to leave the water and seek appropriate shelter immediately;
@@ -617,8 +681,9 @@ Residual risk
       advised to wear a helmet whilst cycling.
     - One bank rider is permitted per crew, unless training novice coxes, in
       which case approval must be obtained from the event committee.
-    - Expected spectator numbers are low and only two crews race at once, so
-      the chance of collision with spectators is low.
+    - Expected spectator numbers are low, and few crews are on the course at
+      once (two at a time in side-by-side racing), so the chance of
+      collision with spectators is low.
     - Marshals to fire klaxon in the event anyone is in the water, and
       launches to assist with first aid administered.
 
@@ -645,6 +710,34 @@ Residual risk
     - SU and event committee to assess conditions.
     - If deemed not bikeable, the event may be cancelled or restricted to
       only X/S coxes, so bank riders are no longer required.
+
+---
+
+Hazard
+:   Slips and falls on rafts and landing stages, which may be wet or icy
+    { #slips-on-rafts }
+
+Consequences
+:   Injury, Falling into the river, Cold water immersion
+
+Persons at risk
+:   Competitors, Coxswains, Raft marshals
+
+Responsible
+:   Crews, Coxswains, Raft marshals, Boat club committees
+
+Residual risk
+:   {{ risk(severity=3, probability='B') }}
+
+??? success "Controls"
+    - Crews and marshals to take care on rafts, especially when wet or
+      icy; raft marshals keep rafts clear while crews boat and land.
+    - SU and event committee to assess icy conditions, as for ice on the
+      water and towpath.
+    - Marshals to fire klaxon in the event anyone is in the water, and
+      launches to assist with first aid administered.
+    - All competitors must have passed an OURC-approved swim test to
+      qualify for racing.
 
 ---
 

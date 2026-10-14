@@ -3,7 +3,7 @@
 Tamesis Regatta {{ dates.year }} · Linacre Boat Club
 ## Opening Remarks
 
-The Tamesis Regatta is run from {{ daterange(dates.regatta_start, dates.regatta_end) }} (the traditional dates of Wednesday to Saturday of 7th week). Racing will be scheduled to take place from 12 pm to half an hour before sunset on Wednesday to Friday, and 11 am to dusk on Saturday. The course is from a start on the Greenbank to the finish near the Cox Stone. As with all water-based events, safety is the regatta's primary concern.
+The Tamesis Regatta is run from {{ daterange(dates.regatta_start, dates.regatta_end) }} (the traditional dates of Wednesday to Saturday of 7th week). Racing will be scheduled to take place from 12 pm on Wednesday to Friday, and from 11 am on Saturday, until half an hour before sunset each day. The course is from a start on the Greenbank to the finish near the Cox Stone. As with all water-based events, safety is the regatta's primary concern.
 
 Conducting a safe Novice Regatta presents far fewer problems than an event such as Summer Eights or Torpids. There are fewer crews racing at any one time, the style of racing is different (i.e. side-by-side racing instead of “bumps” racing) and the course is much shorter. This document provides a comprehensive safety plan for the event, concerning the participants and organisers.
 
@@ -97,7 +97,7 @@ Marshalls will be drawn from experienced rowers and coxes; Linacre Boat Club wil
 
 All marshals will attend a pre-regatta marshalling briefing, which will be held before the regatta. This year the marshal briefing will be held at Linacre College on {{ dates.marshal_briefing | ukdate }}. This pre-regatta briefing will cover the marshalling duties in detail.
 
-On the race day itself, a second briefing of key points will be held at Racedesk to refresh the marshals on the key aspects of their role, and will include a mock river check, radio checks, and before racing starts - klaxon testing. 
+On the race day itself, a second briefing of key points will be held at Race Desk to refresh the marshals on the key aspects of their role, and will include a mock river check, radio checks, and before racing starts - klaxon testing. 
 
 The klaxon test serves two purposes:
 
@@ -117,7 +117,7 @@ The contact details of the Chief Marshal will be provided to all marshals during
 
 Marshalling will be split into 2 shifts on each race day, and the first shift of marshals will remain at their posts until relieved by the second shift marshal.
 
-The Chief Marshal shall assign more experienced marshals to cover the most critical positions, such as the Head and Univ. The positions highlighted in bold in the list of marshals should be filled by members of the event committee.
+The Chief Marshal shall assign more experienced marshals to cover the most critical positions, such as the Head and Univ. The positions highlighted in bold in the list of marshals should be filled by marshals deemed by the event committee to have sufficient experience.
 
 ### Equipment
 
@@ -213,7 +213,7 @@ Key:
 | Equipment | Position | Specific Duties |
 | :---- | :---- | :---- |
 |  | **Chief Marshal** | Responsible for running marshalling briefings and assigning marshalling positions on race days and being on hand to answer any question or assist in marshalling-related matters. |
-| :material-bullhorn::material-flag:{ .tr-icon-red } | **Senior Umpire (Start Marshal)** | Decides the stagger according to stream conditions on the day and gives the starting commands (“Attention\! Go\!”). They will also award a row-over to crews whose opponents are late without good reason. May disqualify any crews who start before the command is given. Conducts river check when required, or asks their assistant to do so. Location of the SU and their assistant is dependent on the racing format, and is shown on the maps in Appendix 9. |
+| :material-bullhorn::material-flag:{ .tr-icon-red } | **Senior Umpire (Start Marshal)** | Decides the stagger according to stream conditions on the day and gives the starting commands (“Attention\! Go\!”). They will also award a row-over to crews whose opponents are late without good reason. May disqualify any crews who start before the command is given. Conducts river check when required, or asks their assistant to do so. Location of the SU and their assistant is dependent on the racing format, and is shown on the maps in Appendix 3. |
 | :material-alarm-light:{ .tr-icon-red }:material-timer-outline: | Senior Umpire’s Assistant Start Timer | **[side by side racing]** Responsible for listening to all radio traffic, alerts Senior Umpire about urgent or important situations. Conducts river checks on the Senior Umpire’s request.  **[time trials]** Notes the time each crew crosses the start line, below University College Boathouse. |
 | :material-alarm-light:{ .tr-icon-red }:material-check-circle:{ .tr-icon-green }:material-bullhorn: | (1) Head | Located at the Head of the river. Liaises with other river users, asking them to move to Holding Point A and await the end the race in progress. Instructs crews who have finished to spin and return to the boathouses (via transit lane). Will note coxing protest and relay to the race desk. |
 | :material-alarm-light:{ .tr-icon-red }:material-check-circle:{ .tr-icon-green }:material-bullhorn::material-timer-outline: | (2) Finish Marshal | Determines who has won the race and sounds the finishing clacker when the bow of the winning boat passes the finishing line. Also ensures that crews are well clear of the finishing line before spinning. Will note coxing protests and relay results to race desk. This position will preferably be filled by a member of the race committee to ensure consistency. |
@@ -232,7 +232,7 @@ Key:
 
 **Lights**
 
-All crews must have switched-on white lights at the front and rear of their boats visible through 360 degrees at all times applicable, to ensure that they will be seen if the weather suddenly changes and visibility is impaired. Failure to use lights will result in disqualification. Racing will finish by 15.45 to ensure that all crews leave the water before sunset. In case of a delay in racing, some races might be postponed until the next day.
+All crews must have switched-on white lights at the front and rear of their boats visible through 360 degrees at all times applicable, to ensure that they will be seen if the weather suddenly changes and visibility is impaired. Failure to use lights will result in disqualification. Racing will finish half an hour before sunset, to ensure that all crews leave the water before sunset. In case of a delay in racing, some races might be postponed until the next day.
 
 **Scheduling**
 
@@ -242,7 +242,7 @@ Racing will take place approximately every three to four minutes, and crews are 
 
 The issue of circulation will be heavily emphasised at both the coxswains briefing and the marshal briefing, in order to ensure that the circulation patterns are obeyed. Similar circulation patterns have worked in previous years, and we see no reason to doubt that they would continue to work safely. 
 
-The circulation patterns both for side-by-side racing and time trials are included in the appendices to this document. Due to the use of the intermediate course, there is no crossing of the racing lanes at all. Coxswains shall be instructed to follow marshals’ commands.
+The circulation patterns both for side-by-side racing and time trials are included in the appendices to this document. The transit lane stays on the City side of the river along the whole course, so it does not cross the racing lanes. Coxswains shall be instructed to follow marshals’ commands.
 
 Crews have a general responsibility, whilst sticking to circulation, to avoid other river traffic (which should in theory follow the circulation pattern under instruction from marshals) and to avoid wildlife, especially swans.
 
@@ -532,7 +532,7 @@ It is imperative that all relevant people are contacted as soon as possible, and
 
 The University Security Services will then offer advice on the best course of action, contact the ‘Press Office’ where required, inform College Bursars where required and contact key members of the Sports Department staff.
 
-If not present at the event, the Rowing Sabbatical should be informed of the incident. The Rowing Sabbatical will in the event be present for a considerable amount of the regatta, in their capacity as Water Safety Advisor and Covid Advisor.
+If not present at the event, the Rowing Sabbatical should be informed of the incident. The Rowing Sabbatical will in the event be present for a considerable amount of the regatta, in their capacity as Water Safety Advisor.
 
 As soon as is sensibly possible the Event Secretary should complete a BR incident form, and an accident form and near miss report form.  These should be submitted to the Rowing Sabbatical Officer and Sports Safety Officer. These forms will then be forwarded to the University Safety Office.
 

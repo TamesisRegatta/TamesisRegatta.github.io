@@ -580,13 +580,15 @@ The details of any incident or accident are not to be discussed with any person 
 
 **Appendix 3 – Circulation Patterns and Marshal Placements**
 
- ![Circulation map 1](assets/img/circulation-1.png)
+<!-- Stopgap: these three maps are vector copies of the circulation PDFs,
+     converted with mutool (text as outlines). Replace them with the course
+     map's print images (assets/map/print/, from scripts/strip_map.py) once
+     the intermediate and time trial courses are on the interactive map. -->
+![Time trial circulation and placement of marshals](assets/img/circulation-time-trial.svg)
 
-![Circulation map 2](assets/img/circulation-2.png)
+![Intermediate course circulation and placement of marshals](assets/img/circulation-intermediate.svg)
 
-![Circulation map 3](assets/img/circulation-3.png)
-
-[Please see additional documents for higher resolution PDF]
+![Short course circulation and placement of marshals](assets/img/circulation-short.svg)
 
  
 

@@ -3,9 +3,16 @@
 // coloured squares (one per risk, linking to it), derived entirely from
 // what's already rendered. No markdown changes are needed to keep this in
 // sync: add a risk, and its square appears automatically.
-document.addEventListener("DOMContentLoaded", function () {
+//
+// Runs as soon as this script loads, not on DOMContentLoaded: the PDF export
+// (Paged.js) copies the page into its layout when parsing finishes, before
+// DOMContentLoaded listeners run (as in contacts.js). Material loads this at
+// the end of the page, so the risks are already in the DOM; DOMContentLoaded
+// is a fallback, and the strips are only ever added once.
+(function () {
+  function build() {
   var container = document.querySelector(".md-content__inner");
-  if (!container) return;
+  if (!container || container.querySelector(".risk-summary")) return;
 
   container.querySelectorAll(":scope > h2[id]").forEach(function (heading) {
     var squares = [];
@@ -47,4 +54,8 @@ document.addEventListener("DOMContentLoaded", function () {
 
     heading.insertAdjacentElement("afterend", summary);
   });
-});
+  }
+
+  build();
+  document.addEventListener("DOMContentLoaded", build);
+})();

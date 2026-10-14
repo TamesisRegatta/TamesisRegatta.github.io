@@ -235,6 +235,15 @@ a.tr-rule-anchor:hover {
     display: none;
   }
 
+  /* Horizontal rules (--- in markdown) separate the risks in the risk
+     assessment, the only page that uses them: in PDFs each one is a page
+     break instead, so every risk starts on a new page. */
+  .md-typeset hr {
+    break-after: page;
+    margin: 0;
+    border: 0;
+  }
+
   /* Nor the "Linking to a rule/risk" tips, which are about those permalinks. */
   .md-typeset .admonition.tip {
     display: none;

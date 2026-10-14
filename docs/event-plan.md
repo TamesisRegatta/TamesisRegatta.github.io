@@ -95,7 +95,7 @@ The medical unit this year will be provided by Epione Medical Services.
 In case of an emergency, the **emergency services, in particular the ambulance service, shall be made aware of the regatta and all access points.** In the event of a 999 call, emergency service access is possible from:
 
 1. **Riverside Centre off Donnington Bridge** (postcode OX4 4AZ, ///copy.bath.ridge)  
-2. **University College Boathouse via Abingdon Road** (postcode – OX1 4PS, ///nation.bunks.levels)  
+2. **University College Boathouse via Abingdon Road** (postcode OX1 4PS, ///nation.bunks.levels)  
 3. **Boat House Island via ChCh Meadow** (///scrap.wiring.mixed). Call ChCh Lodge {{ phone('chch_lodge') }} for access  
 4. **Longbridges Boat House** (key to gate off Donnington Bridge (///causes.gets.scars) held at Race Desk)
 
@@ -145,7 +145,7 @@ Marshals will be provided with:
 
 Marshals will be required to provide:
 
-* Their own private mobile phone – and share the number with the Event Committee before their shift
+* Their own private mobile phone, and share the number with the Event Committee before their shift
 
 Some marshals, identified below, will additionally be provided with:
 
@@ -187,7 +187,7 @@ Where possible, the raft marshals shall track which crews have boated from the r
 
 Checks will pay special attention to the following, in accordance with OURCs equipment rules, RowSafe, and the general practice at Torpids and Eights:
 
-* Heel restraints – heels firmly secured and don’t rise above the lowest fixed point of the shoe.
+* Heel restraints: heels firmly secured and don’t rise above the lowest fixed point of the shoe.
 * Bow ball is firmly attached, not just taped
 * All backstays are in place
 * All hatch covers are in place if the boat has watertight compartments fitted
@@ -252,7 +252,7 @@ All crews must have switched-on white lights at the front and rear of their boat
 
 **Scheduling**
 
-Racing will take place approximately every three to four minutes, and crews are required to follow the schedule closely, otherwise appropriate action will be taken by the Regatta organisers.  Alterations to the published draw will have to be rare and on an ‘if possible’ basis – crews will be required to submit their clashes with their entry and then usually expected to abide by the draw given.
+Racing will take place approximately every three to four minutes, and crews are required to follow the schedule closely, otherwise appropriate action will be taken by the Regatta organisers.  Alterations to the published draw will have to be rare and on an ‘if possible’ basis; crews will be required to submit their clashes with their entry and then usually expected to abide by the draw given.
 
 ## Circulation
 
@@ -476,13 +476,13 @@ This concludes the Event Safety Plan for Tamesis {{ dates.year }}
 
  
 
-## Appendix 1 – Contingency Plans for Pre-Regatta Bad Weather { .tr-appendix }
+## Appendix 1: Contingency Plans for Pre-Regatta Bad Weather { .tr-appendix }
 
 IF THE ISIS IS UPGRADED TO BLUE, AMBER OR RED FLAG PRIOR TO THE REGATTA OR A DAY’S RACING.
 
 This is a contingency plan for advanced changes to the regatta in the event of bad weather. Note: this is NOT to be used if weather turns bad during racing. The emergency contingency should then be used.
 
-**Red/Amber Flag** – Racing suspended.
+**Red/Amber Flag**: racing suspended.
 
 If racing is lost on one or more days, the Event Committee will make its best efforts to reconfigure the remaining days with the goal of enabling as much safe racing as possible. Depending on how much racing is lost, this may include, for example:
 
@@ -518,7 +518,7 @@ The Tel. No. of Iffley Lock Keeper is {{ phone('iffley_lock') }}
 
  
 
-## Appendix 2 – Major Incident Reporting { .tr-appendix }
+## Appendix 2: Major Incident Reporting { .tr-appendix }
 
 If a major incident occurs during racing, the committee should ensure that any injured person(s) receives emergency first aid from medical personnel, and that a decision is made by Race Desk on advice of the medical personnel to contact the relevant emergency services.
 
@@ -573,7 +573,7 @@ The details of any incident or accident are not to be discussed with any person 
 **{{ roles.post_incident_coordinator.title }}:** {{ roles.post_incident_coordinator.name }}; {{ email('david_seale') }}; {{ phone('david_seale') }}
 
 
-## Appendix 3 – Circulation Patterns and Marshal Placements { .tr-appendix }
+## Appendix 3: Circulation Patterns and Marshal Placements { .tr-appendix }
 
 <!-- Stopgap: these three maps are vector copies of the circulation PDFs,
      converted with mutool (text as outlines). Replace them with the course
@@ -587,7 +587,7 @@ The details of any incident or accident are not to be discussed with any person 
 
  
 
-## Appendix 4 – Important Phone Numbers { .tr-appendix }
+## Appendix 4: Important Phone Numbers { .tr-appendix }
 
 **General enquiries (non-urgent):** [{{ contact.email }}](mailto:{{ contact.email }})
 
@@ -631,11 +631,11 @@ Epione Medical Services - {{ phone('epione_medical') }}
 
 {{ roles.incident_controller.name }}, {{ roles.water_safety_advisor.title }}
 
-## Appendix 5 – Emergency Action Plan
+## Appendix 5: Emergency Action Plan
 
 Sent with this document. 
 
-## Appendix 6 – Risk Assessment
+## Appendix 6: Risk Assessment
 
 Sent with this document. 
 

@@ -1,6 +1,6 @@
 // Under each "## Category" heading that's followed by one or more risks
 // (i.e. has .risk-badge elements before the next heading), inject a strip of
-// coloured squares — one per risk, linking to it — derived entirely from
+// coloured squares (one per risk, linking to it), derived entirely from
 // what's already rendered. No markdown changes are needed to keep this in
 // sync: add a risk, and its square appears automatically.
 document.addEventListener("DOMContentLoaded", function () {
@@ -25,7 +25,7 @@ document.addEventListener("DOMContentLoaded", function () {
         squares.push({
           id: anchor.id,
           level: level,
-          label: anchor.textContent.trim() + " — " + badge.textContent.trim(),
+          label: anchor.textContent.trim() + ": " + badge.textContent.trim(),
         });
       });
       el = el.nextElementSibling;

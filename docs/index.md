@@ -14,14 +14,14 @@ Greenbank to the Cox Stone, and takes place from
 | Coxing briefing | {{ dates.coxing_briefing | ukdate }} |
 | Racing | {{ daterange(dates.regatta_start, dates.regatta_end) }} |
 
-Dates and role holders are configured in a single file —
+Dates and role holders are configured in a single file:
 [edit event.yml on GitHub](https://github.com/TamesisRegatta/TamesisRegatta.github.io/edit/main/event.yml).
 
 ## Documents
 
-- **[Rules](rules.md)** — eligibility, equipment, conduct of racing, and
+- **[Rules](rules.md)**: eligibility, equipment, conduct of racing, and
   bystander safety. Every rule has a permanent link.
-- **[Event & Safety Plan](event-plan.md)** — how the regatta is organised and
+- **[Event & Safety Plan](event-plan.md)**: how the regatta is organised and
   run: marshalling, circulation, emergency procedures, and contacts.
 
 Each document can also be downloaded as a PDF using the button at the top of

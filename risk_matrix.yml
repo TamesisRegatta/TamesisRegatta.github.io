@@ -1,7 +1,7 @@
 # The official Tamesis Regatta severity x probability risk matrix.
 #
 # Individual risks (see docs/risk-assessment.md) are NOT given a "Level of
-# Risk" field directly — that would let a transcription slip in either
+# Risk" field directly; that would let a transcription slip in either
 # severity or probability silently disagree with the stated level. Instead
 # each risk states only its severity and probability, and the `risk()`
 # macro (main.py) looks the level up here. An invalid severity/probability

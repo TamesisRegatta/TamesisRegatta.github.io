@@ -13,7 +13,7 @@ cannot put numbers on the live site. When a value is in neither place, a
 "[withheld]" placeholder is rendered instead.
 
 The generic mailbox (regatta@linacre.ox.ac.uk) is intentionally NOT
-obfuscated — it lives in event.yml and is rendered as a normal mailto: link.
+obfuscated: it lives in event.yml and is rendered as a normal mailto: link.
 """
 
 import base64
@@ -89,7 +89,7 @@ def define_env(env):
 
     @env.filter
     def ukdatetime(d) -> str:
-        """'Wed 11 Nov 2026, 04:00' — always 24-hour clock."""
+        """'Wed 11 Nov 2026, 04:00': always 24-hour clock."""
         return f"{_ukdate(d)}, {d:%H:%M}"
 
     @env.macro
@@ -113,7 +113,7 @@ def define_env(env):
     @env.macro
     def risk(severity: int, probability: str) -> str:
         """A colour-coded 'Level of Risk' badge, derived from severity and
-        probability via risk_matrix.yml — never pass a level in directly, so
+        probability via risk_matrix.yml; never pass a level in directly, so
         it can't disagree with the severity/probability that produced it."""
         probability = probability.upper()
         try:

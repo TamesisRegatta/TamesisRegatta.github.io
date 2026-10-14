@@ -15,7 +15,7 @@ to GitHub Pages at <https://tamesisregatta.org/> on every push to
 | `risk_matrix.yml` | The official severity × probability risk matrix (labels, level lookup, definitions). See [Risk assessment](#risk-assessment). |
 | `docs/` | The site content (Markdown), one file per page, plus `assets/` for CSS/JS/images. |
 | `mkdocs.yml` | Site configuration, navigation, theme, and plugins. |
-| `main.py` | Macros used by pages — dates, contact details, risk badges (see below). |
+| `main.py` | Macros used by pages: dates, contact details, risk badges (see below). |
 | `.github/workflows/deploy.yml` | Builds the site (including PDFs) and deploys it to GitHub Pages. |
 
 ## Editing
@@ -43,13 +43,13 @@ to GitHub Pages at <https://tamesisregatta.org/> on every push to
 
 Each risk in `docs/risk-assessment.md` is a
 [definition list](https://python-markdown.github.io/extensions/definition_lists/)
-with exactly five fields — Hazard, Consequences, Persons at risk,
-Responsible, Residual risk — which `extra.css` renders as a compact
+with exactly five fields (Hazard, Consequences, Persons at risk,
+Responsible, Residual risk), which `extra.css` renders as a compact
 label/value grid instead of Markdown's default stacked layout:
 
 ```markdown
 Hazard
-:   Capsize or submerge — boats on the water for racing, or on rafts waiting
+:   Capsize or submerge: boats on the water for racing, or on rafts waiting
     to push off/land
     { #capsize-submerge }
 
@@ -74,7 +74,7 @@ Residual risk
   entry's permanent anchor.
 - **Residual risk** is never written as text. `{{ risk(severity, probability)
   }}` (a macro in `main.py`) looks the level up in `risk_matrix.yml` and
-  renders the colour-coded badge — so a risk's severity/probability can never
+  renders the colour-coded badge, so a risk's severity/probability can never
   silently disagree with its stated level. An invalid combination fails
   `mkdocs build --strict`. The matrix legend further down the page
   (`risk_matrix_table()`) is generated from the same file, so it can't drift
@@ -85,7 +85,7 @@ Residual risk
   print CSS in `extra.css` forces these open in generated PDFs, so nothing is
   hidden in print.
 - Each `## Category` heading (Water, Weather, Land based) automatically gets
-  a strip of colour-coded squares linking to the risks beneath it —
+  a strip of colour-coded squares linking to the risks beneath it;
   `docs/assets/risk-summary.js` builds this from the rendered badges and
   anchors after the page loads, so there's nothing to keep in sync by hand.
 
@@ -96,8 +96,8 @@ repository**. Pages reference them as `{{ phone('fergus_cooper') }}` /
 `{{ email('sydney_rose') }}`; at build time `main.py` reads the values from
 `PHONE_*` / `EMAIL_*` environment variables, which CI populates from GitHub
 Actions **repository secrets** (see the `env:` block in the deploy workflow
-for the expected names). Values are rendered lightly obfuscated — encoded in
-the HTML and decoded by JavaScript in the browser — so the plain numbers do
+for the expected names). Values are rendered lightly obfuscated (encoded in
+the HTML and decoded by JavaScript in the browser), so the plain numbers do
 not appear in the page source for scrapers to harvest. Anyone can still read
 and dial them normally.
 

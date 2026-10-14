@@ -5,7 +5,7 @@
 # and the site is rebuilt automatically on push.
 #
 # Personal phone numbers and email addresses are deliberately NOT stored here
-# (or anywhere in the repository) — they are injected at build time from
+# (or anywhere in the repository): they are injected at build time from
 # GitHub Actions secrets. See "Contact details" in the README.
 
 # All dates are ISO 8601 (YYYY-MM-DD, times as HH:MM:SS); YAML parses them
@@ -44,7 +44,7 @@ risk_assessment:
   prepared_by: Fergus Cooper and Sydney Rose
 
 contact:
-  # The generic regatta mailbox — safe to publish, rendered as a normal
+  # The generic regatta mailbox: safe to publish, rendered as a normal
   # clickable mailto: link wherever it is used.
   email: regatta@linacre.ox.ac.uk
 

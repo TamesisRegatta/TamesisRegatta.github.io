@@ -20,15 +20,13 @@ Prior to the event, this risk assessment and the associated [Event Plan](event-p
 | 2026.1 | 2026-10-14 | <ul>{% if amber_flag_racing %}<li>Add a risk for limited racing on Low Amber Flag, with its safety controls</li>{% endif %}<li>Add a risk for lack of training time before the regatta</li><li>Re-rate unrowable conditions after controls, and add rower status restrictions</li><li>Merge the two risks for ice on the water</li><li>Add this cover block and changelog</li></ul> |
 
 !!! tip "Linking to a risk"
-    Every risk has a permanent anchor on its Hazard row — hover over it and
+    Every risk has a permanent anchor on its Hazard row: hover over it and
     click the **¶** symbol to get a link directly to it, e.g.
     `#capsize-submerge`.
 
 Each risk states a **severity** (1–5) and **probability** (A–E) only; the
 **residual risk** shown is always calculated from those two values using the
-[matrix below](#how-levels-are-calculated) — it is never entered separately,
-so it cannot silently disagree with the severity/probability that produced
-it.
+[matrix below](#how-levels-are-calculated).
 
 !!! info "What is residual risk?"
     The **residual risk** is the risk remaining *after* the listed controls
@@ -38,7 +36,7 @@ it.
 ## Risks: water-based { .tr-new-page }
 
 Hazard
-:   Capsize or submerge — boats on the water for racing, or on rafts waiting
+:   Capsize or submerge: boats on the water for racing, or on rafts waiting
     to push off/land
     { #capsize-submerge }
 
@@ -68,7 +66,7 @@ Residual risk
 ---
 
 Hazard
-:   Collision into obstacles or other boats — boats on the water for racing,
+:   Collision into obstacles or other boats: boats on the water for racing,
     or on rafts waiting to push off/land
     { #collision-into-obstacles }
 
@@ -104,7 +102,7 @@ Residual risk
 ---
 
 Hazard
-:   Collision into moored boats — boats on the water for racing, or on
+:   Collision into moored boats: boats on the water for racing, or on
     rafts waiting to push off/land
     { #collision-into-moored-boats }
 
@@ -132,7 +130,7 @@ Residual risk
 ---
 
 Hazard
-:   Collision between a boat and a person in the water — boats on the water
+:   Collision between a boat and a person in the water: boats on the water
     for racing, or on rafts waiting to push off/land
     { #collision-with-person-in-water }
 
@@ -163,7 +161,7 @@ Residual risk
 ---
 
 Hazard
-:   Over-exertion — boats on the water for racing, or on rafts waiting to
+:   Over-exertion: boats on the water for racing, or on rafts waiting to
     push off/land
     { #over-exertion }
 
@@ -190,7 +188,7 @@ Residual risk
 ---
 
 Hazard
-:   Faulty or poorly maintained equipment — boats on the water for racing,
+:   Faulty or poorly maintained equipment: boats on the water for racing,
     or on rafts waiting to push off/land
     { #faulty-equipment }
 
@@ -217,7 +215,7 @@ Residual risk
 ---
 
 Hazard
-:   Pre-existing health conditions — boats on the water for racing, or on
+:   Pre-existing health conditions: boats on the water for racing, or on
     rafts waiting to push off/land
     { #pre-existing-health-conditions }
 
@@ -241,7 +239,7 @@ Residual risk
 ---
 
 Hazard
-:   Capsize, collision, or being caught in the propeller — launches on the
+:   Capsize, collision, or being caught in the propeller: launches on the
     course
     { #launch-incident }
 
@@ -267,7 +265,7 @@ Residual risk
 ---
 
 Hazard
-:   Capsize, collision, or crash — crews containing visually impaired
+:   Capsize, collision, or crash: crews containing visually impaired
     rowers (not coxswains)
     { #visually-impaired-rowers }
 
@@ -308,7 +306,7 @@ Residual risk
 ## Risks: weather-related
 
 Hazard
-:   Conditions unrowable — high stream or bad weather leaving novice coxes
+:   Conditions unrowable: high stream or bad weather leaving novice coxes
     and crews unable to cope
     { #un-rowable-conditions }
 
@@ -336,7 +334,7 @@ Residual risk
 ---
 
 Hazard
-:   Racing in higher stream — racing on Low Amber Flag (≤ 4.5 bucks
+:   Racing in higher stream: racing on Low Amber Flag (≤ 4.5 bucks
     equivalent)
     { #racing-on-low-amber-flag }
 
@@ -376,7 +374,7 @@ Residual risk
 ---
 
 Hazard
-:   Struck by lightning — crews, marshals and the event committee caught in
+:   Struck by lightning: crews, marshals and the event committee caught in
     a storm while racing or at the riverside
     { #struck-by-lightning }
 
@@ -400,7 +398,7 @@ Residual risk
       shelter.
     - Crews that have pushed off and are warming up or waiting to race
       should land under marshal/umpire instructions.
-    - Crews that are mid-race may be advised to stop or complete the race —
+    - Crews that are mid-race may be advised to stop or complete the race;
       the safest course of action is decided by the SU.
     - Once crews have landed they must seek shelter, preferably within a
       boathouse. No crews may boat again until the SU/Event Committee has
@@ -411,7 +409,7 @@ Residual risk
 ---
 
 Hazard
-:   Crews become too cold — extreme cold
+:   Crews become too cold: extreme cold
     { #extreme-cold-crews }
 
 Consequences
@@ -440,7 +438,7 @@ Residual risk
 ---
 
 Hazard
-:   Marshals become too cold — extreme cold
+:   Marshals become too cold: extreme cold
     { #extreme-cold-marshals }
 
 Consequences
@@ -467,7 +465,7 @@ Residual risk
 ---
 
 Hazard
-:   Collision — ice on the water
+:   Collision: ice on the water
     { #ice-on-the-water }
 
 Consequences
@@ -493,7 +491,7 @@ Residual risk
 ---
 
 Hazard
-:   Collision, or the outcome of a race undetermined — low visibility (fog)
+:   Collision, or the outcome of a race undetermined: low visibility (fog)
     { #low-visibility-fog }
 
 Consequences
@@ -517,7 +515,7 @@ Residual risk
 ---
 
 Hazard
-:   Collision, or the outcome of a race undetermined — low visibility
+:   Collision, or the outcome of a race undetermined: low visibility
     (failing light)
     { #low-visibility-light }
 
@@ -544,7 +542,7 @@ Residual risk
 ---
 
 Hazard
-:   Novice crews unable to race safely — high stream or bad weather leading
+:   Novice crews unable to race safely: high stream or bad weather leading
     to a lack of training time before the regatta
     { #lack-of-training-time }
 
@@ -575,7 +573,7 @@ Residual risk
 ## Risks: land-based
 
 Hazard
-:   Collision or injury — boats being moved on the land
+:   Collision or injury: boats being moved on the land
     { #boats-moved-on-land }
 
 Consequences
@@ -598,7 +596,7 @@ Residual risk
 ---
 
 Hazard
-:   Collision involving accompanying cyclists or pedestrians — bank riders
+:   Collision involving accompanying cyclists or pedestrians: bank riders
     accompanying crews on the towpath
     { #bank-rider-collision }
 
@@ -627,7 +625,7 @@ Residual risk
 ---
 
 Hazard
-:   Collision, possible immersion, or falling off a bike — ice on the
+:   Collision, possible immersion, or falling off a bike: ice on the
     towpath
     { #ice-on-the-towpath }
 
@@ -661,22 +659,22 @@ the badges above are calculated from.
 </div>
 
 ??? note "Probability definitions"
-    - **A** — {{ risk_matrix.probability.A }}
-    - **B** — {{ risk_matrix.probability.B }}
-    - **C** — {{ risk_matrix.probability.C }}
-    - **D** — {{ risk_matrix.probability.D }}
-    - **E** — {{ risk_matrix.probability.E }}
+    - **A**: {{ risk_matrix.probability.A }}
+    - **B**: {{ risk_matrix.probability.B }}
+    - **C**: {{ risk_matrix.probability.C }}
+    - **D**: {{ risk_matrix.probability.D }}
+    - **E**: {{ risk_matrix.probability.E }}
 
 ??? note "Severity definitions"
-    - **1** — {{ risk_matrix.severity[1].injury }} / {{ risk_matrix.severity[1].damage }}
-    - **2** — {{ risk_matrix.severity[2].injury }} / {{ risk_matrix.severity[2].damage }}
-    - **3** — {{ risk_matrix.severity[3].injury }} / {{ risk_matrix.severity[3].damage }}
-    - **4** — {{ risk_matrix.severity[4].injury }} / {{ risk_matrix.severity[4].damage }}
-    - **5** — {{ risk_matrix.severity[5].injury }} / {{ risk_matrix.severity[5].damage }}
+    - **1**: {{ risk_matrix.severity[1].injury }} / {{ risk_matrix.severity[1].damage }}
+    - **2**: {{ risk_matrix.severity[2].injury }} / {{ risk_matrix.severity[2].damage }}
+    - **3**: {{ risk_matrix.severity[3].injury }} / {{ risk_matrix.severity[3].damage }}
+    - **4**: {{ risk_matrix.severity[4].injury }} / {{ risk_matrix.severity[4].damage }}
+    - **5**: {{ risk_matrix.severity[5].injury }} / {{ risk_matrix.severity[5].damage }}
 
 ??? note "What each level means"
-    - **Low** — {{ risk_matrix.definitions.low }}
-    - **Moderate** — {{ risk_matrix.definitions.moderate }}
-    - **Substantial** — {{ risk_matrix.definitions.substantial }}
-    - **Intolerable** — {{ risk_matrix.definitions.intolerable }}
+    - **Low**: {{ risk_matrix.definitions.low }}
+    - **Moderate**: {{ risk_matrix.definitions.moderate }}
+    - **Substantial**: {{ risk_matrix.definitions.substantial }}
+    - **Intolerable**: {{ risk_matrix.definitions.intolerable }}
 

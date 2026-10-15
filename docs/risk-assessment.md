@@ -437,7 +437,8 @@ Residual risk
       suspended if either is unavailable (see the Event Plan's
       [Launches](event-plan.md#launches) section).
     - Every crew must have senior rowers (≥ 3 full terms of rowing
-      experience) at bow and 2.
+      experience) at bow and 2, who must still meet all other eligibility
+      rules, such as who may row in women's events.
     - Coxes must be S status, or X status upgraded more than 12 months
       before the day of racing.
     - No crew may boat from or land at a boathouse downstream of the Gut, or

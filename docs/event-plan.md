@@ -253,8 +253,8 @@ Key:
 | :material-alarm-light:{ .tr-icon-red }:material-check-circle:{ .tr-icon-green } | (5) Boathouses B | See Raft Marshals (above) Stationed at the downstream half of Boathouse Island **[time trials]** Also acts as Crossing Marshal: crews landing at Univ wait near St John's Boathouse, and cross to land under this marshal's instruction. |
 | :material-alarm-light:{ .tr-icon-red }:material-check-circle:{ .tr-icon-green } | **(6) Tower** | Stationed on the roof of one of the boathouses. This marshal is to monitor racing for safety and fairness and shall liaise with the race committee regarding any appeals. This position will preferably be filled by a member of the race committee to ensure consistency. |
 | :material-alarm-light:{ .tr-icon-red }:material-check-circle:{ .tr-icon-green }:material-bullhorn: | (7) Univ | See Raft Marshals (above) Stationed at University College Boathouse. This position will preferably be filled by a member of the race committee to ensure consistency. **[side by side racing]** Coordinates with Tower Marshal to hold crews that want to boat from Univ and sends them up in transit once the current race has gone past, but with sufficient distance (in case the boat racing on County station catches a crab or runs into other boat-stopping trouble). **[time trials]** Sends Univ crews to push off and cross to the City side between divisions, and keeps the raft clear for landing crews. |
-| :material-alarm-light:{ .tr-icon-red }:material-check-circle:{ .tr-icon-green } | (8) Greenbanks | Stationed below the start on the County side of the river. **[side by side racing]** Assisting crews to pair up before the start, ensuring crews are on the correct side (city/county). Advising crews in transit for landing at Univ, holding them back if race is in progress. **[time trials]** Keeps crews in the Marshalling Zone tucked in to the towpath bank, in the correct order. |
-| :material-alarm-light:{ .tr-icon-red }:material-check-circle:{ .tr-icon-green }:material-bullhorn: | (9) Longbridges | See Raft Marshals (above).  Stationed at Longbridges Boathouse During time trials, liaises with river traffic to show them Holding Point B, and advises when they can proceed upstream.  During side by side racing, advises crews in transit for landing at University College boathouse. Directs crews landing at Longbridges, and may instruct a crew to land with bows pointing downstream (see [Landing at Longbridges](#longbridges-landing)). This position will preferably be filled by a member of the race committee to ensure consistency. |
+| :material-alarm-light:{ .tr-icon-red }:material-check-circle:{ .tr-icon-green } | (8) Greenbanks | Stationed below the start on the County side of the river. **[side by side racing]** Assisting crews to pair up before the start, ensuring crews are on the correct side (city/county). Advising crews in transit for landing at Univ, holding them back if race is in progress. **[time trials]** Keeps crews in the Marshalling Zone tucked in to the towpath bank, in the correct order.{% if amber_flag_racing %} **[Low Amber Flag]** Stands exactly where the Senior Umpire directs. All crews must spin upstream of this marshal, except crews landing at Longbridges; moves on any other crew found below this point (see [Racing on Low Amber Flag](#racing-on-low-amber-flag)).{% endif %} |
+| :material-alarm-light:{ .tr-icon-red }:material-check-circle:{ .tr-icon-green }:material-bullhorn: | (9) Longbridges | See Raft Marshals (above).  Stationed at Longbridges Boathouse During time trials, liaises with river traffic to show them Holding Point B, and advises when they can proceed upstream.  During side by side racing, advises crews in transit for landing at University College boathouse. Directs crews landing at Longbridges, and may instruct a crew to land with bows pointing downstream (see [Boating and landing at Longbridges](#longbridges-boating-landing)).{% if amber_flag_racing %} **[Low Amber Flag]** Directs crews landing at Longbridges to spin above the raft and drift back to land with bows pointing upstream.{% endif %} This position will preferably be filled by a member of the race committee to ensure consistency. |
 | :material-alarm-light:{ .tr-icon-red }:material-check-circle:{ .tr-icon-green }:material-bullhorn: | **(10) Gut** | **[side by side racing]** Stationed at Top Gut, just below Longbridges. They are responsible for liaising with other river users, asking them to hold at Holding Point B and await the end of the race in progress.  **[time trials]** To send crews towards the start when it is clear, in the correct order. Ask river traffic to tuck in at Holding Point B if necessary.  They are responsible for liaising with other river users, asking them to hold and await the end of the race in progress. Instructs crews where to spin. Ensures that crews are moving to the start in good time and are at the correct stations to ensure that no collisions occur. Responsible for holding any crews coming upstream through the gut until it is safe to cross into race circulation above the gut. |
 | :material-alarm-light:{ .tr-icon-red }:material-check-circle:{ .tr-icon-green }:material-bullhorn: | (11) Donnington Bridge | Only in use when using an intermediate course; responsible for ensuring crews do not go below Donnington Bridge (unless landing at a boathouse below it). See [Transit through the Gut](#gut-transit). |
 | :material-alarm-light:{ .tr-icon-red } | Launch Driver (Medical Launch) | Launch drivers must hold RYA Powerboat L2 or equivalent qualification. Drives the [medical launch](#launches), with a member of the medical team. Transports medics to emergency sites. |
@@ -291,10 +291,12 @@ On parts of the river not under event management, OURCs clubs must abide by all 
 * On the short course, which all time trials use, no other crew may go through the Gut.
 * On the intermediate course, the Senior Umpires and Race Committee may also allow other crews through the Gut, as far as Donnington Bridge, provided both safety launches are providing cover (see [Launches](#launches)). Whether they do will be made clear to all crews before each day's racing; if it is not allowed, no other crew may go through the Gut.
 
-### Landing at Longbridges { #longbridges-landing }
+### Boating and landing at Longbridges { #longbridges-boating-landing }
 
+* Crews boating from Longbridges boat with bows pointing upstream, directly into the Marshalling Zone. On the intermediate course, when crews are allowed through the Gut (see [Transit through the Gut](#gut-transit)), they may instead choose to boat with bows pointing downstream.
 * Crews landing at Longbridges spin and land with bows pointing upstream. In high stream, crews may spin upstream of the raft and drift back to land, still with bows pointing upstream.
-* The Longbridges Marshal (9) may instead instruct a crew to land with bows pointing downstream, for example to keep the raft running efficiently.
+* The Longbridges Marshal (9) may instead instruct a crew to land with bows pointing downstream, for example to keep the raft running efficiently.{% if amber_flag_racing %}
+* On Low Amber Flag, crews always spin above the raft under the direction of the Longbridges Marshal, and drift back to land with bows pointing upstream; the Longbridges Marshal may not instruct crews to land with bows pointing downstream (see [Racing on Low Amber Flag](#racing-on-low-amber-flag)).{% endif %}
 
 ### Time Trial
 
@@ -304,7 +306,7 @@ For time trials, crews may not do laps on the water to warm up. Crews proceed do
 
 Boathouse Island crews should boat with bow-balls pointing downstream and proceed down the City side to the spinning area upstream of Longbridges House.
 
-Crews boating from Longbridges should boat with bows facing upstream.
+Crews boating from Longbridges boat with bows pointing upstream (see [Boating and landing at Longbridges](#longbridges-boating-landing)).
 
 Crews boating from Univ boat with bows pointing downstream, pushing off and crossing immediately to the City side between divisions, under the direction of the Univ Marshal. Crews at Univ must follow the Univ Marshal's directions if asked not to put their boat on the raft, to make space for landing crews.
 
@@ -326,7 +328,7 @@ After spinning, all crews return downstream on the City side, without doing any 
 
 * **Boathouse Island:** crews land at Boathouse Island with bows pointing downstream.
 * **Univ:** crews wait near St John's Boathouse on the City side, and cross to land at Univ under the instruction of the Crossing Marshal (5).
-* **Longbridges:** crews continue down the City side past the Marshalling Zone, and land as set out in [Landing at Longbridges](#longbridges-landing).
+* **Longbridges:** crews continue down the City side past the Marshalling Zone, and land as set out in [Boating and landing at Longbridges](#longbridges-boating-landing).
 * **Isis Boathouse:** crews continue down the City side past the Marshalling Zone, and go through the Gut under the direction of the Gut Marshal. Crews landing at the Isis Boathouse can land in any safe manner at their discretion.
 
 ### Side-By-Side
@@ -353,9 +355,9 @@ Crews based on Boathouse Island must land with bows pointing downstream, at one 
 
 #### Longbridges
 
-Crews boating from Longbridges boat directly into the marshaling zone and proceed as outlined above for Boathouse Island crews.
+Crews boating from Longbridges boat as set out in [Boating and landing at Longbridges](#longbridges-boating-landing), and then proceed as outlined above for Boathouse Island crews in the Marshalling Zone.
 
-When returning after a race, they must proceed along the Transit Lane, and land as set out in [Landing at Longbridges](#longbridges-landing). They must take care to avoid obstructing crews entering the Marshalling Zone.
+When returning after a race, they must proceed along the Transit Lane, and land as set out in [Boating and landing at Longbridges](#longbridges-boating-landing). They must take care to avoid obstructing crews entering the Marshalling Zone.
 
 #### University Boathouse
 
@@ -443,7 +445,7 @@ Should Race Desk and/or the Senior Umpire decide that racing must stop, the foll
 4. Once crews which have finished have landed, all crews in the Marshalling Zone are pointing upstream, and the Incident Controller decides the top stretch is sufficiently clear, the Senior Umpire and marshals will direct crews in the Marshalling Zone back to their boathouses, as quickly and safely as possible. This overrides normal circulation: landing with bows pointing upstream is safest, especially in high stream.
     * **Boathouse Island:** cross to the City side, proceed up the course, and land with bows pointing upstream.
     * **Univ:** land with bows pointing upstream, under the direction of the Univ Marshal.
-    * **Longbridges:** land as set out in [Landing at Longbridges](#longbridges-landing).
+    * **Longbridges:** land as set out in [Boating and landing at Longbridges](#longbridges-boating-landing).
     * **Isis Boathouse:** go through the Gut under the direction of the Gut Marshal.
 
 The whole process should take under 20 minutes. The operation being directed by the incident controller will keep crews safe and avoid collisions.   All marshals are to be briefed on this procedure in full prior to taking up their duties.
@@ -473,7 +475,7 @@ Racing on Low Amber Flag requires all of the following:
 4. **Boathouses downstream of the Gut:** no crew may boat from or land at a boathouse downstream of the Gut, or go through the Gut. For instance, this would likely require Reuben College crews, who normally boat from the Isis Boathouse, to borrow equipment from a club boating above the Gut. This overrides [Transit through the Gut](#gut-transit).
 5. **Crews safe to race:** each novice rower should have had no fewer than 5 training outings before racing. Crews that the Senior Umpires or the Event Committee deem unsafe to race on Low Amber Flag may be asked to land, withdrawn from racing, or disqualified (see the rule on [crews racing safely](rules.md#safe-to-race)).
 
-Crews must spin under the direction of race officials, well above the Longbridges raft, on Low Amber Flag.
+On Low Amber Flag, crews must spin upstream of the Greenbanks Marshal (8), under the direction of race officials. The only exception is crews landing at Longbridges, who spin above the Longbridges raft under the direction of the Longbridges Marshal (9), and drift back to land with bows pointing upstream (see [Boating and landing at Longbridges](#longbridges-boating-landing)).
 {% else %}
 Amber Flag means that only senior crews are permitted to row; under these situations, racing will cease.
 {% endif %}

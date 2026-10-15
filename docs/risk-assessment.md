@@ -448,8 +448,11 @@ Residual risk
       race on Low Amber Flag may be asked to land, withdrawn from racing, or
       disqualified (see the [crews racing safely](rules.md#safe-to-race)
       rule).
-    - Crews must spin under the direction of race officials, well above the
-      Longbridges raft.
+    - Crews must spin upstream of the Greenbanks Marshal, who stands where
+      the Senior Umpire directs, so any crew below that point is clearly in
+      the wrong place. Crews landing at Longbridges instead spin above the
+      raft under the direction of the Longbridges Marshal, and drift back to
+      land with bows pointing upstream.
     - Entrants notified by 5pm the day before, so crews can arrange senior
       bow pairs, eligible coxes, and borrowed equipment where needed.
 {% endif %}

@@ -84,11 +84,25 @@ It is **compulsory for all coxswains to attend the Coxes’ Regatta safety brief
 
 **Medical cover** 
 
-A **Medical Unit** will be present at all times during racing, and will have uninterrupted access to a dedicated safety launch. There shall be **a medical post at the Race Desk and a dedicated safety launch with an assigned medic at all times, with access to all parts of the course**, which will have complete priority over any racing crews. The Unit shall consist of at least two people dedicated to medical cover at the event and **qualified in line with the medical providers’ risk assessment.** 
+A **Medical Unit** will be present at all times during racing. There shall be **a medical post at the Race Desk and the medical launch, with an assigned medic, at all times** (see [Launches](#launches)). The Unit shall consist of at least two people dedicated to medical cover at the event and **qualified in line with the medical providers’ risk assessment.** 
 
 The medical team shall be informed, through their agents, of the nature of the event, and will have the risk assessment made available to them. Furthermore, they will be required to hold liability insurance of their own or through their employer, and will be issued a copy of the schedule.
 
 The medical unit this year will be provided by Epione Medical Services.
+
+**Launches**
+{ #launches }
+
+Three launches are available for the event: the medical launch and two safety launches. A launch is **providing cover** when it is afloat, with a qualified driver and a radio, ready to respond.
+
+* **Medical launch:** dedicated to medical cover, with an assigned medic, at all times during racing. It has access to all parts of the course and complete priority over any racing crews. It is stationed wherever the medics prefer; in recent years this has been at Race Desk. Racing is suspended while the medical launch is unavailable.
+* **Safety launches:** the two safety launches are interchangeable. When not needed for cover, a safety launch may transport marshals, such as those stationed on the County side, and additional medical personnel as required. If the medical launch breaks down, a safety launch may replace it.
+
+How many safety launches must be providing cover depends on conditions:
+
+* **Normal racing:** at least one.
+* **Intermediate course, with crews allowed through the Gut** (see [Transit through the Gut](#gut-transit)): both, with one stationed near Longbridges to assist crews below it quickly. If only one safety launch is available, crews will not be allowed through the Gut.{% if amber_flag_racing %}
+* **Low Amber Flag** (see [Racing on Low Amber Flag](#racing-on-low-amber-flag)): both, with at least one stationed downstream of all marshalling crews. If either is unavailable, racing on Low Amber Flag is suspended.{% endif %}
 
 **Emergency Access**
 
@@ -123,7 +137,7 @@ The klaxon test serves two purposes:
 
 After briefing marshals shall head to their stations.
 
-Those stationed on the County side of the river may be able to be transported on the secondary launch.
+Those stationed on the County side of the river may be able to be transported on a safety launch.
 
 ### Coordination
 
@@ -243,8 +257,8 @@ Key:
 | :material-alarm-light:{ .tr-icon-red }:material-check-circle:{ .tr-icon-green }:material-bullhorn: | (9) Longbridges | See Raft Marshals (above).  Stationed at Longbridges Boathouse During time trials, liaises with river traffic to show them Holding Point B, and advises when they can proceed upstream.  During side by side racing, advises crews in transit for landing at University College boathouse. Directs crews landing at Longbridges, and may instruct a crew to land with bows pointing downstream (see [Landing at Longbridges](#longbridges-landing)). This position will preferably be filled by a member of the race committee to ensure consistency. |
 | :material-alarm-light:{ .tr-icon-red }:material-check-circle:{ .tr-icon-green }:material-bullhorn: | **(10) Gut** | **[side by side racing]** Stationed at Top Gut, just below Longbridges. They are responsible for liaising with other river users, asking them to hold at Holding Point B and await the end of the race in progress.  **[time trials]** To send crews towards the start when it is clear, in the correct order. Ask river traffic to tuck in at Holding Point B if necessary.  They are responsible for liaising with other river users, asking them to hold and await the end of the race in progress. Instructs crews where to spin. Ensures that crews are moving to the start in good time and are at the correct stations to ensure that no collisions occur. Responsible for holding any crews coming upstream through the gut until it is safe to cross into race circulation above the gut. |
 | :material-alarm-light:{ .tr-icon-red }:material-check-circle:{ .tr-icon-green }:material-bullhorn: | (11) Donnington Bridge | Only in use when using an intermediate course; responsible for ensuring crews do not go below Donnington Bridge (unless landing at a boathouse below it). See [Transit through the Gut](#gut-transit). |
-| :material-alarm-light:{ .tr-icon-red } | Launch Driver (Medical Response) | Launch drivers must hold RYA Powerboat L2 or equivalent qualification. Dedicated launch with a member of the medical team. Transports medics to emergency sites. |
-| :material-alarm-light:{ .tr-icon-red } | Launch Driver (Transport Launch) | Launch drivers must hold RYA Powerboat L2 or equivalent qualification. Transports additional medical personnel as required for emergency response. |
+| :material-alarm-light:{ .tr-icon-red } | Launch Driver (Medical Launch) | Launch drivers must hold RYA Powerboat L2 or equivalent qualification. Drives the [medical launch](#launches), with a member of the medical team. Transports medics to emergency sites. |
+| :material-alarm-light:{ .tr-icon-red } | Launch Driver (Safety Launch) | Launch drivers must hold RYA Powerboat L2 or equivalent qualification. Drives a [safety launch](#launches), providing cover where required. Transports marshals, and additional medical personnel as required for emergency response. |
 
 **Lights**
 
@@ -275,7 +289,7 @@ On parts of the river not under event management, OURCs clubs must abide by all 
 
 * Crews boating from or landing at a boathouse downstream of the Gut, such as the Isis Boathouse, may always go through the Gut, under the direction of the Gut Marshal.
 * On the short course, which all time trials use, no other crew may go through the Gut.
-* On the intermediate course, the Senior Umpires and Race Committee may also allow other crews through the Gut, as far as Donnington Bridge. Whether they do will be made clear to all crews before each day's racing; if it is not allowed, no other crew may go through the Gut.
+* On the intermediate course, the Senior Umpires and Race Committee may also allow other crews through the Gut, as far as Donnington Bridge, provided both safety launches are providing cover (see [Launches](#launches)). Whether they do will be made clear to all crews before each day's racing; if it is not allowed, no other crew may go through the Gut.
 
 ### Landing at Longbridges { #longbridges-landing }
 
@@ -404,9 +418,9 @@ Any boats passing upstream, or boats which are too large to fit in the navigatio
 
  
 
-In the event of a dangerous incident occurring whilst a race is underway - such as a rower in the water, severe injury, the blockage of the racing line or the breaking down of the safety launch etc. - marshals will be instructed to stop racing by sounding a klaxon immediately. If their klaxon doesn’t work, they must say KLAXON\! KLAXON\! KLAXON\! into their radio. All marshals on the racing course will be equipped with klaxons and on the sounding of the first klaxon (or the respective radio call) will also sound their own. It will therefore be possible to hear the klaxon from all parts of the racing area and the warm up area. To avoid confusion, all marshals will be asked at the briefing not to use the word ‘klaxon’ on the radio unless they wish to notify a race stopping event.  The phrase ‘air horn’ should be used if they wish, for example, to ask for a replacement canister.
+In the event of a dangerous incident occurring whilst a race is underway - such as a rower in the water, severe injury, the blockage of the racing line or the breaking down of the medical launch etc. - marshals will be instructed to stop racing by sounding a klaxon immediately. If their klaxon doesn’t work, they must say KLAXON\! KLAXON\! KLAXON\! into their radio. All marshals on the racing course will be equipped with klaxons and on the sounding of the first klaxon (or the respective radio call) will also sound their own. It will therefore be possible to hear the klaxon from all parts of the racing area and the warm up area. To avoid confusion, all marshals will be asked at the briefing not to use the word ‘klaxon’ on the radio unless they wish to notify a race stopping event.  The phrase ‘air horn’ should be used if they wish, for example, to ask for a replacement canister.
 
-All coxswains will be briefed at the obligatory coxing meeting to instruct their crews to halt as soon as safely possible on the sounding of the klaxon. There will be a dedicated safety launch based at Race Desk to enable swift access of event medics to the scene if this is necessary. 
+All coxswains will be briefed at the obligatory coxing meeting to instruct their crews to halt as soon as safely possible on the sounding of the klaxon. The [medical launch](#launches) enables swift access of event medics to the scene if this is necessary. 
 
 The on-site incident controller will take charge of the incident and at the time of the incident take charge of liaising with medical personnel and marshalls, look after the injured party (arranging for someone to accompany them to the hospital OR accompany them back home if necessary). The incident controller will then report to the post incident coordinator who will inform the injured individuals college if applicable, OR inform a family member/friend if a non-student, and ensure all reports are submitted to the appropriate bodies (e.g. British Rowing, Sabbatical Officer, Sports Safety Officer, University Sports Office.) If no incidents have occurred then the post-incident coordinator will still be informed at the end of racing each day.
 
@@ -453,7 +467,7 @@ Racing may continue on Low Amber Flag (≤ 4.5 bucks equivalent) on Days 3 and 4
 
 Racing on Low Amber Flag requires all of the following:
 
-1. **Safety launches:** at least two launches on the water at all times, downstream of all marshalling crews, to assist any crew that needs help.
+1. **Safety launches:** both safety launches providing cover, with at least one stationed downstream of all marshalling crews, as set out in [Launches](#launches).
 2. **Bow pair:** every crew must have senior rowers (≥ 3 full terms of rowing experience) at bow and 2. This overrides any rule to the contrary, including the composition of [competitive](rules.md#competitive-crews) and [friendly](rules.md#friendly-crews) crews.
 3. **Coxes:** S status, or X status upgraded more than 12 months before the day of racing. N status coxes, and X status coxes upgraded within the last 12 months, may not cox on Low Amber Flag. This overrides the rule that [any crew may have a cox of any status](rules.md#cox-status).
 

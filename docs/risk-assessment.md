@@ -263,7 +263,7 @@ Residual risk
       (or equivalent).
     - All launch drivers and passengers must wear PFDs, in line with the
       [OURCs Code of Conduct](https://ourcs.co.uk/organisation/conduct/).
-    - A second launch will assist if needed.
+    - Another launch will assist if needed.
     - Drivers must wear kill cords at all times whilst operating a launch.
 
 ---
@@ -325,9 +325,12 @@ Residual risk
 :   {{ risk(severity=4, probability='A') }}
 
 ??? success "Controls"
-    - Three launches are available for the event, so a launch that breaks
-      down can be replaced. Racing is suspended while the dedicated medical
-      launch is unavailable.
+    - Three launches are available for the event: the medical launch and
+      two safety launches, as set out in the Event Plan's
+      [Launches](event-plan.md#launches) section, which also sets how many
+      safety launches must be providing cover in each condition. A safety
+      launch can replace the medical launch if it breaks down; racing is
+      suspended while the medical launch is unavailable.
     - Radio checks and klaxon tests are carried out at the marshals'
       briefing before racing.
     - If a klaxon fails, the marshal says "KLAXON! KLAXON! KLAXON!" on the
@@ -365,7 +368,10 @@ Residual risk
       them until it is safe to proceed.
     - Rowing in high stream follows the OURCs flag system, and racing is
       suspended when conditions are unsuitable.
-    - Launches on the water to assist any crew that needs help.
+    - Crews are only allowed through the Gut on the intermediate course when
+      both safety launches are providing cover, with one stationed near
+      Longbridges to assist crews below it quickly (see the Event Plan's
+      [Launches](event-plan.md#launches) section).
 
 ---
 
@@ -425,8 +431,10 @@ Residual risk
     - Short course only, at the discretion of the Senior Umpires and the
       Event Committee, and only if no other condition (such as wind or
       visibility) adds to the safety concerns. Never guaranteed.
-    - At least two launches on the water at all times, downstream of all
-      marshalling crews, to assist any crew that needs help.
+    - Both safety launches providing cover, with at least one stationed
+      downstream of all marshalling crews. Racing on Low Amber Flag is
+      suspended if either is unavailable (see the Event Plan's
+      [Launches](event-plan.md#launches) section).
     - Every crew must have senior rowers (≥ 3 full terms of rowing
       experience) at bow and 2.
     - Coxes must be S status, or X status upgraded more than 12 months
@@ -549,8 +557,7 @@ Residual risk
 ??? success "Controls"
     - SU, event committee, race officials and marshals to monitor weather
       conditions.
-    - Safety launches to clear small quantities of ice from the racing
-      course.
+    - Launches to clear small quantities of ice from the racing course.
     - Racing cancelled if launches cannot sufficiently clear the course of
       ice.
 

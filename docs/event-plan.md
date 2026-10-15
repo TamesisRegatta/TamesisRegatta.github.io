@@ -260,6 +260,8 @@ The issue of circulation will be heavily emphasised at both the coxswains briefi
 
 The circulation patterns both for side-by-side racing and time trials are included in the appendices to this document. The transit lane stays on the City side of the river along the whole course, so it does not cross the racing lanes. Coxswains shall be instructed to follow marshals’ commands.
 
+Where needed for safety, instructions from the Senior Umpires or the Race Committee override the circulation rules in this plan: for example, when racing is stopped early and crews must return to their boathouses quickly (see [Emergency procedure](#emergency-procedure)).
+
 Crews have a general responsibility, whilst sticking to circulation, to avoid other river traffic (which should in theory follow the circulation pattern under instruction from marshals) and to avoid wildlife, especially swans.
 
 Note that the region of the river under event management is as follows:
@@ -419,9 +421,11 @@ Should Race Desk and/or the Senior Umpire decide that racing must stop, the foll
 
 3. The head marshal then tells the boats which have finished to spin and land in normal circulation.
 
-4. Then, depending on the racing format:
-    * **Side-by-side racing:** Once crews which have finished have landed, the Incident Controller will direct crews waiting below the start to land upstream at their boathouses. Crews who boat from Longbridges will be directed to spin on the Green Bank, and may land in either direction.
-    * **Time trials:** Once all the boats in the Marshalling Zone are pointing upstream and the Incident Controller decides the top stretch is sufficiently clear, the Senior Umpire and marshals will instruct any crews waiting in the Marshalling Zone to proceed up the course, as safely as possible, and land upstream at their boathouses.
+4. Once crews which have finished have landed, all crews in the Marshalling Zone are pointing upstream, and the Incident Controller decides the top stretch is sufficiently clear, the Senior Umpire and marshals will direct crews in the Marshalling Zone back to their boathouses, as quickly and safely as possible. This overrides normal circulation: landing with bows pointing upstream is safest, especially in high stream.
+    * **Boathouse Island:** cross to the City side, proceed up the course, and land with bows pointing upstream.
+    * **Univ:** land with bows pointing upstream, under the direction of the Univ Marshal.
+    * **Longbridges:** spin on the Green Bank, and may land in either direction.
+    * **Isis Boathouse:** go through the Gut under the direction of the Gut Marshal.
 
 The whole process should take under 20 minutes. The operation being directed by the incident controller will keep crews safe and avoid collisions.   All marshals are to be briefed on this procedure in full prior to taking up their duties.
 

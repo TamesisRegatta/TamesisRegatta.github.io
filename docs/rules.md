@@ -67,7 +67,7 @@ Questions about these rules should be sent to
     2. If you lose to a friendly crew in a heat, then you will proceed through to the repechage instead of to round one.
         { #friendly-repechage }
 
-4. All athletes must be members of their respective college boat club per OURCs rules of racing section A1.1. A maximum of 2 associate members are permitted in any crew.
+4. All athletes must be members of their respective college boat club, per the membership definitions in the General rules of racing of the [OURCs Rules of Racing](https://ourcs.co.uk/organisation/racing/). A maximum of 2 associate members are permitted in any crew.
     { #club-membership }
 
 5. At the discretion of the Event Committee, composite crews (composed of novice rowers, within the eligibility rules, from more than one boat club) may be permitted to row as a competitive crew. This rule is intended to allow novices to race who would otherwise not have a seat, and the Event Committee will be unlikely to permit composite crews which have been created for reasons other than this.

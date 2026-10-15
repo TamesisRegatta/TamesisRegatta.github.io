@@ -196,8 +196,8 @@ Hazard
     { #faulty-equipment }
 
 Consequences
-:   Collision due to steering, Crews trapped in boats, Life jackets not
-    inflating
+:   Collision due to steering, Crews trapped in boats, Inflatable
+    personal flotation devices (PFDs) not inflating
 
 Persons at risk
 :   Competitors & river users
@@ -261,7 +261,8 @@ Residual risk
 ??? success "Controls"
     - All launch drivers must have an RYA Powerboat Level 2 qualification
       (or equivalent).
-    - All launch drivers and passengers must wear life jackets.
+    - All launch drivers and passengers must wear PFDs, in line with the
+      [OURCs Code of Conduct](https://ourcs.co.uk/organisation/conduct/).
     - A second launch will assist if needed.
     - Drivers must wear kill cords at all times whilst operating a launch.
 

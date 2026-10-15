@@ -76,11 +76,11 @@ A Risk Assessment has been conducted, and is included as Appendix 6 to this docu
 
 **Swim Tests**
 
-All **competitors (including coxswains) must have passed an OURCs swim test** before being allowed to compete. Competitors who have failed to pass a swimming test will not be allowed to compete (the wearing of a lifejacket will not be accepted in lieu of a swim test: this is above and beyond guidance in the BR water safety code “RowSafe”). 
+All **competitors (including coxswains) must have passed an OURCs swim test** before being allowed to compete. Competitors who have failed to pass a swimming test will not be allowed to compete (the wearing of a personal flotation device (PFD) will not be accepted in lieu of a swim test: this is above and beyond guidance in the BR water safety code “RowSafe”). 
 
 **Coxswains** 
 
-It is **compulsory for all coxswains to attend the Coxes’ Regatta safety briefing** which will be held in conjunction with OURCs. The date is to be confirmed, but it is planned to be the Wednesday of Week 6 of Michaelmas Term ({{ dates.coxing_briefing | ukdate }}). In cases of illness or academic clashes, exemptions may be given by the Regatta Captain of Coxes in consultation with OURCs. Exemptions have to be requested via email no later than 11am on the day the briefing will take place. However, exemptions, if at all, can only be given to coxes who are X or S status. Coxes who have been exempted from attending the briefing are required to review the relevant information, especially the circulation pattern, which will be made available on the regatta web page and circulated to all boat clubs via email. **ALL coxswains are required to wear life jackets.**
+It is **compulsory for all coxswains to attend the Coxes’ Regatta safety briefing** which will be held in conjunction with OURCs. The date is to be confirmed, but it is planned to be the Wednesday of Week 6 of Michaelmas Term ({{ dates.coxing_briefing | ukdate }}). In cases of illness or academic clashes, exemptions may be given by the Regatta Captain of Coxes in consultation with OURCs. Exemptions have to be requested via email no later than 11am on the day the briefing will take place. However, exemptions, if at all, can only be given to coxes who are X or S status. Coxes who have been exempted from attending the briefing are required to review the relevant information, especially the circulation pattern, which will be made available on the regatta web page and circulated to all boat clubs via email. **ALL coxswains are required to wear a PFD, in line with the [OURCs Code of Conduct](https://ourcs.co.uk/organisation/conduct/).**
 
 **Medical cover** 
 
@@ -191,7 +191,7 @@ Checks will pay special attention to the following, in accordance with OURCs equ
 * Bow ball is firmly attached, not just taped
 * All backstays are in place
 * All hatch covers are in place if the boat has watertight compartments fitted
-* Coxswain wears a life jacket
+* Coxswain wears a PFD, in line with the [OURCs Code of Conduct](https://ourcs.co.uk/organisation/conduct/)
 * Switched-on 360° static white lights at front and rear at times applicable
 
 Crews whose equipment does not meet the above criteria will not be allowed to push off.

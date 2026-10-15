@@ -135,7 +135,7 @@ Questions about these rules should be sent to
     6. Lights. Boats which are scheduled to race after 15:00 each day must carry bright white lights attached to the stern and bow, which together are visible through 360 degrees.
         { #lights }
 
-2. Coxes shall wear a life jacket in the correct manner and be familiar with the method of operation.
+2. Coxes shall wear a personal flotation device (PFD), in line with the [OURCs Code of Conduct](https://ourcs.co.uk/organisation/conduct/), and be familiar with its method of operation.
     { #cox-lifejackets }
 
 3. All bankriders must have a roadworthy bicycle equipped with properly functioning brakes and, if appropriate, lights. Bankriders must not have handheld cameras or other devices.

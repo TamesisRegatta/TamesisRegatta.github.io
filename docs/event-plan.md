@@ -303,7 +303,7 @@ After crossing the finish line, crews must proceed upstream well clear of the fi
 
 After spinning, all crews return downstream on the City side, without doing any further laps.
 
-* **Boathouse Island:** crews land at Boathouse Island.
+* **Boathouse Island:** crews land at Boathouse Island with bows pointing downstream.
 * **Univ:** crews wait near St John's Boathouse on the City side, and cross to land at Univ under the instruction of the Crossing Marshal (5).
 * **Longbridges:** crews continue down the City side past the Marshalling Zone, then spin and land at Longbridges with bows facing upstream.
 * **Isis Boathouse:** crews continue down the City side past the Marshalling Zone, and go through the Gut under the direction of the Gut Marshal. Crews landing at the Isis Boathouse can land in any safe manner at their discretion.
@@ -328,7 +328,7 @@ Crews boat with their bows pointed downstream and keep within the Transit Lane a
 
 Crews may spin into the Marshalling Zone, ensuring that they do not obstruct any other crews while they do so. 
 
-Crews based on Boathouse Island must land at one of the rafts at the upstream end of the island (Rafts between St Anne’s Boathouse and Brasenose Boathouse).
+Crews based on Boathouse Island must land with bows pointing downstream, at one of the rafts at the upstream end of the island (Rafts between St Anne’s Boathouse and Brasenose Boathouse).
 
 #### Longbridges
 

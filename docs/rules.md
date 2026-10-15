@@ -245,3 +245,4 @@ Questions about these rules should be sent to
 | 2025.1 | 2025-10-29 | Initial version of 2025 rules |
 | 2025.2 | 2025-10-30 | Clarified that deadline for complete crews is before the scratch deadline. Updated name of Chief Marshal |
 | 2026.1 | 2026-07-18 | Converted to website format; dates updated for 2026 |
+| 2026.2 | 2026-10-15 | Coxes' PFDs to follow the OURCs Code of Conduct. Added rule 2.16: crews must be safe to race |

@@ -564,7 +564,7 @@ It is imperative that all relevant people are contacted as soon as possible, and
 
 The University Security Services will then offer advice on the best course of action, contact the ‘Press Office’ where required, inform College Bursars where required and contact key members of the Sports Department staff.
 
-If not present at the event, the Rowing Sabbatical should be informed of the incident. The Rowing Sabbatical will in the event be present for a considerable amount of the regatta, in their capacity as Water Safety Advisor.
+If not present at the event, the Rowing Sabbatical should be informed of the incident.
 
 As soon as is sensibly possible the Event Secretary should complete a BR incident form, and an accident form and near miss report form.  These should be submitted to the Rowing Sabbatical Officer and Sports Safety Officer. These forms will then be forwarded to the University Safety Office.
 

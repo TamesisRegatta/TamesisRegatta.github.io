@@ -155,9 +155,10 @@ Residual risk
       is in the water.
     - Circulation pattern sent to all crews in advance; competitors and bank
       riders are expected to understand and follow it.
-    - Crews entered must be able to row all eight safely; crews deemed
-      unsafe may be asked to land at any point and may be pulled from
-      racing, at the discretion of the event committee.
+    - Crews entered must be able to row all eight safely; crews that the
+      Senior Umpires or the Event Committee deem unsafe may be asked to land
+      at any point, withdrawn from racing, or disqualified (see the
+      [crews racing safely](rules.md#safe-to-race) rule).
     - All competitors must have passed an OURC-approved swim test to
       qualify for racing.
 
@@ -184,9 +185,9 @@ Residual risk
     - Crews expected to fully warm up on land prior to boating.
     - Captains/coaches expected to enter crews who are physically capable of
       racing.
-    - Crews deemed unsafe may be asked to land at any point and may be
-      pulled from racing, or removed, at the discretion of the event
-      committee.
+    - Crews that the Senior Umpires or the Event Committee deem unsafe may
+      be asked to land at any point, withdrawn from racing, or disqualified
+      (see the [crews racing safely](rules.md#safe-to-race) rule).
 
 ---
 
@@ -442,6 +443,10 @@ Residual risk
     - No crew may boat from or land at a boathouse downstream of the Gut, or
       go through the Gut; crews based there must borrow equipment from a
       club boating above the Gut.
+    - Crews that the Senior Umpires or the Event Committee deem unsafe to
+      race on Low Amber Flag may be asked to land, withdrawn from racing, or
+      disqualified (see the [crews racing safely](rules.md#safe-to-race)
+      rule).
     - Crews must spin under the direction of race officials, well above the
       Longbridges raft.
     - Entrants notified by 5pm the day before, so crews can arrange senior
@@ -638,9 +643,12 @@ Residual risk
     - Senior Umpire to assess the recent history of weather and conditions
       that allowed training, in consultation with the Event Committee, to
       decide if racing is safe to occur.
-    - Each novice rower is recommended to have had no fewer than 5 training
-      outings before racing; crews that the Senior Umpires or the Event
-      Committee deem unsafe to race may be disqualified.
+    - Captains to take extra care that their crews are safe to race,
+      bearing in mind the standing recommendation that each novice rower
+      has had no fewer than 5 training outings before racing; crews that
+      the Senior Umpires or the Event Committee deem unsafe to race may be
+      asked to land, withdrawn from racing, or disqualified (see the
+      [crews racing safely](rules.md#safe-to-race) rule).
     - Implement rower status restrictions and/or coxing status restrictions
       at the discretion of the Event Committee.
 

@@ -471,6 +471,7 @@ Racing on Low Amber Flag requires all of the following:
 2. **Bow pair:** every crew must have senior rowers (≥ 3 full terms of rowing experience) at bow and 2. This overrides any rule to the contrary, including the composition of [competitive](rules.md#competitive-crews) and [friendly](rules.md#friendly-crews) crews.
 3. **Coxes:** S status, or X status upgraded more than 12 months before the day of racing. N status coxes, and X status coxes upgraded within the last 12 months, may not cox on Low Amber Flag. This overrides the rule that [any crew may have a cox of any status](rules.md#cox-status).
 4. **Boathouses downstream of the Gut:** no crew may boat from or land at a boathouse downstream of the Gut, or go through the Gut. For instance, this would likely require Reuben College crews, who normally boat from the Isis Boathouse, to borrow equipment from a club boating above the Gut. This overrides [Transit through the Gut](#gut-transit).
+5. **Crews safe to race:** each novice rower should have had no fewer than 5 training outings before racing. Crews that the Senior Umpires or the Event Committee deem unsafe to race on Low Amber Flag may be asked to land, withdrawn from racing, or disqualified (see the rule on [crews racing safely](rules.md#safe-to-race)).
 
 Crews must spin under the direction of race officials, well above the Longbridges raft, on Low Amber Flag.
 {% else %}
@@ -485,7 +486,7 @@ The Event Committee will make every endeavour to announce any such change at lea
 
 As in the event of a large entry it is already planned that a time trial element will be used in lieu of a repêchage, there should be no changes to the Event Plan or Risk Assessment necessitated by the change to a qualification time trial.
 
-In the event of minimal training time due to high stream conditions in Michaelmas, we recommend that each novice rower has had no fewer than 5 training outings before racing. Crews that the Senior Umpires or the Event Committee deem unsafe to race may be disqualified.
+Especially when high stream conditions in Michaelmas have limited training time, captains should take extra care to ensure their crews are safe to race, bearing in mind the recommendation that each novice rower has had no fewer than 5 training outings before racing. Crews that the Senior Umpires or the Event Committee deem unsafe to race may be asked to land, withdrawn from racing, or disqualified (see the rule on [crews racing safely](rules.md#safe-to-race)).
 
 ### High Wind:
 

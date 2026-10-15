@@ -112,6 +112,9 @@ Questions about these rules should be sent to
 15. The event committee reserves the right to scratch any crews for any reason, including but not limited to loss of race time.
     { #committee-scratches }
 
+16. Clubs must only enter crews who can row safely. Each novice rower should have had no fewer than 5 training outings before racing. Crews that the Senior Umpires or the Event Committee deem unsafe to race may be asked to land, withdrawn from racing, or disqualified.
+    { #safe-to-race }
+
 ## 3. Equipment { #equipment }
 
 1. All competing boats shall comply with OURCs rules and RowSafe guidelines for equipment. Crews are required to get their boat checked by a marshal before going afloat and any boat which does not meet the following points, or which is judged by the marshal to be unsafe for any other reason, shall not be allowed to boat until the issue is remedied.

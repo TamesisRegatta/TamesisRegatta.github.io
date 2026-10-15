@@ -236,10 +236,10 @@ Key:
 | :material-timer-outline: | (2A) Finish Timer | *Used in Time Trials only.* Provides backup finish timing along with the finish marshal.  |
 | :material-alarm-light:{ .tr-icon-red } | (3) Meadow | Stationed on the City Side between the humpback bridge, and the Finish Marshal. Advises crews moving away from the spinning area to land. Monitors the upstream end of the river is clear for racing. |
 | :material-alarm-light:{ .tr-icon-red }:material-check-circle:{ .tr-icon-green } | (4) Boathouses A | See Raft Marshals (above) Stationed at the upstream half of Boathouse Island |
-| :material-alarm-light:{ .tr-icon-red }:material-check-circle:{ .tr-icon-green } | (5) Boathouses B | See Raft Marshals (above) Stationed at the downstream half of Boathouse Island |
+| :material-alarm-light:{ .tr-icon-red }:material-check-circle:{ .tr-icon-green } | (5) Boathouses B | See Raft Marshals (above) Stationed at the downstream half of Boathouse Island **[time trials]** Also acts as Crossing Marshal: crews landing at Univ wait near St John's Boathouse, and cross to land under this marshal's instruction. |
 | :material-alarm-light:{ .tr-icon-red }:material-check-circle:{ .tr-icon-green } | **(6) Tower** | Stationed on the roof of one of the boathouses. This marshal is to monitor racing for safety and fairness and shall liaise with the race committee regarding any appeals. This position will preferably be filled by a member of the race committee to ensure consistency. |
-| :material-alarm-light:{ .tr-icon-red }:material-check-circle:{ .tr-icon-green }:material-bullhorn: | (7) Univ | See Raft Marshals (above) Stationed at University College Boathouse. This position will preferably be filled by a member of the race committee to ensure consistency. **[side by side racing]** Coordinates with Tower Marshal to hold crews that want to boat from Univ and sends them up in transit once the current race has gone past, but with sufficient distance (in case the boat racing on County station catches a crab or runs into other boat-stopping trouble). |
-| :material-alarm-light:{ .tr-icon-red }:material-check-circle:{ .tr-icon-green } | (8) Greenbanks | *Used in side by side racing only.* Stationed below the start on the County side of the river. Assisting crews to pair up before the start, ensuring crews are on the correct side (city/county). Advising crews in transit for landing at Univ, holding them back if race is in progress. |
+| :material-alarm-light:{ .tr-icon-red }:material-check-circle:{ .tr-icon-green }:material-bullhorn: | (7) Univ | See Raft Marshals (above) Stationed at University College Boathouse. This position will preferably be filled by a member of the race committee to ensure consistency. **[side by side racing]** Coordinates with Tower Marshal to hold crews that want to boat from Univ and sends them up in transit once the current race has gone past, but with sufficient distance (in case the boat racing on County station catches a crab or runs into other boat-stopping trouble). **[time trials]** Sends Univ crews to push off and cross to the City side between divisions, and keeps the raft clear for landing crews. |
+| :material-alarm-light:{ .tr-icon-red }:material-check-circle:{ .tr-icon-green } | (8) Greenbanks | Stationed below the start on the County side of the river. **[side by side racing]** Assisting crews to pair up before the start, ensuring crews are on the correct side (city/county). Advising crews in transit for landing at Univ, holding them back if race is in progress. **[time trials]** Keeps crews in the Marshalling Zone tucked in to the towpath bank, in the correct order. |
 | :material-alarm-light:{ .tr-icon-red }:material-check-circle:{ .tr-icon-green }:material-bullhorn: | (9) Longbridges | See Raft Marshals (above).  Stationed at Longbridges Boathouse During time trials, liaises with river traffic to show them Holding Point B, and advises when they can proceed upstream.  During side by side racing, advises crews in transit for landing at University College boathouse. This position will preferably be filled by a member of the race committee to ensure consistency. |
 | :material-alarm-light:{ .tr-icon-red }:material-check-circle:{ .tr-icon-green }:material-bullhorn: | **(10) Gut** | **[side by side racing]** Stationed at Top Gut, just below Longbridges. They are responsible for liaising with other river users, asking them to hold at Holding Point B and await the end of the race in progress.  **[time trials]** To send crews towards the start when it is clear, in the correct order. Ask river traffic to tuck in at Holding Point B if necessary.  They are responsible for liaising with other river users, asking them to hold and await the end of the race in progress. Instructs crews where to spin. Ensures that crews are moving to the start in good time and are at the correct stations to ensure that no collisions occur. Responsible for holding any crews coming upstream through the gut until it is safe to cross into race circulation above the gut. |
 | :material-alarm-light:{ .tr-icon-red }:material-check-circle:{ .tr-icon-green }:material-bullhorn: | (11) Donnington Bridge | Only in use when using an intermediate course; responsible for ensuring crews do not go below Donnington Bridge (unless landing at a boathouse below it). See [Transit through the Gut](#gut-transit). |
@@ -277,19 +277,19 @@ On parts of the river not under event management, OURCs clubs must abide by all 
 
 ### Time Trial
 
-For time trials, crews may not do laps on the water to warm up. Crews must proceed towards longbridges and spin to bowside, under marshal instructions, to keep clear of gut and weir streams, and then line up bow to stern against the towpath bank facing upstream.
+For time trials, crews may not do laps on the water to warm up. Crews proceed downstream on the City side and, under marshal instructions, spin to bowside upstream of Longbridges House into the Marshalling Zone, keeping clear of the Gut and weir streams. They then line up bow to stern, tucked in to the towpath bank and facing upstream, while waiting for their division to start. Crews in the Marshalling Zone must not obstruct crews returning to Longbridges or the Isis Boathouse.
 
 #### Boating:
 
-Boat with bow-balls pointing downstream, keeping close to the bank from which they boated, down to the spinning area upstream of Longbridges. The exception is crews boating from Longbridges, who should boat with bows facing upstream.
+Boathouse Island crews should boat with bow-balls pointing downstream and proceed down the City side to the spinning area upstream of Longbridges House.
 
-Crews boating from Univ must listen to the Univ marshal and boat to cross immediately to county side at the direction of Marshals.
+Crews boating from Longbridges should boat with bows facing upstream.
 
-Crews boating from the Isis Boathouse will proceed upstream following standard (training) circulation, but must wait for instruction from the Gut marshal before crossing to reverse circulation above the gut.
+Crews boating from Univ boat with bows pointing downstream, pushing off and crossing immediately to the City side between divisions, under the direction of the Univ Marshal. Crews at Univ must follow the Univ Marshal's directions if asked not to put their boat on the raft, to make space for landing crews.
+
+Crews boating from the Isis Boathouse will proceed upstream following standard (training) circulation, but must wait for instruction from the Gut Marshal before crossing to reverse circulation above the Gut.
 
 Crews should pay particular attention to the direction of the marshals who will facilitate marshalling in the correct order.
-
-Marshalling crews will be asked to keep tucked into a particular bank.
 
 **Crews will be started by the Senior Umpire at the start line, and marshalling crews must move up towards the Senior Umpire as each crew is set off.** 
 
@@ -297,15 +297,16 @@ Marshalling crews will be asked to keep tucked into a particular bank.
 
 The racing line is considered to be as close to the towpath bank as possible. A slower crew must move to give way to a faster crew by steering towards the middle of the river. Impeding a faster crew may incur a time penalty at the discretion of the Senior Umpire.
 
-As crews cross the finish line, they must wind down and move to the towpath side and proceed upstream well clear of the finish line under the instruction of the Finish and Head marshal to make room for other crews. Crews should not spin until told to do so by the Head marshal.
+After crossing the finish line, crews must proceed upstream well clear of the finish line under the instruction of the Finish and Head Marshals, to make room for other crews. Crews should not spin until told to do so by the Head Marshal.
 
-#### Return Circulation - crews landing on Boat House Island:
+#### Return circulation:
 
-Crews returning to Boat House Island must stay on the non-towpath side and land downstream without doing any further laps.
+After spinning, all crews return downstream on the City side, without doing any further laps.
 
-#### Return Circulation - crews landing at Univ, Longbridges, and the Isis Boathouse:
-
-Crews returning to Univ, Longbridges, and the Isis Boathouse must stay on the towpath side downstream of the finish line, and then proceed along the towpath bank to land downstream without doing any further laps. If there is a strong stream at Longbridges, then crews landing at Longbridges may spin upstream of their raft, and drift back to land. Crews landing at the Isis Boathouse can land in any safe manner at their discretion.
+* **Boathouse Island:** crews land at Boathouse Island.
+* **Univ:** crews wait near St John's Boathouse on the City side, and cross to land at Univ under the instruction of the Crossing Marshal (5).
+* **Longbridges:** crews continue down the City side past the Marshalling Zone, then spin and land at Longbridges with bows facing upstream.
+* **Isis Boathouse:** crews continue down the City side past the Marshalling Zone, and go through the Gut under the direction of the Gut Marshal. Crews landing at the Isis Boathouse can land in any safe manner at their discretion.
 
 ### Side-By-Side
 

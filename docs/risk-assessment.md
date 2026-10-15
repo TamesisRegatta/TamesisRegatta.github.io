@@ -439,10 +439,13 @@ Residual risk
       experience) at bow and 2.
     - Coxes must be S status, or X status upgraded more than 12 months
       before the day of racing.
+    - No crew may boat from or land at a boathouse downstream of the Gut, or
+      go through the Gut; crews based there must borrow equipment from a
+      club boating above the Gut.
     - Crews must spin under the direction of race officials, well above the
       Longbridges raft.
     - Entrants notified by 5pm the day before, so crews can arrange senior
-      bow pairs and eligible coxes.
+      bow pairs, eligible coxes, and borrowed equipment where needed.
 {% endif %}
 
 ---

@@ -287,7 +287,7 @@ On parts of the river not under event management, OURCs clubs must abide by all 
 
 ### Transit through the Gut { #gut-transit }
 
-* Crews boating from or landing at a boathouse downstream of the Gut, such as the Isis Boathouse, may always go through the Gut, under the direction of the Gut Marshal.
+* Crews boating from or landing at a boathouse downstream of the Gut, such as the Isis Boathouse, may always go through the Gut, under the direction of the Gut Marshal{% if amber_flag_racing %}, except when racing on Low Amber Flag (see [Racing on Low Amber Flag](#racing-on-low-amber-flag)){% endif %}.
 * On the short course, which all time trials use, no other crew may go through the Gut.
 * On the intermediate course, the Senior Umpires and Race Committee may also allow other crews through the Gut, as far as Donnington Bridge, provided both safety launches are providing cover (see [Launches](#launches)). Whether they do will be made clear to all crews before each day's racing; if it is not allowed, no other crew may go through the Gut.
 
@@ -470,6 +470,7 @@ Racing on Low Amber Flag requires all of the following:
 1. **Safety launches:** both safety launches providing cover, with at least one stationed downstream of all marshalling crews, as set out in [Launches](#launches).
 2. **Bow pair:** every crew must have senior rowers (≥ 3 full terms of rowing experience) at bow and 2. This overrides any rule to the contrary, including the composition of [competitive](rules.md#competitive-crews) and [friendly](rules.md#friendly-crews) crews.
 3. **Coxes:** S status, or X status upgraded more than 12 months before the day of racing. N status coxes, and X status coxes upgraded within the last 12 months, may not cox on Low Amber Flag. This overrides the rule that [any crew may have a cox of any status](rules.md#cox-status).
+4. **Boathouses downstream of the Gut:** no crew may boat from or land at a boathouse downstream of the Gut, or go through the Gut. For instance, this would likely require Reuben College crews, who normally boat from the Isis Boathouse, to borrow equipment from a club boating above the Gut. This overrides [Transit through the Gut](#gut-transit).
 
 Crews must spin under the direction of race officials, well above the Longbridges raft, on Low Amber Flag.
 {% else %}
@@ -535,7 +536,7 @@ Racing may still continue, but S/X coxes only and notify entrants by 5pm the day
 {# The one exception to amber suspending racing: switched by amber_flag_racing
     in event.yml, like "Racing on Low Amber Flag". #}
 {% if amber_flag_racing %}
-If the flag status of the Isis is Low Amber (≤ 4.5 bucks equivalent) on Day 3 or 4, and there was racing on both Days 1 and 2, racing may continue only as set out in [Racing on Low Amber Flag](#racing-on-low-amber-flag). Notify entrants by 5pm the day before, so that crews can arrange senior rowers at bow and 2 and an eligible cox.
+If the flag status of the Isis is Low Amber (≤ 4.5 bucks equivalent) on Day 3 or 4, and there was racing on both Days 1 and 2, racing may continue only as set out in [Racing on Low Amber Flag](#racing-on-low-amber-flag). Notify entrants by 5pm the day before, so that crews can arrange senior rowers at bow and 2, an eligible cox, and, for crews based downstream of the Gut, equipment to borrow.
 {% endif %}
 
 The Regatta Organisers should be in consultation with the Iffley Lock Keeper and the Environment Agency.

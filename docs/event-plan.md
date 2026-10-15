@@ -240,7 +240,7 @@ Key:
 | :material-alarm-light:{ .tr-icon-red }:material-check-circle:{ .tr-icon-green } | **(6) Tower** | Stationed on the roof of one of the boathouses. This marshal is to monitor racing for safety and fairness and shall liaise with the race committee regarding any appeals. This position will preferably be filled by a member of the race committee to ensure consistency. |
 | :material-alarm-light:{ .tr-icon-red }:material-check-circle:{ .tr-icon-green }:material-bullhorn: | (7) Univ | See Raft Marshals (above) Stationed at University College Boathouse. This position will preferably be filled by a member of the race committee to ensure consistency. **[side by side racing]** Coordinates with Tower Marshal to hold crews that want to boat from Univ and sends them up in transit once the current race has gone past, but with sufficient distance (in case the boat racing on County station catches a crab or runs into other boat-stopping trouble). **[time trials]** Sends Univ crews to push off and cross to the City side between divisions, and keeps the raft clear for landing crews. |
 | :material-alarm-light:{ .tr-icon-red }:material-check-circle:{ .tr-icon-green } | (8) Greenbanks | Stationed below the start on the County side of the river. **[side by side racing]** Assisting crews to pair up before the start, ensuring crews are on the correct side (city/county). Advising crews in transit for landing at Univ, holding them back if race is in progress. **[time trials]** Keeps crews in the Marshalling Zone tucked in to the towpath bank, in the correct order. |
-| :material-alarm-light:{ .tr-icon-red }:material-check-circle:{ .tr-icon-green }:material-bullhorn: | (9) Longbridges | See Raft Marshals (above).  Stationed at Longbridges Boathouse During time trials, liaises with river traffic to show them Holding Point B, and advises when they can proceed upstream.  During side by side racing, advises crews in transit for landing at University College boathouse. This position will preferably be filled by a member of the race committee to ensure consistency. |
+| :material-alarm-light:{ .tr-icon-red }:material-check-circle:{ .tr-icon-green }:material-bullhorn: | (9) Longbridges | See Raft Marshals (above).  Stationed at Longbridges Boathouse During time trials, liaises with river traffic to show them Holding Point B, and advises when they can proceed upstream.  During side by side racing, advises crews in transit for landing at University College boathouse. Directs crews landing at Longbridges, and may instruct a crew to land with bows pointing downstream (see [Landing at Longbridges](#longbridges-landing)). This position will preferably be filled by a member of the race committee to ensure consistency. |
 | :material-alarm-light:{ .tr-icon-red }:material-check-circle:{ .tr-icon-green }:material-bullhorn: | **(10) Gut** | **[side by side racing]** Stationed at Top Gut, just below Longbridges. They are responsible for liaising with other river users, asking them to hold at Holding Point B and await the end of the race in progress.  **[time trials]** To send crews towards the start when it is clear, in the correct order. Ask river traffic to tuck in at Holding Point B if necessary.  They are responsible for liaising with other river users, asking them to hold and await the end of the race in progress. Instructs crews where to spin. Ensures that crews are moving to the start in good time and are at the correct stations to ensure that no collisions occur. Responsible for holding any crews coming upstream through the gut until it is safe to cross into race circulation above the gut. |
 | :material-alarm-light:{ .tr-icon-red }:material-check-circle:{ .tr-icon-green }:material-bullhorn: | (11) Donnington Bridge | Only in use when using an intermediate course; responsible for ensuring crews do not go below Donnington Bridge (unless landing at a boathouse below it). See [Transit through the Gut](#gut-transit). |
 | :material-alarm-light:{ .tr-icon-red } | Launch Driver (Medical Response) | Launch drivers must hold RYA Powerboat L2 or equivalent qualification. Dedicated launch with a member of the medical team. Transports medics to emergency sites. |
@@ -277,6 +277,11 @@ On parts of the river not under event management, OURCs clubs must abide by all 
 * On the short course, which all time trials use, no other crew may go through the Gut.
 * On the intermediate course, the Senior Umpires and Race Committee may also allow other crews through the Gut, as far as Donnington Bridge. Whether they do will be made clear to all crews before each day's racing; if it is not allowed, no other crew may go through the Gut.
 
+### Landing at Longbridges { #longbridges-landing }
+
+* Crews landing at Longbridges spin and land with bows pointing upstream. In high stream, crews may spin upstream of the raft and drift back to land, still with bows pointing upstream.
+* The Longbridges Marshal (9) may instead instruct a crew to land with bows pointing downstream, for example to keep the raft running efficiently.
+
 ### Time Trial
 
 For time trials, crews may not do laps on the water to warm up. Crews proceed downstream on the City side and, under marshal instructions, spin to bowside upstream of Longbridges House into the Marshalling Zone, keeping clear of the Gut and weir streams. They then line up bow to stern, tucked in to the towpath bank and facing upstream, while waiting for their division to start. Crews in the Marshalling Zone must not obstruct crews returning to Longbridges or the Isis Boathouse.
@@ -307,7 +312,7 @@ After spinning, all crews return downstream on the City side, without doing any 
 
 * **Boathouse Island:** crews land at Boathouse Island with bows pointing downstream.
 * **Univ:** crews wait near St John's Boathouse on the City side, and cross to land at Univ under the instruction of the Crossing Marshal (5).
-* **Longbridges:** crews continue down the City side past the Marshalling Zone, then spin and land at Longbridges with bows facing upstream.
+* **Longbridges:** crews continue down the City side past the Marshalling Zone, and land as set out in [Landing at Longbridges](#longbridges-landing).
 * **Isis Boathouse:** crews continue down the City side past the Marshalling Zone, and go through the Gut under the direction of the Gut Marshal. Crews landing at the Isis Boathouse can land in any safe manner at their discretion.
 
 ### Side-By-Side
@@ -336,7 +341,7 @@ Crews based on Boathouse Island must land with bows pointing downstream, at one 
 
 Crews boating from Longbridges boat directly into the marshaling zone and proceed as outlined above for Boathouse Island crews.
 
-When returning after a race, they must proceed along the Transit Lane, and may spin to land with bows upstream or cross to land bows pointed downstream at Longbridges Raft. They must take care to avoid obstructing crews entering the Marshalling Zone.
+When returning after a race, they must proceed along the Transit Lane, and land as set out in [Landing at Longbridges](#longbridges-landing). They must take care to avoid obstructing crews entering the Marshalling Zone.
 
 #### University Boathouse
 
@@ -424,7 +429,7 @@ Should Race Desk and/or the Senior Umpire decide that racing must stop, the foll
 4. Once crews which have finished have landed, all crews in the Marshalling Zone are pointing upstream, and the Incident Controller decides the top stretch is sufficiently clear, the Senior Umpire and marshals will direct crews in the Marshalling Zone back to their boathouses, as quickly and safely as possible. This overrides normal circulation: landing with bows pointing upstream is safest, especially in high stream.
     * **Boathouse Island:** cross to the City side, proceed up the course, and land with bows pointing upstream.
     * **Univ:** land with bows pointing upstream, under the direction of the Univ Marshal.
-    * **Longbridges:** spin on the Green Bank, and may land in either direction.
+    * **Longbridges:** land as set out in [Landing at Longbridges](#longbridges-landing).
     * **Isis Boathouse:** go through the Gut under the direction of the Gut Marshal.
 
 The whole process should take under 20 minutes. The operation being directed by the incident controller will keep crews safe and avoid collisions.   All marshals are to be briefed on this procedure in full prior to taking up their duties.

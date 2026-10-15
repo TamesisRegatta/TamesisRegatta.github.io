@@ -358,8 +358,9 @@ Residual risk
 
 ??? success "Controls"
     - Crews spin under marshal instruction, well clear of the Gut and weir
-      streams, and must not go through the Gut except when boating from or
-      landing at the Isis Boathouse.
+      streams.
+    - Crews may only go through the Gut as set out in the Event Plan's
+      [Transit through the Gut](event-plan.md#gut-transit) section.
     - The Gut marshal controls crews and river traffic at the Gut, holding
       them until it is safe to proceed.
     - Rowing in high stream follows the OURCs flag system, and racing is

@@ -242,7 +242,7 @@ Key:
 | :material-alarm-light:{ .tr-icon-red }:material-check-circle:{ .tr-icon-green } | (8) Greenbanks | *Used in side by side racing only.* Stationed below the start on the County side of the river. Assisting crews to pair up before the start, ensuring crews are on the correct side (city/county). Advising crews in transit for landing at Univ, holding them back if race is in progress. |
 | :material-alarm-light:{ .tr-icon-red }:material-check-circle:{ .tr-icon-green }:material-bullhorn: | (9) Longbridges | See Raft Marshals (above).  Stationed at Longbridges Boathouse During time trials, liaises with river traffic to show them Holding Point B, and advises when they can proceed upstream.  During side by side racing, advises crews in transit for landing at University College boathouse. This position will preferably be filled by a member of the race committee to ensure consistency. |
 | :material-alarm-light:{ .tr-icon-red }:material-check-circle:{ .tr-icon-green }:material-bullhorn: | **(10) Gut** | **[side by side racing]** Stationed at Top Gut, just below Longbridges. They are responsible for liaising with other river users, asking them to hold at Holding Point B and await the end of the race in progress.  **[time trials]** To send crews towards the start when it is clear, in the correct order. Ask river traffic to tuck in at Holding Point B if necessary.  They are responsible for liaising with other river users, asking them to hold and await the end of the race in progress. Instructs crews where to spin. Ensures that crews are moving to the start in good time and are at the correct stations to ensure that no collisions occur. Responsible for holding any crews coming upstream through the gut until it is safe to cross into race circulation above the gut. |
-| :material-alarm-light:{ .tr-icon-red }:material-check-circle:{ .tr-icon-green }:material-bullhorn: | (11) Donnington Bridge | Only in use when using an intermediate course; responsible for ensuring crews do not go below Donnington Bridge (unless landing at the Isis Boathouse). |
+| :material-alarm-light:{ .tr-icon-red }:material-check-circle:{ .tr-icon-green }:material-bullhorn: | (11) Donnington Bridge | Only in use when using an intermediate course; responsible for ensuring crews do not go below Donnington Bridge (unless landing at a boathouse below it). See [Transit through the Gut](#gut-transit). |
 | :material-alarm-light:{ .tr-icon-red } | Launch Driver (Medical Response) | Launch drivers must hold RYA Powerboat L2 or equivalent qualification. Dedicated launch with a member of the medical team. Transports medics to emergency sites. |
 | :material-alarm-light:{ .tr-icon-red } | Launch Driver (Transport Launch) | Launch drivers must hold RYA Powerboat L2 or equivalent qualification. Transports additional medical personnel as required for emergency response. |
 
@@ -268,6 +268,12 @@ Note that the region of the river under event management is as follows:
 * From Head of the River to Top Gut (if the course is shortened)
 
 On parts of the river not under event management, OURCs clubs must abide by all standard OURCs rules for general outings.
+
+### Transit through the Gut { #gut-transit }
+
+* Crews boating from or landing at a boathouse downstream of the Gut, such as the Isis Boathouse, may always go through the Gut, under the direction of the Gut Marshal.
+* On the short course, which all time trials use, no other crew may go through the Gut.
+* On the intermediate course, the Senior Umpires and Race Committee may also allow other crews through the Gut, as far as Donnington Bridge. Whether they do will be made clear to all crews before each day's racing; if it is not allowed, no other crew may go through the Gut.
 
 ### Time Trial
 
@@ -305,7 +311,7 @@ Crews returning to Univ, Longbridges, and the Isis Boathouse must stay on the to
 
 Racing will take place on a buoyed course, shown in Appendix 3. The general principle is reverse circulation upstream of the Gut.
 
-Crews must not proceed through the gut at any time, except if boating from or landing at the Isis Boathouse.
+Crews may only go through the Gut as set out in [Transit through the Gut](#gut-transit).
 
 There will be 2 racing lanes, the County Station along the County side of the river, and the City Station approximately following the centre of the river. The start will be at or below Univ Boathouse, and the Finish will be near the Cox Stone.
 

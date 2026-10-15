@@ -224,6 +224,14 @@ a.tr-rule-anchor:hover {
 @page {
   size: A4;
   margin: 16mm;
+
+  /* Page numbers in the bottom margin. mkdocs-exporter lays PDFs out with
+     Paged.js, which supports CSS margin boxes and counter(pages). */
+  @bottom-right {
+    content: "Page " counter(page) " of " counter(pages);
+    font-size: 8pt;
+    color: #666;
+  }
 }
 
 /* mkdocs-exporter (PDF generation) prints each page with Chromium's print

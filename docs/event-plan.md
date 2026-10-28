@@ -10,6 +10,8 @@ Prepared by {{ event_plan.prepared_by }}
 
 </div>
 
+{{ redaction_notice() }}
+
 ### Changelog
 
 | Version | Date | Notes |

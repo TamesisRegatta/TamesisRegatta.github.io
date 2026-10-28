@@ -107,6 +107,9 @@ To build locally with real contact details, copy `contacts.local.example.yml` to
 That file is git-ignored and must never be committed.
 `main.py` reads it when it exists; environment variables take precedence over it, and anything in neither place is still withheld.
 CI never has the file, so it cannot put numbers on the live site.
+Unless every contact detail has a value, the event plan opens with a "Public version: contact details removed" notice, on the page and in its PDF.
+A local build with a complete `contacts.local.yml` therefore produces the full version, without the notice.
+`contacts.local.example.yml` is the canonical list of contact keys: the build fails if a page uses a key that is not listed there.
 Restart `mkdocs serve` after editing it, as it is only read at startup.
 
 The generic mailbox in `event.yml` (`contact.email`) is public by design and

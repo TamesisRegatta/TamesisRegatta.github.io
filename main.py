@@ -10,7 +10,9 @@ For local builds, the same values can instead come from contacts.local.yml
 at the repository root (git-ignored; see contacts.local.example.yml).
 Environment variables take precedence over it. CI never has that file, so it
 cannot put numbers on the live site. When a value is in neither place, a
-"[withheld]" placeholder is rendered instead.
+"[withheld]" placeholder is rendered instead, and the event plan carries a
+"Public version: contact details removed" notice (redaction_notice()) unless
+every key in contacts.local.example.yml has a value.
 
 The generic mailbox (regatta@linacre.ox.ac.uk) is intentionally NOT
 obfuscated: it lives in event.yml and is rendered as a normal mailto: link.
@@ -26,6 +28,16 @@ import yaml
 # Local contact details for building with real numbers on your own machine.
 # Git-ignored, never committed; see contacts.local.example.yml.
 _LOCAL_CONTACTS = Path(__file__).parent / "contacts.local.yml"
+
+# The example file is the canonical list of contact keys: a build counts as
+# complete (no redaction notice) only when every key in it has a value, and
+# pages may only use keys listed in it.
+_CONTACT_KEYS = {
+    kind: set(keys or {})
+    for kind, keys in (yaml.safe_load(
+        (Path(__file__).parent / "contacts.local.example.yml").read_text(encoding="utf-8")
+    ) or {}).items()
+}
 
 
 def _load_local_contacts() -> dict:
@@ -45,13 +57,27 @@ def _obfuscate(value: str) -> str:
     return f'<span class="tr-contact" data-c="{encoded}">[enable JavaScript to view]</span>'
 
 
-def _contact(prefix: str, key: str, placeholder: str) -> str:
+def _value(prefix: str, key: str) -> str:
+    """A contact detail from the environment (CI secrets) or, failing that,
+    contacts.local.yml; empty if neither has it."""
     value = os.environ.get(f"{prefix}_{key.upper()}", "").strip()
     if not value:
         value = _local_contacts.get(prefix.lower(), {}).get(key, "").strip()
+    return value
+
+
+def _contact(prefix: str, key: str, placeholder: str) -> str:
+    if key not in _CONTACT_KEYS.get(prefix.lower(), set()):
+        raise ValueError(f"{prefix.lower()}('{key}') is not listed in contacts.local.example.yml")
+    value = _value(prefix, key)
     if not value:
         return f'<em class="tr-withheld">[{placeholder} withheld]</em>'
     return _obfuscate(value)
+
+
+def _contacts_complete() -> bool:
+    """True when every contact key has a value, i.e. nothing is withheld."""
+    return all(_value(kind.upper(), key) for kind, keys in _CONTACT_KEYS.items() for key in keys)
 
 
 def _ukdate(d: date) -> str:
@@ -104,6 +130,21 @@ def define_env(env):
     def phone(key: str) -> str:
         """A phone number from the PHONE_<KEY> environment variable."""
         return _contact("PHONE", key, "number")
+
+    @env.macro
+    def redaction_notice() -> str:
+        """A prominent notice that this is the public version without contact
+        details. Empty when every contact detail is available (e.g. a local
+        build with a complete contacts.local.yml), so full versions don't
+        carry it."""
+        if _contacts_complete():
+            return ""
+        return (
+            '!!! warning "Public version: contact details removed"\n'
+            "    This public version of the plan does not include contact details.\n"
+            "    The full version, with all contact details, is sent directly to\n"
+            "    event officials and others who need it.\n"
+        )
 
     @env.macro
     def email(key: str) -> str:

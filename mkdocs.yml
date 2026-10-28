@@ -46,7 +46,6 @@ theme:
         name: Switch to light mode
   features:
     - content.action.edit
-    - content.action.view
     - navigation.top
     - navigation.footer
     - search.suggest
@@ -83,6 +82,10 @@ hooks:
   - hooks/map_pdf.py
   # Stops mkdocs-exporter turning mailto: links into broken site URLs in PDFs.
   - hooks/pdf_links.py
+
+extra:
+  # No "Made with Material for MkDocs" in the footer.
+  generator: false
 
 plugins:
   - search

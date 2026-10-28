@@ -670,10 +670,10 @@ Epione Medical Services - {{ phone('epione_medical') }}
 
 ## Appendix 5: Emergency Action Plan
 
-Sent with this document. 
+The Emergency Action Plan is provided to event officials.
 
 ## Appendix 6: Risk Assessment
 
-Sent with this document. 
+See the [Risk Assessment](risk-assessment.md). 
 
 

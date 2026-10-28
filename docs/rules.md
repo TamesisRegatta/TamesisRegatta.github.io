@@ -2,11 +2,6 @@
 
 Tamesis Regatta {{ dates.year }} · Linacre Boat Club
 
-!!! tip "Linking to a rule"
-    Every rule has a permanent anchor. Hover over a rule and click the **¶**
-    symbol to get a link directly to it. Anchors are named, not numbered, so
-    links keep working even if rules are added or renumbered.
-
 Questions about these rules should be sent to
 [{{ contact.email }}](mailto:{{ contact.email }}).
 

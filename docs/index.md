@@ -14,19 +14,21 @@ Greenbank to the Cox Stone, and takes place from
 | Coxing briefing | {{ dates.coxing_briefing | ukdate }} |
 | Racing | {{ daterange(dates.regatta_start, dates.regatta_end) }} |
 
-Dates and role holders are configured in a single file:
-[edit event.yml on GitHub](https://github.com/TamesisRegatta/TamesisRegatta.github.io/edit/main/event.yml).
-
 ## Documents
 
 - **[Rules](rules.md)**: eligibility, equipment, conduct of racing, and
-  bystander safety. Every rule has a permanent link.
+  bystander safety.
 - **[Event & Safety Plan](event-plan.md)**: how the regatta is organised and
   run: marshalling, circulation, emergency procedures, and contacts.
+- **[Risk Assessment](risk-assessment.md)**: the hazards of the event, and the
+  controls in place for each.
+- **[Course Map](map.md)**: an interactive map of the course, circulation and
+  marshal positions.
 
 Each document can also be downloaded as a PDF using the button at the top of
-the page. Spotted a mistake? Every page has an edit (pencil) button that opens
-the page source on GitHub.
+the page. Spotted a mistake, or something unclear? Use the edit (pencil) button
+at the top of any page to suggest a change on GitHub, or email us using the
+contact details below.
 
 ## Contact
 

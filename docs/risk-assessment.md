@@ -20,14 +20,8 @@ Prior to the event, this risk assessment and the associated [Event Plan](event-p
 | 2026.1 | 2026-10-14 | <ul>{% if amber_flag_racing %}<li>Add a risk for limited racing on Low Amber Flag, with its safety controls</li>{% endif %}<li>Add a risk for lack of training time before the regatta</li><li>Re-rate unrowable conditions after controls, and add rower status restrictions</li><li>Merge the two risks for ice on the water</li><li>Add risks for loss of safety cover, crews carried towards the Gut or weir streams, and slips on rafts</li><li>Re-rate capsize, launch incidents, lightning and pre-existing health conditions at their credible worst-case severity</li><li>Add this cover block and changelog</li></ul> |
 | 2026.2 | 2026-10-15 | <ul><li>Update launch cover and Gut transit controls</li>{% if amber_flag_racing %}<li>Tighten Low Amber Flag controls</li>{% endif %}</ul> |
 
-!!! tip "Linking to a risk"
-    Every risk has a permanent anchor on its Hazard row: hover over it and
-    click the **¶** symbol to get a link directly to it, e.g.
-    `#capsize-submerge`.
-
-Each risk states a **severity** (1–5) and **probability** (A–E) only; the
-**residual risk** shown is always calculated from those two values using the
-[matrix below](#how-levels-are-calculated).
+Each risk has a **severity** (1–5) and a **probability** (A–E); its level of
+**residual risk** is read from the [matrix below](#how-levels-are-calculated).
 
 !!! info "What is residual risk?"
     The **residual risk** is the risk remaining *after* the listed controls
@@ -769,8 +763,7 @@ Residual risk
 ## How levels are calculated
 
 The level of risk is read off this matrix by severity (rows) and probability
-(columns). It is generated directly from `risk_matrix.yml`, the same file
-the badges above are calculated from.
+(columns).
 
 <div class="risk-matrix-wrapper" markdown>
 {{ risk_matrix_table() }}

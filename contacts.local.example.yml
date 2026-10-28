@@ -2,8 +2,8 @@
 #
 # Copy this file to contacts.local.yml (git-ignored, never committed) and
 # fill in the values you want to see. main.py reads it when it exists;
-# anything left blank renders as "[withheld]", as before. The live site never
-# sees this file: CI takes its values from GitHub Actions secrets instead.
+# anything left blank renders as "[withheld]". The live site never sees this
+# file, so it always shows the public version, with these details redacted.
 #
 # Quote every value: phone numbers start with 0, which YAML would otherwise
 # treat as an octal number.

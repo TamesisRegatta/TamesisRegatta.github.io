@@ -5,8 +5,9 @@
 # and the site is rebuilt automatically on push.
 #
 # Personal phone numbers and email addresses are deliberately NOT stored here
-# (or anywhere in the repository): they are injected at build time from
-# GitHub Actions secrets. See "Contact details" in the README.
+# (or anywhere in the repository): the live site always has them redacted, and
+# full versions are built locally from contacts.local.yml. See "Contact
+# details" in the README.
 
 # All dates are ISO 8601 (YYYY-MM-DD, times as HH:MM:SS); YAML parses them
 # into real date objects, so a typo like 2026-11-31 fails the build. Pages
@@ -46,8 +47,8 @@ risk_assessment:
 # Organisations' public phone numbers, shown on the site as they are. Only
 # numbers each organisation publishes itself belong here (checked on their
 # own websites, Oct 2026). People's numbers and emails, and any number not
-# confirmed as public, come from secrets or contacts.local.yml instead (see
-# "Contact details" in the README).
+# confirmed as public, come only from contacts.local.yml (see "Contact
+# details" in the README).
 public_phones:
   chch_lodge: "01865 276150"
   ea_duty_officer: "03708 506 506"

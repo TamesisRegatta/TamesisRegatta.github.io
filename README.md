@@ -91,29 +91,20 @@ Residual risk
 
 ## Contact details
 
-Personal phone numbers and email addresses are **never stored in this
-repository**. Pages reference them as `{{ phone('fergus_cooper') }}` /
-`{{ email('sydney_rose') }}`; at build time `main.py` reads the values from
-`PHONE_*` / `EMAIL_*` environment variables, which CI populates from GitHub
-Actions **repository secrets** (see the `env:` block in the deploy workflow
-for the expected names). Values are rendered lightly obfuscated (encoded in
-the HTML and decoded by JavaScript in the browser), so the plain numbers do
-not appear in the page source for scrapers to harvest. Anyone can still read
-and dial them normally.
+Personal phone numbers and email addresses are **never stored in this repository** and never appear on the live site.
+Pages reference them as `{{ phone('fergus_cooper') }}` / `{{ email('sydney_rose') }}`, and the live site always shows `[number withheld]` / `[email withheld]` in their place.
+The event plan then opens with a "Public version: contact details removed" notice, on the page and in its PDF.
 
-If a secret is unset, the page shows `[number withheld]` / `[email withheld]` instead.
+Organisations' phone numbers that the organisation itself publishes (checked on its own website) are not personal: they live in `public_phones` in `event.yml` and are shown as they are.
+Any number not confirmed as public is treated like a personal one.
 
-Organisations' phone numbers that the organisation itself publishes (checked on its own website) are not secret: they live in `public_phones` in `event.yml` and are shown as they are.
-Any number not confirmed as public stays with the personal ones.
-
-To build locally with real contact details, copy `contacts.local.example.yml` to `contacts.local.yml` and fill in the values.
+To build the full version, with contact details, copy `contacts.local.example.yml` to `contacts.local.yml` and fill in the values, then build locally (see "PDFs" below).
 That file is git-ignored and must never be committed.
-`main.py` reads it when it exists; environment variables take precedence over it, and anything in neither place is still withheld.
-CI never has the file, so it cannot put numbers on the live site.
-Unless every contact detail has a value, the event plan opens with a "Public version: contact details removed" notice, on the page and in its PDF.
-A local build with a complete `contacts.local.yml` therefore produces the full version, without the notice.
+`main.py` reads it when it exists; anything left blank is still withheld.
+Only a build with every value filled in leaves out the "Public version" notice.
 `contacts.local.example.yml` is the canonical list of contact keys: the build fails if a page uses a key that is not listed there.
-Restart `mkdocs serve` after editing it, as it is only read at startup.
+Values are rendered lightly obfuscated in the HTML, decoded by JavaScript in the browser, and as plain text in the PDFs.
+Restart `mkdocs serve` after editing the file, as it is only read at startup.
 
 The generic mailbox in `event.yml` (`contact.email`) is public by design and
 rendered as a normal clickable link.

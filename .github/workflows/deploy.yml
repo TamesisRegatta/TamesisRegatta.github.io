@@ -40,19 +40,6 @@ jobs:
         run: mkdocs build --strict
         env:
           PDF_EXPORT: "true"
-          # Personal contact details are stored as repository secrets, never
-          # in the repo itself. Unset secrets render as "[withheld]".
-          PHONE_FERGUS_COOPER: ${{ secrets.PHONE_FERGUS_COOPER }}
-          PHONE_SYDNEY_ROSE: ${{ secrets.PHONE_SYDNEY_ROSE }}
-          PHONE_JOE_HITCHEN: ${{ secrets.PHONE_JOE_HITCHEN }}
-          PHONE_DAVID_SEALE: ${{ secrets.PHONE_DAVID_SEALE }}
-          PHONE_SCOTT_HOUGHTON: ${{ secrets.PHONE_SCOTT_HOUGHTON }}
-          EMAIL_SYDNEY_ROSE: ${{ secrets.EMAIL_SYDNEY_ROSE }}
-          EMAIL_DAVID_SEALE: ${{ secrets.EMAIL_DAVID_SEALE }}
-          PHONE_RIVERSIDE_CENTRE: ${{ secrets.PHONE_RIVERSIDE_CENTRE }}
-          PHONE_CITY_OF_OXFORD_RC: ${{ secrets.PHONE_CITY_OF_OXFORD_RC }}
-          PHONE_IFFLEY_LOCK: ${{ secrets.PHONE_IFFLEY_LOCK }}
-          PHONE_EPIONE_MEDICAL: ${{ secrets.PHONE_EPIONE_MEDICAL }}
 
       - uses: actions/upload-pages-artifact@fc324d3547104276b827a68afc52ff2a11cc49c9 # v5.0.0
         with:

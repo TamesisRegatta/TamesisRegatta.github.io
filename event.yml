@@ -19,7 +19,7 @@ dates:
   regatta_end: 2026-11-28
   novice_cutoff: 2026-10-01
   entries_close: 2026-11-11 04:00:00
-  scratch_deadline: 2026-11-15
+  scratch_deadline: 2026-11-16 04:00:00
   coxing_briefing: 2026-11-18
   marshal_briefing: 2026-11-23
 
@@ -60,8 +60,8 @@ public_phones:
 # issued revision, and add a matching row to the changelog at the top of the
 # rules.
 rules:
-  version: "2026.1"
-  date: 2026-10-15
+  version: "2026.2"
+  date: 2026-10-28
   prepared_by: Fergus Cooper and Sydney Rose
 
 contact:

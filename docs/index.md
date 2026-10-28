@@ -10,7 +10,7 @@ Greenbank to the Cox Stone, and takes place from
 | | |
 | :--- | :--- |
 | Entries close | {{ dates.entries_close | ukdatetime }} |
-| Scratch deadline (full refund) | {{ dates.scratch_deadline | ukdate }} |
+| Scratch deadline (full refund) | {{ dates.scratch_deadline | ukdatetime }} |
 | Coxing briefing | {{ dates.coxing_briefing | ukdate }} |
 | Racing | {{ daterange(dates.regatta_start, dates.regatta_end) }} |
 

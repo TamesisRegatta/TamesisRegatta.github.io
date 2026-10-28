@@ -56,6 +56,14 @@ public_phones:
   university_security: "01865 289999"
   press_office: "01865 280528"
 
+# The rules' cover block (docs/rules.md). Bump the version and date with each
+# issued revision, and add a matching row to the changelog at the top of the
+# rules.
+rules:
+  version: "2026.1"
+  date: 2026-10-15
+  prepared_by: Fergus Cooper and Sydney Rose
+
 contact:
   # The generic regatta mailbox: safe to publish, rendered as a normal
   # clickable mailto: link wherever it is used.

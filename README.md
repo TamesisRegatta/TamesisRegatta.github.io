@@ -36,7 +36,7 @@ to GitHub Pages at <https://tamesisregatta.org/> on every push to
   are added, removed, or renumbered. Add one with `{ #short-name }` on its
   own indented line directly beneath the anchored text (a rule's list item,
   or a risk's Hazard field). Treat published anchor names as permanent.
-- **Changelog**: each document ends with a changelog table; add a row when
+- **Changelog**: each document starts with a changelog table; add a row when
   making a meaningful change.
 
 ## Risk assessment

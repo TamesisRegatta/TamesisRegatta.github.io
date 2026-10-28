@@ -1,11 +1,26 @@
-# Rules
+# Tamesis Regatta {{ dates.year }}: Rules
 
-Tamesis Regatta {{ dates.year }} · Linacre Boat Club
+<div class="tr-cover" markdown="1">
+
+**Linacre Boat Club**
+
+**Version {{ rules.version }}**, {{ rules.date | ukdate }}
+
+Prepared by {{ rules.prepared_by }}
+
+</div>
+
+### Changelog
+
+| Version | Date | Notes |
+| :--- | :--- | :--- |
+| 2026.0 | 2026-07-19 | 2025 rules converted to website format, with dates updated for 2026 |
+| 2026.1 | 2026-10-15 | <ul><li>Racing finishes half an hour before sunset each day (rule 1.4)</li><li>In adverse conditions, coxes may be allowed to cox more than one crew (rule 1.4)</li><li>Add rule 1.7: safety contingencies in the Event Plan take precedence over these rules</li><li>Cite the OURCs membership rules by section name, with a link (rule 2.4)</li><li>Add rule 2.16: crews must be safe to race</li><li>Coxes' PFDs to follow the OURCs Code of Conduct (rule 3.2)</li><li>Add this cover block and changelog</li></ul> |
 
 Questions about these rules should be sent to
 [{{ contact.email }}](mailto:{{ contact.email }}).
 
-## 0. Definitions { #definitions }
+## 0. Definitions { #definitions .tr-new-page }
 
 1. The '**Event Committee**' refers to the {{ roles.regatta_captains.title }}, {{ roles.regatta_captains.name }}; the {{ roles.safety_advisor.title }}, {{ roles.safety_advisor.name }}; the {{ roles.coordinating_senior_umpire.title }}, {{ roles.coordinating_senior_umpire.name }}; the {{ roles.senior_member.title }}, {{ roles.senior_member.name }}; the {{ roles.chief_marshal.title }}, {{ roles.chief_marshal.name }}; the {{ roles.captain_of_coxes.title }}, {{ roles.captain_of_coxes.name }}, and any other individuals chosen in advance to help in the organisation of the event.
     { #event-committee }
@@ -232,13 +247,3 @@ Questions about these rules should be sent to
 
 5. Marshals shall be responsible for reporting unsafe behaviour of accompanying cyclists. Captains will be made aware that they are responsible for the conduct of their coaches, and sanctions will be employed in the case of dangerous or inappropriate behaviour. In the event of an accident, Marshals will report to the Race Desk, which will take appropriate action. Crews will be reminded by e-mail before the event of the need for accompanying cyclists to give way to pedestrians and make safety a priority.
     { #cyclist-conduct }
-
-## Changelog { #changelog }
-
-| Version number | Date | Notes |
-| :--- | :--- | :--- |
-| 2025.1 | 2025-10-29 | Initial version of 2025 rules |
-| 2025.2 | 2025-10-30 | Clarified that deadline for complete crews is before the scratch deadline. Updated name of Chief Marshal |
-| 2026.1 | 2026-07-18 | Converted to website format; dates updated for 2026 |
-| 2026.2 | 2026-10-15 | Coxes' PFDs to follow the OURCs Code of Conduct. Added rule 2.16: crews must be safe to race |
-| 2026.2.1 | 2026-10-28 | Removed a website-only note on linking to rules. No changes to the rules |

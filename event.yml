@@ -33,15 +33,15 @@ amber_flag_racing: true
 # with each issued revision, and add a matching row to the changelog at the
 # top of the event plan. 2026.1 is the version submitted for safety approval.
 event_plan:
-  version: "2026.2"
-  date: 2026-10-15
+  version: "2026.2.1"
+  date: 2026-10-28
   prepared_by: Fergus Cooper and Sydney Rose
 
 # The risk assessment's cover block (docs/risk-assessment.md), versioned
 # alongside the event plan: bump both together, with a changelog row.
 risk_assessment:
-  version: "2026.2"
-  date: 2026-10-15
+  version: "2026.2.1"
+  date: 2026-10-28
   prepared_by: Fergus Cooper and Sydney Rose
 
 # Organisations' public phone numbers, shown on the site as they are. Only

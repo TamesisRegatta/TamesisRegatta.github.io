@@ -19,6 +19,7 @@ Prior to the event, this risk assessment and the associated [Event Plan](event-p
 | 2026.0 | 2026-07-19 | Converted from the 2025 risk assessment |
 | 2026.1 | 2026-10-14 | <ul>{% if amber_flag_racing %}<li>Add a risk for limited racing on Low Amber Flag, with its safety controls</li>{% endif %}<li>Add a risk for lack of training time before the regatta</li><li>Re-rate unrowable conditions after controls, and add rower status restrictions</li><li>Merge the two risks for ice on the water</li><li>Add risks for loss of safety cover, crews carried towards the Gut or weir streams, and slips on rafts</li><li>Re-rate capsize, launch incidents, lightning and pre-existing health conditions at their credible worst-case severity</li><li>Add this cover block and changelog</li></ul> |
 | 2026.2 | 2026-10-15 | <ul><li>Update launch cover and Gut transit controls</li>{% if amber_flag_racing %}<li>Tighten Low Amber Flag controls</li>{% endif %}</ul> |
+| 2026.2.1 | 2026-10-28 | <ul><li>Simplify the explanation of how risk levels are read from the matrix</li><li>Remove a website-only note on linking to risks</li></ul> |
 
 Each risk has a **severity** (1–5) and a **probability** (A–E); its level of
 **residual risk** is read from the [matrix below](#how-levels-are-calculated).

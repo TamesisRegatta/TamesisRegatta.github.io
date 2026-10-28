@@ -8,6 +8,7 @@ edit_uri: edit/main/docs/
 nav:
   - Home: index.md
   - Rules: rules.md
+  - FAQs: faqs.md
   - Event Plan: event-plan.md
   - Risk Assessment: risk-assessment.md
   - Course Map: map.md

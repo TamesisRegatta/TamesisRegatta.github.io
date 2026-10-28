@@ -24,6 +24,7 @@ Greenbank to the Cox Stone, and takes place from
 
 - **[Rules](rules.md)**: eligibility, equipment, conduct of racing, and
   bystander safety.
+- **[FAQs](faqs.md)**: answers to common questions, for captains.
 - **[Event & Safety Plan](event-plan.md)**: how the regatta is organised and
   run: marshalling, circulation, emergency procedures, and contacts.
 - **[Risk Assessment](risk-assessment.md)**: the hazards of the event, and the

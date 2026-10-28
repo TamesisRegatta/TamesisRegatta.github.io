@@ -17,8 +17,9 @@ obfuscated: it lives in event.yml and is rendered as a normal mailto: link.
 
 import base64
 import html
-from datetime import date
+from datetime import date, datetime, time, timedelta
 from pathlib import Path
+from zoneinfo import ZoneInfo
 
 import yaml
 
@@ -73,6 +74,25 @@ def _contacts_complete() -> bool:
     return all(_value(kind.upper(), key) for kind, keys in _CONTACT_KEYS.items() for key in keys)
 
 
+_UK = ZoneInfo("Europe/London")
+
+
+def _uk_start(d: date) -> str:
+    """When d begins, in UK time, as ISO 8601: a datetime as it is, a date
+    at the start of that day."""
+    if not isinstance(d, datetime):
+        d = datetime.combine(d, time())
+    return d.replace(tzinfo=_UK).isoformat()
+
+
+def _uk_end(d: date) -> str:
+    """When d is over, in UK time, as ISO 8601: a datetime as it is, a date
+    at the end of that day."""
+    if not isinstance(d, datetime):
+        d = datetime.combine(d + timedelta(days=1), time())
+    return d.replace(tzinfo=_UK).isoformat()
+
+
 def _ukdate(d: date) -> str:
     """Render a date compactly: 'Wed 25 Nov 2026'."""
     return f"{d:%a} {d.day} {d:%b} {d.year}"
@@ -118,6 +138,26 @@ def define_env(env):
         if (start.year, start.month) == (end.year, end.month):
             return f"{start:%a} {start.day} – {end:%a} {end.day} {end:%b} {end.year}"
         return f"{_ukdate(start)} – {_ukdate(end)}"
+
+    @env.macro
+    def when(start: date, end: date = None, about: bool = False) -> str:
+        """A key date, as text in a <time> element carrying when it starts
+        and when it is over, so docs/assets/key-dates.js can mark it as past,
+        on now or next by the visitor's clock, without rebuilding the site.
+        about=True words a time as approximate: 'Sat 28 Nov 2026, about
+        15:00'."""
+        if end is not None:
+            text = daterange(start, end)
+        elif isinstance(start, datetime):
+            text = f"{_ukdate(start)}, {'about ' if about else ''}{start:%H:%M}"
+        else:
+            text = _ukdate(start)
+        # An approximate time is only over at the end of its day.
+        until = _uk_end(end or (start.date() if about else start))
+        return (
+            f'<time datetime="{_uk_start(start)}" data-from="{_uk_start(start)}"'
+            f' data-until="{until}">{text}</time>'
+        )
 
     @env.macro
     def phone(key: str) -> str:

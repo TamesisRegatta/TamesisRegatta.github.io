@@ -74,6 +74,7 @@ extra_javascript:
   - assets/anchors.js
   - assets/contacts.js
   - assets/risk-summary.js
+  - assets/key-dates.js
   - assets/map.js
 
 hooks:

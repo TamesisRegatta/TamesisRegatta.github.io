@@ -30,6 +30,9 @@ to GitHub Pages at <https://tamesisregatta.org/> on every push to
   → "Wed 25 Nov 2026", `ukdatetime` (24-hour clock) → "Wed 11 Nov 2026,
   04:00", and `{{ daterange(dates.regatta_start, dates.regatta_end) }}` →
   "Wed 25 – Sat 28 Nov 2026".
+- **Key dates** on the home page use `{{ when(dates.entries_close) }}`, which renders the date and records when it starts and is over (in UK time).
+  `docs/assets/key-dates.js` then marks each row as past, on now or next by the visitor's clock, so the table stays current without rebuilding the site.
+  Keep the rows in date order.
 - **Permanent anchors**: rules and risk assessment entries each have a
   stable, *named* anchor (e.g. `/rules/#bow-balls`,
   `/risk-assessment/#capsize-submerge`) so links keep working even if items

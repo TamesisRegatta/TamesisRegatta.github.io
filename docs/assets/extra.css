@@ -710,3 +710,28 @@ table.risk-matrix td {
      each glyph to the pixel grid and the letter spacing goes uneven. */
   text-rendering: geometricPrecision;
 }
+
+/* Key dates on the home page, marked by key-dates.js by the visitor's clock.
+   Screen only: a PDF would freeze them at whenever it was built. */
+@media screen {
+  tr.tr-past td {
+    color: var(--md-default-fg-color--light);
+  }
+
+  tr.tr-past td:last-child::after {
+    content: " (past)";
+  }
+
+  tr.tr-now td,
+  tr.tr-next td {
+    font-weight: 700;
+  }
+
+  tr.tr-now td:last-child::after {
+    content: " (on now)";
+  }
+
+  tr.tr-next td:last-child::after {
+    content: " (next)";
+  }
+}

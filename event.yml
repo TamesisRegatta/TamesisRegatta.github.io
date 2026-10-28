@@ -18,10 +18,14 @@ dates:
   regatta_start: 2026-11-25
   regatta_end: 2026-11-28
   novice_cutoff: 2026-10-01
+  entries_open: 2026-11-01
+  marshal_signups_open: 2026-11-04
   entries_close: 2026-11-11 04:00:00
   scratch_deadline: 2026-11-16 04:00:00
+  draw_published: 2026-11-16
   coxing_briefing: 2026-11-18
   marshal_briefing: 2026-11-23
+  awards_ceremony: 2026-11-28 15:00:00
 
 # Racing on Low Amber Flag (≤ 4.5 bucks equivalent). Pending sign-off from the safety office: set to false
 # to withdraw it, and the event plan reverts to racing being suspended on

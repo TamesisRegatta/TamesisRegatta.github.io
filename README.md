@@ -103,6 +103,9 @@ and dial them normally.
 
 If a secret is unset, the page shows `[number withheld]` / `[email withheld]` instead.
 
+Organisations' phone numbers that the organisation itself publishes (checked on its own website) are not secret: they live in `public_phones` in `event.yml` and are shown as they are.
+Any number not confirmed as public stays with the personal ones.
+
 To build locally with real contact details, copy `contacts.local.example.yml` to `contacts.local.yml` and fill in the values.
 That file is git-ignored and must never be committed.
 `main.py` reads it when it exists; environment variables take precedence over it, and anything in neither place is still withheld.

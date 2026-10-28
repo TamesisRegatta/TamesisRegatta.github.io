@@ -49,14 +49,9 @@ jobs:
           PHONE_SCOTT_HOUGHTON: ${{ secrets.PHONE_SCOTT_HOUGHTON }}
           EMAIL_SYDNEY_ROSE: ${{ secrets.EMAIL_SYDNEY_ROSE }}
           EMAIL_DAVID_SEALE: ${{ secrets.EMAIL_DAVID_SEALE }}
-          PHONE_CHCH_LODGE: ${{ secrets.PHONE_CHCH_LODGE }}
           PHONE_RIVERSIDE_CENTRE: ${{ secrets.PHONE_RIVERSIDE_CENTRE }}
           PHONE_CITY_OF_OXFORD_RC: ${{ secrets.PHONE_CITY_OF_OXFORD_RC }}
-          PHONE_EA_DUTY_OFFICER: ${{ secrets.PHONE_EA_DUTY_OFFICER }}
-          PHONE_EA_INCIDENT_LINE: ${{ secrets.PHONE_EA_INCIDENT_LINE }}
           PHONE_IFFLEY_LOCK: ${{ secrets.PHONE_IFFLEY_LOCK }}
-          PHONE_UNIVERSITY_SECURITY: ${{ secrets.PHONE_UNIVERSITY_SECURITY }}
-          PHONE_PRESS_OFFICE: ${{ secrets.PHONE_PRESS_OFFICE }}
           PHONE_EPIONE_MEDICAL: ${{ secrets.PHONE_EPIONE_MEDICAL }}
 
       - uses: actions/upload-pages-artifact@fc324d3547104276b827a68afc52ff2a11cc49c9 # v5.0.0

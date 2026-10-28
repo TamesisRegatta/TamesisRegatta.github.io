@@ -43,6 +43,18 @@ risk_assessment:
   date: 2026-10-15
   prepared_by: Fergus Cooper and Sydney Rose
 
+# Organisations' public phone numbers, shown on the site as they are. Only
+# numbers each organisation publishes itself belong here (checked on their
+# own websites, Oct 2026). People's numbers and emails, and any number not
+# confirmed as public, come from secrets or contacts.local.yml instead (see
+# "Contact details" in the README).
+public_phones:
+  chch_lodge: "01865 276150"
+  ea_duty_officer: "03708 506 506"
+  ea_incident_line: "0800 80 70 60"
+  university_security: "01865 289999"
+  press_office: "01865 280528"
+
 contact:
   # The generic regatta mailbox: safe to publish, rendered as a normal
   # clickable mailto: link wherever it is used.

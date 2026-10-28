@@ -19,6 +19,7 @@ obfuscated: it lives in event.yml and is rendered as a normal mailto: link.
 """
 
 import base64
+import html
 import os
 from datetime import date
 from pathlib import Path
@@ -128,7 +129,12 @@ def define_env(env):
 
     @env.macro
     def phone(key: str) -> str:
-        """A phone number from the PHONE_<KEY> environment variable."""
+        """An organisation's public number from public_phones in event.yml,
+        shown as it is; otherwise a person's number from the PHONE_<KEY>
+        environment variable or contacts.local.yml, obfuscated."""
+        public = env.variables.get("public_phones") or {}
+        if key in public:
+            return html.escape(str(public[key]))
         return _contact("PHONE", key, "number")
 
     @env.macro

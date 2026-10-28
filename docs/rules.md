@@ -266,7 +266,7 @@ Questions about these rules should be sent to
 
 ## 6. Fees, Scratching and Refunds { #fees-refunds }
 
-1. The entry fee for each crew is set by OURCs, and is the same as the entry fee for Torpids and Summer Eights in the same calendar year.
+1. The entry fee is £{{ entry_fee }} per crew. It is set by OURCs, and is the same as the entry fee for Torpids and Summer Eights in the same calendar year.
     { #entry-fee }
 
 2. The deadline to scratch crews with a full refund is {{ dates.scratch_deadline | ukdatetime }}. Crews scratched after this deadline, by their club or by the Event Committee, are still charged the entry fee, and their club must still provide marshals for them (rule [2.16](#marshals)).

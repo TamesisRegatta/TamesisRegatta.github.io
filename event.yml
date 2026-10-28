@@ -60,6 +60,11 @@ public_phones:
   university_security: "01865 289999"
   press_office: "01865 280528"
 
+# The entry fee per crew, in pounds. It is set by OURCs, and is the same as
+# for Torpids and Summer Eights in the same calendar year. Shown in rule 6.1
+# and the FAQs.
+entry_fee: 98
+
 # The rules' cover block (docs/rules.md). Bump the version and date with each
 # issued revision, and add a matching row to the changelog at the top of the
 # rules.
@@ -72,7 +77,7 @@ rules:
 # issued revision, and add a matching row to the changelog at the top of the
 # FAQs.
 faqs:
-  version: "2026.0"
+  version: "2026.1"
   date: 2026-10-28
   prepared_by: Fergus Cooper and Sydney Rose
 

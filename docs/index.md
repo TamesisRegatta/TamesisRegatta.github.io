@@ -18,12 +18,12 @@ Greenbank to the Cox Stone, and takes place from
 | Coxing briefing (time and venue TBC) | {{ when(dates.coxing_briefing) }} |
 | Marshal briefing (time and venue TBC) | {{ when(dates.marshal_briefing) }} |
 | Racing | {{ when(dates.regatta_start, dates.regatta_end) }} |
-| Awards ceremony, at Race Desk | {{ when(dates.awards_ceremony, about=True) }} |
+| Awards ceremony, on Boathouse Island, near Race Desk | {{ when(dates.awards_ceremony, about=True) }} |
 
 ## Documents
 
-- **[Rules](rules.md)**: eligibility, equipment, conduct of racing, and
-  bystander safety.
+- **[Rules](rules.md)**: eligibility, equipment, the racing format and conduct
+  of racing, bystander safety, and fees and refunds.
 - **[FAQs](faqs.md)**: answers to common questions, for captains.
 - **[Event & Safety Plan](event-plan.md)**: how the regatta is organised and
   run: marshalling, circulation, emergency procedures, and contacts.

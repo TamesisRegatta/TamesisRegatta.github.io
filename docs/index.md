@@ -15,8 +15,8 @@ Greenbank to the Cox Stone, and takes place from
 | Entries close, and crews must be complete | {{ when(dates.entries_close) }} |
 | Scratch deadline (full refund) | {{ when(dates.scratch_deadline) }} |
 | Draw published (our aim, but not guaranteed) | {{ when(dates.draw_published) }} |
-| Coxing briefing (time and venue TBC) | {{ when(dates.coxing_briefing) }} |
-| Marshal briefing (time and venue TBC) | {{ when(dates.marshal_briefing) }} |
+| Coxing briefing (Gulbenkian Lecture Theatre) | {{ when(dates.coxing_briefing) }} |
+| Marshal briefing (online via MS Teams) | {{ when(dates.marshal_briefing) }} |
 | Racing | {{ when(dates.regatta_start, dates.regatta_end) }} |
 | Awards ceremony, on Boathouse Island, near Race Desk | {{ when(dates.awards_ceremony, about=True) }} |
 

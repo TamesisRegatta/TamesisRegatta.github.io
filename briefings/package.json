@@ -1,0 +1,17 @@
+{
+  "name": "tamesis-briefings",
+  "type": "module",
+  "private": true,
+  "scripts": {
+    "build": "./build.sh",
+    "dev": "slidev --open coxing/slides.md"
+  },
+  "dependencies": {
+    "@fontsource-variable/noto-sans": "5.3.0",
+    "@slidev/cli": "53.0.0",
+    "@slidev/types": "53.0.0",
+    "playwright-chromium": "1.64.1",
+    "vue": "3.5.44",
+    "yaml": "2.9.1"
+  }
+}

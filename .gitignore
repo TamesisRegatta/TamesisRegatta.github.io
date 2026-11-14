@@ -1,6 +1,7 @@
 .venv/
 site/
 __pycache__/
+node_modules/
 
 # The original Google Docs export contains personal phone numbers and email
 # addresses and must never be committed. The website version of the document

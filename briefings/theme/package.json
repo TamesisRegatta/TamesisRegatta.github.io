@@ -1,0 +1,26 @@
+{
+  "name": "slidev-theme-tamesis",
+  "version": "0.0.1",
+  "private": true,
+  "type": "module",
+  "description": "Slidev theme for Tamesis Regatta briefings, modelled on slidev-theme-oxrse",
+  "keywords": [
+    "slidev-theme",
+    "slidev"
+  ],
+  "engines": {
+    "slidev": ">=53.0.0"
+  },
+  "slidev": {
+    "colorSchema": "light",
+    "defaults": {
+      "routerMode": "hash",
+      "aspectRatio": "16/9",
+      "canvasWidth": 980,
+      "fonts": {
+        "sans": "Noto Sans Variable",
+        "provider": "none"
+      }
+    }
+  }
+}

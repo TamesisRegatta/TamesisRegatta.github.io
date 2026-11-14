@@ -190,6 +190,10 @@ npx slidev --open coxing/slides.md   # live preview while editing
 `build.sh` writes into `site/`, so run it after `mkdocs build`, which clears that directory; this is what the deploy workflow does.
 The PDF export needs Playwright's Chromium for Node (`npx playwright install chromium`), separate from the Python one.
 
+`overrides` in `briefings/package.json` lift two of Slidev's dependencies past security advisories that Slidev itself has not picked up yet: `dompurify` (pinned by `monaco-editor`, the dev server's code editor) and `image-size` (declared by `pptxgenjs`, the PowerPoint export, which never calls it).
+Neither reaches the published decks.
+Remove each override once `npm ls` shows Slidev depending on a fixed version itself.
+
 The theme, `briefings/theme/`, is modelled on the OxRSE Slidev theme and uses the site's colours, font and logo.
 It is light mode only.
 Its layouts are `cover` (date from `event.yml` via `when:`, plus `presenters:` and `venue:`), `section`, `figure` (one map or diagram, with an optional `::aside::` column) and `alert`; other slides get a black header bar with the slide's title.

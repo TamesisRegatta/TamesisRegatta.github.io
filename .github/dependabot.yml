@@ -25,3 +25,18 @@ updates:
         applies-to: security-updates
         patterns:
           - '*'
+
+  - package-ecosystem: 'npm'
+    directory: '/briefings'
+    schedule:
+      interval: 'weekly'
+    cooldown:
+      default-days: 14
+    groups:
+      npm:
+        patterns:
+          - '*'
+      npm-security:
+        applies-to: security-updates
+        patterns:
+          - '*'

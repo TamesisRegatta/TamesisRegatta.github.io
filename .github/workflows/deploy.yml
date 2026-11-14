@@ -41,6 +41,27 @@ jobs:
         env:
           PDF_EXPORT: "true"
 
+      # The briefing slides (briefings/), built into site/briefings/ after
+      # mkdocs, which clears site/ first.
+      - uses: actions/setup-node@949feb2413d6458794dcd2491c4babbbce0c15c1 # v7.1.0
+        with:
+          node-version-file: briefings/.nvmrc
+          # No npm cache, for the same reason as no pip cache above.
+          package-manager-cache: false
+
+      - name: Install briefing dependencies
+        working-directory: briefings
+        run: npm ci
+
+      # Slidev's PDF export uses the npm Playwright, which needs its own
+      # Chromium; the system libraries came with the Python one above.
+      - name: Install Chromium for the briefing PDFs
+        working-directory: briefings
+        run: npx playwright install chromium
+
+      - name: Build briefing slides with PDFs
+        run: briefings/build.sh
+
       - uses: actions/upload-pages-artifact@fc324d3547104276b827a68afc52ff2a11cc49c9 # v5.0.0
         with:
           path: site

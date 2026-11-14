@@ -449,10 +449,12 @@ class: text-center
 
 <script setup>
 // The klaxon sound is a file in coxing/public/media/, served from the deck's
-// own base URL (see the README for its source and licence). The player is
-// left out of the PDF: the exporter loads the deck with ?print, which with
-// hash routing Slidev's own isPrintMode does not see.
+// own base URL (see the README for its source and licence). The PDF can't
+// play it, so it links to the published file instead. The exporter loads the
+// deck with ?print, which with hash routing Slidev's own isPrintMode does not
+// see.
 const klaxon = import.meta.env.BASE_URL + 'media/klaxon.mp3'
+const klaxonUrl = 'https://tamesisregatta.org' + klaxon
 const inPdf = new URLSearchParams(window.location.search).has('print')
 </script>
 
@@ -463,6 +465,7 @@ If a marshal needs to stop your race, they will fire a loud
 <p class="font-700">All crews on the water stop immediately, and wait for marshals' instructions</p>
 
 <audio v-if="!inPdf" controls preload="none" :src="klaxon" class="mx-auto mt-4"></audio>
+<p v-if="inPdf" class="text-base">Listen to it: <a :href="klaxonUrl">{{ klaxonUrl }}</a></p>
 
 ---
 class: dense

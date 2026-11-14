@@ -16,7 +16,8 @@ to GitHub Pages at <https://tamesisregatta.org/> on every push to
 | `docs/` | The site content (Markdown), one file per page, plus `assets/` for CSS/JS/images. |
 | `mkdocs.yml` | Site configuration, navigation, theme, and plugins. |
 | `main.py` | Macros used by pages: dates, contact details, risk badges (see below). |
-| `.github/workflows/deploy.yml` | Builds the site (including PDFs) and deploys it to GitHub Pages. |
+| `briefings/` | Briefing slide decks, built with Slidev. See [Briefing slides](#briefing-slides). |
+| `.github/workflows/deploy.yml` | Builds the site (including PDFs) and the briefing slides, and deploys them to GitHub Pages. |
 
 ## Editing
 
@@ -172,6 +173,33 @@ This script needs nothing beyond Python:
 ```bash
 python scripts/time_trial_recipe.py scripts/courses/time-trial.svg
 ```
+
+## Briefing slides
+
+The briefings are [Slidev](https://sli.dev/) decks in `briefings/`, published on the same site at `/briefings/<deck>/`, for example <https://tamesisregatta.org/briefings/coxing/>.
+Each deck is a `briefings/<deck>/slides.md`, and each has a PDF download, built alongside it.
+They need Node (version in `briefings/.nvmrc`):
+
+```bash
+cd briefings
+npm ci
+npx slidev --open coxing/slides.md   # live preview while editing
+./build.sh                           # every deck, with PDFs, into ../site/briefings/
+```
+
+`build.sh` writes into `site/`, so run it after `mkdocs build`, which clears that directory; this is what the deploy workflow does.
+The PDF export needs Playwright's Chromium for Node (`npx playwright install chromium`), separate from the Python one.
+
+The theme, `briefings/theme/`, is modelled on the OxRSE Slidev theme and uses the site's colours, font and logo.
+It is light mode only.
+Its layouts are `cover` (date from `event.yml` via `when:`, plus `presenters:` and `venue:`), `section`, `figure` (one map or diagram, with an optional `::aside::` column) and `alert`; other slides get a black header bar with the slide's title.
+
+Slides read the same `event.yml` as the site, so dates and names match: in slide Markdown, `{{ ukdatetime(regatta.dates.coxing_briefing) }}` gives "Wed 18 Nov 2026, 18:30" (`ukdate`, `ukdatetime` and `uktime` match the site's filters), and `v-if="regatta.amber_flag_racing"` switches content as the event plan does.
+Only public data is passed to the slides: `contacts.local.yml` is never read, so decks never contain personal numbers.
+They can import the site's own images from `docs/assets/` by relative path instead of keeping copies.
+
+Decks must not embed YouTube or any other third-party player or resource: the site sets no cookies and stores nothing in visitors' browsers, so it needs no consent banner, and an embed would change that.
+Host video and audio clips in the deck's folder instead, trimmed and compressed.
 
 ## Third-party assets
 

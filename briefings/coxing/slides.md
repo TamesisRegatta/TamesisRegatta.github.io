@@ -181,6 +181,18 @@ import rafts from '../../docs/assets/map/print/boathouse-rafts.svg'
 - After the race, return beside the Meadow to the landing rafts, and land with bows pointing downstream.
 
 ---
+clicks: 8
+---
+
+<script setup>
+import boathouseIsland from './race-cycles/boathouse-island.js'
+</script>
+
+# Race cycle: Boathouse Island
+
+<RaceCycle :route="boathouseIsland" />
+
+---
 
 # Circulation (Longbridges)
 

@@ -198,6 +198,11 @@ The theme, `briefings/theme/`, is modelled on the OxRSE Slidev theme and uses th
 It is light mode only.
 Its layouts are `cover` (date from `event.yml` via `when:`, plus `presenters:` and `venue:`, and `draft: true` for a "not for circulation" band until a deck is final), `section`, `figure` (one map or diagram, with an optional `::aside::` column) and `alert`; other slides get a black header bar with the slide's title.
 
+The `RaceCycle` component animates one crew's race cycle on the short course map (`docs/assets/map/print/course-short.svg`), one stage per click: `<RaceCycle :route="..." />` on a slide with `clicks:` set to the number of stages after the first.
+Each route is a file in `briefings/coxing/race-cycles/`, listing for each stage its caption, camera (a fixed view, or following a boat) and each boat's moves (row along a path, spin, wait, fade), in the map's own coordinates.
+Opening a slide part-way through, going back, or a viewer preferring reduced motion shows the end of a stage at once; the PDF shows the whole route with stage numbers.
+The map's own attribution box is hidden, so the component credits the map below it instead, as its CC BY licence requires.
+
 Slides read the same `event.yml` as the site, so dates and names match: in slide Markdown, `{{ ukdatetime(regatta.dates.coxing_briefing) }}` gives "Wed 18 Nov 2026, 18:30" (`ukdate`, `ukdatetime` and `uktime` match the site's filters), and `v-if="regatta.amber_flag_racing"` switches content as the event plan does.
 Only public data is passed to the slides: `contacts.local.yml` is never read, so decks never contain personal numbers.
 They can import the site's own images from `docs/assets/` by relative path instead of keeping copies.

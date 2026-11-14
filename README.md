@@ -215,6 +215,7 @@ Each item below keeps its licence alongside it, and the licence terms require th
 | Noto Sans and Noto Sans Mono (from [Fontsource](https://fontsource.org/) 5.3.0) | `docs/assets/fonts/` | SIL Open Font License 1.1, see `OFL.txt` there |
 | [d3-zoom](https://github.com/d3/d3-zoom) and its eight D3 dependencies | `docs/assets/vendor/d3/` | ISC, and BSD-3-Clause for d3-ease; full texts in `LICENSE` there and at the top of `d3-zoom.min.js` |
 | Oxford Isis Maps by Bernard Tao | `docs/assets/map/`, and the intermediate course and time trial recipes in `scripts/courses/` (after his circulation PDFs) | CC-BY 3.0; the attribution is drawn on the map and must stay visible |
+| ["Gas fog horn #2"](https://bigsoundbank.com/gas-fog-horn-2-s1049.html) by Joseph Sardin, BigSoundBank (the klaxon in the coxing briefing) | `briefings/coxing/public/media/klaxon.mp3` | CC0 1.0 (public domain); no attribution required, but credited here |
 
 The D3 file is the official `dist/*.min.js` of each module, unmodified and concatenated in dependency order; the versions are listed in its header.
 To update it, download the newer files from each package and rebuild the header and `LICENSE` to match.

@@ -75,7 +75,7 @@ Instructions will be given by marshals if required
 
 - Your schedule and warm-up plans
 - Who you're racing
-- The draw should be out now: if you haven't seen it, ask your captain
+- <span v-if="regatta.draw_url">The draw is out: <a :href="regatta.draw_url">{{ regatta.draw_url }}</a></span><span v-else>The draw is not out yet: watch the mailing lists for it</span>
 - Racing runs from noon Wednesday to Friday, and from 11am on Saturday, until half an hour before sunset
 
 ---

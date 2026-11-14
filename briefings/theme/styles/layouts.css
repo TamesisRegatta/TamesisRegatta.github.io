@@ -49,10 +49,32 @@
   strong { font-weight: 700; }
 
   ul { list-style: disc; padding-left: 1.4em; }
+  ul ul { list-style: circle; }
   ol { list-style: decimal; padding-left: 1.4em; }
-  li { margin: 0.3em 0; }
+  ol[type="a"] { list-style: lower-alpha; }
   li::marker { color: var(--tamesis-link); }
 }
+
+/* Spacing and text size for paragraphs and list items are wrapped in
+   :where() so that they have no specificity, and utility classes on a
+   slide (mt-8, text-2xl, ...) override them. */
+:where(.slidev-layout) li { margin: 0.3em 0; }
+:where(.slidev-layout) p { margin: 0.6em 0; }
+
+/* Key points, emphasised in colour: <span class="key">...</span>. */
+.slidev-layout .key {
+  color: var(--tamesis-link);
+  font-weight: 700;
+}
+
+/* For slides with a lot of text: `class: dense` in the slide's frontmatter. */
+.slidev-layout.dense {
+  font-size: 1rem;
+  line-height: 1.4;
+}
+
+:where(.slidev-layout.dense) li { margin: 0.15em 0; }
+:where(.slidev-layout.dense) p { margin: 0.4em 0; }
 
 /* Section divider: black, large yellow title. */
 .slidev-layout.section {
@@ -74,7 +96,8 @@
   color: var(--tamesis-black);
 
   h1 { @apply text-5xl font-800 mb-6; }
-  p, li { @apply text-2xl; }
   li::marker { color: var(--tamesis-black); }
   a { color: var(--tamesis-black); }
 }
+
+:where(.slidev-layout.alert) :is(p, li) { font-size: 1.5rem; line-height: 2rem; }

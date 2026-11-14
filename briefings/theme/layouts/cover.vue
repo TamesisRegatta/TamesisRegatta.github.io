@@ -84,4 +84,13 @@ const when = computed(() => {
   font-size: 1.1rem;
   opacity: 0.8;
 }
+
+/* Anything in the cover slide's own Markdown, such as a reminder for the
+   audience, shown in yellow under the title block. */
+.tamesis-cover-content p:not([class]) {
+  color: var(--tamesis-yellow);
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin-top: 1.5rem;
+}
 </style>

@@ -67,7 +67,6 @@
     <g data-op="drop" data-path="Circulation Arrows/Gut Upstream 4" />
     <g data-op="drop" data-path="Circulation Arrows/Gut Upstream 2" />
     <g data-op="drop" data-path="Circulation Arrows/St John's Crossing" />
-    <g data-op="drop" data-path="Circulation Arrows/Isis Boathouse Crews Only" />
     <g data-op="drop" data-path="Lanes Labels/Marshalling Area" />
     <g data-op="move" data-path="Marshals/Senior Umpire" data-dx="255.619" data-dy="78.02" />
     <g data-op="move" data-path="Marshals/SU" data-dx="255.619" data-dy="78.02" />
@@ -75,5 +74,9 @@
     <g data-op="move" data-path="Marshals/08" data-dx="145.775" data-dy="35.143" />
     <g data-op="clip" data-path="Lanes/Top Half/Marshalling Zone" data-clip="url(#intermediate-upstream)" />
     <g data-op="retext" data-path="Title/Short Course" data-old="Short Course" data-new="Intermediate Course" />
+    <g data-op="retext" data-path="Circulation Arrows/Isis Boathouse Crews Only" data-old="Only crews boating or landing downstream" data-new="Crews boating or landing downstream may" />
+    <g data-op="retext" data-path="Circulation Arrows/Isis Boathouse Crews Only" data-old="are allowed to go through The Gut" data-new="go through The Gut; other crews only when" />
+    <g data-op="addline" data-path="Circulation Arrows/Isis Boathouse Crews Only" data-text="announced before each day's racing" />
+    <g data-op="move" data-path="Circulation Arrows/Isis Boathouse Crews Only" data-dx="-112" data-dy="-60" />
   </g>
 </svg>

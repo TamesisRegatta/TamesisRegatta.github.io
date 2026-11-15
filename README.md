@@ -165,10 +165,11 @@ If Bernard adds an intermediate course layer to the source, use that instead and
 
 The time trial is derived the same way, from the recipe in `scripts/courses/time-trial.svg`.
 Time trials run on the short course, so the recipe takes the racing lanes out of a copy of the short course and adds the time trial's own circulation.
-`scripts/lift_time_trial.py` writes it from the published time trial PDF, which is drawn on an older version of the map: only the Isis Boathouse crews' arrows are lifted from it, and its notes are set as text.
+`scripts/time_trial_recipe.py` writes it, following the published time trial PDF; that PDF is drawn on an older version of the map, so nothing is lifted from it, and its notes are set as text.
+This script needs nothing beyond Python:
 
 ```bash
-python scripts/lift_time_trial.py "Tamesis 2026 Circulation Short Course Time Trial.pdf" scripts/courses/time-trial.svg
+python scripts/time_trial_recipe.py scripts/courses/time-trial.svg
 ```
 
 ## Third-party assets
@@ -180,7 +181,7 @@ Each item below keeps its licence alongside it, and the licence terms require th
 | :- | :- | :- |
 | Noto Sans and Noto Sans Mono (from [Fontsource](https://fontsource.org/) 5.3.0) | `docs/assets/fonts/` | SIL Open Font License 1.1, see `OFL.txt` there |
 | [d3-zoom](https://github.com/d3/d3-zoom) and its eight D3 dependencies | `docs/assets/vendor/d3/` | ISC, and BSD-3-Clause for d3-ease; full texts in `LICENSE` there and at the top of `d3-zoom.min.js` |
-| Oxford Isis Maps by Bernard Tao | `docs/assets/map/`, and the intermediate course and time trial recipes in `scripts/courses/` (lifted from his circulation PDFs) | CC-BY 3.0; the attribution is drawn on the map and must stay visible |
+| Oxford Isis Maps by Bernard Tao | `docs/assets/map/`, and the intermediate course and time trial recipes in `scripts/courses/` (after his circulation PDFs) | CC-BY 3.0; the attribution is drawn on the map and must stay visible |
 
 The D3 file is the official `dist/*.min.js` of each module, unmodified and concatenated in dependency order; the versions are listed in its header.
 To update it, download the newer files from each package and rebuild the header and `LICENSE` to match.

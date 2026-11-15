@@ -25,8 +25,8 @@ loudly rather than silently dropping out.
 
 Courses the source lacks are derived from one it has (DERIVED): the
 intermediate and time trial courses are copies of the short course, each
-edited by a recipe written from the published circulation PDFs
-(scripts/lift_course.py and scripts/lift_time_trial.py).
+edited by a recipe (written by scripts/lift_course.py from the published
+circulation PDFs, and by scripts/time_trial_recipe.py).
 
 To add a course: add its layer to OUTPUTS['tamesis-map.svg']['keep'] with
 data-course and data-title, exclude anything inside it that belongs elsewhere
@@ -53,7 +53,7 @@ COURSE = 'Regattas/Thamesis Short Course'
 RAFTS = COURSE + '/Boathouse Island'
 
 # Courses the source does not have, made from a copy of one it does by a
-# recipe from scripts/lift_course.py or scripts/lift_time_trial.py: name path
+# recipe from scripts/lift_course.py or scripts/time_trial_recipe.py: name path
 # -> (layer to copy, recipe). The recipe's file name, without .svg, suffixes
 # the ids in the copy.
 INTERMEDIATE = 'Regattas/Thamesis Intermediate Course'
@@ -270,8 +270,8 @@ def index(e, prefix=()):
 
 def derive(src):
     """Add the DERIVED courses: a copy of a course layer, edited by a recipe
-    from scripts/lift_course.py or scripts/lift_time_trial.py (see there for
-    what is lifted and why)."""
+    from scripts/lift_course.py or scripts/time_trial_recipe.py (see there
+    for what is changed and why)."""
     for path, (base, recipe_path) in DERIVED.items():
         orig = src.find(base)
         layer = copy.deepcopy(orig)
@@ -341,6 +341,18 @@ def derive(src):
                 if len(hits) != 1:
                     sys.exit(f'strip_map: {op.get("data-path")!r} does not read {old!r} once')
                 hits[0].text = hits[0].text.replace(old, new)
+            elif kind == 'addline':
+                # A copy of the text's last line, one line further down.
+                spans = [t for t in e if t.tag == SVG + 'tspan']
+                if len(spans) < 2:
+                    sys.exit(f'strip_map: {op.get("data-path")!r} needs two lines to add another')
+                prev, last = spans[-2], spans[-1]
+                line = copy.deepcopy(last)
+                line.attrib.pop('id', None)
+                step = float(last.get('y')) - float(prev.get('y'))
+                line.set('y', f"{float(last.get('y')) + step:.4f}")
+                line.text = op.get('data-text')
+                e.insert(list(e).index(last) + 1, line)
             else:
                 sys.exit(f'strip_map: unknown op {kind!r} in {recipe_path}')
     src.reindex()

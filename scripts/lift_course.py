@@ -130,9 +130,6 @@ DROP = [
     'Circulation Arrows/Gut Upstream 2',
     # Replaced by the published intermediate crossing (Univ Crossing above).
     "Circulation Arrows/St John's Crossing",
-    # "Only crews boating or landing downstream are allowed to go through the
-    # Gut": on the intermediate course others may be allowed through too.
-    'Circulation Arrows/Isis Boathouse Crews Only',
     # The zone left between the intermediate start and the current zone end
     # is too short for its label beside the arrows into the start; the key
     # still names it.
@@ -169,9 +166,20 @@ CLONE = {
                                  'fill:#ff3333;fill-opacity:0.501961', ('between', 'county')),
 }
 
-RETEXT = {
-    'Title/Short Course': ('Short Course', 'Intermediate Course'),
-}
+GUT_NOTE = 'Circulation Arrows/Isis Boathouse Crews Only'
+RETEXT = [
+    ('Title/Short Course', 'Short Course', 'Intermediate Course'),
+    # The short course's Gut note says only crews boating or landing
+    # downstream may go through the Gut; on the intermediate course others
+    # may too, when the Senior Umpires and Race Committee allow it (event
+    # plan, "Transit through the Gut"). The third line is GUT_NOTE_LINE.
+    (GUT_NOTE, 'Only crews boating or landing downstream', 'Crews boating or landing downstream may'),
+    (GUT_NOTE, 'are allowed to go through The Gut', 'go through The Gut; other crews only when'),
+]
+GUT_NOTE_LINE = "announced before each day's racing"
+# The Gut note sits in the Gut, where the lifted arrows run, so it moves out
+# onto the open ground above the Gut.
+GUT_NOTE_MOVE = (-112, -60)
 
 
 def to_map(x, y, half, shift=(0, 0)):
@@ -377,9 +385,12 @@ def main():
     for path, region in CLIP.items():
         ET.SubElement(ops, f'{{{SVGNS}}}g', {'data-op': 'clip', 'data-path': path,
                                               'data-clip': f'url(#intermediate-{region})'})
-    for path, (old, new) in RETEXT.items():
+    for path, old, new in RETEXT:
         ET.SubElement(ops, f'{{{SVGNS}}}g', {'data-op': 'retext', 'data-path': path,
                                               'data-old': old, 'data-new': new})
+    ET.SubElement(ops, f'{{{SVGNS}}}g', {'data-op': 'addline', 'data-path': GUT_NOTE, 'data-text': GUT_NOTE_LINE})
+    ET.SubElement(ops, f'{{{SVGNS}}}g', {'data-op': 'move', 'data-path': GUT_NOTE,
+                                          'data-dx': fmt(GUT_NOTE_MOVE[0]), 'data-dy': fmt(GUT_NOTE_MOVE[1])})
 
     ET.indent(root)
     ET.ElementTree(root).write(sys.argv[3], xml_declaration=True, encoding='UTF-8')

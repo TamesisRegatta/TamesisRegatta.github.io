@@ -426,6 +426,10 @@ table.risk-matrix td {
   --map-c-e5e5e5: hsl(45deg, 6%, 20%);
   --map-c-ebfbff: hsl(200deg, 15%, 22%);
   --map-c-c8c8c8: #6b6b6b;
+  /* Time trial notes and Isis Boathouse crews' arrows: dark reds, lightened
+     to read on the dark background. */
+  --map-c-800000: #ff8a80;
+  --map-c-962430: #e57373;
 }
 
 .tamesis-map-frame {
@@ -559,29 +563,36 @@ table.risk-matrix td {
 }
 
 /* Course and overlay controls above the map, built by map.js from the
-   SVG's data-course and data-overlay groups. */
+   SVG's data-course and data-overlay groups: one line each for Course and
+   Show, wrapping within the line on narrow screens. */
 .tamesis-map-layers {
   display: flex;
-  flex-wrap: wrap;
-  gap: 0.4rem 2rem;
+  flex-direction: column;
+  gap: 0.4rem;
   margin-bottom: 0.6rem;
 }
 
 .tamesis-map-group {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  gap: 0.2rem 1rem;
   margin: 0;
   padding: 0;
   border: 0;
 }
 
+/* The legend floats in a fixed-width column so both lines' options start at
+   the same place; the options box is a flex container, so it sits beside
+   the float and wraps within its own width. */
 .tamesis-map-group legend {
   float: left;
-  margin-right: 0.2rem;
+  min-width: 4.2em;
   padding: 0;
   font-weight: 700;
+}
+
+.tamesis-map-options {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.2rem 1rem;
 }
 
 .tamesis-map-option {

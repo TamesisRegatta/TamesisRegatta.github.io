@@ -260,10 +260,14 @@
       f.className = "tamesis-map-group";
       var lg = document.createElement("legend");
       lg.textContent = legend;
-      f.append(lg);
+      // The options in their own box, so a line that wraps on a narrow
+      // screen starts under the first option rather than under the legend.
+      var opts = document.createElement("div");
+      opts.className = "tamesis-map-options";
       children.forEach(function (c) {
-        f.append(c);
+        opts.append(c);
       });
+      f.append(lg, opts);
       return f;
     }
 

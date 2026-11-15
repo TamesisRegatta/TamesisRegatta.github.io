@@ -42,6 +42,9 @@ Crews land on the top five rafts and boat from the bottom six.
     <img src="../assets/map/print/course-intermediate.svg" loading="lazy" alt="Tamesis Regatta intermediate course: circulation and placement of marshals">
   </figure>
   <figure>
+    <img src="../assets/map/print/course-time-trial.svg" loading="lazy" alt="Tamesis Regatta time trial: circulation and placement of marshals">
+  </figure>
+  <figure>
     <figcaption>Boathouse Island rafts: crews land on the top five rafts and boat from the bottom six.</figcaption>
     <img src="../assets/map/print/boathouse-rafts.svg" loading="lazy" alt="Boathouse Island boathouses and rafts, showing landing and boating rafts and the race desk">
   </figure>

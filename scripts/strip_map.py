@@ -24,8 +24,9 @@ element is an error, so a renamed layer in a new version of the source fails
 loudly rather than silently dropping out.
 
 Courses the source lacks are derived from one it has (DERIVED): the
-intermediate course is a copy of the short course edited by the recipe that
-scripts/lift_course.py writes from the published circulation PDFs.
+intermediate and time trial courses are copies of the short course, each
+edited by a recipe written from the published circulation PDFs
+(scripts/lift_course.py and scripts/lift_time_trial.py).
 
 To add a course: add its layer to OUTPUTS['tamesis-map.svg']['keep'] with
 data-course and data-title, exclude anything inside it that belongs elsewhere
@@ -52,11 +53,15 @@ COURSE = 'Regattas/Thamesis Short Course'
 RAFTS = COURSE + '/Boathouse Island'
 
 # Courses the source does not have, made from a copy of one it does by a
-# recipe from scripts/lift_course.py: name path -> (layer to copy, recipe).
+# recipe from scripts/lift_course.py or scripts/lift_time_trial.py: name path
+# -> (layer to copy, recipe). The recipe's file name, without .svg, suffixes
+# the ids in the copy.
 INTERMEDIATE = 'Regattas/Thamesis Intermediate Course'
+TIME_TRIAL = 'Regattas/Thamesis Time Trial'
 HERE = os.path.dirname(os.path.abspath(__file__))
 DERIVED = {
     INTERMEDIATE: (COURSE, os.path.join(HERE, 'courses', 'intermediate.svg')),
+    TIME_TRIAL: (COURSE, os.path.join(HERE, 'courses', 'time-trial.svg')),
 }
 
 # Per output: the layers to keep, by name path, and the attributes that tell
@@ -78,8 +83,10 @@ OUTPUTS = {
             'AEDs': {'data-overlay': 'aed', 'data-title': 'AEDs'},
             COURSE: {'data-course': 'short', 'data-title': 'Short course', 'data-default': 'true'},
             INTERMEDIATE: {'data-course': 'intermediate', 'data-title': 'Intermediate course'},
+            TIME_TRIAL: {'data-course': 'time-trial', 'data-title': 'Time trial'},
         },
-        'exclude': [RAFTS, INTERMEDIATE + '/Boathouse Island'],  # its own file below
+        # The raft inset: its own file below.
+        'exclude': [RAFTS, INTERMEDIATE + '/Boathouse Island', TIME_TRIAL + '/Boathouse Island'],
     },
     'boathouse-rafts.svg': {
         'keep': {
@@ -94,6 +101,7 @@ OUTPUTS = {
 DROP = [
     COURSE + '/Title/Linacre',  # club logo, linked to a file outside the SVG
     INTERMEDIATE + '/Title/Linacre',
+    TIME_TRIAL + '/Title/Linacre',
 ]
 
 # Links to keep. Every other <a> becomes a plain <g>: the AED and course keys
@@ -156,7 +164,6 @@ PRINT_FONTS = [  # (file in docs/assets/fonts, font-style), embedded in print/
     ('noto-sans-latin-wght-italic.woff2', 'italic'),
 ]
 REF = re.compile(r'url\(#([^)]+)\)|^#(.+)$')
-DERIVED_ID = 'derived'  # suffix for the ids in a derived course's copy
 WARNED = set()
 
 
@@ -263,13 +270,15 @@ def index(e, prefix=()):
 
 def derive(src):
     """Add the DERIVED courses: a copy of a course layer, edited by a recipe
-    from scripts/lift_course.py (see there for what is lifted and why)."""
+    from scripts/lift_course.py or scripts/lift_time_trial.py (see there for
+    what is lifted and why)."""
     for path, (base, recipe_path) in DERIVED.items():
         orig = src.find(base)
         layer = copy.deepcopy(orig)
         layer.set(LABEL, path.rsplit('/', 1)[1])
         # Unique ids for the copy, and its references to them updated.
-        ids = {e.get('id'): e.get('id') + '-' + DERIVED_ID for e in layer.iter() if e.get('id')}
+        suffix = os.path.splitext(os.path.basename(recipe_path))[0]
+        ids = {e.get('id'): e.get('id') + '-' + suffix for e in layer.iter() if e.get('id')}
         for e in layer.iter():
             if e.get('id'):
                 e.set('id', ids[e.get('id')])

@@ -11,7 +11,7 @@ import { computed, onBeforeUnmount, onMounted, ref, watch } from 'vue'
 import { useSlideContext } from '@slidev/client'
 import mapSource from '../../../docs/assets/map/print/course-short.svg?raw'
 import RaceBoat from './RaceBoat.vue'
-import { compile, cuesAt, poseAt } from '../utils/race-cycle.js'
+import { compile, cuesAt, poseAt, RATES } from '../utils/race-cycle.js'
 import { inPdf } from '../utils/print.js'
 
 const props = defineProps({
@@ -38,11 +38,15 @@ const cam = ref({ x: 0, y: 0, w: 1000 })
 
 const stage = computed(() => stages[stageIdx.value])
 
-const boats = computed(() => boatNames.map(name => ({
-  name,
-  pose: poseAt(stage.value, name, t.value),
-  colours: props.route.boats[name].colours,
-})))
+// Each move's strokes start from the finish (phase 0.4 in bladeAt), where
+// the blades are near their resting angle, so they don't jump to the catch.
+const FIRST_PHASE = 0.4
+const boats = computed(() => boatNames.map((name) => {
+  const p = poseAt(stage.value, name, t.value)
+  const rate = RATES[p.stroke] || 0
+  const phase = (p.segT * rate + FIRST_PHASE) % 1
+  return { name, pose: p, stroke: p.stroke, phase, colours: props.route.boats[name].colours }
+}))
 
 const cues = computed(() => cuesAt(stage.value, t.value))
 
@@ -165,7 +169,10 @@ const su = props.route.starter
         <g class="race-cycle-base" v-html="mapInner" />
         <polyline class="race-cycle-trail" :points="trail" />
         <text v-if="su && cues.call" class="race-cycle-call" :x="su[0] + 12" :y="su[1] + 8">{{ cues.call }}</text>
-        <RaceBoat v-for="b in boats" :key="b.name" :pose="b.pose" :colours="b.colours" />
+        <RaceBoat
+          v-for="b in boats" :key="b.name"
+          :pose="b.pose" :stroke="b.stroke" :phase="b.phase" :colours="b.colours"
+        />
         <g v-if="pdf" class="race-cycle-markers">
           <g v-for="m in markers" :key="m.n" :transform="`translate(${m.x} ${m.y - 16})`">
             <circle r="10" />

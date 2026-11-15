@@ -200,7 +200,7 @@ Its layouts are `cover` (date from `event.yml` via `when:`, plus `presenters:` a
 
 The `RaceCycle` component animates one crew's race cycle on the short course map (`docs/assets/map/print/course-short.svg`), one stage per click: `<RaceCycle :route="..." />` on a slide with `clicks:` set to the number of stages after the first.
 Each route is a file in `briefings/coxing/race-cycles/`, listing for each stage its caption, its view of the map (the camera glides between stages) and each boat's moves (row along a path, spin, wait, fade), in the map's own coordinates.
-The boats are schematic eights after the usual pictogram, with the oars drawn still: the circulation is in the boats' paths, not their strokes.
+The boats are schematic eights after the usual pictogram: the oars sweep and feather as the crew rows (at racing pace for moves marked `stroke: 'race'`), and lie angled back at rest.
 Opening a slide part-way through, going back, or a viewer preferring reduced motion shows the end of a stage at once; the PDF shows the whole route with stage numbers.
 The map's own attribution box is hidden, so the component credits the map below it instead, as its CC BY licence requires.
 

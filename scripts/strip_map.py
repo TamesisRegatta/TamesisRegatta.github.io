@@ -100,9 +100,26 @@ OUTPUTS = {
 # data-overlay layer (map.js): name path within the course layer -> attributes.
 # A part inside another part is lifted out to sit just after it, so each can
 # be hidden without the other: the Racedesk star is drawn in the Marshals group.
+MARSHALS_PART = {'data-overlay': 'marshals', 'data-title': 'Marshals'}
+RACEDESK_PART = {'data-overlay': 'racedesk', 'data-title': 'Racedesk'}
+KEY = 'Thamesis Key/'
 PARTS = {
-    'Marshals': {'data-overlay': 'marshals', 'data-title': 'Marshals'},
-    'Marshals/Racedesk Star': {'data-overlay': 'racedesk', 'data-title': 'Racedesk'},
+    'Marshals': MARSHALS_PART,
+    'Marshals/Racedesk Star': RACEDESK_PART,
+    # Their rows in the key, so it lists only what is shown.
+    KEY + 'SU': MARSHALS_PART,
+    KEY + 'Marshal': MARSHALS_PART,
+    KEY + 'BH A Landing Marshal': MARSHALS_PART,
+    KEY + 'BH B Boating Marshal': MARSHALS_PART,
+    KEY + 'Senior Marshal': MARSHALS_PART,
+    KEY + 'Key Text/Left Text': MARSHALS_PART,
+    KEY + 'Racedesk Star': RACEDESK_PART,
+    KEY + 'Key Text/Racedesk Text': RACEDESK_PART,  # split out (SPLIT_LINES)
+}
+# Lines split out of a multi-line text into their own text, so a part can
+# take them: name path of the text -> (start of the line, name of the new text).
+SPLIT_LINES = {
+    KEY + 'Key Text/Left Text': ('Racedesk', 'Racedesk Text'),
 }
 
 # Elements not wanted in any output. Hidden elements inside kept layers are
@@ -401,11 +418,30 @@ def build(src_path, keep, exclude=()):
     for c in list(root):
         if c.tag != SVG + 'defs' and c not in kept:
             root.remove(c)
+    courses = [path for path, attrs in keep.items() if 'data-course' in attrs]
+    for path in courses:
+        for text_path, (start, name) in SPLIT_LINES.items():
+            for full in src.optional([path + '/' + text_path]):
+                text = src.find(full)
+                lines = [t for t in text if t.tag == SVG + 'tspan' and (t.text or '').startswith(start)]
+                if len(lines) != 1:
+                    sys.exit(f'strip_map: {full!r} has {len(lines)} lines starting {start!r}; expected 1')
+                new = ET.Element(text.tag, {k: v for k, v in text.attrib.items() if k != 'id'})
+                new.set(LABEL, name)
+                text.remove(lines[0])
+                new.append(lines[0])
+                p = parent[text]
+                p.insert(list(p).index(text) + 1, new)
+                parent[new] = p
+                parent[lines[0]] = new
+                # Not reindexed: the kept layers have moved, so their paths
+                # would change.
+                src.paths[full.rsplit('/', 1)[0] + '/' + name] = [new]
+
     parts = {}
-    for path, attrs in keep.items():
-        if 'data-course' in attrs:
-            for sub in src.optional([path + '/' + sub for sub in PARTS]):
-                parts[src.find(sub)] = PARTS[sub[len(path) + 1:]]
+    for path in courses:
+        for sub in src.optional([path + '/' + sub for sub in PARTS]):
+            parts[src.find(sub)] = PARTS[sub[len(path) + 1:]]
     for e in parts:
         a = parent[e]
         while a is not root and a not in parts:

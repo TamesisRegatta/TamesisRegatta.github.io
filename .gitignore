@@ -26,3 +26,6 @@ __pycache__/
 *.docx
 *.xlsx
 /Tamesis 2026 Circulation *.pdf
+# Environment Agency notices as received; the site publishes byte-identical
+# copies under docs/assets/ea/.
+/2026_EA_*.pdf

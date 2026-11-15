@@ -711,6 +711,22 @@ table.risk-matrix td {
   text-rendering: geometricPrecision;
 }
 
+/* PDFs embedded on the River Notices page, at A4 proportions. Phones mostly
+   can't show a PDF inline, so there the download link above each is enough. */
+.tr-pdf-embed {
+  display: block;
+  width: 100%;
+  aspect-ratio: 210 / 297;
+  max-height: 90vh;
+  border: 1px solid var(--md-default-fg-color--lightest);
+}
+
+@media screen and (max-width: 44.9375em) {
+  .tr-pdf-embed {
+    display: none;
+  }
+}
+
 /* Key dates on the home page, marked by key-dates.js by the visitor's clock.
    Screen only: a PDF would freeze them at whenever it was built. */
 @media screen {

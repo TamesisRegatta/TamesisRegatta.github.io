@@ -27,6 +27,8 @@ Greenbank to the Cox Stone, and takes place from
 - **[FAQs](faqs.md)**: answers to common questions, for captains.
 - **[Event & Safety Plan](event-plan.md)**: how the regatta is organised and
   run: marshalling, circulation, emergency procedures, and contacts.
+- **[River Notices](river-notices.md)**: the Environment Agency's river
+  restriction notice and consent to place buoys, as PDFs.
 - **[Risk Assessment](risk-assessment.md)**: the hazards of the event, and the
   controls in place for each.
 - **[Course Map](map.md)**: an interactive map of the course, circulation and

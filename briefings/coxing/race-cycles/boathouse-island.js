@@ -8,7 +8,7 @@
 
 export default {
   title: 'Race cycle: Boathouse Island',
-  summary: 'Boat from the downstream rafts and go down the transit lane (1), spin into the Marshalling Zone and pair up (2), start and race (3), spin at the Head (4), and come back down the transit lane to land on the upstream rafts (5).',
+  summary: 'Boat from the downstream rafts and go down the transit lane (1), spin into the Marshalling Zone and pair up (2), start and race, on past the finish line (3), spin at the Head under the marshals\' instruction (4), and come back down the transit lane to land on the upstream rafts (5).',
   // Where the Senior Umpire stands, for the starter's call.
   starter: [1134.6, 302.1],
   boats: {
@@ -48,18 +48,18 @@ export default {
     },
     {
       title: 'Start and race',
-      text: 'Line up in your lane and keep the stagger the Senior Umpire sets. Go on "Go!", and stay in your own lane.',
-      camera: { at: [790, 290], w: 900 },
+      text: 'Line up in your lane and keep the stagger the Senior Umpire sets. Go on "Go!", stay in your own lane, and keep going past the finish line.',
+      camera: { at: [765, 292], w: 940 },
       moves: {
         lin: [
           { to: [[1150, 279], [1137, 276]], dur: 0.8, heading: 180 },
           { wait: 0.4 },
-          { to: [[1100, 274], [1050, 270.8], [1000, 269.5], [950, 269.2], [900, 269.8], [850, 271.5], [800, 276.2], [750, 283], [700, 294], [650, 306], [600, 318.8], [550, 328], [500, 333.8], [450, 338.2], [430, 340]], dur: 3.6, ease: 'start' },
+          { to: [[1100, 274], [1050, 270.8], [1000, 269.5], [950, 269.2], [900, 269.8], [850, 271.5], [800, 276.2], [750, 283], [700, 294], [650, 306], [600, 318.8], [550, 328], [500, 333.8], [450, 338.2], [430, 340], [405, 341], [380, 339.5]], dur: 3.9, ease: 'start' },
         ],
         opp: [
           { to: [[1152, 258], [1141, 255]], dur: 0.8, heading: 180 },
           { wait: 0.4 },
-          { to: [[1100, 253], [1050, 251], [1000, 250.8], [950, 251.5], [900, 253], [850, 255.5], [800, 259.8], [750, 265.8], [700, 273.8], [650, 283.2], [600, 295.2], [550, 304.8], [500, 310.2], [450, 315], [432, 317]], dur: 3.8, ease: 'start' },
+          { to: [[1100, 253], [1050, 251], [1000, 250.8], [950, 251.5], [900, 253], [850, 255.5], [800, 259.8], [750, 265.8], [700, 273.8], [650, 283.2], [600, 295.2], [550, 304.8], [500, 310.2], [450, 315], [432, 317], [410, 318.5], [384, 318.2]], dur: 4.15, ease: 'start' },
         ],
       },
       cues: [
@@ -68,16 +68,16 @@ export default {
       ],
     },
     {
-      title: 'Finish and spin',
-      text: 'Keep paddling until you are clear of the finish, then spin at the Head where the marshal tells you.',
+      title: 'Spin at the Head',
+      text: 'Spin at the Head under instruction from the marshals.',
       camera: { at: [420, 318], w: 450 },
       moves: {
         lin: [
-          { to: [[400, 341], [372, 339]], dur: 1, ease: 'end' },
-          { spin: 176, to: [368, 314], dur: 2 },
+          { to: [[362, 338.5]], dur: 0.8, ease: 'end' },
+          { spin: 176, to: [366, 314], dur: 2 },
         ],
         opp: [
-          { to: [[405, 319], [385, 318]], dur: 1, ease: 'end' },
+          { to: [[370, 318]], dur: 0.8, ease: 'end' },
           { fade: 0, dur: 0.3 },
         ],
       },

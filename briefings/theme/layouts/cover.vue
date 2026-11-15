@@ -6,11 +6,13 @@ import { ukdatetime } from '../utils/dates.js'
 const event = __EVENT__
 
 // `when` names a key in event.yml's dates (e.g. coxing_briefing), and `venue`
-// is free text; both are shown under the title when set.
+// is free text; both are shown under the title when set. `draft: true` puts
+// a "not for circulation" band across the top, on screen and in the PDF.
 const props = defineProps({
   presenters: { type: Array, default: null },
   when: { type: String, default: '' },
   venue: { type: String, default: '' },
+  draft: { type: Boolean, default: false },
 })
 
 const presenters = computed(() => (props.presenters || []).join(' and '))
@@ -26,6 +28,9 @@ const when = computed(() => {
 
 <template>
   <div class="slidev-layout cover tamesis-cover">
+    <p v-if="draft" class="tamesis-cover-draft" role="note">
+      Draft: not yet final and not for circulation
+    </p>
     <img :src="logo" alt="Tamesis Regatta" class="tamesis-cover-logo">
     <div class="tamesis-cover-content">
       <p class="tamesis-cover-event">Tamesis Regatta {{ event.year }}</p>
@@ -49,6 +54,23 @@ const when = computed(() => {
   align-items: center;
   padding: 3rem 3.5rem;
   height: 100%;
+  position: relative;
+}
+
+.tamesis-cover-draft {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  margin: 0;
+  padding: 0.6rem 1rem;
+  background: #c62828;
+  color: white;
+  font-size: 1.3rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-align: center;
+  text-transform: uppercase;
 }
 
 .tamesis-cover-logo {

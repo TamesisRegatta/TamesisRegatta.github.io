@@ -196,7 +196,7 @@ Remove each override once `npm ls` shows Slidev depending on a fixed version its
 
 The theme, `briefings/theme/`, is modelled on the OxRSE Slidev theme and uses the site's colours, font and logo.
 It is light mode only.
-Its layouts are `cover` (date from `event.yml` via `when:`, plus `presenters:` and `venue:`), `section`, `figure` (one map or diagram, with an optional `::aside::` column) and `alert`; other slides get a black header bar with the slide's title.
+Its layouts are `cover` (date from `event.yml` via `when:`, plus `presenters:` and `venue:`, and `draft: true` for a "not for circulation" band until a deck is final), `section`, `figure` (one map or diagram, with an optional `::aside::` column) and `alert`; other slides get a black header bar with the slide's title.
 
 Slides read the same `event.yml` as the site, so dates and names match: in slide Markdown, `{{ ukdatetime(regatta.dates.coxing_briefing) }}` gives "Wed 18 Nov 2026, 18:30" (`ukdate`, `ukdatetime` and `uktime` match the site's filters), and `v-if="regatta.amber_flag_racing"` switches content as the event plan does.
 Only public data is passed to the slides: `contacts.local.yml` is never read, so decks never contain personal numbers.

@@ -88,6 +88,21 @@ KEEP_LINKS = [
     'Logo & Disclaimer/Disclaimer & License/License Text',  # "licensed under CC-BY 3.0"
 ]
 
+# Corrections to the source, so the map matches the event plan (docs/event-plan.md,
+# "Marshal positions"): name path -> (text the source has now, corrected text,
+# corrected name). The source numbers the Boathouse Island marshals 5
+# (upstream half), 6 (downstream half) and 4 (tower); the plan has 4 Boathouses
+# A (upstream), 5 Boathouses B (downstream) and 6 Tower. An element whose text
+# is no longer the expected one is left alone with a warning, as the source has
+# probably been fixed.
+MARSHALS = COURSE + '/Marshals/'
+RELABEL = {
+    MARSHALS + '05': ('5', '4', '04'),
+    MARSHALS + '06': ('6', '5', '05'),
+    MARSHALS + '04': ('4', '6', '06'),
+    MARSHALS + '04 Tower': (None, None, '06 Tower'),
+}
+
 
 # Map items that can be clicked or tapped for information (map.js):
 # data-select is the kind, data-name the popup heading; the other data-*
@@ -199,8 +214,24 @@ def refs(el):
     return found
 
 
+def relabel(src):
+    """Apply RELABEL. All elements are looked up before any is renamed."""
+    found = [(path, src.find(path), fix) for path, fix in RELABEL.items() if src.optional([path])]
+    for path, e, (old, new, label) in found:
+        if old is not None:
+            leaves = [t for t in e.iter() if t.text and t.text.strip()]
+            if len(leaves) != 1 or leaves[0].text.strip() != old:
+                if path not in WARNED:
+                    WARNED.add(path)
+                    print(f'strip_map: warning: {path!r} no longer reads {old!r}; not relabelled', file=sys.stderr)
+                continue
+            leaves[0].text = leaves[0].text.replace(old, new)
+        e.set(LABEL, label)
+
+
 def build(src_path, keep, exclude=()):
     src = Source(src_path)
+    relabel(src)
     root, parent = src.root, src.parent
     kept = {src.find(path): attrs for path, attrs in keep.items()}
     unwanted = {src.find(path) for path in exclude} | {src.find(path) for path in src.optional(DROP)}

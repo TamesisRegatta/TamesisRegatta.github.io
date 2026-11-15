@@ -203,6 +203,18 @@ import boathouseIsland from './race-cycles/boathouse-island.js'
 - The Longbridges Marshal may tell you to land with bows pointing downstream instead: do as they say.
 
 ---
+clicks: 6
+---
+
+<script setup>
+import longbridges from './race-cycles/longbridges.js'
+</script>
+
+# Race cycle: Longbridges
+
+<RaceCycle :route="longbridges" />
+
+---
 
 # Circulation (Univ Raft)
 

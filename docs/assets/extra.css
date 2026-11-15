@@ -426,10 +426,11 @@ table.risk-matrix td {
   --map-c-e5e5e5: hsl(45deg, 6%, 20%);
   --map-c-ebfbff: hsl(200deg, 15%, 22%);
   --map-c-c8c8c8: #6b6b6b;
-  /* Time trial notes and Isis Boathouse crews' arrows: dark reds, lightened
-     to read on the dark background. */
+  /* Marshalling Zone: a muted yellow, so it doesn't glare, dark enough for
+     the light labels and arrows drawn on it. */
+  --map-c-ffff80: #6b6118;
+  /* Time trial notes: a dark red, lightened to read on the dark background. */
   --map-c-800000: #ff8a80;
-  --map-c-962430: #e57373;
 }
 
 .tamesis-map-frame {

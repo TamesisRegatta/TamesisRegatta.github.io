@@ -23,12 +23,17 @@ Layers panel) as a path through the named layers and groups above them, e.g.
 element is an error, so a renamed layer in a new version of the source fails
 loudly rather than silently dropping out.
 
+Courses the source lacks are derived from one it has (DERIVED): the
+intermediate course is a copy of the short course edited by the recipe that
+scripts/lift_course.py writes from the published circulation PDFs.
+
 To add a course: add its layer to OUTPUTS['tamesis-map.svg']['keep'] with
 data-course and data-title, exclude anything inside it that belongs elsewhere
 (like the raft inset), rerun, and add a <figure> for print/course-<id>.svg to
 the print section of docs/map.md.
 """
 import base64
+import copy
 import os
 import re
 import sys
@@ -45,6 +50,14 @@ ET.register_namespace('xlink', XLNS)
 
 COURSE = 'Regattas/Thamesis Short Course'
 RAFTS = COURSE + '/Boathouse Island'
+
+# Courses the source does not have, made from a copy of one it does by a
+# recipe from scripts/lift_course.py: name path -> (layer to copy, recipe).
+INTERMEDIATE = 'Regattas/Thamesis Intermediate Course'
+HERE = os.path.dirname(os.path.abspath(__file__))
+DERIVED = {
+    INTERMEDIATE: (COURSE, os.path.join(HERE, 'courses', 'intermediate.svg')),
+}
 
 # Per output: the layers to keep, by name path, and the attributes that tell
 # docs/assets/map.js what each one is. Nested layers are lifted to the top
@@ -64,8 +77,9 @@ OUTPUTS = {
             'Top Half': {'data-layer': 'base'},
             'AEDs': {'data-overlay': 'aed', 'data-title': 'AEDs'},
             COURSE: {'data-course': 'short', 'data-title': 'Short course', 'data-default': 'true'},
+            INTERMEDIATE: {'data-course': 'intermediate', 'data-title': 'Intermediate course'},
         },
-        'exclude': [RAFTS],  # its own file below
+        'exclude': [RAFTS, INTERMEDIATE + '/Boathouse Island'],  # its own file below
     },
     'boathouse-rafts.svg': {
         'keep': {
@@ -79,6 +93,7 @@ OUTPUTS = {
 # dropped as well.
 DROP = [
     COURSE + '/Title/Linacre',  # club logo, linked to a file outside the SVG
+    INTERMEDIATE + '/Title/Linacre',
 ]
 
 # Links to keep. Every other <a> becomes a plain <g>: the AED and course keys
@@ -141,6 +156,7 @@ PRINT_FONTS = [  # (file in docs/assets/fonts, font-style), embedded in print/
     ('noto-sans-latin-wght-italic.woff2', 'italic'),
 ]
 REF = re.compile(r'url\(#([^)]+)\)|^#(.+)$')
+DERIVED_ID = 'derived'  # suffix for the ids in a derived course's copy
 WARNED = set()
 
 
@@ -150,6 +166,9 @@ class Source:
     def __init__(self, path):
         self.tree = ET.parse(path)
         self.root = self.tree.getroot()
+        self.reindex()
+
+    def reindex(self):
         self.parent = {c: p for p in self.root.iter() for c in p}
         self.paths = {}
         self._index(self.root, [])
@@ -229,9 +248,99 @@ def relabel(src):
         e.set(LABEL, label)
 
 
+def index(e, prefix=()):
+    """Name path (relative to e) -> elements, for the elements below e."""
+    out = {}
+    for c in e:
+        label = c.get(LABEL)
+        path = prefix + (label,) if label else prefix
+        if label:
+            out.setdefault('/'.join(path), []).append(c)
+        for k, v in index(c, path).items():
+            out.setdefault(k, []).extend(v)
+    return out
+
+
+def derive(src):
+    """Add the DERIVED courses: a copy of a course layer, edited by a recipe
+    from scripts/lift_course.py (see there for what is lifted and why)."""
+    for path, (base, recipe_path) in DERIVED.items():
+        orig = src.find(base)
+        layer = copy.deepcopy(orig)
+        layer.set(LABEL, path.rsplit('/', 1)[1])
+        # Unique ids for the copy, and its references to them updated.
+        ids = {e.get('id'): e.get('id') + '-' + DERIVED_ID for e in layer.iter() if e.get('id')}
+        for e in layer.iter():
+            if e.get('id'):
+                e.set('id', ids[e.get('id')])
+            for k, v in e.attrib.items():
+                if '#' in v:
+                    e.set(k, REF.sub(lambda m: m.group(0).replace(m.group(1) or m.group(2), ids.get(m.group(1) or m.group(2), m.group(1) or m.group(2))), v))
+        parent = src.parent[orig]
+        parent.insert(list(parent).index(orig) + 1, layer)
+
+        recipe = ET.parse(recipe_path).getroot()
+        names = index(layer)
+
+        def one(p):
+            found = names.get(p, [])
+            if len(found) != 1:
+                sys.exit(f'strip_map: {len(found)} elements named {path + "/" + p!r} for {recipe_path}; expected exactly 1')
+            return found[0]
+
+        sub_parent = {c: p for p in layer.iter() for c in p}
+        for g in recipe:
+            if g.get('data-into') is None:
+                continue
+            target = one(g.get('data-into'))
+            after = g.get('data-after')
+            at = list(target).index(one(after)) + 1 if after else len(target)
+            for e in list(g):
+                for x in e.iter():
+                    if x.get('data-label'):
+                        x.set(LABEL, x.attrib.pop('data-label'))
+                target.insert(at, e)
+                at += 1
+        for op in recipe.iter(SVG + 'g'):
+            kind = op.get('data-op')
+            if not kind:
+                continue
+            e = one(op.get('data-path'))
+            if kind == 'drop':
+                sub_parent[e].remove(e)
+            elif kind == 'move':
+                t = f"translate({op.get('data-dx')},{op.get('data-dy')})"
+                e.set('transform', (t + ' ' + e.get('transform', '')).strip())
+            elif kind == 'clip':
+                e.set('clip-path', op.get('data-clip'))
+            elif kind == 'clone':
+                # A copy with its own style and label, cut to the
+                # intersection of two clip regions (one on a wrapper).
+                c = copy.deepcopy(e)
+                for x in c.iter():
+                    x.attrib.pop('id', None)
+                c.set(LABEL, op.get('data-label'))
+                c.set('style', op.get('data-style'))
+                c.set('clip-path', op.get('data-clip'))
+                wrap = ET.Element(SVG + 'g', {'clip-path': op.get('data-clip-outer')})
+                wrap.append(c)
+                target = one(op.get('data-into'))
+                target.insert(list(target).index(one(op.get('data-after'))) + 1, wrap)
+            elif kind == 'retext':
+                old, new = op.get('data-old'), op.get('data-new')
+                hits = [t for t in e.iter() if t.text and old in t.text]
+                if len(hits) != 1:
+                    sys.exit(f'strip_map: {op.get("data-path")!r} does not read {old!r} once')
+                hits[0].text = hits[0].text.replace(old, new)
+            else:
+                sys.exit(f'strip_map: unknown op {kind!r} in {recipe_path}')
+    src.reindex()
+
+
 def build(src_path, keep, exclude=()):
     src = Source(src_path)
     relabel(src)
+    derive(src)
     root, parent = src.root, src.parent
     kept = {src.find(path): attrs for path, attrs in keep.items()}
     unwanted = {src.find(path) for path in exclude} | {src.find(path) for path in src.optional(DROP)}

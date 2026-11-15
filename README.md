@@ -147,6 +147,22 @@ Layers are found by their names in Inkscape's Layers panel, so a renamed layer s
 To add a course, add its layer to `OUTPUTS` in the script, rerun it, and add a `<figure>` for its print image to the print section of `docs/map.md`; the page's controls pick it up from the SVG.
 The page's downloadable PDF is assembled by `hooks/map_pdf.py`, one page per map, each sized to its map.
 
+The script also corrects the source where it disagrees with the event plan (`RELABEL`: the Boathouse Island marshal numbers), and skips a correction with a warning once the source no longer needs it.
+
+The source has no intermediate course layer, so that course is derived: a copy of the short course layer, edited by the recipe in `scripts/courses/intermediate.svg`.
+`scripts/lift_course.py` writes that recipe from the published circulation PDFs (the ones in Appendix 3 of the event plan, kept beside the repository but not in it).
+It lifts what the intermediate PDF has and the short course PDF does not (the start, the lanes and arrows down to it, the Gut and Donnington Bridge arrows, marshal 11) and moves them onto the current map; everything the two courses share comes from Bernard's current short course layer.
+It needs PyMuPDF, which the site itself does not use:
+
+```bash
+pip install pymupdf
+python scripts/lift_course.py "Tamesis 2026 Circulation Intermediate Course.pdf" "Tamesis 2026 Circulation Short Course.pdf" scripts/courses/intermediate.svg
+```
+
+Rerun `strip_map.py` after changing the recipe.
+The script's comments say what is lifted, what is left out and why.
+If Bernard adds an intermediate course layer to the source, use that instead and delete the recipe.
+
 ## Third-party assets
 
 Everything the site needs is served from this repository, with no external CDNs or font services.
@@ -156,7 +172,7 @@ Each item below keeps its licence alongside it, and the licence terms require th
 | :- | :- | :- |
 | Noto Sans and Noto Sans Mono (from [Fontsource](https://fontsource.org/) 5.3.0) | `docs/assets/fonts/` | SIL Open Font License 1.1, see `OFL.txt` there |
 | [d3-zoom](https://github.com/d3/d3-zoom) and its eight D3 dependencies | `docs/assets/vendor/d3/` | ISC, and BSD-3-Clause for d3-ease; full texts in `LICENSE` there and at the top of `d3-zoom.min.js` |
-| Oxford Isis Maps by Bernard Tao | `docs/assets/map/tamesis-map.svg` | CC-BY 3.0; the attribution is drawn on the map and must stay visible |
+| Oxford Isis Maps by Bernard Tao | `docs/assets/map/`, and the intermediate course recipe `scripts/courses/intermediate.svg` (lifted from his circulation PDFs) | CC-BY 3.0; the attribution is drawn on the map and must stay visible |
 
 The D3 file is the official `dist/*.min.js` of each module, unmodified and concatenated in dependency order; the versions are listed in its header.
 To update it, download the newer files from each package and rebuild the header and `LICENSE` to match.

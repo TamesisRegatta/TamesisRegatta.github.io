@@ -146,6 +146,7 @@ That source file is not kept in this repository.
 Layers are found by their names in Inkscape's Layers panel, so a renamed layer stops the script with an error naming it.
 To add a course, add its layer to `OUTPUTS` in the script, rerun it, and add a `<figure>` for its print image to the print section of `docs/map.md`; the page's controls pick it up from the SVG.
 The page's downloadable PDF is assembled by `hooks/map_pdf.py`, one page per map, each sized to its map.
+The page's Show line has a checkbox for each overlay layer (`data-overlay` in `OUTPUTS`, such as the AEDs) and for each part of every course listed in `PARTS` (the marshals, and the Racedesk).
 
 The script also corrects the source where it disagrees with the event plan (`RELABEL`: the Boathouse Island marshal numbers), and skips a correction with a warning once the source no longer needs it.
 

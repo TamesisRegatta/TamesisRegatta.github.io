@@ -196,13 +196,23 @@
   }
 
   // Layer controls, built from the SVG's own markup (see scripts/strip_map.py):
-  // groups with data-course form a pick-one radio group plus "None", groups
-  // with data-overlay are independent checkboxes, and data-title labels each.
-  // The selection is kept in the URL (?course=none&aed=0), non-defaults only,
-  // so a link can open a particular view.
+  // groups with data-course form a pick-one radio group plus "None", and
+  // elements with data-overlay are independent checkboxes, one per value, with
+  // data-title as the label. An overlay can be a whole layer (AEDs) or a part
+  // of every course (marshals), so all elements sharing a value switch
+  // together. The selection is kept in the URL (?course=none&aed=0),
+  // non-defaults only, so a link can open a particular view.
   function layerControls(frame, svg) {
     var courses = Array.from(svg.querySelectorAll(".tamesis-map-viewport > [data-course]"));
-    var overlays = Array.from(svg.querySelectorAll(".tamesis-map-viewport > [data-overlay]"));
+    var overlayEls = Array.from(svg.querySelectorAll(".tamesis-map-viewport [data-overlay]"));
+    // One per value, in order of first appearance.
+    var overlays = overlayEls.filter(function (g, i) {
+      return (
+        overlayEls.findIndex(function (h) {
+          return h.dataset.overlay === g.dataset.overlay;
+        }) === i
+      );
+    });
     var defaultCourse = courses.filter(function (g) {
       return g.dataset.default === "true";
     })[0];
@@ -228,7 +238,7 @@
       courses.forEach(function (g) {
         g.classList.toggle("is-hidden", g.dataset.course !== state.course);
       });
-      overlays.forEach(function (g) {
+      overlayEls.forEach(function (g) {
         g.classList.toggle("is-hidden", !state[g.dataset.overlay]);
       });
       var p = new URLSearchParams(location.search);

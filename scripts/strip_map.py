@@ -96,6 +96,15 @@ OUTPUTS = {
     },
 }
 
+# Parts of every course that the page can show and hide on their own, like a
+# data-overlay layer (map.js): name path within the course layer -> attributes.
+# A part inside another part is lifted out to sit just after it, so each can
+# be hidden without the other: the Racedesk star is drawn in the Marshals group.
+PARTS = {
+    'Marshals': {'data-overlay': 'marshals', 'data-title': 'Marshals'},
+    'Marshals/Racedesk Star': {'data-overlay': 'racedesk', 'data-title': 'Racedesk'},
+}
+
 # Elements not wanted in any output. Hidden elements inside kept layers are
 # dropped as well.
 DROP = [
@@ -392,11 +401,33 @@ def build(src_path, keep, exclude=()):
     for c in list(root):
         if c.tag != SVG + 'defs' and c not in kept:
             root.remove(c)
-    for c, attrs in kept.items():
+    parts = {}
+    for path, attrs in keep.items():
+        if 'data-course' in attrs:
+            for sub in src.optional([path + '/' + sub for sub in PARTS]):
+                parts[src.find(sub)] = PARTS[sub[len(path) + 1:]]
+    for e in parts:
+        a = parent[e]
+        while a is not root and a not in parts:
+            a = parent[a]
+        if a is root:
+            continue
+        b = parent[e]
+        while b is not a:
+            if b.get('transform'):
+                sys.exit(f'strip_map: {e.get(LABEL)!r} is inside {b.get(LABEL) or b.get("id")!r}, '
+                         'which is moved or scaled; lifting it out would misplace it')
+            b = parent[b]
+        parent[e].remove(e)
+        p = parent[a]
+        p.insert(list(p).index(a) + 1, e)
+        parent[e] = p
+
+    for c, attrs in list(kept.items()) + list(parts.items()):
         for k, v in attrs.items():
             c.set(k, v)
-        # No display on kept layers: Inkscape's display:none/inline would
-        # override the stylesheet that map.js uses to show and hide them.
+        # No display on layers the page shows and hides: Inkscape's
+        # display:none/inline would override the stylesheet map.js uses.
         st = re.sub(r'display:[^;]+;?', '', c.get('style') or '').strip(';')
         if st:
             c.set('style', st)

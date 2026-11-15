@@ -11,7 +11,7 @@ import { computed, onBeforeUnmount, onMounted, ref, watch } from 'vue'
 import { useSlideContext } from '@slidev/client'
 import mapSource from '../../../docs/assets/map/print/course-short.svg?raw'
 import RaceBoat from './RaceBoat.vue'
-import { compile, cuesAt, poseAt, RATES } from '../utils/race-cycle.js'
+import { compile, cuesAt, poseAt } from '../utils/race-cycle.js'
 import { inPdf } from '../utils/print.js'
 
 const props = defineProps({
@@ -38,20 +38,17 @@ const cam = ref({ x: 0, y: 0, w: 1000 })
 
 const stage = computed(() => stages[stageIdx.value])
 
-const boats = computed(() => boatNames.map((name) => {
-  const p = poseAt(stage.value, name, t.value)
-  const rate = RATES[p.stroke] || 0
-  return { name, pose: p, stroke: p.stroke, phase: (p.segT * rate) % 1, colours: props.route.boats[name].colours }
-}))
+const boats = computed(() => boatNames.map(name => ({
+  name,
+  pose: poseAt(stage.value, name, t.value),
+  colours: props.route.boats[name].colours,
+})))
 
 const cues = computed(() => cuesAt(stage.value, t.value))
 
-function cameraAt(i, time) {
+// Each stage has one fixed view; the camera glides from one to the next.
+function cameraAt(i) {
   const c = stages[i].camera
-  if (c.follow) {
-    const p = poseAt(stages[i], c.follow, time)
-    return { x: p.x + (c.offset?.[0] || 0), y: p.y + (c.offset?.[1] || 0), w: c.w }
-  }
   return { x: c.at[0], y: c.at[1], w: c.w }
 }
 
@@ -64,7 +61,7 @@ const viewBox = computed(() => {
 // The lead crew's route, sampled once, for the trail behind it and the PDF.
 const samples = []
 for (let i = 1; i <= last; i++) {
-  for (let tt = 0; tt <= stages[i].dur + 1e-9; tt += 0.1) {
+  for (let tt = 0; tt <= stages[i].dur + 1e-9; tt += 0.05) {
     const p = poseAt(stages[i], lead, tt)
     samples.push({ i, t: tt, x: p.x, y: p.y })
   }
@@ -88,7 +85,7 @@ function frame(ts) {
   t.value = Math.min(dur, t.value + dt)
   // The camera eases toward where it should be, so cuts between stages and
   // changes of zoom glide rather than jump.
-  const want = cameraAt(stageIdx.value, t.value)
+  const want = cameraAt(stageIdx.value)
   const k = 1 - Math.exp(-dt / 0.45)
   const c = cam.value
   const w = Math.exp(Math.log(c.w) + (Math.log(want.w) - Math.log(c.w)) * k)
@@ -110,7 +107,7 @@ function show(i, play) {
   }
   else {
     t.value = stage.value.dur
-    cam.value = cameraAt(stageIdx.value, t.value)
+    cam.value = cameraAt(stageIdx.value)
   }
 }
 
@@ -147,7 +144,7 @@ onMounted(() => {
   })
   observer.observe(box.value)
   if (pdf)
-    cam.value = cameraAt(0, 0)
+    cam.value = cameraAt(0)
   show(pdf ? 0 : $clicks.value, false)
   pending = setTimeout(() => (settledAt = performance.now()), 400)
 })
@@ -167,16 +164,8 @@ const su = props.route.starter
       <svg class="race-cycle-map" :viewBox="viewBox" preserveAspectRatio="xMidYMid slice" role="img" :aria-label="route.title">
         <g class="race-cycle-base" v-html="mapInner" />
         <polyline class="race-cycle-trail" :points="trail" />
-        <g v-if="su && cues.flag" class="race-cycle-flag" :transform="`translate(${su[0] + 6} ${su[1] - 2})`">
-          <line x1="0" y1="0" x2="0" y2="-10" />
-          <rect v-if="cues.flag === 'raised'" x="0" y="-10" width="6" height="4" />
-          <rect v-else x="-0.4" y="-4" width="4" height="6" transform="rotate(30 0 -4)" />
-        </g>
-        <text v-if="su && cues.call" class="race-cycle-call" :x="su[0] + 13" :y="su[1] + 3">{{ cues.call }}</text>
-        <RaceBoat
-          v-for="b in boats" :key="b.name"
-          :pose="b.pose" :stroke="b.stroke" :phase="b.phase" :colours="b.colours"
-        />
+        <text v-if="su && cues.call" class="race-cycle-call" :x="su[0] + 12" :y="su[1] + 8">{{ cues.call }}</text>
+        <RaceBoat v-for="b in boats" :key="b.name" :pose="b.pose" :colours="b.colours" />
         <g v-if="pdf" class="race-cycle-markers">
           <g v-for="m in markers" :key="m.n" :transform="`translate(${m.x} ${m.y - 16})`">
             <circle r="10" />
@@ -252,15 +241,12 @@ const su = props.route.starter
   opacity: 0.55;
 }
 
-.race-cycle-flag line { stroke: #333; stroke-width: 0.6; }
-.race-cycle-flag rect { fill: #d32f2f; }
-
 .race-cycle-call {
-  font-size: 7px;
+  font-size: 22px;
   font-weight: 800;
   fill: #b71c1c;
   stroke: #fff;
-  stroke-width: 1.6px;
+  stroke-width: 4px;
   paint-order: stroke;
 }
 

@@ -68,11 +68,11 @@ function along(c, s) {
 }
 
 // One move, starting from pose p, as a function of u in [0, 1].
-//   { to: [[x, y], ...], dur, stroke, heading? }   row along a smooth path;
+//   { to: [[x, y], ...], dur, heading?, ease? }   row along a smooth path;
 //       heading: a final heading to turn to over the last part of the path.
 //   { spin: degrees, dur, to?: [x, y] }   spin in place (clockwise positive),
-//       drifting to `to`; rows on stroke side and backs down bow side.
-//   { wait: dur, stroke? }   sit still (blades flat on the water).
+//       drifting to `to`.
+//   { wait: dur }   sit still.
 //   { fade: opacity, dur }   fade in or out where it is.
 function build(move, p) {
   if (move.to && !move.spin) {
@@ -81,7 +81,6 @@ function build(move, p) {
     const [a0, a1] = PROFILES[move.ease || 'default']
     return {
       dur: move.dur,
-      stroke: move.stroke || 'paddle',
       at(u) {
         const q = along(c, ramp(u, a0, a1) * c.total)
         // Ease out of the starting heading over the first fifth of the path,
@@ -99,7 +98,6 @@ function build(move, p) {
     const [x1, y1] = move.to || [p.x, p.y]
     return {
       dur: move.dur,
-      stroke: 'spin',
       at(u) {
         const e = ease(u)
         return { ...p, x: lerp(p.x, x1, e), y: lerp(p.y, y1, e), h: p.h + move.spin * e }
@@ -107,9 +105,9 @@ function build(move, p) {
     }
   }
   if (move.fade !== undefined) {
-    return { dur: move.dur, stroke: 'none', at: u => ({ ...p, opacity: lerp(p.opacity, move.fade, ease(u)) }) }
+    return { dur: move.dur, at: u => ({ ...p, opacity: lerp(p.opacity, move.fade, ease(u)) }) }
   }
-  return { dur: move.wait, stroke: move.stroke || 'none', at: () => ({ ...p }) }
+  return { dur: move.wait, at: () => ({ ...p }) }
 }
 
 // Precompute every stage: for each boat, its timed segments and end pose.
@@ -140,17 +138,17 @@ export function compile(route) {
   })
 }
 
-// A boat's pose and stroke at time t in a compiled stage.
+// A boat's pose at time t in a compiled stage.
 export function poseAt(stage, name, t) {
   const b = stage.boats[name]
   for (const seg of b.segs) {
     if (t < seg.t0 + seg.dur)
-      return { ...seg.at(Math.max(0, (t - seg.t0) / seg.dur)), stroke: seg.stroke, segT: t - seg.t0 }
+      return seg.at(Math.max(0, (t - seg.t0) / seg.dur))
   }
-  return { ...b.end, stroke: 'none', segT: 0 }
+  return { ...b.end }
 }
 
-// Cue state (flag, starter's call) at time t: the latest cue of each kind.
+// Cue state (the starter's call) at time t: the latest cue of each kind.
 export function cuesAt(stage, t) {
   const out = {}
   for (const cue of stage.cues || []) {
@@ -159,34 +157,3 @@ export function cuesAt(stage, t) {
   }
   return out
 }
-
-// Blade sweep for a stroke phase in [0, 1): degrees toward the stern from
-// square, and how much of the spoon's face shows from above. A feathered
-// blade lies flat, so its whole face (and colours) shows; a squared blade is
-// on edge, so it looks narrow.
-const SQUARE = 0.4
-export function bladeAt(mode, phase, side) {
-  if (mode === 'none')
-    return { angle: 0, open: 1 }
-  const catchA = -38
-  const finishA = 30
-  const drive = 0.4
-  let angle
-  let open
-  if (phase < drive) {
-    angle = lerp(catchA, finishA, ease(phase / drive))
-    open = SQUARE
-  }
-  else {
-    const u = (phase - drive) / (1 - drive)
-    angle = lerp(finishA, catchA, ease(u))
-    // Feathered for the middle of the recovery, squaring up for the catch.
-    open = u < 0.15 ? lerp(SQUARE, 1, u / 0.15) : u > 0.8 ? lerp(1, SQUARE, (u - 0.8) / 0.2) : 1
-  }
-  // Spinning: bow side backs down, which is the stroke played backwards.
-  if (mode === 'spin' && side === 'bow')
-    angle = -angle
-  return { angle, open }
-}
-
-export const RATES = { paddle: 0.8, race: 1.25, spin: 0.7, none: 0 }

@@ -181,7 +181,7 @@ import rafts from '../../docs/assets/map/print/boathouse-rafts.svg'
 - After the race, return beside the Meadow to the landing rafts, and land with bows pointing downstream.
 
 ---
-clicks: 8
+clicks: 5
 ---
 
 <script setup>

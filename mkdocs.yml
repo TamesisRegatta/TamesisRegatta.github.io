@@ -92,6 +92,8 @@ hooks:
   - hooks/map_pdf.py
   # Stops mkdocs-exporter turning mailto: links into broken site URLs in PDFs.
   - hooks/pdf_links.py
+  # Makes the PDFs accessible: tagged, with their language and bookmarks.
+  - hooks/pdf_tagged.py
   # Serves /draw/ as a short link to draw_url in event.yml, once it is set,
   # and adds a Draw entry to the nav after Home.
   - hooks/draw_redirect.py

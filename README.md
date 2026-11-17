@@ -132,7 +132,8 @@ python3 -m venv .venv
 Each page gets a "Download as PDF" button. PDFs are rendered headlessly with
 Chromium via [mkdocs-exporter](https://adrienbrignon.github.io/mkdocs-exporter/).
 Generation is skipped locally by default (it slows the edit loop); CI always
-builds them. To build them locally:
+builds them. `hooks/pdf_tagged.py` makes them tagged PDFs, with their language
+and bookmarks, for screen readers. To build them locally:
 
 ```bash
 .venv/bin/playwright install chromium

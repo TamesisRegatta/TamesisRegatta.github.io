@@ -225,6 +225,18 @@ import longbridges from './race-cycles/longbridges.js'
 - Make it clear to the Marshals/Senior Umpire that you wish to land, and they will instruct you to follow a race in the County Station back to Univ, and land bows upstream.
 
 ---
+clicks: 6
+---
+
+<script setup>
+import univ from './race-cycles/univ.js'
+</script>
+
+# Race cycle: Univ raft
+
+<RaceCycle :route="univ" />
+
+---
 
 # Circulation (Isis Boathouse)
 

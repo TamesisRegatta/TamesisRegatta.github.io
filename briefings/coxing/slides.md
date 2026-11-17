@@ -247,6 +247,18 @@ import univ from './race-cycles/univ.js'
 - Cross to standard circulation as you enter the Gut, keeping a good lookout for crews and boats coming upstream. Land at the Isis Boathouse in any safe manner.
 
 ---
+clicks: 6
+---
+
+<script setup>
+import isisBoathouse from './race-cycles/isis-boathouse.js'
+</script>
+
+# Race cycle: Isis Boathouse
+
+<RaceCycle :route="isisBoathouse" />
+
+---
 
 # Transit through the Gut
 

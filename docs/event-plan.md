@@ -16,7 +16,7 @@ Prepared by {{ event_plan.prepared_by }}
 
 {{ redaction_notice() }}
 
-### Changelog
+## Changelog
 
 | Version | Date | Notes |
 | :--- | :--- | :--- |

@@ -16,7 +16,7 @@ Prior to the event, this risk assessment and the associated [Event Plan](event-p
 
 </div>
 
-### Changelog
+## Changelog
 
 | Version | Date | Notes |
 | :--- | :--- | :--- |

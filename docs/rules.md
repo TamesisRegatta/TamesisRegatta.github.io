@@ -14,7 +14,7 @@ Prepared by {{ rules.prepared_by }}
 
 </div>
 
-### Changelog
+## Changelog
 
 | Version | Date | Notes |
 | :--- | :--- | :--- |

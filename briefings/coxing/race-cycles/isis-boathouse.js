@@ -101,19 +101,21 @@ export default {
       camera: { at: [1010, 305], w: 1440 },
       moves: {
         lin: [
-          // The centre of the map's Transit Lane (as in longbridges.js), on
-          // past Longbridges on the City side.
-          { to: [[400, 297.5], [420, 294.6], [460, 290.5], [500, 286.4], [540, 282.3], [580, 275.8], [620, 266.7], [660, 259.4], [700, 253.8], [740, 248.9], [780, 244.4], [820, 241.5], [860, 238.7], [900, 236.2], [940, 234.1], [980, 232.8], [1020, 232.1], [1060, 232.1], [1100, 233.9], [1140, 239.2], [1180, 251.2], [1220, 266], [1260, 279.8], [1300, 291.4], [1340, 301.5], [1380, 311], [1420, 319.5], [1460, 323.1], [1490, 328.5], [1540, 339], [1590, 347], [1625, 352]], dur: 6.5 },
+          // The centre of the map's Transit Lane (as in longbridges.js), then
+          // close along the Greenbank (about 14 units off its bank, so the
+          // oars stay clear of it).
+          { to: [[400, 297.5], [420, 294.6], [460, 290.5], [500, 286.4], [540, 282.3], [580, 275.8], [620, 266.7], [660, 259.4], [700, 253.8], [740, 248.9], [780, 244.4], [820, 241.5], [860, 238.7], [900, 236.2], [940, 234.1], [980, 232.8], [1020, 232.1], [1060, 232.1], [1100, 233.9], [1140, 239.2], [1180, 251.2], [1220, 266], [1260, 279.8], [1300, 291.4], [1340, 301.5], [1380, 311], [1420, 319.5], [1460, 323.1], [1500, 329], [1540, 332], [1580, 336]], dur: 6.5 },
         ],
       },
     },
     {
       title: 'Into the Gut',
-      text: 'Cross to standard circulation as you enter the Gut, keeping a good lookout for crews and boats coming up. Land at the Isis Boathouse in any safe manner.',
+      text: 'Keep close to the Greenbank and go straight into the Gut, in standard circulation, keeping a good lookout for crews and boats coming up. Land at the Isis Boathouse in any safe manner.',
       camera: { at: [1600, 370], w: 300 },
       moves: {
         lin: [
-          { to: [[1655, 360], [1680, 372], [1705, 388]], dur: 2.5 },
+          // On along the Greenbank, and off the map's edge into the Gut.
+          { to: [[1630, 344], [1683, 355], [1715, 358]], dur: 2.5 },
           { fade: 0, dur: 0.4 },
         ],
       },

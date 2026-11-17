@@ -18,12 +18,19 @@ const props = defineProps({
   colours: { type: String, default: 'linacre' }, // a key of BLADES
 })
 
-// Blade designs (from OURCs's blade colours chart), simplified to what shows
-// on a small spoon: its colour, and a mark across it. The cox wears the
+// Blade designs (from OURCs's blade colours chart, TT24), simplified to what
+// shows on a small spoon: its colour, and a mark on it. Marks: a saltire or
+// cross in markColour; neck, markColour over the half of the spoon nearest
+// the shaft; bands, stripes across the spoon, each at a distance from its
+// middle toward the tip (the spoon runs from -1.6 to 1.6). The cox wears the
 // club's colour too.
 const BLADES = {
   linacre: { spoon: 'var(--tamesis-yellow)', edge: '#1a1a1a', mark: 'saltire', markColour: '#000', cox: 'var(--tamesis-yellow)' },
   mansfield: { spoon: '#eb1c24', edge: '#1a1a1a', mark: 'cross', markColour: '#fff000', cox: '#eb1c24' },
+  // White, with purple on the half by the shaft.
+  wolfsonM2: { spoon: '#fff', edge: '#1a1a1a', mark: 'neck', markColour: '#9b2fb5', cox: '#9b2fb5' },
+  // White, with a navy and a green stripe across it near the tip.
+  reuben: { spoon: '#fff', edge: '#1a1a1a', mark: 'bands', bands: [{ at: 1.0, colour: '#152361' }, { at: 0.45, colour: '#2e9a45' }], cox: '#152361' },
   plain: { spoon: '#9e9e9e', edge: '#555', mark: null, cox: '#d0d0d0' },
 }
 const blade = computed(() => BLADES[props.colours] || BLADES.plain)
@@ -60,8 +67,10 @@ const HULL = 'M 6 -0.8 L -6 -0.8 C -9.5 -0.8 -12.2 -0.45 -12.5 -0.2 Q -12.75 0 -
   <g :transform="transform" :opacity="pose.opacity ?? 1" class="race-boat" :class="colours">
     <g v-for="o in oars" :key="o.seat" :transform="`translate(${o.x} ${o.dir * HALF_BEAM}) rotate(${o.rot})`">
       <line class="shaft" x1="0" y1="0" :x2="0" :y2="o.dir * 5.2" />
+      <!-- The spoon's tip is toward +dir; its outline is drawn last, over
+           any mark, so marks stay inside its rounded corners. -->
       <g :transform="`translate(0 ${o.dir * 6.8}) scale(${o.open} 1)`">
-        <rect class="spoon" x="-0.85" y="-1.6" width="1.7" height="3.2" rx="0.35" :fill="blade.spoon" :stroke="blade.edge" />
+        <rect class="spoon" x="-0.85" y="-1.6" width="1.7" height="3.2" rx="0.35" :fill="blade.spoon" />
         <g v-if="blade.mark" class="mark" :stroke="blade.markColour">
           <template v-if="blade.mark === 'saltire'">
             <line x1="-0.85" y1="-1.6" x2="0.85" y2="1.6" />
@@ -71,7 +80,12 @@ const HULL = 'M 6 -0.8 L -6 -0.8 C -9.5 -0.8 -12.2 -0.45 -12.5 -0.2 Q -12.75 0 -
             <line x1="0" y1="-1.05" x2="0" y2="1.05" />
             <line x1="-0.55" :y1="o.dir * 0.35" x2="0.55" :y2="o.dir * 0.35" />
           </template>
+          <rect v-else-if="blade.mark === 'neck'" x="-0.85" :y="o.dir > 0 ? -1.6 : 0" width="1.7" height="1.6" :fill="blade.markColour" stroke="none" />
+          <template v-else-if="blade.mark === 'bands'">
+            <line v-for="b in blade.bands" :key="b.at" x1="-0.85" :y1="o.dir * b.at" x2="0.85" :y2="o.dir * b.at" :stroke="b.colour" />
+          </template>
         </g>
+        <rect class="spoon-edge" x="-0.85" y="-1.6" width="1.7" height="3.2" rx="0.35" fill="none" :stroke="blade.edge" />
       </g>
     </g>
     <path class="hull" :d="HULL" />
@@ -87,6 +101,6 @@ const HULL = 'M 6 -0.8 L -6 -0.8 C -9.5 -0.8 -12.2 -0.45 -12.5 -0.2 Q -12.75 0 -
 .race-boat .cox { stroke: #1a1a1a; stroke-width: 0.2; }
 .race-boat .bow-ball { fill: #fff; stroke: #1a1a1a; stroke-width: 0.2; }
 .race-boat .shaft { stroke: #3a3a3a; stroke-width: 0.35; }
-.race-boat .spoon { stroke-width: 0.2; }
+.race-boat .spoon-edge { stroke-width: 0.2; }
 .race-boat .mark { stroke-width: 0.38; }
 </style>

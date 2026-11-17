@@ -1,299 +1,118 @@
-# TamesisRegatta.github.io
+# Tamesis Regatta website
 
-Static website for Tamesis Regatta, containing the rules, event & safety plan,
-risk assessment, and other documents. Built with
-[MkDocs](https://www.mkdocs.org/) and the
-[Material](https://squidfunk.github.io/mkdocs-material/) theme, and deployed
-to GitHub Pages at <https://tamesisregatta.org/> on every push to
-`main`.
+The website of Tamesis Regatta, Oxford's novice regatta, at <https://tamesisregatta.org/>: the rules, FAQs, event and safety plan, risk assessment, course map and briefing slides.
+It is built with [MkDocs](https://www.mkdocs.org/) and the [Material](https://squidfunk.github.io/mkdocs-material/) theme, with the briefings in [Slidev](https://sli.dev/), and deployed to GitHub Pages from `main`.
 
-## Layout
-
-| Path | Purpose |
-| :--- | :--- |
-| `event.yml` | Key dates and named role holders, in one place. Pages refer to them as `{{ dates.entries_close }}`, `{{ roles.chief_marshal.name }}` etc. |
-| `risk_matrix.yml` | The official severity × probability risk matrix (labels, level lookup, definitions). See [Risk assessment](#risk-assessment). |
-| `docs/` | The site content (Markdown), one file per page, plus `assets/` for CSS/JS/images. |
-| `mkdocs.yml` | Site configuration, navigation, theme, and plugins. |
-| `main.py` | Macros used by pages: dates, contact details, risk badges (see below). |
-| `briefings/` | Briefing slide decks, built with Slidev. See [Briefing slides](#briefing-slides). |
-| `.github/workflows/deploy.yml` | Builds the site (including PDFs) and the briefing slides, and deploys them to GitHub Pages. |
-
-## Editing
-
-- **Change a date or role holder**: edit `event.yml` only. Every page and PDF
-  picks it up on the next build. Each page also has an edit (pencil) button
-  linking straight to its source on GitHub.
-- **Dates are ISO 8601** (`2026-11-25`, times as `04:00:00`) and parsed into
-  real date objects, so invalid dates fail the build. Every date is set
-  explicitly in `event.yml`; nothing is calculated relative to another date.
-  Pages control rendering with filters: `{{ dates.regatta_start | ukdate }}`
-  → "Wed 25 Nov 2026", `ukdatetime` (24-hour clock) → "Wed 11 Nov 2026,
-  04:00", and `{{ daterange(dates.regatta_start, dates.regatta_end) }}` →
-  "Wed 25 – Sat 28 Nov 2026".
-- **Key dates** on the home page use `{{ when(dates.entries_close) }}`, which renders the date and records when it starts and is over (in UK time).
-  `docs/assets/key-dates.js` then marks each row as past, on now or next by the visitor's clock, so the table stays current without rebuilding the site.
-  Keep the rows in date order.
-- **Navigation**: the nav in `mkdocs.yml` lists the pages for crews and captains first, then the safety documents, which `extra.css` marks off with a "Safety documents" divider above Event Plan (so keep Event Plan straight after FAQs).
-  Each page sets its nav icon in its front matter, as `icon: material/...`, using an icon bundled with Material.
-- **The draw**: set `draw_url` in `event.yml` to the Google Sheet's "Publish to web" link.
-  `hooks/draw_redirect.py` then serves <https://tamesisregatta.org/draw/> as a short link that forwards to it, and adds a Draw entry to the nav after Home.
-  The nav, the home page's key dates and the coxing briefing link there, in a new tab (`docs/assets/draw-link.js` does that for the nav entry).
-  Give the short link in anything sent out or printed: if the draw moves to another sheet, changing `draw_url` keeps it working.
-- **Permanent anchors**: rules and risk assessment entries each have a
-  stable, *named* anchor (e.g. `/rules/#bow-balls`,
-  `/risk-assessment/#capsize-submerge`) so links keep working even if items
-  are added, removed, or renumbered. Add one with `{ #short-name }` on its
-  own indented line directly beneath the anchored text (a rule's list item,
-  or a risk's Hazard field). Treat published anchor names as permanent.
-- **Changelog**: each document starts with a changelog table; add a row when
-  making a meaningful change.
-
-## Risk assessment
-
-Each risk in `docs/risk-assessment.md` is a
-[definition list](https://python-markdown.github.io/extensions/definition_lists/)
-with exactly five fields (Hazard, Consequences, Persons at risk,
-Responsible, Residual risk), which `extra.css` renders as a compact
-label/value grid instead of Markdown's default stacked layout:
-
-```markdown
-Hazard
-:   Capsize or submerge: boats on the water for racing, or on rafts waiting
-    to push off/land
-    { #capsize-submerge }
-
-Consequences
-:   Hypothermia, Drowning, Infection, Trapped inside the boat, Collision
-
-Persons at risk
-:   Competitors & river users
-
-Responsible
-:   Crews, Coxswains, Boat club committees, Marshals, Event committee
-
-Residual risk
-:   {{ risk(severity=2, probability='B') }}
-
-??? success "Controls"
-    - Rescue with launch. Administer first aid. ...
-```
-
-- **Hazard** combines the original risk assessment's "Hazard" and
-  "Description of hazardous event" columns into one line, and carries the
-  entry's permanent anchor.
-- **Residual risk** is never written as text. `{{ risk(severity, probability)
-  }}` (a macro in `main.py`) looks the level up in `risk_matrix.yml` and
-  renders the colour-coded badge, so a risk's severity/probability can never
-  silently disagree with its stated level. An invalid combination fails
-  `mkdocs build --strict`. The matrix legend further down the page
-  (`risk_matrix_table()`) is generated from the same file, so it can't drift
-  from what the badges show either.
-- **Controls** go in a `??? success "Controls"` collapsible section. It uses
-  `success` rather than the ordinary `note` type so it gets a distinct
-  checkbox icon (set once in `mkdocs.yml`'s `theme.icon.admonition.success`);
-  print CSS in `extra.css` forces these open in generated PDFs, so nothing is
-  hidden in print.
-- Each `## Category` heading (Water, Weather, Land based) automatically gets
-  a strip of colour-coded squares linking to the risks beneath it;
-  `docs/assets/risk-summary.js` builds this from the rendered badges and
-  anchors after the page loads, so there's nothing to keep in sync by hand.
-
-## Contact details
-
-Personal phone numbers and email addresses are **never stored in this repository** and never appear on the live site.
-Pages reference them as `{{ phone('fergus_cooper') }}` / `{{ email('sydney_rose') }}`, and the live site always shows `[number withheld]` / `[email withheld]` in their place.
-The event plan then opens with a "Public version: contact details removed" notice, on the page and in its PDF.
-
-Organisations' phone numbers that the organisation itself publishes (checked on its own website) are not personal: they live in `public_phones` in `event.yml` and are shown as they are.
-Any number not confirmed as public is treated like a personal one.
-
-To build the full version, with contact details, copy `contacts.local.example.yml` to `contacts.local.yml` and fill in the values, then build locally (see "PDFs" below).
-That file is git-ignored and must never be committed.
-`main.py` reads it when it exists; anything left blank is still withheld.
-Only a build with every value filled in leaves out the "Public version" notice.
-`contacts.local.example.yml` is the canonical list of contact keys: the build fails if a page uses a key that is not listed there.
-Values are rendered lightly obfuscated in the HTML, decoded by JavaScript in the browser, and as plain text in the PDFs.
-Restart `mkdocs serve` after editing the file, as it is only read at startup.
-
-The generic mailbox in `event.yml` (`contact.email`) is public by design and
-rendered as a normal clickable link.
-
-## Local preview
+## Running it locally
 
 ```bash
 python3 -m venv .venv
 .venv/bin/pip install -r requirements.txt
-.venv/bin/mkdocs serve   # http://127.0.0.1:8000, rebuilds on save
+.venv/bin/mkdocs serve                            # http://127.0.0.1:8000, rebuilds on save
 ```
 
-## PDFs
-
-Each page gets a "Download as PDF" button. PDFs are rendered headlessly with
-Chromium via [mkdocs-exporter](https://adrienbrignon.github.io/mkdocs-exporter/).
-Generation is skipped locally by default (it slows the edit loop); CI always
-builds them. `hooks/pdf_tagged.py` makes them tagged PDFs, with their language
-and bookmarks, for screen readers. To build them locally:
+PDFs are only built when `PDF_EXPORT` is set, as they slow the edit loop:
 
 ```bash
-.venv/bin/playwright install chromium
-sudo .venv/bin/playwright install-deps chromium   # system libraries, once
-PDF_EXPORT=true .venv/bin/mkdocs build
+.venv/bin/playwright install --with-deps chromium  # once
+PDF_EXPORT=true .venv/bin/mkdocs build --strict
 ```
 
-## Course map
-
-The Course Map page (`docs/map.md`) is built from Bernard Tao's Oxford Isis Maps, an Inkscape SVG with layers for every event on the river.
-That source file is not kept in this repository.
-`scripts/strip_map.py` extracts the layers Tamesis uses into `docs/assets/map/`:
+The briefing decks need Node (version in `briefings/.nvmrc`):
 
 ```bash
-.venv/bin/python scripts/strip_map.py path/to/IsisMap.svg docs/assets/map
+cd briefings && npm ci
+npx slidev --open coxing/slides.md                # live preview
+./build.sh                                        # every deck, with PDFs, into ../site/briefings/ (after mkdocs build)
 ```
 
-Layers are found by their names in Inkscape's Layers panel, so a renamed layer stops the script with an error naming it.
-To add a course, add its layer to `OUTPUTS` in the script, rerun it, and add a `<figure>` for its print image to the print section of `docs/map.md`; the page's controls pick it up from the SVG.
-The page's downloadable PDF is assembled by `hooks/map_pdf.py`, one page per map, each sized to its map.
-The page's Show line has a checkbox for each overlay layer (`data-overlay` in `OUTPUTS`, such as the AEDs) and for each part of every course listed in `PARTS` (the marshals, and the Racedesk), which also hides that part's rows in the key.
+Never use `-q` with `--strict`: it hides the warnings that strict fails on.
 
-The script also corrects the source where it disagrees with the event plan (`RELABEL`: the Boathouse Island marshal numbers), and skips a correction with a warning once the source no longer needs it.
+## Making changes
 
-The source has no intermediate course layer, so that course is derived: a copy of the short course layer, edited by the recipe in `scripts/courses/intermediate.svg`.
-`scripts/lift_course.py` writes that recipe from the published circulation PDFs (the ones in Appendix 3 of the event plan, kept beside the repository but not in it).
-It lifts what the intermediate PDF has and the short course PDF does not (the start, the lanes and arrows down to it, the Gut and Donnington Bridge arrows, marshal 11) and moves them onto the current map; everything the two courses share comes from Bernard's current short course layer.
-It needs PyMuPDF, which the site itself does not use:
+Make changes through a pull request.
+Every pull request is built exactly as for a deploy, with PDFs and decks, and checked by `tests/check_site.py`; merging to `main` deploys it.
 
-```bash
-pip install pymupdf
-python scripts/lift_course.py "Tamesis 2026 Circulation Intermediate Course.pdf" "Tamesis 2026 Circulation Short Course.pdf" scripts/courses/intermediate.svg
-```
+| Path | What it holds |
+| :- | :- |
+| `event.yml` | Dates, role holders, the draw's link and other values the pages and decks use |
+| `docs/` | One Markdown file per page, and `assets/` for CSS, JavaScript, images and fonts |
+| `mkdocs.yml` | Navigation, theme, plugins, hooks and the Plausible settings |
+| `main.py` | Macros for the pages: dates, contact details, risk badges |
+| `risk_matrix.yml` | The risk matrix that the risk badges and the matrix table are drawn from |
+| `hooks/` | Build steps: the map PDF, tagged PDFs, PDF links, the draw's short link |
+| `overrides/` | Changes to Material's templates, each explained at its top |
+| `briefings/` | The Slidev decks and their theme |
+| `scripts/` | Tools for regenerating the course map |
+| `tests/check_site.py` | Accessibility, privacy and PDF checks of the built site |
 
-Rerun `strip_map.py` after changing the recipe.
-The script's comments say what is lifted, what is left out and why.
-If Bernard adds an intermediate course layer to the source, use that instead and delete the recipe.
+Each script, hook and component explains itself at its top; read that before changing it.
 
-The time trial is derived the same way, from the recipe in `scripts/courses/time-trial.svg`.
-Time trials run on the short course, so the recipe takes the racing lanes out of a copy of the short course and adds the time trial's own circulation.
-`scripts/time_trial_recipe.py` writes it, following the published time trial PDF; that PDF is drawn on an older version of the map, so nothing is lifted from it, and its notes are set as text.
-This script needs nothing beyond Python:
+Things to keep to:
 
-```bash
-python scripts/time_trial_recipe.py scripts/courses/time-trial.svg
-```
+- **Dates and names** live only in `event.yml`, as ISO 8601 (`2026-11-25`, `04:00:00`), so a mistake fails the build.
+  Pages show them with filters such as `{{ dates.regatta_start | ukdate }}`; the home page's key dates use `{{ when(...) }}`, and must stay in date order.
+- **Anchors are permanent.**
+  Rules and risks have named anchors (`{ #short-name }` on its own line under the item, as in `/rules/#bow-balls`); never rename a published one.
+- **Changelogs.**
+  Each document opens with one; add a row for a meaningful change.
+  The event plan and risk assessment are approved by the University safety office, so any change to their wording is a new version for it to approve.
+- **Risks** follow the pattern of the existing ones: five fields, with the residual risk always given as `{{ risk(severity=..., probability=...) }}`, never as text, and the controls in a `??? success "Controls"` box.
+- **Navigation** lists the crews' pages first, then the safety documents, under a divider drawn above Event Plan (so keep it straight after FAQs).
+  Each page sets its icon in its front matter (`icon: material/...`).
+- **The draw.**
+  Set `draw_url` in `event.yml`; the site then serves <https://tamesisregatta.org/draw/> as a short link to it, and adds it to the nav.
+  Give the short link in anything printed or sent out.
+- **Icons** come from Material's bundled sets (`:material-...:`); plain emoji shortcodes load from a CDN.
 
-## Briefing slides
+## Personal contact details
 
-The briefings are [Slidev](https://sli.dev/) decks in `briefings/`, published on the same site at `/briefings/<deck>/`, for example <https://tamesisregatta.org/briefings/coxing/>.
-Each deck is a `briefings/<deck>/slides.md`, and each has a PDF download, built alongside it.
-They need Node (version in `briefings/.nvmrc`):
+Personal phone numbers and email addresses are never stored in this repository and never appear on the live site.
+Pages refer to them as `{{ phone('fergus_cooper') }}` or `{{ email('sydney_rose') }}`, which the live site shows as `[number withheld]`, with a "Public version" notice on the event plan.
+Organisations' numbers go in `public_phones` in `event.yml`, and are shown, only if the organisation publishes them on its own website; any other number is treated as personal.
 
-```bash
-cd briefings
-npm ci
-npx slidev --open coxing/slides.md   # live preview while editing
-./build.sh                           # every deck, with PDFs, into ../site/briefings/
-```
+For the full version, copy `contacts.local.example.yml` to `contacts.local.yml`, fill it in, and build locally (restart `mkdocs serve` after editing it).
+That file is git-ignored and must never be committed; neither must PDFs built from it.
+`contacts.local.example.yml` lists every key a page may use.
 
-`build.sh` writes into `site/`, so run it after `mkdocs build`, which clears that directory; this is what the deploy workflow does.
-The PDF export needs Playwright's Chromium for Node (`npx playwright install chromium`), separate from the Python one.
-
-`overrides` in `briefings/package.json` lift two of Slidev's dependencies past security advisories that Slidev itself has not picked up yet: `dompurify` (pinned by `monaco-editor`, the dev server's code editor) and `image-size` (declared by `pptxgenjs`, the PowerPoint export, which never calls it).
-Neither reaches the published decks.
-Remove each override once `npm ls` shows Slidev depending on a fixed version itself.
-
-The theme, `briefings/theme/`, is modelled on the OxRSE Slidev theme and uses the site's colours, font and logo.
-It is light mode only.
-Its layouts are `cover` (date from `event.yml` via `when:`, plus `presenters:` and `venue:`, and `draft: true` for a "not for circulation" band until a deck is final), `section`, `figure` (one map or diagram, with an optional `::aside::` column) and `alert`; other slides get a black header bar with the slide's title.
-
-The `RaceCycle` component animates one crew's race cycle on the short course map (`docs/assets/map/print/course-short.svg`), one stage per click: `<RaceCycle :route="..." />` on a slide with `clicks:` set to the number of stages after the first.
-Each route is a file in `briefings/coxing/race-cycles/`, listing for each stage its caption, its view of the map (the camera glides between stages) and each boat's moves (row along a path, spin, wait, fade), in the map's own coordinates.
-The boats are schematic eights after the usual pictogram: the oars sweep and feather as the crew rows (at racing pace for moves marked `stroke: 'race'`), and lie angled back at rest.
-Each boat's blades are a club's colours from `BLADES` in `briefings/theme/components/RaceBoat.vue` (Linacre and Mansfield so far, plus plain grey for opponents); add a club there to use it in a route.
-Opening a slide part-way through, going back, or a viewer preferring reduced motion shows the end of a stage at once; the PDF shows the whole route with stage numbers.
-The map's own attribution box is hidden, so the component credits the map below it instead, as its CC BY licence requires.
-
-Slides read the same `event.yml` as the site, so dates and names match: in slide Markdown, `{{ ukdatetime(regatta.dates.coxing_briefing) }}` gives "Wed 18 Nov 2026, 18:30" (`ukdate`, `ukdatetime` and `uktime` match the site's filters), and `v-if="regatta.amber_flag_racing"` switches content as the event plan does.
-Only public data is passed to the slides: `contacts.local.yml` is never read, so decks never contain personal numbers.
-They can import the site's own images from `docs/assets/` by relative path instead of keeping copies.
-
-Decks must not embed YouTube or any other third-party player or resource: the site needs no consent banner (see [Privacy](#privacy)), and an embed would change that.
-Host video and audio clips in the deck's folder instead, trimmed and compressed.
-
-## Privacy
+## Privacy and accessibility
 
 The site sets no cookies and needs no consent banner.
-The privacy policy, `docs/privacy.md` (at `/privacy/`, linked from the footer through `copyright` in `mkdocs.yml`), says what the site counts and stores; keep it in step with any change below, including its date.
-
-Its pages load nothing from other sites but [Plausible Analytics](https://plausible.io/), which counts visits on Oxford Research Software Engineering's Plausible server without cookies or storage, and keeps no personal data.
-`overrides/main.html` puts its script, set in `extra.plausible` in `mkdocs.yml`, in every page, and `briefings/theme/setup/vite-plugins.ts` reads the same setting to put it in every built briefing deck.
-A deck counts once per opening, not per slide: its slides are addresses after a "#", which Plausible ignores (leave its `hashBasedRouting` option off).
-What the script counts besides page views (PDF downloads, links to other sites) is set on the Plausible server, not here.
-Clicks on links to the draw are counted as a "Draw" event, through the class `plausible-event-name--Draw` on those links (`docs/index.md`, and `docs/assets/draw-link.js` for the nav).
-Plausible ignores visits from localhost, `file:` pages and automated browsers, so local previews and the PDF export count nothing.
-To stop counting your own visits on the live site, set `localStorage.plausible_ignore = "true"` in your browser's console there.
-
-The analytics page, `docs/analytics.md` (at `/analytics/`), embeds the dashboard's public shared link (`extra.plausible.dashboard`); `docs/assets/analytics.js` shows it in the site's light or dark mode.
-It is the only page that embeds anything.
-The dashboard sets no cookies, but keeps two display settings of its own (`metric__tamesisregatta.org` and `topStatsHeight__tamesisregatta.org`) in its frame's local storage.
-
-Links to other sites, such as the GitHub and YouTube links in the header, only take visitors there when they click.
-That includes the short link to the draw: `/draw/` is a page that loads nothing itself and sends the browser straight on to Google Sheets, the same as clicking a link.
-The draw is never embedded in a page, as that would load Google's content, and its cookies, on the site itself.
-The only thing the site itself stores in the browser is the visitor's light or dark mode, which Material keeps in local storage (`__palette`) so the next page matches; remembering a display preference needs no consent.
-The briefing decks are the exception: Slidev keeps about twenty settings for its own controls (`slidev-*` keys, such as the presenter layout and drawing brush) in local storage, and one (`vue-router:scroll`) in session storage, as soon as a deck opens; none is sent anywhere, and the privacy policy says so.
-
-`overrides/partials/source.html` keeps it that way: Material's own version of the repository link in the navigation drawer fetches the repository's star and fork counts from GitHub's API on every page, and caches them in session storage.
-Before adding a theme feature or plugin, check that it adds no cookies, storage or requests to other sites, for instance by loading a local build in a browser and looking at the developer tools' Application and Network tabs.
-
-## Accessibility
+Its only third-party content is [Plausible Analytics](https://plausible.io/), which counts visits on Oxford Research Software Engineering's server without cookies or storage; the analytics page embeds its dashboard.
+Nothing else from another site may be embedded, in the site or the decks (no YouTube, fonts or CDNs): host media in the repository instead.
+To stop Plausible counting your own visits, run `localStorage.plausible_ignore = "true"` in your browser's console on the live site.
 
 The site aims to meet [WCAG 2.2](https://www.w3.org/TR/WCAG22/) at level AA.
-Its accessibility statement, `docs/accessibility.md` (at `/accessibility/`, linked from the footer), lists what visitors should be able to do, the known limitations, and how the site was tested.
-Keep it in step with changes to the site, including its date and its limitations.
-Visitors report problems to the regatta mailbox.
-
-The automated checks (below) cover what the statement says was tested; keep the two in step.
-Things to keep:
-
-- Links in page text are underlined on screen (`extra.css`), as the link colours are too close to the text's.
-- Text on the moderate and substantial risk colours is black; white is too faint on them.
-- Anything that takes keyboard focus shows it.
-- `overrides/partials/search.html` names Material's search panel, and `extra.css` hides its results while search is closed, so they take no keyboard focus.
-- The briefing decks have not been checked yet; the statement says so.
-
-## Automated checks
-
-Every pull request, and every push to `main`, builds the site with its PDFs and the briefing decks, exactly as for a deploy, then runs `tests/check_site.py` on the result; only `main` is deployed.
-The script serves the built site to headless Chromium as `https://tamesisregatta.org` (answering its requests from the files, and catching Plausible's events so nothing is counted) and fails, listing each problem with its page, if:
-
-- [axe-core](https://github.com/dequelabs/axe-core) (a dev dependency in `briefings/package.json`, kept up to date by Dependabot) finds anything against the WCAG 2.0, 2.1 and 2.2 level A and AA rules or its best practices, on any page in light or dark mode, or with the course map's courses and a marker's details, the risk assessment's controls, search, or the phone menu open;
-- a page scrolls sideways or cuts off text at 320 px wide, or with wider text spacing;
-- anything animates when less motion is asked for;
-- keyboard focus lands on something that cannot be seen, or that does not show it;
-- a page sets a cookie, stores anything in the browser but the light or dark mode, or loads from any site but this one and the Plausible server (see [Privacy](#privacy));
-- a document's PDF is not tagged, or has no language or bookmarks.
-
-It finds pages from the build, so new pages are checked without changing it; the briefing decks are left out until they are ready.
-To run it locally, after `npm ci` in `briefings/`:
+The privacy policy (`docs/privacy.md`) and accessibility statement (`docs/accessibility.md`) say what the site counts, stores and has been tested for; keep them, and their dates, in step with changes.
+`tests/check_site.py` fails on cookies, unexpected storage or third-party requests, accessibility problems, and untagged PDFs; to run it locally, after building with `PDF_EXPORT=true` and `npm ci` in `briefings/`:
 
 ```bash
-PDF_EXPORT=true .venv/bin/mkdocs build --strict
 .venv/bin/python tests/check_site.py site briefings/node_modules/axe-core/axe.min.js
 ```
 
-Without `PDF_EXPORT`, the PDFs are not built, and the script skips them.
+The briefing decks are not checked yet, and the accessibility statement says so.
+
+## Course map
+
+The course map is drawn from Bernard Tao's Oxford Isis Maps, an Inkscape SVG that is not kept in this repository.
+`scripts/strip_map.py` extracts the layers the site uses into `docs/assets/map/`; the intermediate course and time trial, which the source lacks, are derived from its short course by the recipes in `scripts/courses/`, written by `scripts/lift_course.py` and `scripts/time_trial_recipe.py`.
+Each script's docstring says how to run it.
+
+## Briefing slides
+
+Each deck is `briefings/<deck>/slides.md`, published at `/briefings/<deck>/` with a PDF.
+The theme in `briefings/theme/` uses the site's colours and font, is light mode only, and reads `event.yml`, but never `contacts.local.yml`.
+Its layouts are `cover` (with `draft: true` for a "not for circulation" band until a deck is final), `section`, `figure` and `alert`; `RaceCycle` animates a crew's race cycle from a route in `briefings/coxing/race-cycles/`.
+
+`overrides` in `briefings/package.json` lift `dompurify` and `image-size` past security advisories Slidev has not picked up; remove each once `npm ls` shows Slidev on a fixed version.
 
 ## Third-party assets
 
-Everything the site needs is served from this repository, with no external CDNs or font services; the only exception is Plausible's script and dashboard (see [Privacy](#privacy)).
-Each item below keeps its licence alongside it, and the licence terms require those notices to stay with the files.
+Each keeps its licence beside it, as the licences require.
 
 | Asset | Location | Licence |
 | :- | :- | :- |
-| Noto Sans and Noto Sans Mono (from [Fontsource](https://fontsource.org/) 5.3.0) | `docs/assets/fonts/` | SIL Open Font License 1.1, see `OFL.txt` there |
-| [d3-zoom](https://github.com/d3/d3-zoom) and its eight D3 dependencies | `docs/assets/vendor/d3/` | ISC, and BSD-3-Clause for d3-ease; full texts in `LICENSE` there and at the top of `d3-zoom.min.js` |
-| Oxford Isis Maps by Bernard Tao | `docs/assets/map/`, and the intermediate course and time trial recipes in `scripts/courses/` (after his circulation PDFs) | CC-BY 3.0; the attribution is drawn on the map and must stay visible |
-| Gas fog horn by Joseph Sardin, [BigSoundBank](https://bigsoundbank.com/), extended from three short blasts to one 10-second blast (the klaxon in the coxing briefing) | `briefings/coxing/public/media/klaxon.mp3` | CC0 1.0 (public domain); no attribution required, but credited here |
-
-The D3 file is the official `dist/*.min.js` of each module, unmodified and concatenated in dependency order; the versions are listed in its header.
-To update it, download the newer files from each package and rebuild the header and `LICENSE` to match.
+| Noto Sans and Noto Sans Mono, from [Fontsource](https://fontsource.org/) 5.3.0 | `docs/assets/fonts/` | SIL Open Font License 1.1 (`OFL.txt`) |
+| [d3-zoom](https://github.com/d3/d3-zoom) and its eight D3 dependencies, unmodified, versions in the file's header | `docs/assets/vendor/d3/` | ISC, and BSD-3-Clause for d3-ease (`LICENSE`) |
+| Oxford Isis Maps by Bernard Tao | `docs/assets/map/`, `scripts/courses/` | CC BY 3.0; the attribution drawn on the map must stay visible |
+| Gas fog horn by Joseph Sardin, [BigSoundBank](https://bigsoundbank.com/), lengthened to one 10-second blast | `briefings/coxing/public/media/klaxon.mp3` | CC0 1.0 |

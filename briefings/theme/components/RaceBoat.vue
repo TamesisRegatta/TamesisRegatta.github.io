@@ -13,7 +13,7 @@ import { bladeAt } from '../utils/race-cycle.js'
 
 const props = defineProps({
   pose: { type: Object, required: true }, // { x, y, h, opacity }
-  stroke: { type: String, default: 'none' }, // paddle, race, spin or none
+  stroke: { type: String, default: 'none' }, // paddle, race or none
   phase: { type: Number, default: 0 }, // stroke cycle, 0 to 1
   colours: { type: String, default: 'linacre' }, // a key of BLADES
 })
@@ -39,7 +39,7 @@ const SEATS = Array.from({ length: 8 }, (_, i) => {
 const HALF_BEAM = 0.8
 
 const oars = computed(() => SEATS.map((s) => {
-  const { angle, open } = bladeAt(props.stroke, props.phase, s.side)
+  const { angle, open } = bladeAt(props.stroke, props.phase)
   // Oars are drawn outward along -y (stroke side) or +y (bow side). A sweep
   // toward the stern (-x) is then an anticlockwise turn on stroke side and a
   // clockwise one on bow side, which is dir * angle either way.

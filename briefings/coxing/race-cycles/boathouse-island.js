@@ -37,8 +37,9 @@ export default {
       camera: { at: [1320, 312], w: 520 },
       moves: {
         lin: [
-          { spin: 180, to: [1508, 357], dur: 1.5 },
-          { to: [[1478, 362], [1445, 361], [1400, 352], [1350, 341], [1300, 327], [1250, 312], [1200, 295], [1165, 284]], dur: 2.5 },
+          // Round in a clockwise arc (rowing on with stroke side), then up
+          // the Marshalling Zone.
+          { to: [[1532, 339], [1543, 349], [1539, 360], [1522, 365], [1500, 364], [1478, 362], [1445, 361], [1400, 352], [1350, 341], [1300, 327], [1250, 312], [1200, 295], [1165, 284]], dur: 4 },
         ],
         opp: [
           { fade: 1, dur: 0.3 },
@@ -73,8 +74,8 @@ export default {
       camera: { at: [420, 318], w: 450 },
       moves: {
         lin: [
-          { to: [[362, 338.5]], dur: 0.8, ease: 'end' },
-          { spin: 176, to: [366, 314], dur: 2 },
+          // On past the finish, and round in a clockwise arc.
+          { to: [[362, 338.5], [349, 332], [344, 321], [349, 310], [362, 303], [380, 300]], dur: 2.8 },
         ],
         opp: [
           { to: [[370, 318]], dur: 0.8, ease: 'end' },

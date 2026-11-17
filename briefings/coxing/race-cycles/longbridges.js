@@ -76,8 +76,8 @@ export default {
       camera: { at: [420, 318], w: 450 },
       moves: {
         lin: [
-          { to: [[362, 338.5]], dur: 0.8, ease: 'end' },
-          { spin: 176, to: [366, 314], dur: 2 },
+          // On past the finish, and round in a clockwise arc.
+          { to: [[362, 338.5], [349, 332], [344, 321], [349, 310], [362, 303], [380, 300]], dur: 2.8 },
         ],
         opp: [
           { to: [[370, 318]], dur: 0.8, ease: 'end' },
@@ -102,9 +102,9 @@ export default {
       camera: { at: [1610, 378], w: 440 },
       moves: {
         lin: [
-          { to: [[1630, 357], [1668, 368]], dur: 1.5, ease: 'end' },
-          { spin: 180, to: [1680, 382], dur: 2 },
-          { to: [[1662, 400], [1644, 404]], dur: 1.5, heading: 193, ease: 'end' },
+          // Past the raft, round in a clockwise arc, and back up onto it,
+          // bows pointing upstream.
+          { to: [[1630, 357], [1662, 367], [1682, 381], [1680, 396], [1663, 403], [1644, 404]], dur: 5, heading: 193 },
         ],
       },
     },

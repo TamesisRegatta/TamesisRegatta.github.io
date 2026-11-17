@@ -209,8 +209,18 @@ Slides read the same `event.yml` as the site, so dates and names match: in slide
 Only public data is passed to the slides: `contacts.local.yml` is never read, so decks never contain personal numbers.
 They can import the site's own images from `docs/assets/` by relative path instead of keeping copies.
 
-Decks must not embed YouTube or any other third-party player or resource: the site sets no cookies and stores nothing in visitors' browsers, so it needs no consent banner, and an embed would change that.
+Decks must not embed YouTube or any other third-party player or resource: the site needs no consent banner (see [Privacy](#privacy)), and an embed would change that.
 Host video and audio clips in the deck's folder instead, trimmed and compressed.
+
+## Privacy
+
+The site sets no cookies and needs no consent banner.
+Its pages make no requests to other sites: everything they load is served from this repository (see below).
+Links to other sites, such as the GitHub and YouTube links in the header, only take visitors there when they click.
+The only thing stored in the browser is the visitor's light or dark mode, which Material keeps in local storage (`__palette`) so the next page matches; remembering a display preference needs no consent.
+
+`overrides/partials/source.html` keeps it that way: Material's own version of the repository link in the navigation drawer fetches the repository's star and fork counts from GitHub's API on every page, and caches them in session storage.
+Before adding a theme feature or plugin, check that it adds no cookies, storage or requests to other sites, for instance by loading a local build in a browser and looking at the developer tools' Application and Network tabs.
 
 ## Third-party assets
 

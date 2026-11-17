@@ -1,0 +1,17 @@
+{#-
+  Overrides Material's built-in partials/source.html (the repository link in
+  the navigation drawer) only to drop data-md-component="source". With it,
+  Material's JavaScript fetches the repository's star and fork counts from
+  api.github.com on every page and caches them in session storage; without
+  it, this is a plain link, and the site makes no requests to other sites.
+  Everything else is identical to the theme's original template.
+-#}
+<a href="{{ config.repo_url }}" title="{{ lang.t('source') }}" class="md-source">
+  <div class="md-source__icon md-icon">
+    {% set icon = config.theme.icon.repo or "fontawesome/brands/git-alt" %}
+    {% include ".icons/" ~ icon ~ ".svg" %}
+  </div>
+  <div class="md-source__repository">
+    {{ config.repo_name }}
+  </div>
+</a>

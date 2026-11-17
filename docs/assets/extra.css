@@ -295,6 +295,26 @@ a.tr-rule-anchor:hover {
   }
 }
 
+/* Search (Material's, with its panel named in overrides/partials/search.html).
+   Its results area takes keyboard focus (tabindex="0"), even while search
+   is closed and the area cannot be seen, so a Tab press seemed to go
+   nowhere: hidden, it takes no focus until search opens. The search box
+   shows when it has focus, which Material does not (WCAG 2.4.7). The
+   result count is darker than Material's grey, which falls just short of
+   4.5:1 (WCAG 1.4.3). */
+[data-md-toggle="search"]:not(:checked) ~ .md-header .md-search__scrollwrap {
+  visibility: hidden;
+}
+
+.md-search__form:focus-within {
+  outline: 2px solid var(--md-accent-fg-color);
+  outline-offset: 2px;
+}
+
+.md-search-result__meta {
+  color: var(--md-default-fg-color);
+}
+
 /* Links in page text are underlined, so they are told apart from the text
    around them without relying on colour (WCAG 1.4.1): the link colours are
    too close to the text's, especially in dark mode. Screen only; the PDFs

@@ -20,6 +20,7 @@ Prepared by {{ faqs.prepared_by }}
 | :--- | :--- | :--- |
 | 2026.0 | 2026-10-28 | 2025 Captains' FAQ converted to website format |
 | 2026.1 | 2026-10-28 | <ul><li>Bring dates, deadlines and wording in line with the 2026 rules, with links to the relevant rules</li><li>Briefing times and venues to be confirmed</li><li>Remove the reference to a Marshal FAQ</li><li>Add a question on entry fees and refunds</li></ul> |
+| 2026.2 | 2026-11-17 | <ul><li>Link to the published draw</li><li>Give the briefings' times and venues: the marshal briefing is online for everyone</li><li>Point to the circulation pattern on the Course Map</li></ul> |
 
 These answers summarise the [Rules](rules.md) and the [Event Plan](event-plan.md); where they differ, the Rules and the Event Plan apply.
 If those documents do not answer your question, please email us at [{{ contact.email }}](mailto:{{ contact.email }}).
@@ -33,8 +34,14 @@ All crews should expect to race in a heat on day one, {{ dates.regatta_start | u
 
 If your crew loses their day one heat, they will compete in the repechage, which is likely to take place the next day.
 If your crew wins either a heat or the repechage, you will race on the following days in a side-by-side knock-out format.
+
+{% if draw_url %}
+The draw was published on {{ dates.draw_published | ukdate }}: [view the draw :material-open-in-new:](/draw/){ .plausible-event-name--Draw target="_blank" rel="noopener" title="Opens the draw on Google Sheets, in a new tab" }.
+It shows when each of your crews is scheduled to race, and lets you follow the various permutations all the way to the final.
+{% else %}
 We aim to publish the draw on {{ dates.draw_published | ukdate }}, but cannot guarantee this.
 Once it is published, you will know when your boat is scheduled to race, and you will be able to follow the various permutations all the way to the final.
+{% endif %}
 
 The timetable of racing and the draw itself may need to be changed at short notice, for instance if conditions necessitate reducing the amount of racing on any given day.
 We will make every effort to give as much notice of changes as possible.
@@ -45,10 +52,10 @@ See the rules on the [racing format](rules.md#format).
 Yes, just like other regattas on the Isis organised by OURCs, such as Torpids and Summer Eights.
 For Tamesis, clubs must provide one experienced marshal for each boat entered: two boats entered means two marshalling slots.
 You will need to source volunteers from your club who have marshalled previously and register their names with the Race Committee.
-They will also be required to attend the pre-regatta marshalling briefing on {{ dates.marshal_briefing | ukdate }} (time and venue to be confirmed), or remotely online if in-person attendance is impossible.
+They will also be required to attend the pre-regatta marshalling briefing on {{ dates.marshal_briefing | ukdatetime }}, {{ venues.marshal_briefing }}.
 This mandatory briefing will cover the marshalling duties in detail.
 
-You as a captain, or your individually nominated marshals, can fill your volunteer slots by filling out a Google form, which will be circulated to captains.
+You as a captain, or your individually nominated marshals, can fill your volunteer slots by filling out the Google form that has been circulated to captains.
 See the [rule on marshals](rules.md#marshals).
 
 ### What if we need to make a substitution? { #substitutions }
@@ -126,8 +133,8 @@ In cases of illness or academic clashes, exemptions may be given by the {{ roles
 Exemptions must be requested in advance by email to [{{ contact.email }}](mailto:{{ contact.email }}), no later than 11am on the day of the briefing.
 Your email should include the cox's name and coxing history (races, coxing status etc).
 Exemptions can only be given to coxes who are X or S status.
-Coxes who have been exempted from attending the briefing are required to review the relevant information, especially the circulation pattern, which will be made available on this website and circulated to all boat clubs by email.
-The time and venue of the briefing are to be confirmed.
+Coxes who have been exempted from attending the briefing are required to review the relevant information, especially the circulation pattern, which is on the [Course Map](map.md) and will be circulated to all boat clubs by email.
+The briefing is on {{ dates.coxing_briefing | ukdatetime }}, in the {{ venues.coxing_briefing }}.
 See the [rule on coxing licences and the briefing](rules.md#coxing-licence).
 
 ### What counts as a novice rower? { #novice }

@@ -27,6 +27,12 @@ dates:
   marshal_briefing: 2026-11-23 19:00:00
   awards_ceremony: 2026-11-28 15:00:00
 
+# Where the briefings are held, as the home page's key dates, the FAQs and the
+# rules give it: {{ venues.coxing_briefing }}.
+venues:
+  coxing_briefing: Gulbenkian Lecture Theatre
+  marshal_briefing: online via MS Teams
+
 # Racing on Low Amber Flag (≤ 4.5 bucks equivalent). Pending sign-off from the safety office: set to false
 # to withdraw it, and the event plan reverts to racing being suspended on
 # Amber Flag, as on Red. It switches the "Racing on Low Amber Flag" section of
@@ -37,8 +43,8 @@ amber_flag_racing: true
 # with each issued revision, and add a matching row to the changelog at the
 # top of the event plan. 2026.1 is the version submitted for safety approval.
 event_plan:
-  version: "2026.2.1"
-  date: 2026-10-28
+  version: "2026.2.2"
+  date: 2026-11-17
   prepared_by: Fergus Cooper and Sydney Rose
 
 # The risk assessment's cover block (docs/risk-assessment.md), versioned
@@ -78,16 +84,16 @@ entry_fee: 98
 # issued revision, and add a matching row to the changelog at the top of the
 # rules.
 rules:
-  version: "2026.2"
-  date: 2026-10-28
+  version: "2026.3"
+  date: 2026-11-17
   prepared_by: Fergus Cooper and Sydney Rose
 
 # The FAQs' cover block (docs/faqs.md). Bump the version and date with each
 # issued revision, and add a matching row to the changelog at the top of the
 # FAQs.
 faqs:
-  version: "2026.1"
-  date: 2026-10-28
+  version: "2026.2"
+  date: 2026-11-17
   prepared_by: Fergus Cooper and Sydney Rose
 
 contact:

@@ -24,6 +24,7 @@ Prepared by {{ event_plan.prepared_by }}
 | 2026.1 | 2026-10-14 | <ul>{% if amber_flag_racing %}<li>Add provision for limited racing on Low Amber Flag under strict safety controls</li>{% endif %}<li>Make contingencies for missed racing flexible, with example scenarios</li><li>Run time trials on the short course only</li><li>Standardise wording to racing finishing half an hour before sunset each day</li><li>Add this changelog</li></ul> |
 | 2026.2 | 2026-10-15 | <ul><li>Coxes' PFDs to follow the OURCs Code of Conduct</li><li>Clarify Gut transit: always allowed for crews based below the Gut, and on the intermediate course at the Senior Umpires' and Race Committee's discretion</li><li>Correct time trial circulation to match the map</li><li>Set boating and landing directions at Boathouse Island and Longbridges, including when racing stops early</li><li>Define launch cover: a medical launch and two safety launches, with both safety launches required when crews may go through the Gut</li><li>Recommend 5 training outings for every novice rower, and allow unsafe crews to be withdrawn or disqualified</li>{% if amber_flag_racing %}<li>Low Amber Flag: no crews from below the Gut, a fixed spin point at the Greenbanks Marshal, and bow pair eligibility clarified</li>{% endif %}</ul> |
 | 2026.2.1 | 2026-10-28 | <ul><li>Mark the public version as having contact details removed</li><li>Show organisations' published phone numbers</li><li>Point Appendices 5 and 6 to the Emergency Action Plan and the Risk Assessment</li></ul> |
+| 2026.2.2 | 2026-11-17 | <ul><li>Give the briefings' times and venues: the marshal briefing is held online</li><li>Correct the Event Captain of Coxes' title</li><li>Point to the circulation pattern on the Course Map</li><li>Correct the spelling of marshals</li></ul> |
 
 ## Opening Remarks { .tr-new-page }
 
@@ -88,7 +89,7 @@ All **competitors (including coxswains) must have passed an OURCs swim test** be
 
 **Coxswains** 
 
-It is **compulsory for all coxswains to attend the Coxes’ Regatta safety briefing** which will be held in conjunction with OURCs. The date is to be confirmed, but it is planned to be the Wednesday of Week 6 of Michaelmas Term ({{ dates.coxing_briefing | ukdate }}). In cases of illness or academic clashes, exemptions may be given by the Regatta Captain of Coxes in consultation with OURCs. Exemptions have to be requested via email no later than 11am on the day the briefing will take place. However, exemptions, if at all, can only be given to coxes who are X or S status. Coxes who have been exempted from attending the briefing are required to review the relevant information, especially the circulation pattern, which will be made available on the regatta web page and circulated to all boat clubs via email. **ALL coxswains are required to wear a PFD, in line with the [OURCs Code of Conduct](https://ourcs.co.uk/organisation/conduct/).**
+It is **compulsory for all coxswains to attend the Coxes’ Regatta safety briefing** which will be held in conjunction with OURCs. It will be held on {{ dates.coxing_briefing | ukdatetime }} in the {{ venues.coxing_briefing }}. In cases of illness or academic clashes, exemptions may be given by the {{ roles.captain_of_coxes.title }} in consultation with OURCs. Exemptions have to be requested via email no later than 11am on the day the briefing will take place. However, exemptions, if at all, can only be given to coxes who are X or S status. Coxes who have been exempted from attending the briefing are required to review the relevant information, especially the circulation pattern, which is on the regatta website's [Course Map](map.md) and will be circulated to all boat clubs via email. **ALL coxswains are required to wear a PFD, in line with the [OURCs Code of Conduct](https://ourcs.co.uk/organisation/conduct/).**
 
 **Medical cover** 
 
@@ -129,11 +130,11 @@ In case they need to be contacted, the phone number for **City of Oxford Rowing 
 
 Maps detailing the placement of marshals can be found in Appendix 3.
 
-Marshalls will be drawn from experienced rowers and coxes; Linacre Boat Club will provide experienced marshals for critical positions such as at position 9 (pairing marshal), 6 (tower marshal), and 7 (Univ marshal). The remaining balance to be provided by the clubs participating, with each club providing one experienced marshal per entry, in a similar manner to bumps racing. 
+Marshals will be drawn from experienced rowers and coxes; Linacre Boat Club will provide experienced marshals for critical positions such as at position 9 (pairing marshal), 6 (tower marshal), and 7 (Univ marshal). The remaining balance to be provided by the clubs participating, with each club providing one experienced marshal per entry, in a similar manner to bumps racing. 
 
 ### Briefing
 
-All marshals will attend a pre-regatta marshalling briefing, which will be held before the regatta. This year the marshal briefing will be held at Linacre College on {{ dates.marshal_briefing | ukdate }}. This pre-regatta briefing will cover the marshalling duties in detail.
+All marshals will attend a pre-regatta marshalling briefing, which will be held before the regatta. This year the marshal briefing will be held {{ venues.marshal_briefing }} on {{ dates.marshal_briefing | ukdatetime }}. This pre-regatta briefing will cover the marshalling duties in detail.
 
 On the race day itself, a second briefing of key points will be held at Race Desk to refresh the marshals on the key aspects of their role, and will include a mock river check, radio checks, and before racing starts - klaxon testing. 
 
@@ -432,7 +433,7 @@ In the event of a dangerous incident occurring whilst a race is underway - such 
 
 All coxswains will be briefed at the obligatory coxing meeting to instruct their crews to halt as soon as safely possible on the sounding of the klaxon. The [medical launch](#launches) enables swift access of event medics to the scene if this is necessary. 
 
-The on-site incident controller will take charge of the incident and at the time of the incident take charge of liaising with medical personnel and marshalls, look after the injured party (arranging for someone to accompany them to the hospital OR accompany them back home if necessary). The incident controller will then report to the post incident coordinator who will inform the injured individuals college if applicable, OR inform a family member/friend if a non-student, and ensure all reports are submitted to the appropriate bodies (e.g. British Rowing, Sabbatical Officer, Sports Safety Officer, University Sports Office.) If no incidents have occurred then the post-incident coordinator will still be informed at the end of racing each day.
+The on-site incident controller will take charge of the incident and at the time of the incident take charge of liaising with medical personnel and marshals, look after the injured party (arranging for someone to accompany them to the hospital OR accompany them back home if necessary). The incident controller will then report to the post incident coordinator who will inform the injured individuals college if applicable, OR inform a family member/friend if a non-student, and ensure all reports are submitted to the appropriate bodies (e.g. British Rowing, Sabbatical Officer, Sports Safety Officer, University Sports Office.) If no incidents have occurred then the post-incident coordinator will still be informed at the end of racing each day.
 
 **If it is decided that the river has become unsafe for novices during racing the following procedure will be implemented by all marshals in relevant positions:**
 

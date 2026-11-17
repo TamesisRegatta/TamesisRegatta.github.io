@@ -11,7 +11,7 @@ Greenbank to the Cox Stone, and takes place from
 
 ## Key dates
 
-| | |
+| What | When |
 | :--- | :--- |
 | Novice cut-off (see the [novice definition](rules.md#novice-definition)) | {{ when(dates.novice_cutoff) }} |
 | Entries open | {{ when(dates.entries_open) }} |

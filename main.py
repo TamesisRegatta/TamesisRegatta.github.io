@@ -213,7 +213,8 @@ def define_env(env):
         """The full severity x probability matrix, rendered from
         risk_matrix.yml so the legend can never drift from what risk()
         actually looks up."""
-        rows = ['<tr><th></th>']
+        # The corner cell heads nothing, so it is a plain cell, not a header.
+        rows = ['<tr><td></td>']
         for p in probabilities:
             rows.append(f"<th>{p}</th>")
         rows.append("</tr>")

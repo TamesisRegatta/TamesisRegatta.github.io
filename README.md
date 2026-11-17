@@ -245,6 +245,29 @@ The briefing decks are the exception: Slidev keeps about twenty settings for its
 `overrides/partials/source.html` keeps it that way: Material's own version of the repository link in the navigation drawer fetches the repository's star and fork counts from GitHub's API on every page, and caches them in session storage.
 Before adding a theme feature or plugin, check that it adds no cookies, storage or requests to other sites, for instance by loading a local build in a browser and looking at the developer tools' Application and Network tabs.
 
+## Accessibility
+
+The site aims to meet [WCAG 2.2](https://www.w3.org/TR/WCAG22/) at level AA.
+Its accessibility statement, `docs/accessibility.md` (at `/accessibility/`, linked from the footer), lists what visitors should be able to do, the known limitations, and how the site was tested.
+Keep it in step with changes to the site, including its date and its limitations.
+Visitors report problems to the regatta mailbox.
+
+The statement's checks were made by hand on 17 November 2026, against a local build in headless Chromium:
+
+- [axe-core](https://github.com/dequelabs/axe-core) 4.14 with the WCAG 2.0, 2.1 and 2.2 level A and AA rules and its best practices, on every page in light and dark mode, and with the course map's courses and details, the risk assessment's controls, search and the phone menu open;
+- reflow at 320 px wide, wider text spacing, and reduced motion;
+- the keyboard's focus order and focus indicators;
+- the PDFs' tags, language and bookmarks (`pdfinfo`).
+
+Repeat them after any change to how the site looks or works; there is no automated check yet.
+Things to keep:
+
+- Links in page text are underlined on screen (`extra.css`), as the link colours are too close to the text's.
+- Text on the moderate and substantial risk colours is black; white is too faint on them.
+- Anything that takes keyboard focus shows it.
+- `overrides/partials/search.html` names Material's search panel, and `extra.css` hides its results while search is closed, so they take no keyboard focus.
+- The briefing decks have not been checked yet; the statement says so.
+
 ## Third-party assets
 
 Everything the site needs is served from this repository, with no external CDNs or font services; the only exception is Plausible's script and dashboard (see [Privacy](#privacy)).

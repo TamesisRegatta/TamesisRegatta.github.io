@@ -111,9 +111,9 @@ extra:
     embed_script: https://plausible-oxrse.fly.dev/js/embed.host.js
     dashboard: https://plausible-oxrse.fly.dev/share/tamesisregatta.org?auth=wocsFySJ9DCk-Bm52bdZP
 
-# The footer's links to the privacy policy and analytics page, which are not
-# in the nav.
-copyright: '<a href="/privacy/">Privacy policy</a> &middot; <a href="/analytics/">Analytics</a>'
+# The footer's links to the accessibility statement, privacy policy and
+# analytics page, which are not in the nav.
+copyright: '<a href="/accessibility/">Accessibility</a> &middot; <a href="/privacy/">Privacy policy</a> &middot; <a href="/analytics/">Analytics</a>'
 
 plugins:
   - search

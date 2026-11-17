@@ -252,14 +252,7 @@ Its accessibility statement, `docs/accessibility.md` (at `/accessibility/`, link
 Keep it in step with changes to the site, including its date and its limitations.
 Visitors report problems to the regatta mailbox.
 
-The statement's checks were made by hand on 17 November 2026, against a local build in headless Chromium:
-
-- [axe-core](https://github.com/dequelabs/axe-core) 4.14 with the WCAG 2.0, 2.1 and 2.2 level A and AA rules and its best practices, on every page in light and dark mode, and with the course map's courses and details, the risk assessment's controls, search and the phone menu open;
-- reflow at 320 px wide, wider text spacing, and reduced motion;
-- the keyboard's focus order and focus indicators;
-- the PDFs' tags, language and bookmarks (`pdfinfo`).
-
-Repeat them after any change to how the site looks or works; there is no automated check yet.
+The automated checks (below) cover what the statement says was tested; keep the two in step.
 Things to keep:
 
 - Links in page text are underlined on screen (`extra.css`), as the link colours are too close to the text's.
@@ -267,6 +260,28 @@ Things to keep:
 - Anything that takes keyboard focus shows it.
 - `overrides/partials/search.html` names Material's search panel, and `extra.css` hides its results while search is closed, so they take no keyboard focus.
 - The briefing decks have not been checked yet; the statement says so.
+
+## Automated checks
+
+Every pull request, and every push to `main`, builds the site with its PDFs and the briefing decks, exactly as for a deploy, then runs `tests/check_site.py` on the result; only `main` is deployed.
+The script serves the built site to headless Chromium as `https://tamesisregatta.org` (answering its requests from the files, and catching Plausible's events so nothing is counted) and fails, listing each problem with its page, if:
+
+- [axe-core](https://github.com/dequelabs/axe-core) (a dev dependency in `briefings/package.json`, kept up to date by Dependabot) finds anything against the WCAG 2.0, 2.1 and 2.2 level A and AA rules or its best practices, on any page in light or dark mode, or with the course map's courses and a marker's details, the risk assessment's controls, search, or the phone menu open;
+- a page scrolls sideways or cuts off text at 320 px wide, or with wider text spacing;
+- anything animates when less motion is asked for;
+- keyboard focus lands on something that cannot be seen, or that does not show it;
+- a page sets a cookie, stores anything in the browser but the light or dark mode, or loads from any site but this one and the Plausible server (see [Privacy](#privacy));
+- a document's PDF is not tagged, or has no language or bookmarks.
+
+It finds pages from the build, so new pages are checked without changing it; the briefing decks are left out until they are ready.
+To run it locally, after `npm ci` in `briefings/`:
+
+```bash
+PDF_EXPORT=true .venv/bin/mkdocs build --strict
+.venv/bin/python tests/check_site.py site briefings/node_modules/axe-core/axe.min.js
+```
+
+Without `PDF_EXPORT`, the PDFs are not built, and the script skips them.
 
 ## Third-party assets
 

@@ -331,12 +331,22 @@ a.tr-rule-anchor:hover {
   background-color: #2e7d32;
 }
 
+/* Moderate and substantial take black text: white on these colours is only
+   3.3:1 and 3.6:1, below the 4.5:1 that text needs (WCAG 1.4.3); black is
+   6.4:1 and 5.8:1. Low and intolerable keep white (5.1:1 and 5.6:1). */
 .risk-moderate {
   background-color: #b8860b;
 }
 
 .risk-substantial {
   background-color: #d2691e;
+}
+
+.risk-badge.risk-moderate,
+.risk-badge.risk-substantial,
+table.risk-matrix td.risk-moderate,
+table.risk-matrix td.risk-substantial {
+  color: #000;
 }
 
 .risk-intolerable {

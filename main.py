@@ -223,4 +223,6 @@ def define_env(env):
                 level = risk_matrix["levels"][s][p]
                 rows.append(f'<td class="risk-{level}">{_RISK_LEVEL_LABELS[level]}</td>')
             rows.append("</tr>")
-        return f'<table class="risk-matrix">{"".join(rows)}</table>'
+        # The wrapper lets the table scroll on its own on a narrow screen,
+        # rather than the whole page scrolling sideways (extra.css).
+        return f'<div class="risk-matrix-wrap"><table class="risk-matrix">{"".join(rows)}</table></div>'

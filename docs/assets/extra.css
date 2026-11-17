@@ -379,6 +379,15 @@ table.risk-matrix {
   border-collapse: collapse;
 }
 
+/* On a narrow screen the matrix scrolls within its own box, not the page
+   (WCAG 1.4.10 reflow allows a data table to scroll on its own). */
+@media screen {
+  .risk-matrix-wrap {
+    max-width: 100%;
+    overflow-x: auto;
+  }
+}
+
 table.risk-matrix th,
 table.risk-matrix td {
   text-align: center;

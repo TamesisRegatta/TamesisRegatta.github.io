@@ -238,6 +238,7 @@ Links to other sites, such as the GitHub and YouTube links in the header, only t
 That includes the short link to the draw: `/draw/` is a page that loads nothing itself and sends the browser straight on to Google Sheets, the same as clicking a link.
 The draw is never embedded in a page, as that would load Google's content, and its cookies, on the site itself.
 The only thing the site itself stores in the browser is the visitor's light or dark mode, which Material keeps in local storage (`__palette`) so the next page matches; remembering a display preference needs no consent.
+The briefing decks are the exception: Slidev keeps about twenty settings for its own controls (`slidev-*` keys, such as the presenter layout and drawing brush) in local storage, and one (`vue-router:scroll`) in session storage, as soon as a deck opens; none is sent anywhere, and the privacy policy says so.
 
 `overrides/partials/source.html` keeps it that way: Material's own version of the repository link in the navigation drawer fetches the repository's star and fork counts from GitHub's API on every page, and caches them in session storage.
 Before adding a theme feature or plugin, check that it adds no cookies, storage or requests to other sites, for instance by loading a local build in a browser and looking at the developer tools' Application and Network tabs.

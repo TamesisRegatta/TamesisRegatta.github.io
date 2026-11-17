@@ -41,6 +41,9 @@ Plausible's [data policy](https://plausible.io/data-policy){ target="_blank" rel
 The site keeps whether pages show in light or dark mode on your device, in your browser's local storage, so that each page matches the last.
 It is never sent anywhere.
 
+The briefing slides, under `/briefings/`, keep settings for their own controls in your browser's storage when you open them, such as the layout of the presenter's view and the drawing tools.
+They are never sent anywhere either.
+
 The statistics on the analytics page keep two display settings of their own in your browser, if you open that page: which chart is shown, and its layout.
 Nothing else is stored, and nothing that identifies you.
 

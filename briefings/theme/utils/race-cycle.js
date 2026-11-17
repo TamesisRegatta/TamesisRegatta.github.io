@@ -27,31 +27,40 @@ function ramp(u, a0, a1) {
 // Speed profiles for a move: default starts and stops gently; 'start' only
 // pulls away (for a race start), 'end' only winds down, 'linear' neither.
 const PROFILES = { default: [0.35, 0.35], start: [0.12, 0], end: [0, 0.6], linear: [0, 0] }
-const smooth = u => (u <= 0 ? 0 : u >= 1 ? 1 : u * u * (3 - 2 * u))
 const lerp = (a, b, u) => a + (b - a) * u
 const deg = Math.PI / 180
 
-// Shortest signed turn from a to b, in degrees.
-export function turn(a, b) {
-  return ((((b - a) % 360) + 540) % 360) - 180
-}
-
-// A Catmull-Rom curve through points, as a dense polyline with arc lengths.
-function curve(points) {
-  const pts = [points[0], ...points, points[points.length - 1]]
+// A smooth curve through points (a cubic Hermite spline, Catmull-Rom inside),
+// as a dense polyline with arc lengths. h0 and h1, if given, are headings in
+// degrees that the curve leaves the first point and arrives at the last point
+// along. Starting each move along the boat's heading, and ending along the
+// heading the next move starts from, joins moves and stages without a corner.
+function curve(points, h0, h1) {
+  const n = points.length
+  const sub = (a, b) => [a[0] - b[0], a[1] - b[1]]
+  const along = (h, a, b) => {
+    const d = Math.hypot(...sub(b, a))
+    return [Math.cos(h * deg) * d, Math.sin(h * deg) * d]
+  }
+  const tangents = points.map((p, i) => {
+    if (i === 0)
+      return h0 === undefined ? sub(points[1], p) : along(h0, p, points[1])
+    if (i === n - 1)
+      return h1 === undefined ? sub(p, points[i - 1]) : along(h1, points[i - 1], p)
+    return sub(points[i + 1], points[i - 1]).map(v => v / 2)
+  })
   const out = []
-  for (let i = 1; i < pts.length - 2; i++) {
-    const [p0, p1, p2, p3] = [pts[i - 1], pts[i], pts[i + 1], pts[i + 2]]
+  for (let i = 0; i < n - 1; i++) {
+    const [p0, p1, m0, m1] = [points[i], points[i + 1], tangents[i], tangents[i + 1]]
     for (let k = 0; k < 24; k++) {
       const t = k / 24
       const t2 = t * t
       const t3 = t2 * t
-      out.push([0, 1].map(j => 0.5 * ((2 * p1[j]) + (-p0[j] + p2[j]) * t
-        + (2 * p0[j] - 5 * p1[j] + 4 * p2[j] - p3[j]) * t2
-        + (-p0[j] + 3 * p1[j] - 3 * p2[j] + p3[j]) * t3)))
+      out.push([0, 1].map(j => (2 * t3 - 3 * t2 + 1) * p0[j] + (t3 - 2 * t2 + t) * m0[j]
+        + (-2 * t3 + 3 * t2) * p1[j] + (t3 - t2) * m1[j]))
     }
   }
-  out.push(points[points.length - 1])
+  out.push(points[n - 1])
   const len = [0]
   for (let i = 1; i < out.length; i++)
     len.push(len[i - 1] + Math.hypot(out[i][0] - out[i - 1][0], out[i][1] - out[i - 1][1]))
@@ -69,41 +78,21 @@ function along(c, s) {
 
 // One move, starting from pose p, as a function of u in [0, 1].
 //   { to: [[x, y], ...], dur, stroke?, heading?, ease? }   row along a smooth
-//       path (stroke: 'paddle', the default, or 'race'); heading: a final
-//       heading to turn to over the last part of the path.
-//   { spin: degrees, dur, to?: [x, y] }   spin in place (clockwise positive),
-//       drifting to `to`; rows on stroke side and backs down bow side.
+//       path (stroke: 'paddle', the default, or 'race'), which leaves along
+//       the boat's heading and, if heading is given, arrives along it. The
+//       boat always points along the path, so a spin is an arc in the path.
 //   { wait: dur }   sit still, blades resting.
 //   { fade: opacity, dur }   fade in or out where it is.
 function build(move, p) {
-  if (move.to && !move.spin) {
-    const c = curve([[p.x, p.y], ...move.to])
-    const h0 = p.h
+  if (move.to) {
+    const c = curve([[p.x, p.y], ...move.to], p.h, move.heading)
     const [a0, a1] = PROFILES[move.ease || 'default']
     return {
       dur: move.dur,
       stroke: move.stroke || 'paddle',
       at(u) {
         const q = along(c, ramp(u, a0, a1) * c.total)
-        // Ease out of the starting heading over the first fifth of the path,
-        // and into a requested final heading over the last fifth.
-        let h = q.h
-        if (u < 0.2)
-          h = q.h + turn(q.h, h0) * (1 - smooth(u / 0.2))
-        if (move.heading !== undefined && u > 0.8)
-          h = h + turn(h, move.heading) * smooth((u - 0.8) / 0.2)
-        return { ...p, x: q.x, y: q.y, h }
-      },
-    }
-  }
-  if (move.spin) {
-    const [x1, y1] = move.to || [p.x, p.y]
-    return {
-      dur: move.dur,
-      stroke: 'spin',
-      at(u) {
-        const e = ease(u)
-        return { ...p, x: lerp(p.x, x1, e), y: lerp(p.y, y1, e), h: p.h + move.spin * e }
+        return { ...p, x: q.x, y: q.y, h: q.h }
       },
     }
   }
@@ -169,7 +158,7 @@ export function cuesAt(stage, t) {
 // as in the usual pictogram of an eight.
 const SQUARE = 0.4
 export const REST = 25
-export function bladeAt(mode, phase, side) {
+export function bladeAt(mode, phase) {
   if (mode === 'none')
     return { angle: REST, open: 1 }
   const catchA = -38
@@ -187,11 +176,8 @@ export function bladeAt(mode, phase, side) {
     // Feathered for the middle of the recovery, squaring up for the catch.
     open = u < 0.15 ? lerp(SQUARE, 1, u / 0.15) : u > 0.8 ? lerp(1, SQUARE, (u - 0.8) / 0.2) : 1
   }
-  // Spinning: bow side backs down, which is the stroke played backwards.
-  if (mode === 'spin' && side === 'bow')
-    angle = -angle
   return { angle, open }
 }
 
 // Strokes per second for each kind of rowing.
-export const RATES = { paddle: 0.8, race: 1.25, spin: 0.7, none: 0 }
+export const RATES = { paddle: 0.8, race: 1.25, none: 0 }

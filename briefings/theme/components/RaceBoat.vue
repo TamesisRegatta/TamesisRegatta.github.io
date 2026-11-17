@@ -13,17 +13,23 @@ import { bladeAt } from '../utils/race-cycle.js'
 
 const props = defineProps({
   pose: { type: Object, required: true }, // { x, y, h, opacity }
-  stroke: { type: String, default: 'none' }, // paddle, race, spin or none
+  stroke: { type: String, default: 'none' }, // paddle, race or none
   phase: { type: Number, default: 0 }, // stroke cycle, 0 to 1
   colours: { type: String, default: 'linacre' }, // a key of BLADES
 })
 
-// Blade designs (from OURCs's blade colours chart), simplified to what shows
-// on a small spoon: its colour, and a mark across it. The cox wears the
-// club's colour too.
+// Blade designs (from OURCs's blade colours chart, TT24), simplified to what
+// shows on a small spoon: its colour, and a mark on it. Marks: a saltire or
+// cross in markColour; bands, stripes across the spoon, each at a distance
+// from its middle toward the tip (the spoon runs from -1.6 to 1.6). The cox
+// wears the club's colour too.
 const BLADES = {
   linacre: { spoon: 'var(--tamesis-yellow)', edge: '#1a1a1a', mark: 'saltire', markColour: '#000', cox: 'var(--tamesis-yellow)' },
   mansfield: { spoon: '#eb1c24', edge: '#1a1a1a', mark: 'cross', markColour: '#fff000', cox: '#eb1c24' },
+  // Red, with two black stripes across it near the tip.
+  somerville: { spoon: '#e31b23', edge: '#1a1a1a', mark: 'bands', bands: [{ at: 1.0, colour: '#000' }, { at: 0.45, colour: '#000' }], cox: '#e31b23' },
+  // White, with a navy and a green stripe across it near the tip.
+  reuben: { spoon: '#fff', edge: '#1a1a1a', mark: 'bands', bands: [{ at: 1.0, colour: '#152361' }, { at: 0.45, colour: '#2e9a45' }], cox: '#152361' },
   plain: { spoon: '#9e9e9e', edge: '#555', mark: null, cox: '#d0d0d0' },
 }
 const blade = computed(() => BLADES[props.colours] || BLADES.plain)
@@ -39,7 +45,7 @@ const SEATS = Array.from({ length: 8 }, (_, i) => {
 const HALF_BEAM = 0.8
 
 const oars = computed(() => SEATS.map((s) => {
-  const { angle, open } = bladeAt(props.stroke, props.phase, s.side)
+  const { angle, open } = bladeAt(props.stroke, props.phase)
   // Oars are drawn outward along -y (stroke side) or +y (bow side). A sweep
   // toward the stern (-x) is then an anticlockwise turn on stroke side and a
   // clockwise one on bow side, which is dir * angle either way.
@@ -60,8 +66,10 @@ const HULL = 'M 6 -0.8 L -6 -0.8 C -9.5 -0.8 -12.2 -0.45 -12.5 -0.2 Q -12.75 0 -
   <g :transform="transform" :opacity="pose.opacity ?? 1" class="race-boat" :class="colours">
     <g v-for="o in oars" :key="o.seat" :transform="`translate(${o.x} ${o.dir * HALF_BEAM}) rotate(${o.rot})`">
       <line class="shaft" x1="0" y1="0" :x2="0" :y2="o.dir * 5.2" />
+      <!-- The spoon's tip is toward +dir; its outline is drawn last, over
+           any mark, so marks stay inside its rounded corners. -->
       <g :transform="`translate(0 ${o.dir * 6.8}) scale(${o.open} 1)`">
-        <rect class="spoon" x="-0.85" y="-1.6" width="1.7" height="3.2" rx="0.35" :fill="blade.spoon" :stroke="blade.edge" />
+        <rect class="spoon" x="-0.85" y="-1.6" width="1.7" height="3.2" rx="0.35" :fill="blade.spoon" />
         <g v-if="blade.mark" class="mark" :stroke="blade.markColour">
           <template v-if="blade.mark === 'saltire'">
             <line x1="-0.85" y1="-1.6" x2="0.85" y2="1.6" />
@@ -71,7 +79,11 @@ const HULL = 'M 6 -0.8 L -6 -0.8 C -9.5 -0.8 -12.2 -0.45 -12.5 -0.2 Q -12.75 0 -
             <line x1="0" y1="-1.05" x2="0" y2="1.05" />
             <line x1="-0.55" :y1="o.dir * 0.35" x2="0.55" :y2="o.dir * 0.35" />
           </template>
+          <template v-else-if="blade.mark === 'bands'">
+            <line v-for="b in blade.bands" :key="b.at" x1="-0.85" :y1="o.dir * b.at" x2="0.85" :y2="o.dir * b.at" :stroke="b.colour" />
+          </template>
         </g>
+        <rect class="spoon-edge" x="-0.85" y="-1.6" width="1.7" height="3.2" rx="0.35" fill="none" :stroke="blade.edge" />
       </g>
     </g>
     <path class="hull" :d="HULL" />
@@ -87,6 +99,6 @@ const HULL = 'M 6 -0.8 L -6 -0.8 C -9.5 -0.8 -12.2 -0.45 -12.5 -0.2 Q -12.75 0 -
 .race-boat .cox { stroke: #1a1a1a; stroke-width: 0.2; }
 .race-boat .bow-ball { fill: #fff; stroke: #1a1a1a; stroke-width: 0.2; }
 .race-boat .shaft { stroke: #3a3a3a; stroke-width: 0.35; }
-.race-boat .spoon { stroke-width: 0.2; }
+.race-boat .spoon-edge { stroke-width: 0.2; }
 .race-boat .mark { stroke-width: 0.38; }
 </style>

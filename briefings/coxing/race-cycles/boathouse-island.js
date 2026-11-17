@@ -37,8 +37,9 @@ export default {
       camera: { at: [1320, 312], w: 520 },
       moves: {
         lin: [
-          { spin: 180, to: [1508, 357], dur: 1.5 },
-          { to: [[1478, 362], [1445, 361], [1400, 352], [1350, 341], [1300, 327], [1250, 312], [1200, 295], [1165, 284]], dur: 2.5 },
+          // Round in a clockwise arc (rowing on with stroke side), then up
+          // the Marshalling Zone.
+          { to: [[1532, 339], [1543, 349], [1539, 360], [1522, 365], [1500, 364], [1478, 362], [1445, 361], [1400, 352], [1350, 341], [1300, 327], [1250, 312], [1200, 295], [1165, 284]], dur: 4 },
         ],
         opp: [
           { fade: 1, dur: 0.3 },
@@ -51,13 +52,16 @@ export default {
       text: 'Line up in your lane and keep the stagger the Senior Umpire sets. Go on "Go!", stay in your own lane, and keep going past the finish line.',
       camera: { at: [765, 292], w: 940 },
       moves: {
+        // The City station (opp) starts slightly ahead: it is nearer the
+        // middle of the river, so has more stream against it, and a slightly
+        // longer course round the bend.
         lin: [
-          { to: [[1150, 279], [1137, 276]], dur: 0.8, heading: 180 },
+          { to: [[1153, 279], [1141, 276]], dur: 0.8, heading: 180 },
           { wait: 0.4 },
           { to: [[1100, 274], [1050, 270.8], [1000, 269.5], [950, 269.2], [900, 269.8], [850, 271.5], [800, 276.2], [750, 283], [700, 294], [650, 306], [600, 318.8], [550, 328], [500, 333.8], [450, 338.2], [430, 340], [405, 341], [380, 339.5]], dur: 3.9, stroke: 'race', ease: 'start' },
         ],
         opp: [
-          { to: [[1152, 258], [1141, 255]], dur: 0.8, heading: 180 },
+          { to: [[1149, 258], [1137, 255]], dur: 0.8, heading: 180 },
           { wait: 0.4 },
           { to: [[1100, 253], [1050, 251], [1000, 250.8], [950, 251.5], [900, 253], [850, 255.5], [800, 259.8], [750, 265.8], [700, 273.8], [650, 283.2], [600, 295.2], [550, 304.8], [500, 310.2], [450, 315], [432, 317], [410, 318.5], [384, 318.2]], dur: 4.15, stroke: 'race', ease: 'start' },
         ],
@@ -73,8 +77,8 @@ export default {
       camera: { at: [420, 318], w: 450 },
       moves: {
         lin: [
-          { to: [[362, 338.5]], dur: 0.8, ease: 'end' },
-          { spin: 176, to: [366, 314], dur: 2 },
+          // On past the finish, and round in a clockwise arc.
+          { to: [[362, 338.5], [349, 332], [344, 321], [349, 310], [362, 303], [380, 300]], dur: 2.8 },
         ],
         opp: [
           { to: [[370, 318]], dur: 0.8, ease: 'end' },

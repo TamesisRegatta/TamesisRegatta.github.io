@@ -3,12 +3,21 @@ import logo from '../../docs/assets/img/tamesis_logo.svg'
 
 // Layouts that fill the slide themselves, without the header bar.
 const full = ['cover', 'section', 'alert']
+
+// The header shows the slide's title as plain text, as written, so a
+// {{ regatta.year }} in a heading would show unfilled. Fill in such simple
+// references to event.yml (see setup/main.ts), leaving anything else as it is.
+const event = __EVENT__
+function fill(title) {
+  return title.replace(/\{\{\s*regatta\.([\w.]+)\s*\}\}/g,
+    (whole, path) => path.split('.').reduce((value, key) => value?.[key], event) ?? whole)
+}
 </script>
 
 <template>
   <div v-if="!full.includes($nav.currentLayout)" class="tamesis-header">
     <span class="tamesis-header-title">
-      {{ $nav.currentSlideRoute.meta?.slide?.title || '' }}
+      {{ fill($nav.currentSlideRoute.meta?.slide?.title || '') }}
     </span>
     <img :src="logo" alt="Tamesis Regatta" class="tamesis-header-logo">
   </div>

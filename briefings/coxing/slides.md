@@ -225,6 +225,18 @@ import longbridges from './race-cycles/longbridges.js'
 - Make it clear to the Marshals/Senior Umpire that you wish to land, and they will instruct you to follow a race in the County Station back to Univ, and land bows upstream.
 
 ---
+clicks: 6
+---
+
+<script setup>
+import univ from './race-cycles/univ.js'
+</script>
+
+# Race cycle: Univ raft
+
+<RaceCycle :route="univ" />
+
+---
 
 # Circulation (Isis Boathouse)
 
@@ -233,6 +245,18 @@ import longbridges from './race-cycles/longbridges.js'
 - Head upstream in standard circulation through the Gut, and wait for the Gut Marshal's instruction before crossing to reverse circulation above it. Then find your opposition, pair up, and continue upstream towards the start.
 - After the race, spin at the Head, and continue all the way downstream in the TRANSIT LANE.
 - Cross to standard circulation as you enter the Gut, keeping a good lookout for crews and boats coming upstream. Land at the Isis Boathouse in any safe manner.
+
+---
+clicks: 6
+---
+
+<script setup>
+import isisBoathouse from './race-cycles/isis-boathouse.js'
+</script>
+
+# Race cycle: Isis Boathouse
+
+<RaceCycle :route="isisBoathouse" />
 
 ---
 

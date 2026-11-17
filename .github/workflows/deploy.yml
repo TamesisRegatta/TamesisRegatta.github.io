@@ -1,15 +1,20 @@
 name: Build and deploy site
 
+# Every pull request gets the same build and checks as a deploy, so it is
+# tested exactly as it would be published; only main is deployed.
 on:
   push:
     branches: [main]
+  pull_request:
   workflow_dispatch:
 
 permissions:
   contents: read
 
+# Deploys share one group, so a newer push replaces an older one; each pull
+# request has its own, so checks and deploys never cancel each other.
 concurrency:
-  group: pages
+  group: ${{ github.event_name == 'pull_request' && format('check-{0}', github.ref) || 'pages' }}
   cancel-in-progress: true
 
 jobs:
@@ -62,13 +67,20 @@ jobs:
       - name: Build briefing slides with PDFs
         run: briefings/build.sh
 
+      # Accessibility, privacy and the PDFs, on the built site (see "Automated
+      # checks" in the README). axe-core comes from the briefings' npm install.
+      - name: Check the site
+        run: python tests/check_site.py site briefings/node_modules/axe-core/axe.min.js
+
       - uses: actions/upload-pages-artifact@fc324d3547104276b827a68afc52ff2a11cc49c9 # v5.0.0
+        if: github.event_name != 'pull_request'
         with:
           path: site
 
   deploy:
     name: Deploy
     needs: build
+    if: github.event_name != 'pull_request'
     runs-on: ubuntu-26.04
     timeout-minutes: 10
     environment:

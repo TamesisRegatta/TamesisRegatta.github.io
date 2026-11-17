@@ -34,6 +34,9 @@ to GitHub Pages at <https://tamesisregatta.org/> on every push to
 - **Key dates** on the home page use `{{ when(dates.entries_close) }}`, which renders the date and records when it starts and is over (in UK time).
   `docs/assets/key-dates.js` then marks each row as past, on now or next by the visitor's clock, so the table stays current without rebuilding the site.
   Keep the rows in date order.
+- **The draw**: set `draw_url` in `event.yml` to the Google Sheet's "Publish to web" link.
+  `hooks/draw_redirect.py` then serves <https://tamesisregatta.org/draw/> as a short link that forwards to it, and the home page's key dates and the coxing briefing link there, in a new tab.
+  Give the short link in anything sent out or printed: if the draw moves to another sheet, changing `draw_url` keeps it working.
 - **Permanent anchors**: rules and risk assessment entries each have a
   stable, *named* anchor (e.g. `/rules/#bow-balls`,
   `/risk-assessment/#capsize-submerge`) so links keep working even if items
@@ -217,6 +220,8 @@ Host video and audio clips in the deck's folder instead, trimmed and compressed.
 The site sets no cookies and needs no consent banner.
 Its pages make no requests to other sites: everything they load is served from this repository (see below).
 Links to other sites, such as the GitHub and YouTube links in the header, only take visitors there when they click.
+That includes the short link to the draw: `/draw/` is a page that loads nothing itself and sends the browser straight on to Google Sheets, the same as clicking a link.
+The draw is never embedded in a page, as that would load Google's content, and its cookies, on the site itself.
 The only thing stored in the browser is the visitor's light or dark mode, which Material keeps in local storage (`__palette`) so the next page matches; remembering a display preference needs no consent.
 
 `overrides/partials/source.html` keeps it that way: Material's own version of the repository link in the navigation drawer fetches the repository's star and fork counts from GitHub's API on every page, and caches them in session storage.

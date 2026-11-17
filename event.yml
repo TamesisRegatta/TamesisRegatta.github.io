@@ -60,10 +60,13 @@ public_phones:
   university_security: "01865 289999"
   press_office: "01865 280528"
 
-# Where the draw is published: a full URL, or empty until it is out. The
-# coxing briefing links to it when set, and says it is not out yet when
-# empty; rebuild (push) after setting it.
-draw_url: ""
+# Where the draw is published: a full https:// URL (the Google Sheet's
+# "Publish to web" link), or empty until it is out. When set, the site serves
+# tamesisregatta.org/draw as a short link that forwards to it
+# (hooks/draw_redirect.py), and the home page and the coxing briefing link to
+# that short link; when empty, they say the draw is not out yet. Rebuild
+# (push) after changing it.
+draw_url: "https://docs.google.com/spreadsheets/d/e/2PACX-1vS2cgXK_uNDzNxR0InGrgDzEPGWJhteh7923yQw17IxzVoyg08OqpoXR5yY7BydYq1rU0V3PW9HMpMr/pubhtml?gid=491937164"
 
 # The entry fee per crew, in pounds. It is set by OURCs, and is the same as
 # for Torpids and Summer Eights in the same calendar year. Shown in rule 6.1

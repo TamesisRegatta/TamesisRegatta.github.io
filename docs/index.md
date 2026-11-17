@@ -14,7 +14,7 @@ Greenbank to the Cox Stone, and takes place from
 | Marshal sign-ups open | {{ when(dates.marshal_signups_open) }} |
 | Entries close, and crews must be complete | {{ when(dates.entries_close) }} |
 | Scratch deadline (full refund) | {{ when(dates.scratch_deadline) }} |
-| Draw published (our aim, but not guaranteed) | {{ when(dates.draw_published) }} |
+| Draw published{% if draw_url %}: [view the draw :material-open-in-new:](/draw/){ target="_blank" rel="noopener" title="Opens the draw on Google Sheets, in a new tab" }{% else %} (our aim, but not guaranteed){% endif %} | {{ when(dates.draw_published) }} |
 | Coxing briefing (Gulbenkian Lecture Theatre) | {{ when(dates.coxing_briefing) }} |
 | Marshal briefing (online via MS Teams) | {{ when(dates.marshal_briefing) }} |
 | Racing | {{ when(dates.regatta_start, dates.regatta_end) }} |

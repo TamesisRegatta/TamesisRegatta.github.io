@@ -85,6 +85,8 @@ hooks:
   - hooks/map_pdf.py
   # Stops mkdocs-exporter turning mailto: links into broken site URLs in PDFs.
   - hooks/pdf_links.py
+  # Serves /draw/ as a short link to draw_url in event.yml, once it is set.
+  - hooks/draw_redirect.py
 
 extra:
   # No "Made with Material for MkDocs" in the footer.

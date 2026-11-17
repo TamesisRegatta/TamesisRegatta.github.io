@@ -295,6 +295,19 @@ a.tr-rule-anchor:hover {
   }
 }
 
+/* Links in page text are underlined, so they are told apart from the text
+   around them without relying on colour (WCAG 1.4.1): the link colours are
+   too close to the text's, especially in dark mode. Screen only; the PDFs
+   keep their look. Not the heading permalinks, buttons, or the risk
+   summary's squares, which are not in running text. */
+@media screen {
+  .md-typeset a:not(.headerlink):not(.md-button):not(.md-content__button):not(.risk-summary-square) {
+    text-decoration: underline;
+    text-decoration-thickness: 0.06em;
+    text-underline-offset: 0.18em;
+  }
+}
+
 /* Risk assessment: "Level of risk" badge and the severity/probability
    matrix table, both driven by risk_matrix.yml via the risk() and
    risk_matrix_table() macros (main.py) so the colours always match. */

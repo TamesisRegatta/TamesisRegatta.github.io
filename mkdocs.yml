@@ -5,14 +5,19 @@ repo_url: https://github.com/TamesisRegatta/TamesisRegatta.github.io
 repo_name: TamesisRegatta
 edit_uri: edit/main/docs/
 
+# Pages for crews and captains first, then the safety documents, which
+# extra.css marks off under a "Safety documents" divider placed just before
+# Event Plan (keep Event Plan straight after FAQs). The Draw entry is added
+# after Home by hooks/draw_redirect.py. Each page sets its nav icon in its
+# front matter (icon: material/...).
 nav:
   - Home: index.md
+  - Course Map: map.md
   - Rules: rules.md
   - FAQs: faqs.md
   - Event Plan: event-plan.md
-  - River Notices: river-notices.md
   - Risk Assessment: risk-assessment.md
-  - Course Map: map.md
+  - River Notices: river-notices.md
 
 theme:
   name: material

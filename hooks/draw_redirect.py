@@ -52,7 +52,11 @@ def _draw_url():
 
 def on_nav(nav, config, files):
     if _draw_url():
-        nav.items.insert(1, Link("Draw", SHORT_LINK))
+        link = Link("Draw", SHORT_LINK)
+        # Material shows meta.icon beside a nav entry, as pages set it in
+        # their front matter; a link has no front matter, so set it here.
+        link.meta = {"icon": "material/tournament"}
+        nav.items.insert(1, link)
     return nav
 
 

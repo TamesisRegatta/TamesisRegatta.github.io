@@ -1,3 +1,7 @@
+---
+icon: material/home-outline
+---
+
 # Tamesis Regatta {{ dates.year }}
 
 Tamesis Regatta is Oxford's novice regatta, held on the Isis and organised by
@@ -22,17 +26,17 @@ Greenbank to the Cox Stone, and takes place from
 
 ## Documents
 
+- **[Course Map](map.md)**: an interactive map of the course, circulation and
+  marshal positions.
 - **[Rules](rules.md)**: eligibility, equipment, the racing format and conduct
   of racing, bystander safety, and fees and refunds.
 - **[FAQs](faqs.md)**: answers to common questions, for captains.
 - **[Event & Safety Plan](event-plan.md)**: how the regatta is organised and
   run: marshalling, circulation, emergency procedures, and contacts.
-- **[River Notices](river-notices.md)**: the Environment Agency's river
-  restriction notice and consent to place buoys, as PDFs.
 - **[Risk Assessment](risk-assessment.md)**: the hazards of the event, and the
   controls in place for each.
-- **[Course Map](map.md)**: an interactive map of the course, circulation and
-  marshal positions.
+- **[River Notices](river-notices.md)**: the Environment Agency's river
+  restriction notice and consent to place buoys, as PDFs.
 
 Each document can also be downloaded as a PDF using the button at the top of
 the page. Spotted a mistake, or something unclear? Use the edit (pencil) button

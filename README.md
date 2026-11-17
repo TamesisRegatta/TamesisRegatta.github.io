@@ -34,6 +34,8 @@ to GitHub Pages at <https://tamesisregatta.org/> on every push to
 - **Key dates** on the home page use `{{ when(dates.entries_close) }}`, which renders the date and records when it starts and is over (in UK time).
   `docs/assets/key-dates.js` then marks each row as past, on now or next by the visitor's clock, so the table stays current without rebuilding the site.
   Keep the rows in date order.
+- **Navigation**: the nav in `mkdocs.yml` lists the pages for crews and captains first, then the safety documents, which `extra.css` marks off with a "Safety documents" divider above Event Plan (so keep Event Plan straight after FAQs).
+  Each page sets its nav icon in its front matter, as `icon: material/...`, using an icon bundled with Material.
 - **The draw**: set `draw_url` in `event.yml` to the Google Sheet's "Publish to web" link.
   `hooks/draw_redirect.py` then serves <https://tamesisregatta.org/draw/> as a short link that forwards to it, and adds a Draw entry to the nav after Home.
   The nav, the home page's key dates and the coxing briefing link there, in a new tab (`docs/assets/draw-link.js` does that for the nav entry).

@@ -1,3 +1,7 @@
+---
+icon: material/gavel
+---
+
 # Tamesis Regatta {{ dates.year }}: Rules
 
 <div class="tr-cover" markdown="1">

@@ -1,4 +1,5 @@
 ---
+icon: material/waves
 # A PDF of this page would only repeat the two PDFs it links to.
 pdf: false
 ---

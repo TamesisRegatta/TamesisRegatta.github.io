@@ -1,4 +1,5 @@
 ---
+icon: material/map-outline
 hide:
   - toc
 ---

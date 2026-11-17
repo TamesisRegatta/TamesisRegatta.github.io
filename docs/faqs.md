@@ -1,3 +1,7 @@
+---
+icon: material/help-circle-outline
+---
+
 # Tamesis Regatta {{ dates.year }}: FAQs
 
 <div class="tr-cover" markdown="1">

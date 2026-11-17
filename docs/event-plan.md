@@ -1,3 +1,7 @@
+---
+icon: material/clipboard-text-outline
+---
+
 # Tamesis Regatta {{ dates.year }}: Event & Safety Plan
 
 <div class="tr-cover" markdown="1">

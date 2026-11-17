@@ -1,3 +1,7 @@
+---
+icon: material/alert-outline
+---
+
 # Tamesis Regatta {{ dates.year }}: Risk Assessment
 
 <div class="tr-cover" markdown="1">

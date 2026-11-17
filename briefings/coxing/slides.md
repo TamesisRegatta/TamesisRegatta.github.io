@@ -34,41 +34,19 @@ Have you handed your coxing card or other photo ID in at the front?
 
 ---
 
-# Safety: First priority
-
-- Risk assessment: read this! (<https://tamesisregatta.org/risk-assessment/>)
-- Medics at all times, at Race Desk and on the medical launch: find any marshal
-- Weather might be cold: keep a lookout for hypothermia
-  - shivering; pale, cold and dry skin; slurred speech; slow breathing; tiredness or confusion
-  - move them indoors; dry clothing; contact medics
-  - <https://www.nhs.uk/conditions/hypothermia/>
-- Every crew should bring a dry change of kit for after racing
-
----
-
-# Safety: First priority
-
-- Lightning: 30/30 rule
-  - seek shelter if the time between seeing a lightning flash and hearing thunder is 30 seconds or less
-  - shelter for 30 mins after last clap of thunder
-  - take care with anything long and pointy such as blades
-- Not yet boated: don't push off, and seek shelter
-- On the water: land under marshal and umpire instructions
-- Mid-race: the Senior Umpire decides whether you stop or finish
-- Once landed, shelter in a boathouse; no one boats again until the Senior Umpire says it is safe
-
-<br>
-
-Instructions will be given by marshals if required
-
----
-
 # This briefing will cover...
 
-- Preparing to race (the final week)
-- Race format
-- Warm-up and return circulation pattern
-- How to race well
+1. **Tamesis {{ regatta.year }}:** what you must know for this regatta: key information, safety, circulation and race day
+2. **Racing on the Isis:** safety and rules for any outing or event on the river
+3. **Coxing well:** general advice for preparing and racing
+
+---
+layout: section
+---
+
+# PART 1: TAMESIS {{ regatta.year }}
+
+What you must know for this regatta
 
 ---
 
@@ -81,52 +59,102 @@ Instructions will be given by marshals if required
 
 ---
 
-# Getting ready to race
+# Format of the regatta
 
-### The week before
+- Every crew races a side-by-side heat on the first day.
+- Lose your heat, and you race a repechage, normally the next day.
+- Win your heat or repechage, and you go on to a side-by-side knock-out, up to the final.
+- Unless conditions require changes, every crew gets at least two races.
+- Friendly crews: in the repechage and later rounds, a competitive crew racing a friendly crew always wins.
+- Conditions may change the format, and the draw, at short notice.
 
-- Decide warm-up plan, the start commands, and a race plan (with your coach).
-- Check the boat safety
-  - bow-ball, firmly attached (not just taped)
-  - heel restraints/quick release: heels released before they come above horizontal, and shoes can be undone with one hand.
-  - boat lights, charged!
-  - hatch covers, present!
-  - backstays, present
-  - Bolts and fittings, tight.
+---
+
+# Tamesis {{ regatta.year }} Advice
+
+- Each novice rower should have had at least 5 training outings before racing. Crews the Senior Umpires or Event Committee judge unsafe may be asked to land, withdrawn, or disqualified.
+- Only coxes that have been briefed here, or otherwise exempted may cox.
+- No one may row in, or cox, more than one crew.
+- If conditions dictate a change to X/S only, there may be an additional online briefing.
+
+---
+
+# Checks on the day
+
 - A raft marshal checks your boat before you push off: if it fails, you don't boat
+- Photo ID for every member of your crew, including you: a printout of their University card or coxing licence. You may have to prove the identity of your crew and/or cox before racing or when you return.
 
-<span class="key">Lights are required on the water after 15:00 each day. No lights means disqualification.</span>
+<br>
 
----
-
-# Getting ready to race
-
-### The night before
-
-- Racing equipment (small bag of tools: adjustable spanner, screwdriver, roll of electrical tape, watch)
-- Photo ID for every member of your crew, including you: a printout of their University card or coxing licence
-- Know your opposition: Who are they? What do their blades look like? Are you on City or County station?
-- Check the weather: wear appropriate kit
-- Double check timings
-
----
-
-# ON THE DAY: Lifejackets
-
-<span class="key">Coxes lacking lifejackets:</span>
-
-- <span class="key">£50 FINE</span>
-- <span class="key">Club Safety Review.</span>
-
-<p class="text-center mt-8">Always do your lifejacket up properly (including crotch strap) and wear it OVER your coat, in line with the OURCs Code of Conduct</p>
+<p class="text-center key">Lights are required on the water after 15:00 each day. No lights means disqualification.</p>
 
 <p class="text-center mt-8 key">COXES WITHOUT LIFEJACKETS WILL NOT BE ALLOWED TO RACE</p>
 
 ---
-layout: section
+
+# Safety: First priority
+
+- Risk assessment: read this! (<https://tamesisregatta.org/risk-assessment/>)
+- Medics at all times, at Race Desk and on the medical launch: find any marshal
+- If you have equipment problems, talk to a marshal as soon as possible
+- Klaxons... ALWAYS OBEY MARSHAL INSTRUCTIONS
+
 ---
 
-# CIRCULATION
+# Lightning at Tamesis
+
+- Not yet boated: don't push off, and seek shelter
+- On the water: land under marshal and umpire instructions
+- Mid-race: the Senior Umpire decides whether you stop or finish
+- Once landed, shelter in a boathouse; no one boats again until the Senior Umpire says it is safe
+
+<br>
+
+Instructions will be given by marshals if required
+
+---
+
+# The river flag
+
+- <span class="key">Red Flag: no racing.</span>
+- <span v-if="regatta.amber_flag_racing" class="key">Amber Flag: no racing, except on Low Amber Flag on the last two days (next slide).</span><span v-else class="key">Amber Flag: no racing.</span>
+- Dark Blue Flag: racing may continue, with S and X status coxes only, and possibly on a changed course.
+- The format for the next day's racing is confirmed by 5pm each day, but racing can be called off at shorter notice if conditions get worse.
+- In adverse conditions the Event Committee may let S and X coxes cox more than one crew.
+
+---
+
+# Low Amber Flag
+
+<div v-if="regatta.amber_flag_racing">
+
+- Racing may continue only on Days 3 and 4, only if there was racing on both Days 1 and 2, and only on the short course. It is never guaranteed: we will tell you by 5pm the day before.
+- Coxes must be S status, or X status upgraded more than 12 months before the day.
+- Every crew must have senior rowers (at least 3 full terms of rowing) at bow and 2.
+- No crew may boat from or land at a boathouse below the Gut, or go through the Gut.
+- All crews spin upstream of the Greenbanks Marshal, under the direction of race officials.
+- Longbridges crews spin above their raft under the Longbridges Marshal, and drift back to land with bows pointing upstream.
+
+</div>
+
+<div v-else>
+
+- Racing is suspended on Amber Flag, as on Red Flag.
+
+</div>
+
+---
+
+# If racing is stopped early
+
+- Crews still in their boathouses will not boat.
+- No more races are started; crews that have finished spin and land in normal circulation.
+- Then the Senior Umpire and marshals send crews in the Marshalling Zone home, as quickly and safely as possible. <span class="key">This overrides normal circulation</span>:
+  - Boathouse Island: cross to the City side, go up the course, and land with bows pointing upstream
+  - Univ: land with bows pointing upstream, under the Univ Marshal
+  - Longbridges: land as usual, under the Longbridges Marshal
+  - Isis Boathouse: go through the Gut under the Gut Marshal
+- Don't panic, and follow the marshals, not your coach.
 
 ---
 
@@ -145,9 +173,17 @@ layout: figure
 import shortCourse from '../../docs/assets/img/circulation-short.svg'
 </script>
 
-# Short course circulation
+# Short course: circulation, marshals and defibrillators
 
-<img :src="shortCourse" alt="Short course circulation and placement of marshals">
+<img :src="shortCourse" alt="Short course circulation and placement of marshals, with defibrillator locations">
+
+---
+
+# Spinning for the regatta
+
+- Spin where marshals tell you to!
+- Nearly all your spins will be the other way to usual: row on with stroke side
+- After the race, spin where you are told, and row back close to the Meadows bank
 
 ---
 
@@ -283,81 +319,11 @@ import intermediateCourse from '../../docs/assets/img/circulation-intermediate.s
 
 ---
 
-# Spinning for the regatta
-
-- Spin where marshals tell you to!
-- Nearly all your spins will be the other way to usual
-- Row on with stroke side and back down with bow side
-- Make sure your bowsiders know how to back down!
-- You may not always need to back down, especially if you are trying to cross the river while spinning
-
----
-
-# The river flag
-
-- <span class="key">Red Flag: no racing.</span>
-- <span v-if="regatta.amber_flag_racing" class="key">Amber Flag: no racing, except on Low Amber Flag on the last two days (next slide).</span><span v-else class="key">Amber Flag: no racing.</span>
-- Dark Blue Flag: racing may continue, with S and X status coxes only, and possibly on a changed course.
-- The format for the next day's racing is confirmed by 5pm each day, but racing can be called off at shorter notice if conditions get worse.
-- In adverse conditions the Event Committee may let S and X coxes cox more than one crew.
-
----
-
-# Low Amber Flag
-
-<div v-if="regatta.amber_flag_racing">
-
-- Racing may continue only on Days 3 and 4, only if there was racing on both Days 1 and 2, and only on the short course. It is never guaranteed: we will tell you by 5pm the day before.
-- Coxes must be S status, or X status upgraded more than 12 months before the day.
-- Every crew must have senior rowers (at least 3 full terms of rowing) at bow and 2.
-- No crew may boat from or land at a boathouse below the Gut, or go through the Gut.
-- All crews spin upstream of the Greenbanks Marshal, under the direction of race officials.
-- Longbridges crews spin above their raft under the Longbridges Marshal, and drift back to land with bows pointing upstream.
-
-</div>
-
-<div v-else>
-
-- Racing is suspended on Amber Flag, as on Red Flag.
-
-</div>
-
----
-layout: section
----
-
-# RACE DAY
-
----
-
 # Obeying the rules
 
-- The stagger is set by the Senior Umpire, not by you or your coach
-- Side-by-side racing, your whole boat must stay in your own lane and not impede the other crew or transiting boats.
 - Don't get in the way of other crews while racing, or indeed when warming up!
 - Be on time for your race or risk DSQ or penalties: the Senior Umpire may award a row-over if your opponents are late. Note that races are timed in blocks: aim to be at the start line when your block is set to start.
 - Any appeals should adhere to the rules (read them!!)
-- You may have to prove the identity of your crew and/or cox before racing or when you return: carry photo ID for every crew member
-
----
-
-# Bankriders
-
-- N status coxes must have a bankrider at all times on the water. X and S status coxes may have one if they wish.
-- Only one bankrider may follow each crew.
-- Bankriders need a roadworthy bike with working brakes, and lights when appropriate.
-- Bankriders must not hold cameras or other devices while cycling, and must give way to pedestrians.
-
----
-
-# Format of the regatta
-
-- Every crew races a side-by-side heat on the first day.
-- Lose your heat, and you race a repechage, normally the next day.
-- Win your heat or repechage, and you go on to a side-by-side knock-out, up to the final.
-- Unless conditions require changes, every crew gets at least two races.
-- Friendly crews: in the repechage and later rounds, a competitive crew racing a friendly crew always wins.
-- Conditions may change the format, and the draw, at short notice.
 
 ---
 
@@ -375,41 +341,174 @@ Side-by-side: 'enough' buoys marking the mid-race area, and more buoys marking o
 <p class="text-center mt-8 key">Fouling (hitting another crew), interference (going into another crew's lane) or safety infringements (going into the transit lane) can result in DSQ</p>
 
 ---
+class: dense
+---
 
-# Emergencies
+# The start
 
-- First Aid: medical post at Race Desk, and the medical launch on the river
-- Water hygiene
-
-<br>
-
-- If you have equipment problems, talk to a marshal as soon as possible
-- Klaxons... ALWAYS OBEY MARSHAL INSTRUCTIONS
+- The stagger is set by the Senior Umpire, not by you or your coach: don't try to change it.
+- Not ready? Raise your arm, and lower it as soon as you are.
+- We WILL NOT start a race if you are obviously not straight, ready or stagger is not correct so don't panic
+- We WILL start a race, regardless of hand up, if you look ready and are not actively adjusting so be ready
+- The starter names the two crews, then says "Attention" and raises a red flag, then says "Go!" and drops the flag.
+- If the stream is strong command will be shorter: listen to the SU for instructions!
+- False start, or a collision straight off the start: the starter stops you both and restarts the race. Repeated false starts can mean DSQ.
 
 ---
 
-# If racing is stopped early
+# Let's look at the start
 
-- Crews still in their boathouses will not boat.
-- No more races are started; crews that have finished spin and land in normal circulation.
-- Then the Senior Umpire and marshals send crews in the Marshalling Zone home, as quickly and safely as possible. <span class="key">This overrides normal circulation</span>:
-  - Boathouse Island: cross to the City side, go up the course, and land with bows pointing upstream
-  - Univ: land with bows pointing upstream, under the Univ Marshal
-  - Longbridges: land as usual, under the Longbridges Marshal
-  - Isis Boathouse: go through the Gut under the Gut Marshal
-- Don't panic, and follow the marshals, not your coach.
+<div class="text-center text-2xl mt-24">
+
+<https://www.youtube.com/watch?v=VgSArFfquNk>
+
+</div>
 
 ---
-layout: figure
+layout: alert
+class: text-center
 ---
 
 <script setup>
-import shortCourse from '../../docs/assets/img/circulation-short.svg'
+// The klaxon sound is a file in coxing/public/media/, served from the deck's
+// own base URL (see the README for its source and licence). The PDF can't
+// play it, so it links to the published file instead. The exporter loads the
+// deck with ?print, which with hash routing Slidev's own isPrintMode does not
+// see.
+const klaxon = import.meta.env.BASE_URL + 'media/klaxon.mp3'
+const klaxonUrl = 'https://tamesisregatta.org' + klaxon
+const inPdf = new URLSearchParams(window.location.search).has('print')
 </script>
 
-# Short course: marshals and defibrillators
+If a marshal needs to stop your race, they will fire a loud
 
-<img :src="shortCourse" alt="Short course circulation and placement of marshals, with defibrillator locations">
+<div class="text-8xl font-800 leading-tight my-6">KLAXON</div>
+
+<p class="font-700">All crews on the water stop immediately, and wait for marshals' instructions</p>
+
+<audio v-if="!inPdf" controls preload="none" :src="klaxon" class="mx-auto mt-4"></audio>
+<p v-if="inPdf" class="text-base">Listen to it: <a :href="klaxonUrl">{{ klaxonUrl }}</a></p>
+
+---
+
+# At the finish line
+
+- Row through the finish line, and keep paddling until you are fully clear of it.
+- 'Straight finish' (No stagger)
+- The race is decided by the bows: the finish is a white post, the clacker, which clacks as each crew crosses.
+- If you wish to appeal the race: raise your hand at finish
+- Dead heat: the finish marshal tells you, and you go straight back to the start to re-row.
+- Listen to marshals and stop as soon as you're asked.
+- Make sure the whole crew knows when your next race is before leaving the river.
+
+---
+
+# Landing
+
+- Stay upstream until a raft is free.
+- Don't drift: You can back down if needed.
+- If landing the wrong way from training:
+  - Blades on the raft get out first
+  - Then they hold the boat for the others!
+
+---
+
+# Race Desk and problems
+
+- Blade clashes in races may lead to appeals
+- Equipment failure discuss with Racedesk ASAP. They may not be able to reschedule though.
+- Equipment conflicts (adjacent races) also discuss with Racedesk
+- Register ALL SUBSTITUTIONS before you boat: on the entry system up to the online deadline, then in person at Racedesk
+- A crew that races as a friendly crew stays friendly from then on
+- Racedesk is in the Merton Small Boats bay
+  - For problems on the day, try to go in person: They may not get e-mails
+
+---
+layout: section
+---
+
+# PART 2: RACING ON THE ISIS
+
+Safety and rules for any outing or event on the river
+
+---
+
+# Cold and water
+
+- Weather might be cold: keep a lookout for hypothermia
+  - shivering; pale, cold and dry skin; slurred speech; slow breathing; tiredness or confusion
+  - move them indoors; dry clothing; contact medics
+  - <https://www.nhs.uk/conditions/hypothermia/>
+- Every crew should bring a dry change of kit for after racing
+- Water hygiene
+
+---
+
+# Lightning: 30/30 rule
+
+- seek shelter if the time between seeing a lightning flash and hearing thunder is 30 seconds or less
+- shelter for 30 mins after last clap of thunder
+- take care with anything long and pointy such as blades
+
+---
+
+# Lifejackets
+
+<span class="key">Coxes lacking lifejackets:</span>
+
+- <span class="key">£50 FINE</span>
+- <span class="key">Club Safety Review.</span>
+
+<p class="text-center mt-8">Always do your lifejacket up properly (including crotch strap) and wear it OVER your coat, in line with the OURCs Code of Conduct</p>
+
+---
+
+# Boat safety checks
+
+- bow-ball, firmly attached (not just taped)
+- heel restraints/quick release: heels released before they come above horizontal, and shoes can be undone with one hand.
+- boat lights, charged!
+- hatch covers, present!
+- backstays, present
+- Bolts and fittings, tight.
+
+---
+
+# Bankriders
+
+- N status coxes must have a bankrider at all times on the water. X and S status coxes may have one if they wish.
+- Only one bankrider may follow each crew.
+- Bankriders need a roadworthy bike with working brakes, and lights when appropriate.
+- Bankriders must not hold cameras or other devices while cycling, and must give way to pedestrians.
+
+---
+
+# Keep to bowside
+
+- STICK CLOSELY TO BOWSIDE in training unless overtaking: this is an existing rule. This includes entry to/exit from the Gut. Tuck back in quickly after overtaking. You need to learn to steer very near the bank.
+
+---
+layout: section
+---
+
+# PART 3: COXING WELL
+
+General advice for preparing and racing
+
+---
+
+# Getting ready to race
+
+### The week before
+
+- Decide warm-up plan, the start commands, and a race plan (with your coach).
+
+### The night before
+
+- Racing equipment (small bag of tools: adjustable spanner, screwdriver, roll of electrical tape, watch)
+- Know your opposition: Who are they? What do their blades look like? Are you on City or County station?
+- Check the weather: wear appropriate kit
+- Double check timings
 
 ---
 
@@ -439,35 +538,12 @@ import shortCourse from '../../docs/assets/img/circulation-short.svg'
 
 ---
 
-# Lining up for side-by-side
+# Lining up well
 
 - Aim for center of lane well before you get to the start line.
 - Wind may push you sideways: Go to upwind side of your lane if crosswinds.
 - Remember you can back down to straighten as well as row on. Please only use 1 rower at a time to adjust position.
 - You may have to wait for river traffic: keep on top of position.
-- Staggered start: we will set this. Don't try to change it.
-- Not ready? Raise your arm, and lower it as soon as you are.
-- We WILL NOT start a race if you are obviously not straight, ready or stagger is not correct so don't panic
-- We WILL start a race, regardless of hand up, if you look ready and are not actively adjusting so be ready
-
----
-
-# Side-by-side start
-
-- The starter names the two crews, then says "Attention" and raises a red flag, then says "Go!" and drops the flag.
-- If the stream is strong command will be shorter: listen to the SU for instructions!
-- Look down your lane and focus on steering. Don't look directly at the next-door crew (you may veer towards them). Sneak peeks briefly.
-- False start, or a collision straight off the start: the starter stops you both and restarts the race. Repeated false starts can mean DSQ.
-
----
-
-# Let's look at the start
-
-<div class="text-center text-2xl mt-24">
-
-<https://www.youtube.com/watch?v=VgSArFfquNk>
-
-</div>
 
 ---
 
@@ -476,6 +552,7 @@ import shortCourse from '../../docs/assets/img/circulation-short.svg'
 - Your main job is steering
 - A good line can easily win you the race
 - Crashing/clashing will likely mean you lose the race
+- Look down your lane and focus on steering. Don't look directly at the next-door crew (you may veer towards them). Sneak peeks briefly.
 
 <br>
 
@@ -492,93 +569,28 @@ import shortCourse from '../../docs/assets/img/circulation-short.svg'
 - Tell your rowers where you are: be honest but sound positive. Anyone can catch a sudden crab! Remember, in novice racing the winner is often the one who DOESN'T make a mistake: see Somerville in the 2022 W final: <https://youtu.be/qIXQKo3uhL8?t=120>
 
 ---
-layout: alert
-class: text-center
----
 
-<script setup>
-// The klaxon sound is a file in coxing/public/media/, served from the deck's
-// own base URL (see the README for its source and licence). The PDF can't
-// play it, so it links to the published file instead. The exporter loads the
-// deck with ?print, which with hash routing Slidev's own isPrintMode does not
-// see.
-const klaxon = import.meta.env.BASE_URL + 'media/klaxon.mp3'
-const klaxonUrl = 'https://tamesisregatta.org' + klaxon
-const inPdf = new URLSearchParams(window.location.search).has('print')
-</script>
+# After the finish
 
-If a marshal needs to stop your race, they will fire a loud
-
-<div class="text-8xl font-800 leading-tight my-6">KLAXON</div>
-
-<p class="font-700">All crews on the water stop immediately, and wait for marshals' instructions</p>
-
-<audio v-if="!inPdf" controls preload="none" :src="klaxon" class="mx-auto mt-4"></audio>
-<p v-if="inPdf" class="text-base">Listen to it: <a :href="klaxonUrl">{{ klaxonUrl }}</a></p>
-
----
-class: dense
----
-
-# At the finish line
-
-- Row through the finish line, and keep paddling until you are fully clear of it. Then wind down: don't call 'easy there' or 'hold it' or say 'we've won'.
-- 'Straight finish' (No stagger)
-- The race is decided by the bows: the finish is a white post, the clacker, which clacks as each crew crosses.
-- If you wish to appeal the race: raise your hand at finish
-- Dead heat: the finish marshal tells you, and you go straight back to the start to re-row.
-- Listen to marshals and stop as soon as you're asked.
-- Spin where you are told: ROWING ON WITH STROKE SIDE and row back close to the Meadows bank.
+- Wind down: don't call 'easy there' or 'hold it' or say 'we've won'.
 - Do not lie down in the boat unless you are unwell: you will be mistaken for someone having a medical emergency.
-- Make sure the whole crew knows when your next race is before leaving the river.
 
 ---
 
-# Landing
+# Spinning and crabs
 
-- Stay upstream until a raft is free.
-- Don't drift: You can back down if needed.
-- If landing the wrong way from training:
-  - Blades on the raft get out first
-  - Then they hold the boat for the others!
+- Row on with stroke side and back down with bow side
+- Make sure your bowsiders know how to back down!
+- You may not always need to back down, especially if you are trying to cross the river while spinning
 
----
-
-# Problems?
+<br>
 
 - If you catch a crab, start rowing again asap: make sure you talk through with your crew what you are going to do if this happens.
-- Blade clashes in races may lead to appeals
-- Equipment failure discuss with Racedesk ASAP. They may not be able to reschedule though.
-- Equipment conflicts (adjacent races) also discuss with Racedesk
-- Register ALL SUBSTITUTIONS before you boat: on the entry system up to the online deadline, then in person at Racedesk
-- A crew that races as a friendly crew stays friendly from then on
-- Racedesk is in the Merton Small Boats bay
-  - For problems on the day, try to go in person: They may not get e-mails
-
----
-
-# This is the full race again
-
-<div class="text-center text-2xl mt-24">
-
-<https://www.youtube.com/watch?v=VgSArFfquNk>
-
-</div>
-
----
-
-# Tamesis {{ regatta.year }} Advice
-
-- Each novice rower should have had at least 5 training outings before racing. Crews the Senior Umpires or Event Committee judge unsafe may be asked to land, withdrawn, or disqualified.
-- Only coxes that have been briefed here, or otherwise exempted may cox.
-- No one may row in, or cox, more than one crew.
-- If conditions dictate a change to X/S only, there may be an additional online briefing.
 
 ---
 
 # Final Training Advice
 
-- STICK CLOSELY TO BOWSIDE in training unless overtaking: this is an existing rule. This includes entry to/exit from the Gut. Tuck back in quickly after overtaking. You need to learn to steer very near the bank.
 - Practice your warm-up and remember it won't be very long on water for the short course.
 - Practice starts, but be careful to do them safely including stopping safely (check behind you first) and not obstructing other crews.
 - Practice bursts of pressure, with pushes in.

@@ -14,6 +14,9 @@
     "vue": "3.5.44",
     "yaml": "2.9.1"
   },
+  "devDependencies": {
+    "axe-core": "4.14.0"
+  },
   "overrides": {
     "dompurify": "3.4.17",
     "image-size": "2.0.4"

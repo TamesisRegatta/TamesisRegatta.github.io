@@ -55,7 +55,10 @@
       .then(function (text) {
         var svg = new DOMParser().parseFromString(text, "image/svg+xml").documentElement;
         svg = document.importNode(svg, true);
-        svg.setAttribute("role", "img");
+        // A static figure is a picture. The course map holds markers that take
+        // keyboard focus, which a picture (role img) would hide from screen
+        // readers, so it is a labelled group instead.
+        svg.setAttribute("role", frame.classList.contains("tamesis-map-static") ? "img" : "group");
         svg.setAttribute("aria-label", frame.dataset.label || "Map");
         // Everything but <defs> goes into one group that carries the zoom
         // transform, so markers and text-wrap shapes in <defs> are untouched.

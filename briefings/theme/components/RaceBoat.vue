@@ -20,15 +20,14 @@ const props = defineProps({
 
 // Blade designs (from OURCs's blade colours chart, TT24), simplified to what
 // shows on a small spoon: its colour, and a mark on it. Marks: a saltire or
-// cross in markColour; neck, markColour over the half of the spoon nearest
-// the shaft; bands, stripes across the spoon, each at a distance from its
-// middle toward the tip (the spoon runs from -1.6 to 1.6). The cox wears the
-// club's colour too.
+// cross in markColour; bands, stripes across the spoon, each at a distance
+// from its middle toward the tip (the spoon runs from -1.6 to 1.6). The cox
+// wears the club's colour too.
 const BLADES = {
   linacre: { spoon: 'var(--tamesis-yellow)', edge: '#1a1a1a', mark: 'saltire', markColour: '#000', cox: 'var(--tamesis-yellow)' },
   mansfield: { spoon: '#eb1c24', edge: '#1a1a1a', mark: 'cross', markColour: '#fff000', cox: '#eb1c24' },
-  // White, with purple on the half by the shaft.
-  wolfsonM2: { spoon: '#fff', edge: '#1a1a1a', mark: 'neck', markColour: '#9b2fb5', cox: '#9b2fb5' },
+  // Red, with two black stripes across it near the tip.
+  somerville: { spoon: '#e31b23', edge: '#1a1a1a', mark: 'bands', bands: [{ at: 1.0, colour: '#000' }, { at: 0.45, colour: '#000' }], cox: '#e31b23' },
   // White, with a navy and a green stripe across it near the tip.
   reuben: { spoon: '#fff', edge: '#1a1a1a', mark: 'bands', bands: [{ at: 1.0, colour: '#152361' }, { at: 0.45, colour: '#2e9a45' }], cox: '#152361' },
   plain: { spoon: '#9e9e9e', edge: '#555', mark: null, cox: '#d0d0d0' },
@@ -80,7 +79,6 @@ const HULL = 'M 6 -0.8 L -6 -0.8 C -9.5 -0.8 -12.2 -0.45 -12.5 -0.2 Q -12.75 0 -
             <line x1="0" y1="-1.05" x2="0" y2="1.05" />
             <line x1="-0.55" :y1="o.dir * 0.35" x2="0.55" :y2="o.dir * 0.35" />
           </template>
-          <rect v-else-if="blade.mark === 'neck'" x="-0.85" :y="o.dir > 0 ? -1.6 : 0" width="1.7" height="1.6" :fill="blade.markColour" stroke="none" />
           <template v-else-if="blade.mark === 'bands'">
             <line v-for="b in blade.bands" :key="b.at" x1="-0.85" :y1="o.dir * b.at" x2="0.85" :y2="o.dir * b.at" :stroke="b.colour" />
           </template>

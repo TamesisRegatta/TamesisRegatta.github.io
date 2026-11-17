@@ -1,5 +1,5 @@
 // Race cycle for a crew boating from the Univ raft on the short course, for
-// RaceCycle, in Wolfson M2's colours. Coordinates are those of
+// RaceCycle, in Somerville's colours. Coordinates are those of
 // docs/assets/map/print/course-short.svg (downstream is +x). Captions follow
 // the event plan's Side-By-Side circulation for University Boathouse, and the
 // coxing briefing's slide on it. The start, race and spin at the Head are the
@@ -10,13 +10,17 @@
 
 export default {
   title: 'Race cycle: Univ raft',
-  summary: 'Boat bows pointing downstream and cross straight to the transit lane (1), spin into the Marshalling Zone and pair up (2), start and race, on past the finish line (3), spin at the Head under the marshals\' instruction (4), come back down the transit lane and spin into the Marshalling Zone (5), and follow a race up the County Station to land at Univ bows pointing upstream (6).',
+  summary: 'Boat bows pointing downstream and cross straight to the transit lane (1), spin into the Marshalling Zone and pair up (2), start and race, on past the finish line (3), spin at the Head under the marshals\' instruction (4), come back down the transit lane and spin into the Marshalling Zone just below the start when the Senior Umpire says (5), and follow the next race up the County Station to land at Univ bows pointing upstream (6).',
   // Where the Senior Umpire stands, for the starter's call.
   starter: [1134.6, 302.1],
   boats: {
     // On the Univ raft, bows pointing downstream.
-    lin: { colours: 'wolfsonM2', start: { x: 1048, y: 278, h: 3 } },
+    lin: { colours: 'somerville', start: { x: 1048, y: 278, h: 3 } },
     opp: { colours: 'plain', start: { x: 1440, y: 340, h: 190, opacity: 0 } },
+    // The next race, which the Univ crew follows up to land: on the start
+    // line in the County and City stations, hidden until then.
+    nextCounty: { colours: 'plain', start: { x: 1141, y: 276, h: 180, opacity: 0 } },
+    nextCity: { colours: 'plain', start: { x: 1137, y: 255, h: 180, opacity: 0 } },
   },
   stages: [
     {
@@ -91,25 +95,46 @@ export default {
     },
     {
       title: 'Down the transit lane',
-      text: 'Come back down beside the Meadow and the boathouses in the TRANSIT LANE, then spin into the Marshalling Zone (never through the Gut).',
-      camera: { at: [1010, 305], w: 1440 },
+      text: 'Come back down beside the Meadow and the boathouses in the TRANSIT LANE, and make it clear you want to land. The Senior Umpire may tell you to spin straight into the Marshalling Zone just below the start, in front of other crews.',
+      // From the Head to just below the start, where this stage ends.
+      camera: { at: [830, 285], w: 940 },
       moves: {
         lin: [
           // The centre of the map's Transit Lane (as in longbridges.js),
-          // then the spin into the Marshalling Zone.
-          { to: [[400, 297.5], [420, 294.6], [460, 290.5], [500, 286.4], [540, 282.3], [580, 275.8], [620, 266.7], [660, 259.4], [700, 253.8], [740, 248.9], [780, 244.4], [820, 241.5], [860, 238.7], [900, 236.2], [940, 234.1], [980, 232.8], [1020, 232.1], [1060, 232.1], [1100, 233.9], [1140, 239.2], [1180, 251.2], [1220, 266], [1260, 279.8], [1300, 291.4], [1340, 301.5], [1380, 311], [1420, 319.5], [1460, 323.1], [1490, 328.5], [1515, 334], [1532, 339], [1543, 349], [1539, 360], [1522, 365], [1500, 364], [1478, 362]], dur: 8 },
+          // then a clockwise spin just below the start, into the
+          // Marshalling Zone behind the County station.
+          { to: [[400, 297.5], [420, 294.6], [460, 290.5], [500, 286.4], [540, 282.3], [580, 275.8], [620, 266.7], [660, 259.4], [700, 253.8], [740, 248.9], [780, 244.4], [820, 241.5], [860, 238.7], [900, 236.2], [940, 234.1], [980, 232.8], [1020, 232.1], [1060, 232.1], [1100, 233.9], [1140, 239.2], [1175, 249], [1205, 262], [1226, 277], [1225, 290], [1213, 297], [1200, 295]], dur: 7 },
         ],
       },
     },
     {
-      title: 'Follow a race and land',
-      text: 'Make it clear you want to land. When the Senior Umpire tells you, follow a race up the County Station, and land at Univ with bows pointing upstream.',
-      camera: { at: [1255, 315], w: 560 },
+      title: 'Follow the next race and land',
+      text: 'When the Senior Umpire tells you, follow the next race up the County Station, and land at Univ with bows pointing upstream.',
+      camera: { at: [1110, 280], w: 320 },
       moves: {
         lin: [
-          { to: [[1445, 361], [1400, 352], [1350, 341], [1300, 327], [1250, 312], [1200, 295], [1165, 284], [1130, 279], [1100, 277.5], [1070, 278], [1048, 278]], dur: 5, heading: 183 },
+          { wait: 2 },
+          { to: [[1165, 285], [1130, 279], [1100, 277.5], [1070, 278], [1048, 278]], dur: 3.5, heading: 183 },
+        ],
+        // The next race appears on the start line, goes on "Go!", and races
+        // away upstream out of view.
+        nextCounty: [
+          { fade: 1, dur: 0.4 },
+          { wait: 0.6 },
+          { to: [[1100, 274], [1050, 270.8], [1000, 269.5], [950, 269.2], [900, 269.8]], dur: 2.2, stroke: 'race', ease: 'start' },
+          { fade: 0, dur: 0.3 },
+        ],
+        nextCity: [
+          { fade: 1, dur: 0.4 },
+          { wait: 0.6 },
+          { to: [[1100, 253], [1050, 251], [1000, 250.8], [950, 251.5], [900, 253]], dur: 2.3, stroke: 'race', ease: 'start' },
+          { fade: 0, dur: 0.3 },
         ],
       },
+      cues: [
+        { at: 1, set: { call: 'Go!' } },
+        { at: 2.4, set: { call: '' } },
+      ],
     },
   ],
 }

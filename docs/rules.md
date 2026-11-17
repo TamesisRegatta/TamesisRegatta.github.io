@@ -21,6 +21,7 @@ Prepared by {{ rules.prepared_by }}
 | 2026.0 | 2026-07-19 | 2025 rules converted to website format, with dates updated for 2026 |
 | 2026.1 | 2026-10-15 | <ul><li>Racing finishes half an hour before sunset; in adverse conditions coxes may cox more than one crew (rule 1.4)</li><li>Event Plan safety contingencies take precedence (rule 1.7)</li><li>Cite the OURCs membership rules by section name, with a link (rule 2.4)</li><li>Crews must be safe to race (rule 2.16)</li><li>Coxes' PFDs per the OURCs Code of Conduct (rule 3.2)</li></ul> |
 | 2026.2 | 2026-10-28 | <ul><li>Clarify friendly crews, swim tests, coxing briefing exemptions, identification and one crew per person, in line with the Event Plan (section 2)</li><li>Clubs provide one marshal per crew (rule 2.16)</li><li>Lights required on the water after 15:00 (rule 3.1.6)</li><li>Describe the racing format; on-the-day decisions rest with the Race Committee (section 4)</li><li>Add section 6: entry fees, scratching and refunds, with the scratch deadline moved to Monday 04:00</li><li>Add this cover block and changelog</li></ul> |
+| 2026.3 | 2026-11-17 | <ul><li>Give the briefings' times and venues: the marshal briefing is online for everyone (rules 2.7 and 2.16)</li><li>Point to the circulation pattern on the Course Map (rule 2.7)</li></ul> |
 
 Questions about these rules should be sent to
 [{{ contact.email }}](mailto:{{ contact.email }}).
@@ -94,7 +95,7 @@ Questions about these rules should be sent to
 6. All competitors (rowers and coxes) must have an in-date swim test on the OURCs entry system. Competitors booked into a swim test after the close of entries but before racing may still be eligible, and should contact the OURCs Rowing Sabbatical Officer to confirm.
     { #swim-test }
 
-7. All coxes must hold an OURCs coxing licence and must attend the coxing briefing, held in conjunction with OURCs on {{ dates.coxing_briefing | ukdate }}. In cases of illness or academic clashes, the {{ roles.captain_of_coxes.title }} may, in consultation with OURCs, exempt a cox from attending. Exemptions must be requested by email to [{{ contact.email }}](mailto:{{ contact.email }}) no later than 11am on the day of the briefing, giving the cox's name and coxing history, and can only be given to X or S status coxes. Exempted coxes must review the briefing materials, especially the circulation pattern, which will be made available on this website and circulated to all boat clubs by email.
+7. All coxes must hold an OURCs coxing licence and must attend the coxing briefing, held in conjunction with OURCs on {{ dates.coxing_briefing | ukdatetime }} in the {{ venues.coxing_briefing }}. In cases of illness or academic clashes, the {{ roles.captain_of_coxes.title }} may, in consultation with OURCs, exempt a cox from attending. Exemptions must be requested by email to [{{ contact.email }}](mailto:{{ contact.email }}) no later than 11am on the day of the briefing, giving the cox's name and coxing history, and can only be given to X or S status coxes. Exempted coxes must review the briefing materials, especially the circulation pattern, which is on the [Course Map](map.md) and will be circulated to all boat clubs by email.
     { #coxing-licence }
 
     1. N status coxes must have a bankrider at all times that they are on the water. X or S coxes are not required to have a bankrider, but may if they wish.
@@ -130,7 +131,7 @@ Questions about these rules should be sent to
 15. Clubs must only enter crews who can row safely. Each novice rower should have had no fewer than 5 training outings before racing. Crews that the Senior Umpires or the Event Committee deem unsafe to race may be asked to land, withdrawn from racing, or disqualified.
     { #safe-to-race }
 
-16. Each club must provide one experienced marshal for each crew it enters. Marshals must have marshalled before, must be registered with the Race Committee before the regatta, and must attend the marshal briefing on {{ dates.marshal_briefing | ukdate }} (online, if attending in person is impossible). This applies to crews scratched after the scratch deadline too (rule [6.2](#scratch-deadline)).
+16. Each club must provide one experienced marshal for each crew it enters. Marshals must have marshalled before, must be registered with the Race Committee before the regatta, and must attend the marshal briefing on {{ dates.marshal_briefing | ukdatetime }}, {{ venues.marshal_briefing }}. This applies to crews scratched after the scratch deadline too (rule [6.2](#scratch-deadline)).
     { #marshals }
 
 ## 3. Equipment { #equipment }

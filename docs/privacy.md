@@ -23,7 +23,7 @@ The statistics are anonymous and only ever added up: no one is tracked, and no p
 - how long the page was open, and how far down it was scrolled
 - which PDFs were downloaded, and which links to the draw and to other sites were followed
 
-The briefing slides, under `/briefings/`, are not counted.
+For the briefing slides, under `/briefings/`, each opening of a set of slides is counted once, not each slide seen.
 
 ### What is not
 

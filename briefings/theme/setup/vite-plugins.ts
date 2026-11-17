@@ -30,8 +30,38 @@ function readEvent() {
   }
 }
 
+// Plausible Analytics, as on the site: the script's address is read from
+// extra.plausible in mkdocs.yml, so the site and the decks use the same one.
+// mkdocs.yml has Python-only tags (!!python/name, !ENV), which the yaml
+// package leaves unresolved, with warnings that are not needed here.
+function plausibleScript(): string {
+  const config = parseYaml(fs.readFileSync(path.join(repoRoot, 'mkdocs.yml'), 'utf-8'), { logLevel: 'error' })
+  return config?.extra?.plausible?.script || ''
+}
+
+// Plausible's snippet, as it gives it for the site (overrides/main.html).
+// Slides are addresses such as /briefings/coxing/#/15, and Plausible counts a
+// page view only when the path before the "#" changes (its hashBasedRouting
+// option is off), so opening a deck counts once, however many slides are seen.
+const plausibleInit = 'window.plausible=window.plausible||function(){(plausible.q=plausible.q||[]).push(arguments)},plausible.init=plausible.init||function(i){plausible.o=i||{}};plausible.init()'
+
 export default defineVitePluginsSetup(() => {
   return [{
+    name: 'tamesis-plausible',
+    // Only in built decks (briefings/build.sh), not in the dev server.
+    // Plausible ignores localhost and automated browsers anyway, so local
+    // previews and the PDF export count nothing.
+    apply: 'build',
+    transformIndexHtml() {
+      const src = plausibleScript()
+      if (!src)
+        return []
+      return [
+        { tag: 'script', attrs: { async: true, src }, injectTo: 'head' },
+        { tag: 'script', children: plausibleInit, injectTo: 'head' },
+      ]
+    },
+  }, {
     name: 'tamesis-event',
     // Read here, not once at setup, because a dev server restart runs config()
     // again: that is how edits to event.yml reach the deck.

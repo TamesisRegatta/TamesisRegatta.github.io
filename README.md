@@ -224,7 +224,8 @@ The site sets no cookies and needs no consent banner.
 The privacy policy, `docs/privacy.md` (at `/privacy/`, linked from the footer through `copyright` in `mkdocs.yml`), says what the site counts and stores; keep it in step with any change below, including its date.
 
 Its pages load nothing from other sites but [Plausible Analytics](https://plausible.io/), which counts visits on Oxford Research Software Engineering's Plausible server without cookies or storage, and keeps no personal data.
-`overrides/main.html` puts its script, set in `extra.plausible` in `mkdocs.yml`, in every page; the briefing decks do not have it.
+`overrides/main.html` puts its script, set in `extra.plausible` in `mkdocs.yml`, in every page, and `briefings/theme/setup/vite-plugins.ts` reads the same setting to put it in every built briefing deck.
+A deck counts once per opening, not per slide: its slides are addresses after a "#", which Plausible ignores (leave its `hashBasedRouting` option off).
 What the script counts besides page views (PDF downloads, links to other sites) is set on the Plausible server, not here.
 Clicks on links to the draw are counted as a "Draw" event, through the class `plausible-event-name--Draw` on those links (`docs/index.md`, and `docs/assets/draw-link.js` for the nav).
 Plausible ignores visits from localhost, `file:` pages and automated browsers, so local previews and the PDF export count nothing.

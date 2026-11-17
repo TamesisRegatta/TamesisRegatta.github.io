@@ -35,7 +35,8 @@ to GitHub Pages at <https://tamesisregatta.org/> on every push to
   `docs/assets/key-dates.js` then marks each row as past, on now or next by the visitor's clock, so the table stays current without rebuilding the site.
   Keep the rows in date order.
 - **The draw**: set `draw_url` in `event.yml` to the Google Sheet's "Publish to web" link.
-  `hooks/draw_redirect.py` then serves <https://tamesisregatta.org/draw/> as a short link that forwards to it, and the home page's key dates and the coxing briefing link there, in a new tab.
+  `hooks/draw_redirect.py` then serves <https://tamesisregatta.org/draw/> as a short link that forwards to it, and adds a Draw entry to the nav after Home.
+  The nav, the home page's key dates and the coxing briefing link there, in a new tab (`docs/assets/draw-link.js` does that for the nav entry).
   Give the short link in anything sent out or printed: if the draw moves to another sheet, changing `draw_url` keeps it working.
 - **Permanent anchors**: rules and risk assessment entries each have a
   stable, *named* anchor (e.g. `/rules/#bow-balls`,

@@ -63,8 +63,9 @@ public_phones:
 # Where the draw is published: a full https:// URL (the Google Sheet's
 # "Publish to web" link), or empty until it is out. When set, the site serves
 # tamesisregatta.org/draw as a short link that forwards to it
-# (hooks/draw_redirect.py), and the home page and the coxing briefing link to
-# that short link; when empty, they say the draw is not out yet. Rebuild
+# (hooks/draw_redirect.py), and the nav, the home page and the coxing briefing
+# link to that short link; when empty, there is no nav entry, and the home
+# page and the briefing say the draw is not out yet. Rebuild
 # (push) after changing it.
 draw_url: "https://docs.google.com/spreadsheets/d/e/2PACX-1vS2cgXK_uNDzNxR0InGrgDzEPGWJhteh7923yQw17IxzVoyg08OqpoXR5yY7BydYq1rU0V3PW9HMpMr/pubhtml?gid=491937164"
 

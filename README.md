@@ -221,18 +221,30 @@ Host video and audio clips in the deck's folder instead, trimmed and compressed.
 ## Privacy
 
 The site sets no cookies and needs no consent banner.
-Its pages make no requests to other sites: everything they load is served from this repository (see below).
+The privacy policy, `docs/privacy.md` (at `/privacy/`, linked from the footer through `copyright` in `mkdocs.yml`), says what the site counts and stores; keep it in step with any change below, including its date.
+
+Its pages load nothing from other sites but [Plausible Analytics](https://plausible.io/), which counts visits on Oxford Research Software Engineering's Plausible server without cookies or storage, and keeps no personal data.
+`overrides/main.html` puts its script, set in `extra.plausible` in `mkdocs.yml`, in every page; the briefing decks do not have it.
+What the script counts besides page views (PDF downloads, links to other sites) is set on the Plausible server, not here.
+Clicks on links to the draw are counted as a "Draw" event, through the class `plausible-event-name--Draw` on those links (`docs/index.md`, and `docs/assets/draw-link.js` for the nav).
+Plausible ignores visits from localhost, `file:` pages and automated browsers, so local previews and the PDF export count nothing.
+To stop counting your own visits on the live site, set `localStorage.plausible_ignore = "true"` in your browser's console there.
+
+The analytics page, `docs/analytics.md` (at `/analytics/`), embeds the dashboard's public shared link (`extra.plausible.dashboard`); `docs/assets/analytics.js` shows it in the site's light or dark mode.
+It is the only page that embeds anything.
+The dashboard sets no cookies, but keeps two display settings of its own (`metric__tamesisregatta.org` and `topStatsHeight__tamesisregatta.org`) in its frame's local storage.
+
 Links to other sites, such as the GitHub and YouTube links in the header, only take visitors there when they click.
 That includes the short link to the draw: `/draw/` is a page that loads nothing itself and sends the browser straight on to Google Sheets, the same as clicking a link.
 The draw is never embedded in a page, as that would load Google's content, and its cookies, on the site itself.
-The only thing stored in the browser is the visitor's light or dark mode, which Material keeps in local storage (`__palette`) so the next page matches; remembering a display preference needs no consent.
+The only thing the site itself stores in the browser is the visitor's light or dark mode, which Material keeps in local storage (`__palette`) so the next page matches; remembering a display preference needs no consent.
 
 `overrides/partials/source.html` keeps it that way: Material's own version of the repository link in the navigation drawer fetches the repository's star and fork counts from GitHub's API on every page, and caches them in session storage.
 Before adding a theme feature or plugin, check that it adds no cookies, storage or requests to other sites, for instance by loading a local build in a browser and looking at the developer tools' Application and Network tabs.
 
 ## Third-party assets
 
-Everything the site needs is served from this repository, with no external CDNs or font services.
+Everything the site needs is served from this repository, with no external CDNs or font services; the only exception is Plausible's script and dashboard (see [Privacy](#privacy)).
 Each item below keeps its licence alongside it, and the licence terms require those notices to stay with the files.
 
 | Asset | Location | Licence |

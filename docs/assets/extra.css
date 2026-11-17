@@ -771,6 +771,21 @@ table.risk-matrix td {
   }
 }
 
+/* The analytics page's embedded dashboard (see docs/analytics.md), on a
+   transparent background (docs/assets/analytics.js). A browser paints an
+   opaque backdrop behind a frame whose colour scheme differs from its
+   document's. The dashboard declares none, which counts as light, so the
+   frame is marked light too; otherwise dark mode, where Material sets
+   color-scheme: dark, shows the dashboard on a white block (checked in
+   Chromium: "normal" and "dark" here both give the white block). */
+iframe.tr-analytics {
+  width: 1px;
+  min-width: 100%;
+  height: 1600px;
+  border: 0;
+  color-scheme: light;
+}
+
 /* Key dates on the home page, marked by key-dates.js by the visitor's clock.
    Screen only: a PDF would freeze them at whenever it was built. */
 @media screen {

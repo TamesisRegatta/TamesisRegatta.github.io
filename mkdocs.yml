@@ -84,6 +84,7 @@ extra_javascript:
   - assets/key-dates.js
   - assets/map.js
   - assets/draw-link.js
+  - assets/analytics.js
 
 hooks:
   # Replaces the course map page's PDF with one page per map, each sized to
@@ -98,6 +99,19 @@ hooks:
 extra:
   # No "Made with Material for MkDocs" in the footer.
   generator: false
+  # Plausible Analytics, on Oxford Research Software Engineering's server
+  # (see "Privacy" in the README). script: the site's own script, which
+  # overrides/main.html puts in every page; its settings (counting PDF
+  # downloads and links to other sites) are made on the server. dashboard: the
+  # dashboard's shared link, which the analytics page embeds.
+  plausible:
+    script: https://plausible-oxrse.fly.dev/js/pa-PwXVTc5jYDF32-gGeAIHT.js
+    embed_script: https://plausible-oxrse.fly.dev/js/embed.host.js
+    dashboard: https://plausible-oxrse.fly.dev/share/tamesisregatta.org?auth=wocsFySJ9DCk-Bm52bdZP
+
+# The footer's links to the privacy policy and analytics page, which are not
+# in the nav.
+copyright: '<a href="/privacy/">Privacy policy</a> &middot; <a href="/analytics/">Analytics</a>'
 
 plugins:
   - search

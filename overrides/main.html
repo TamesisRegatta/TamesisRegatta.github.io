@@ -1,0 +1,18 @@
+{#-
+  Extends Material's base template only to put Plausible Analytics in every
+  page's head, in Material's own analytics block (see "Privacy" in the
+  README). The script's address comes from extra.plausible in mkdocs.yml.
+  Plausible ignores visits from localhost, file: pages and automated browsers,
+  so local previews and the PDF export count nothing.
+-#}
+{% extends "base.html" %}
+
+{% block analytics %}
+  {% if config.extra.plausible and config.extra.plausible.script %}
+    <script async src="{{ config.extra.plausible.script }}"></script>
+    <script>
+      window.plausible=window.plausible||function(){(plausible.q=plausible.q||[]).push(arguments)},plausible.init=plausible.init||function(i){plausible.o=i||{}};
+      plausible.init()
+    </script>
+  {% endif %}
+{% endblock %}

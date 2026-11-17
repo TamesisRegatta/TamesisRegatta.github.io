@@ -55,7 +55,7 @@ You will need to source volunteers from your club who have marshalled previously
 They will also be required to attend the pre-regatta marshalling briefing on {{ dates.marshal_briefing | ukdatetime }}, {{ venues.marshal_briefing }}.
 This mandatory briefing will cover the marshalling duties in detail.
 
-You as a captain, or your individually nominated marshals, can fill your volunteer slots by filling out a Google form, which will be circulated to captains.
+You as a captain, or your individually nominated marshals, can fill your volunteer slots by filling out the Google form that has been circulated to captains.
 See the [rule on marshals](rules.md#marshals).
 
 ### What if we need to make a substitution? { #substitutions }

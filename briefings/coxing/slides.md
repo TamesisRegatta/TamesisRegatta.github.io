@@ -191,9 +191,9 @@ Instructions will be given by marshals if required.
 
 # The river flag
 
-- <span class="key">Red Flag: no racing.</span>
-- <span v-if="regatta.amber_flag_racing" class="key">Amber Flag: no racing, except on Low Amber Flag on the last two days (next slide).</span><span v-else class="key">Amber Flag: no racing.</span>
-- Dark Blue Flag: racing may continue, with S and X status coxes only, and possibly on a changed course.
+- <span class="flag" style="--flag: #c62828" aria-hidden="true"></span><span class="key">Red Flag: no racing.</span>
+- <span class="flag" style="--flag: #f5a300" aria-hidden="true"></span><span v-if="regatta.amber_flag_racing" class="key">Amber Flag: no racing, except on Low Amber Flag on the last two days (next slide).</span><span v-else class="key">Amber Flag: no racing.</span>
+- <span class="flag" style="--flag: #14286e" aria-hidden="true"></span>Dark Blue Flag: racing may continue, with S and X status coxes only, and possibly on a changed course.
 - The format for the next day's racing is confirmed by 5pm each day, but racing can be called off at shorter notice if conditions get worse.
 - In adverse conditions the Event Committee may let S and X coxes cox more than one crew.
 

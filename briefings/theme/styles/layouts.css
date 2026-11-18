@@ -97,6 +97,19 @@
   font-weight: 700;
 }
 
+/* A river flag's colour, before its name:
+   <span class="flag" style="--flag: #c62828" aria-hidden="true"></span>. */
+.slidev-layout .flag {
+  display: inline-block;
+  width: 2em;
+  height: 1.3em;
+  margin-right: 0.5em;
+  vertical-align: -0.3em;
+  background: var(--flag);
+  border: 1px solid var(--tamesis-black);
+  border-radius: 2px;
+}
+
 /* For slides with a lot of text: `class: dense` in the slide's frontmatter. */
 .slidev-layout.dense {
   font-size: 1rem;

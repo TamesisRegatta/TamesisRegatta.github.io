@@ -31,7 +31,9 @@ const pdf = inPdf()
 .slidev-layout .clip-player img {
   display: block;
   margin: 0 auto;
-  height: 300px;
+  /* As tall as fits under the header bar with a one-line caption below, in
+     the slide's 980 by 552 canvas */
+  height: 375px;
   width: auto;
   max-width: 100%;
   aspect-ratio: 16 / 9;

@@ -240,6 +240,7 @@ Instructions will be given by marshals if required.
 - Earlier rounds will be a short course, and if conditions permit we will lengthen the course in later rounds.
 - Reverse circulation above the Gut: the transit lane is on the City side for the whole course, and never crosses the racing lanes.
 - So nearly all your spins will be the other way to usual: row on with stroke side.
+- Steer clear of wildlife, especially swans. Other river traffic is handled by the marshals and Race Committee.
 
 ---
 layout: figure

@@ -239,6 +239,7 @@ Instructions will be given by marshals if required.
 - The start may move up or down the Greenbank, depending on factors such as stream and time constraints.
 - Earlier rounds will be a short course, and if conditions permit we will lengthen the course in later rounds.
 - Reverse circulation above the Gut: the transit lane is on the City side for the whole course, and never crosses the racing lanes.
+- So nearly all your spins will be the other way to usual: row on with stroke side.
 
 ---
 layout: figure
@@ -252,13 +253,6 @@ import shortCourse from '../../docs/assets/img/circulation-short.svg'
 
 <img :src="shortCourse" alt="Short course circulation and placement of marshals, with defibrillator locations">
 
----
-
-# Spinning for the regatta
-
-- Spin where the marshals direct you.
-- Nearly all your spins will be the other way to usual: row on with stroke side.
-- After the race, spin where you are told, and row back close to the Meadows bank.
 
 ---
 

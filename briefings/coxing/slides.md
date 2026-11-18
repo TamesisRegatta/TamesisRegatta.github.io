@@ -479,11 +479,9 @@ Side-by-side: 'enough' buoys marking the mid-race area, and more buoys marking o
 
 # Let's look at the start
 
-<div class="text-center text-2xl mt-24">
+<ClipPlayer name="start-2025-mens-final" alt="The start of the 2025 men's final: both crews sitting ready, with the SU's red flag raised on the left." />
 
-<https://www.youtube.com/watch?v=VgSArFfquNk>
-
-</div>
+<p class="text-center">2025 men's final: watch the SU's red flag, on the left. It goes up on "Attention", and drops on "Go!".</p>
 
 ---
 
@@ -690,6 +688,16 @@ General advice for preparing and racing
 <br>
 
 - If you catch a crab, start rowing again as soon as possible: make sure you talk through with your crew what you are going to do if this happens.
+
+---
+
+# Recovering from a crab
+
+<ClipPlayer name="crab-2025-womens-final" alt="Early in the 2025 women's final, with the two crews racing side by side, one crew catches a crab." />
+
+<p class="text-center">2025 women's final: an early crab takes about a minute to recover from fully (the middle plays at double speed).</p>
+
+<p class="text-center key">Talk through with your crew, and ideally practise, what everyone does when someone catches a crab.</p>
 
 ---
 

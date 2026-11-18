@@ -279,6 +279,24 @@ import rafts from '../../docs/assets/map/print/boathouse-rafts.svg'
 
 ---
 
+# Landing at Boathouse Island
+
+- You may need to walk your boat along the island to reach the right raft.
+- When landing, hold the boat from the middle or stern, <span class="key">never by a bow-seat blade</span>, or the stream will swing the stern out into the river.
+
+<div class="grid grid-cols-2 gap-8 text-base text-center">
+  <figure>
+    <LandingSwing held="bow" label="A boat landing bows downstream, held at the raft by a bow-seat blade: the stream swings its stern out into the river." />
+    <figcaption>Held by a bow-seat blade: the stern swings out.</figcaption>
+  </figure>
+  <figure>
+    <LandingSwing held="stern" label="A boat landing bows downstream, held from the stern: it stays alongside the raft." />
+    <figcaption>Held from the middle or stern: the boat stays alongside.</figcaption>
+  </figure>
+</div>
+
+---
+
 # Circulation (Boathouse Island)
 
 - Boat (from downstream rafts) pointing towards the Gut and go down in the <span class="key">transit lane</span>. Be aware that there may be crews joining the transit lane near the Cherwell cut who have crossed after boating from Univ.
@@ -461,7 +479,7 @@ Side-by-side: 'enough' buoys marking the mid-race area, and more buoys marking o
 # Landing
 
 - Stay upstream until a raft is free.
-- Don't drift: You can back down if needed.
+- Don't drift: you can back down if needed.
 - If landing the wrong way from training:
   - Blades on the raft get out first.
   - Then they hold the boat for the others.

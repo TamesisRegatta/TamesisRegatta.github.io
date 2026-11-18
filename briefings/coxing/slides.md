@@ -668,7 +668,7 @@ General advice for preparing and racing
   - Plan a few technique points to make calls on.
   - Use a few landmarks: "passing our raft", "end of boathouses".
   - Think about what would motivate you to pull harder! Ask your crew what they would like to hear. Sound confident: rehearse beforehand if you need to.
-- Tell your rowers where you are: be honest but sound positive. Anyone can catch a sudden crab! Remember, in novice racing the winner is often the one who <span class="key">doesn't</span> make a mistake: see Somerville in the 2022 W final: <https://youtu.be/qIXQKo3uhL8?t=120>.
+- Tell your rowers where you are: be honest but sound positive. Anyone can catch a sudden crab! Remember, in novice racing the winner is often the one who <span class="key">doesn't</span> make a mistake.
 
 ---
 

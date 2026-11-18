@@ -2,7 +2,6 @@
 theme: ../theme
 title: Coxing briefing
 layout: cover
-draft: true
 presenters:
   - Fergus Cooper
   - Sydney Rose

@@ -7,7 +7,7 @@ edit_uri: edit/main/docs/
 
 # Pages for crews and captains first, then the safety documents, which
 # extra.css marks off under a "Safety documents" divider placed just before
-# Event Plan (keep Event Plan straight after FAQs). The Draw entry is added
+# Event Plan (keep Event Plan straight after Briefings). The Draw entry is added
 # after Home by hooks/draw_redirect.py. Each page sets its nav icon in its
 # front matter (icon: material/...).
 nav:
@@ -15,6 +15,7 @@ nav:
   - Course Map: map.md
   - Rules: rules.md
   - FAQs: faqs.md
+  - Briefings: briefings.md
   - Event Plan: event-plan.md
   - Risk Assessment: risk-assessment.md
   - River Notices: river-notices.md

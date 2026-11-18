@@ -45,9 +45,10 @@ ALLOWED_HOSTS = {urlparse(ORIGIN).netloc, PLAUSIBLE}
 # Material keeps the light or dark mode here (its key starts with the base path).
 ALLOWED_STORAGE = {"/.__palette"}
 AXE_TAGS = ["wcag2a", "wcag2aa", "wcag21a", "wcag21aa", "wcag22aa", "best-practice"]
-# Not pages: the briefing decks (not checked yet), the draw's short link (a
-# redirect to Google Sheets), and the theme's assets.
-SKIP = ("briefings/", "draw/", "assets/", "search/")
+# Not pages: the draw's short link (a redirect to Google Sheets), and the
+# theme's assets. The briefing decks, in folders under briefings/, are skipped
+# too (not checked yet), though the Briefings page that lists them is checked.
+SKIP = ("draw/", "assets/", "search/")
 # Controls that show focus on something other than themselves: the light or
 # dark mode switch is a hidden input whose label is ringed, and the search box
 # is ringed round its form (extra.css).
@@ -66,7 +67,8 @@ def pages():
     for index in sorted(SITE.rglob("index.html")):
         folder = index.parent.relative_to(SITE).as_posix()
         path = "/" if folder == "." else f"/{folder}/"
-        if not path.lstrip("/").startswith(SKIP):
+        deck = folder.startswith("briefings/")
+        if not deck and not path.lstrip("/").startswith(SKIP):
             found.append(path)
     return found + ["/no-such-page/"]
 

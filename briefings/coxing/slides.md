@@ -324,7 +324,7 @@ import intermediateCourse from '../../docs/assets/img/circulation-intermediate.s
 # Obeying the rules
 
 - Keep clear of other crews, both while racing and while warming up.
-- Please be on time for your race: late crews risk penalties or DSQ, and the Senior Umpire may award a row-over if your opponents are late. Races are timed in blocks: aim to be at the start line when your block is set to start.
+- Please be on time for your race: late crews risk penalties or disqualification (DQ), and the Senior Umpire may award a row-over if your opponents are late. Races are timed in blocks: aim to be at the start line when your block is set to start.
 - Any appeals need to follow the procedure in the rules.
 
 ---
@@ -340,7 +340,7 @@ Side-by-side: 'enough' buoys marking the mid-race area, and more buoys marking o
   <li>stay in your lane, don't hit the other crew, including blades</li>
 </ol>
 
-<p class="text-center mt-8 key">Fouling (hitting another crew), interference (going into another crew's lane) or safety infringements (going into the transit lane) can result in DSQ</p>
+<p class="text-center mt-8 key">Fouling (hitting another crew), interference (going into another crew's lane) or safety infringements (going into the transit lane) can result in a DQ</p>
 
 ---
 class: dense
@@ -354,7 +354,7 @@ class: dense
 - We WILL start a race if you look ready and are not actively adjusting, even with a hand up, so be ready
 - The starter names the two crews, then says "Attention" and raises a red flag, then says "Go!" and drops the flag.
 - If the stream is strong command will be shorter: listen to the SU for instructions!
-- False start, or a collision straight off the start: the starter stops you both and restarts the race. Repeated false starts can mean DSQ.
+- False start, or a collision straight off the start: the starter stops you both and restarts the race. Repeated false starts can mean a DQ.
 
 ---
 

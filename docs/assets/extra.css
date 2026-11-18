@@ -814,15 +814,26 @@ table.risk-matrix td {
   }
 }
 
-/* Nav: a "Safety documents" divider above Event Plan, marking off the
-   documents for officials from the pages for crews (see the nav in
-   mkdocs.yml). The current page's own link is "./", so Event Plan is found
-   two ways: as the item linking to event-plan/ (on every other page), or as
-   the item after Briefings (on the Event Plan page itself). Browsers without
-   :has() just show no divider. */
-.md-nav--primary > .md-nav__list > .md-nav__item:has(> a[href$="briefings/"]) + .md-nav__item::before,
-.md-nav--primary > .md-nav__list > .md-nav__item:has(> a[href$="event-plan/"])::before {
-  content: "Safety documents";
+/* Nav: section dividers, a "Safety documents" one above Event Plan, marking
+   off the documents for officials from the pages for crews, and a "Past
+   regattas" one above History (see the nav in mkdocs.yml). Each item that
+   starts a section names it in --tr-nav-section. The current page's own link
+   is "./", so each such item is found two ways: as the item linking to its
+   page (on every other page), or as the item after the one before it (on its
+   own page). Browsers without :has() just show no dividers. */
+.md-nav--primary > .md-nav__list > .md-nav__item:has(> a[href$="briefings/"]) + .md-nav__item,
+.md-nav--primary > .md-nav__list > .md-nav__item:has(> a[href$="event-plan/"]) {
+  --tr-nav-section: "Safety documents";
+}
+
+.md-nav--primary > .md-nav__list > .md-nav__item:has(> a[href$="river-notices/"]) + .md-nav__item,
+.md-nav--primary > .md-nav__list > .md-nav__item:has(> a[href$="history/"]) {
+  --tr-nav-section: "Past regattas";
+}
+
+/* No section named, no content, so no divider */
+.md-nav--primary > .md-nav__list > .md-nav__item::before {
+  content: var(--tr-nav-section, none);
   display: block;
   margin-top: 1em;
   padding-top: 0.8em;
@@ -838,8 +849,7 @@ table.risk-matrix td {
    above each item and pads its links, so the label takes the links' indent
    and no line of its own. */
 @media screen and (max-width: 76.2344em) {
-  .md-nav--primary > .md-nav__list > .md-nav__item:has(> a[href$="faqs/"]) + .md-nav__item::before,
-  .md-nav--primary > .md-nav__list > .md-nav__item:has(> a[href$="event-plan/"])::before {
+  .md-nav--primary > .md-nav__list > .md-nav__item::before {
     margin-top: 0;
     padding: 1rem 0.8rem 0;
     border-top: none;
@@ -859,6 +869,116 @@ iframe.tr-analytics {
   height: 1600px;
   border: 0;
   color-scheme: light;
+}
+
+/* History page (docs/history.md, rendered by history_results() in main.py):
+   each year's events side by side, stacked on narrow screens, each a card
+   listing its final and small final. A medal pip marks 1st to 3rd; the place
+   is always written out too, so nothing relies on the colour. */
+.tr-history-year {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(14rem, 1fr));
+  gap: 1rem;
+}
+
+.md-typeset .tr-history-event {
+  padding: 0 1rem 0.6rem;
+  border: 0.05rem solid var(--md-default-fg-color--lightest);
+  border-radius: 0.2rem;
+}
+
+.md-typeset .tr-history-event h3 {
+  margin: 0.8em 0 0.4em;
+}
+
+.md-typeset table.tr-history-results {
+  width: 100%;
+  margin: 0;
+  border-collapse: collapse;
+  font-size: 0.8rem;
+}
+
+/* For screen readers only: the results' column headings (the places speak
+   for themselves on screen), and the rest of a video link's name */
+.md-typeset .tr-history-results thead,
+.md-typeset .tr-visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+}
+
+.md-typeset .tr-history-results th[scope="rowgroup"] {
+  padding: 0.8em 0 0.2em;
+  text-align: left;
+  color: var(--md-default-fg-color--light);
+  font-size: 0.6rem;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+/* A final's video link, at the right of its "Final" label, in ordinary
+   type rather than the label's small capitals */
+.md-typeset .tr-history-video {
+  float: right;
+  font-size: 0.7rem;
+  font-weight: 400;
+  letter-spacing: normal;
+  text-transform: none;
+}
+
+.md-typeset .tr-history-video svg {
+  width: 1.1em;
+  height: 1.1em;
+  margin-right: 0.3em;
+  vertical-align: -0.2em;
+  fill: currentcolor;
+}
+
+.md-typeset .tr-history-results td {
+  padding: 0.25em 0;
+  vertical-align: baseline;
+}
+
+.md-typeset .tr-history-results td:first-child {
+  width: 3.2em;
+  white-space: nowrap;
+  color: var(--md-default-fg-color--light);
+}
+
+.md-typeset .tr-history-results tr[class^="tr-place-"] td:first-child::before {
+  content: "";
+  display: inline-block;
+  width: 0.6em;
+  height: 0.6em;
+  margin-right: 0.4em;
+  border-radius: 50%;
+}
+
+.md-typeset .tr-history-results .tr-place-1st td:first-child::before {
+  background: #fbc117;
+}
+
+.md-typeset .tr-history-results .tr-place-2nd td:first-child::before {
+  background: #b4b4b4;
+}
+
+.md-typeset .tr-history-results .tr-place-3rd td:first-child::before {
+  background: #b87333;
+}
+
+.md-typeset .tr-history-results .tr-place-1st td {
+  font-weight: 700;
+  color: var(--md-default-fg-color);
+}
+
+.md-typeset .tr-history-tbc,
+.md-typeset .tr-history-cancelled {
+  color: var(--md-default-fg-color--light);
+  font-style: italic;
 }
 
 /* Key dates on the home page, marked by key-dates.js by the visitor's clock.

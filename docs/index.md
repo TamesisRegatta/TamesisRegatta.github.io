@@ -39,6 +39,8 @@ Greenbank to the Cox Stone, and takes place from
   controls in place for each.
 - **[River Notices](river-notices.md)**: the Environment Agency's river
   restriction notice and consent to place buoys, as PDFs.
+- **[History](history.md)**: the top four crews in each event at past
+  regattas.
 
 Each document can also be downloaded as a PDF using the button at the top of
 the page. Spotted a mistake, or something unclear? Use the edit (pencil) button

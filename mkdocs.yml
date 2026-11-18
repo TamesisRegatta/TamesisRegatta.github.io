@@ -5,11 +5,12 @@ repo_url: https://github.com/TamesisRegatta/TamesisRegatta.github.io
 repo_name: TamesisRegatta
 edit_uri: edit/main/docs/
 
-# Pages for crews and captains first, then the safety documents, which
-# extra.css marks off under a "Safety documents" divider placed just before
-# Event Plan (keep Event Plan straight after Briefings). The Draw entry is added
-# after Home by hooks/draw_redirect.py. Each page sets its nav icon in its
-# front matter (icon: material/...).
+# Pages for crews and captains first, then the safety documents, then past
+# regattas. extra.css marks off the last two sections with a "Safety
+# documents" divider just before Event Plan and a "Past regattas" divider
+# just before History (keep each straight after Briefings and River Notices
+# respectively). The Draw entry is added after Home by hooks/draw_redirect.py.
+# Each page sets its nav icon in its front matter (icon: material/...).
 nav:
   - Home: index.md
   - Course Map: map.md
@@ -19,6 +20,7 @@ nav:
   - Event Plan: event-plan.md
   - Risk Assessment: risk-assessment.md
   - River Notices: river-notices.md
+  - History: history.md
 
 theme:
   name: material
@@ -126,6 +128,8 @@ plugins:
         # Namespaced, so risk_matrix.yml's own top-level keys (severity,
         # levels, etc.) can't collide with anything else: {{ risk_matrix.* }}
         - risk_matrix: risk_matrix.yml
+        # Past results, for the History page: {{ history.years }}
+        - history: history.yml
   - exporter:
       formats:
         pdf:

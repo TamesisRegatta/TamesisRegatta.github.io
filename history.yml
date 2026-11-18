@@ -1,0 +1,41 @@
+# Results of past regattas, from 2022, when Linacre Boat Club started hosting
+# Tamesis, newest first. Rendered on the History page (docs/history.md) by
+# history_results() in main.py.
+#
+# Each year is either raced or cancelled; a cancelled year gives why, as a
+# note. Each event of a raced year (men, women) lists its final, winner first,
+# and its small final (the 3rd and 4th place playoff), 3rd place first:
+#
+#   men:
+#     final: [Magdalen A, University A]
+#     small_final: [Wadham A, Keble B]
+#
+# A race not filled in yet shows "Results to follow". An event's final may
+# link to its video on YouTube, as final_video.
+years:
+  - year: 2025
+    status: raced
+    men:
+      final: [Magdalen, University]
+      final_video: https://www.youtube.com/watch?v=cP9Jb9fDBBU
+      small_final: [Queen's, St Anne's]
+    women:
+      final: [St Hugh's, Magdalen]
+      final_video: https://www.youtube.com/watch?v=sJp7TLjA6FM
+      small_final: [Merton, St Catherine's]
+  - year: 2024
+    status: cancelled
+    note: high stream
+  - year: 2023
+    status: cancelled
+    note: high stream
+  - year: 2022
+    status: raced
+    men:
+      final: [St Hugh's, New College]
+      final_video: https://www.youtube.com/watch?v=VgSArFfquNk
+      small_final: [Keble, Pembroke]
+    women:
+      final: [St Antony's, Somerville]
+      final_video: https://www.youtube.com/watch?v=qIXQKo3uhL8
+      small_final: [St Hilda's, Lincoln]

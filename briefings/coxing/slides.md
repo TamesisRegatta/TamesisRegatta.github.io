@@ -72,7 +72,7 @@ What you must know for this regatta
 
 # Tamesis {{ regatta.year }} Advice
 
-- Each novice rower should have had at least 5 training outings before racing. Crews the Senior Umpires or Event Committee judge unsafe may be asked to land, withdrawn, or disqualified.
+- All crews must be safe to race, and the Tamesis organisers recommend novices have been on the water at least 5 times. Crews the Senior Umpires or Event Committee judge unsafe may be asked to land, withdrawn, or disqualified.
 - Only coxes that have been briefed here, or otherwise exempted may cox.
 - No one may row in, or cox, more than one crew.
 - If conditions dictate a change to X/S only, there may be an additional online briefing.

@@ -487,7 +487,7 @@ Safety and rules for any outing or event on the river
 
 ---
 
-# Cold and water
+# Cold weather
 
 - Race week looks cold: keep a lookout for hypothermia.
   - Signs: shivering; pale, cold and dry skin; slurred speech; slow breathing; tiredness or confusion.
@@ -495,9 +495,14 @@ Safety and rules for any outing or event on the river
   - NHS advice: <https://www.nhs.uk/conditions/hypothermia/>.
 - Every crew should bring a dry change of kit for after racing.
 - Coxes sit still in the cold for a long time: wear warm, waterproof layers, with your lifejacket over the top.
-- Water hygiene:
-  - Cover cuts and blisters with waterproof plasters, wash your hands before eating, and shower after racing.
-  - If you get flu-like symptoms in the weeks after being on the river, see a doctor and mention river water: it can carry Weil's disease (leptospirosis).
+
+---
+
+# Water hygiene
+
+- Cover cuts and blisters with waterproof plasters.
+- Wash your hands before eating, and shower after racing.
+- If you get flu-like symptoms in the weeks after being on the river, see a doctor and mention river water: it can carry Weil's disease (leptospirosis).
 
 ---
 

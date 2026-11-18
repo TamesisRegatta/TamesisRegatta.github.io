@@ -898,9 +898,10 @@ iframe.tr-analytics {
   font-size: 0.8rem;
 }
 
-.md-typeset .tr-history-results thead {
-  /* The column headings are for screen readers: the places speak for
-     themselves on screen */
+/* For screen readers only: the results' column headings (the places speak
+   for themselves on screen), and the rest of a video link's name */
+.md-typeset .tr-history-results thead,
+.md-typeset .tr-visually-hidden {
   position: absolute;
   width: 1px;
   height: 1px;
@@ -917,6 +918,24 @@ iframe.tr-analytics {
   font-weight: 700;
   letter-spacing: 0.05em;
   text-transform: uppercase;
+}
+
+/* A final's video link, at the right of its "Final" label, in ordinary
+   type rather than the label's small capitals */
+.md-typeset .tr-history-video {
+  float: right;
+  font-size: 0.7rem;
+  font-weight: 400;
+  letter-spacing: normal;
+  text-transform: none;
+}
+
+.md-typeset .tr-history-video svg {
+  width: 1.1em;
+  height: 1.1em;
+  margin-right: 0.3em;
+  vertical-align: -0.2em;
+  fill: currentcolor;
 }
 
 .md-typeset .tr-history-results td {

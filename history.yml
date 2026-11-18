@@ -10,15 +10,18 @@
 #     final: [Magdalen A, University A]
 #     small_final: [Wadham A, Keble B]
 #
-# A race not filled in yet shows "Results to follow".
+# A race not filled in yet shows "Results to follow". An event's final may
+# link to its video on YouTube, as final_video.
 years:
   - year: 2025
     status: raced
     men:
       final: [Magdalen, University]
+      final_video: https://www.youtube.com/watch?v=cP9Jb9fDBBU
       small_final: [Queen's, St Anne's]
     women:
       final: [St Hugh's, Magdalen]
+      final_video: https://www.youtube.com/watch?v=sJp7TLjA6FM
       small_final: [Merton, St Catherine's]
   - year: 2024
     status: cancelled
@@ -30,7 +33,9 @@ years:
     status: raced
     men:
       final: [St Hugh's, New College]
+      final_video: https://www.youtube.com/watch?v=VgSArFfquNk
       small_final: [Keble, Pembroke]
     women:
       final: [St Antony's, Somerville]
+      final_video: https://www.youtube.com/watch?v=qIXQKo3uhL8
       small_final: [St Hilda's, Lincoln]

@@ -571,7 +571,9 @@ Safety and rules for any outing or event on the river
 - <span class="key">£50 fine.</span>
 - <span class="key">Club Safety Review.</span>
 
-<p class="text-center mt-8">Always do your PFD up properly (including any crotch strap) and wear it <span class="key">over</span> your coat, in line with the OURCs Code of Conduct.</p>
+<p class="text-center mt-8">Always fasten your PFD securely and wear it <span class="key">on top of</span> all other clothing, in line with the OURCs Code of Conduct.</p>
+
+<p class="text-center">A lifejacket also needs its crotch strap worn correctly, and must be under 10 years old.</p>
 
 ---
 

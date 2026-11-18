@@ -74,9 +74,9 @@ What you must know for this regatta
 
 ---
 
-# Tamesis {{ regatta.year }} Advice
+# Who may race
 
-- All crews must be safe to race, and the Tamesis organisers recommend novices have been on the water at least 5 times. Crews the Senior Umpires or Event Committee judge unsafe may be asked to land, withdrawn, or disqualified.
+- All crews must be safe to race, and the Tamesis organisers recommend novices have been on the water at least 5 times. Crews the SUs or Event Committee judge unsafe may be asked to land, withdrawn, or disqualified.
 - Only coxes that have been briefed here, or otherwise exempted may cox.
 - No one may row in, or cox, more than one crew.
 - If conditions dictate a change to X/S only, there may be an additional online briefing.
@@ -180,8 +180,8 @@ If a marshal needs to stop your race, they will fire a loud
 
 - Not yet boated: don't push off, and seek shelter.
 - On the water: land as the marshals and umpires direct.
-- Mid-race: the Senior Umpire decides whether you stop or finish.
-- Once landed, shelter in a boathouse; no one boats again until the Senior Umpire says it is safe.
+- Mid-race: the SU decides whether you stop or finish.
+- Once landed, shelter in a boathouse; no one boats again until the SU says it is safe.
 
 <br>
 
@@ -224,7 +224,7 @@ Instructions will be given by marshals if required.
 
 - Crews still in their boathouses will not boat.
 - No more races are started; crews that have finished spin and land in normal circulation.
-- Then the Senior Umpire and marshals send crews in the Marshalling Zone home, as quickly and safely as possible. <span class="key">This overrides normal circulation</span>:
+- Then the SU and marshals send crews in the Marshalling Zone home, as quickly and safely as possible. <span class="key">This overrides normal circulation</span>:
   - Boathouse Island: cross to the City side, go up the course, and land with bows pointing upstream.
   - Univ: land with bows pointing upstream, as the Univ Marshal directs.
   - Longbridges: land as usual, as the Longbridges Marshal directs.
@@ -302,7 +302,7 @@ import boathouseIsland from './race-cycles/boathouse-island.js'
 
 # Circulation (Longbridges)
 
-- Boat with your bow ball pointing upstream towards the head, directly into the Marshalling Zone.
+- Boat with your bow ball pointing upstream towards the Head, directly into the Marshalling Zone.
 - Pair up, and proceed upstream towards the start waiting to race.
 - After the race, spin at the Head, come down by the Meadows then the boathouses, and stay in the <span class="key">transit lane</span>. Take care not to obstruct crews entering the Marshalling Zone.
 - To land: spin and land with bows pointing upstream. In high stream, spin above the raft and drift back to land.
@@ -324,11 +324,11 @@ import longbridges from './race-cycles/longbridges.js'
 
 # Circulation (Univ Raft)
 
-- Boat bow ball pointing towards the Gut. Only push off when instructed to by the Univ Marshal. Cross immediately into the <span class="key">transit lane</span>, proceed downstream along the Greenbank.
+- Boat with your bow ball pointing towards the Gut. Only push off when instructed to by the Univ Marshal. Cross immediately into the <span class="key">transit lane</span>, proceed downstream along the Greenbank.
 - Crews should be in their boat ready to push off before requesting permission from the Univ Marshal, who will then coordinate with the SU so that you can safely push off after a race comes past.
 - Spin as the marshals direct, and pair up to await racing.
 - After the race, spin at the Head, come down beside the Meadows and then the boathouses in the <span class="key">transit lane</span>, then spin into the Marshalling Zone (never through the Gut).
-- Make it clear to the Marshals/Senior Umpire that you wish to land, and they will instruct you to follow a race in the County Station back to Univ, and land bows upstream.
+- Make it clear to the marshals and the SU that you wish to land, and they will instruct you to follow a race in the County Station back to Univ, and land bows upstream.
 
 ---
 clicks: 6
@@ -372,7 +372,7 @@ import isisBoathouse from './race-cycles/isis-boathouse.js'
 
 - Crews based below the Gut, such as at the Isis Boathouse, may always go through the Gut, as the Gut Marshal directs<span v-if="regatta.amber_flag_racing">, except when racing on Low Amber Flag, when no crew may go through the Gut</span>.
 - <span class="key">On the short course, which all time trials use, no other crew may go through the Gut.</span>
-- On the intermediate course, the Senior Umpires and Race Committee may also allow other crews through the Gut, as far as Donnington Bridge. This will be made clear before each day's racing: if it isn't, you may not go through.
+- On the intermediate course, the SUs and Race Committee may also allow other crews through the Gut, as far as Donnington Bridge. This will be made clear before each day's racing: if it isn't, you may not go through.
 - When they are allowed through:
   - Any crews heading downstream along the Greenbank cross <span class="key">carefully</span> to standard circulation when entering the Gut.
   - Longbridges crews may boat with bows pointing downstream.
@@ -405,7 +405,7 @@ import intermediateCourse from '../../docs/assets/img/circulation-intermediate.s
 # Obeying the rules
 
 - Keep clear of other crews, both while racing and while warming up.
-- Please be on time for your race: late crews risk penalties or a DQ, and the Senior Umpire may award a row-over if your opponents are late. Races are timed in blocks: aim to be at the start line when your block is set to start.
+- Please be on time for your race: late crews risk penalties or a DQ, and the SU may award a row-over if your opponents are late. Races are timed in blocks: aim to be at the start line when your block is set to start.
 
 ---
 
@@ -426,13 +426,13 @@ Side-by-side: 'enough' buoys marking the mid-race area, and more buoys marking o
 
 # The start
 
-- The stagger is set by the Senior Umpire, not by you or your coach: please don't try to change it.
+- The stagger is set by the SU, not by you or your coach: please don't try to change it.
 - Not ready? Raise your arm, and lower it as soon as you are.
 - We <span class="key">will not</span> start a race if you are clearly not straight or ready, or the stagger is not right, so there's no need to panic.
 - We <span class="key">will</span> start a race if you look ready and are not actively adjusting, even with a hand up, so be ready.
-- The starter names the two crews, then says "Attention" and raises a red flag, then says "Go!" and drops the flag.
+- The SU names the two crews, then says "Attention" and raises a red flag, then says "Go!" and drops the flag.
 - If the stream is strong, the command will be shorter: listen to the SU for instructions.
-- False start, or a collision straight off the start: the starter stops you both and restarts the race. Repeated false starts can mean a DQ.
+- False start, or a collision straight off the start: the SU stops you both and restarts the race. Repeated false starts can mean a DQ.
 
 ---
 
@@ -471,10 +471,10 @@ Side-by-side: 'enough' buoys marking the mid-race area, and more buoys marking o
 # Race Desk and problems
 
 - Equipment failure: tell the nearest marshal as soon as possible, and they can radio Race Desk. Race Desk may not be able to reschedule, though.
-- Equipment conflicts (adjacent races): also discuss with Racedesk.
-- Register <span class="key">all substitutions</span> before you boat: on the entry system up to the online deadline, then in person at Racedesk.
+- Equipment conflicts (adjacent races): discuss with Race Desk.
+- Register <span class="key">all substitutions</span> before you boat: on the entry system up to the online deadline, then in person at Race Desk.
 - A crew that races as a friendly crew stays friendly from then on.
-- Racedesk is in the Merton Small Boats bay.
+- Race Desk is in the Merton Small Boats bay.
   - For problems on the day, try to go in person: they may not see emails in time.
 
 ---
@@ -603,7 +603,7 @@ General advice for preparing and racing
 # Lining up well
 
 - Listen for the SU's instructions. Decide beforehand whether your crew will follow the SU directly or you will relay the instructions, and make sure the whole crew knows which.
-- Aim for center of lane well before you get to the start line.
+- Aim for the centre of your lane well before you get to the start line.
 - Wind may push you sideways: Go to upwind side of your lane if crosswinds.
 - Remember you can back down to straighten as well as row on. Please only use 1 rower at a time to adjust position.
 - You may have to wait for river traffic: keep on top of position.
@@ -625,10 +625,10 @@ General advice for preparing and racing
 
 # Racing Calls
 
-- You can prep and practice a race plan beforehand:
+- You can prepare and practise a race plan beforehand:
   - Plan a few technique points to make calls on.
   - Use a few landmarks: "passing our raft", "end of boathouses".
-  - Think about what would motivate you to pull harder! Ask your crew what they would like to hear. Sound confident: rehearse before hand if you need to.
+  - Think about what would motivate you to pull harder! Ask your crew what they would like to hear. Sound confident: rehearse beforehand if you need to.
 - Tell your rowers where you are: be honest but sound positive. Anyone can catch a sudden crab! Remember, in novice racing the winner is often the one who <span class="key">doesn't</span> make a mistake: see Somerville in the 2022 W final: <https://youtu.be/qIXQKo3uhL8?t=120>.
 
 ---
@@ -648,16 +648,16 @@ General advice for preparing and racing
 
 <br>
 
-- If you catch a crab, start rowing again asap: make sure you talk through with your crew what you are going to do if this happens.
+- If you catch a crab, start rowing again as soon as possible: make sure you talk through with your crew what you are going to do if this happens.
 
 ---
 
 # Final Training Advice
 
-- Practice your warm-up and remember it won't be very long on water for the short course.
-- Practice starts, but be careful to do them safely including stopping safely (check behind you first) and not obstructing other crews.
-- Practice bursts of pressure, with pushes in.
-- Practice the crew catching a crab and what you will call if it happens.
+- Practise your warm-up, and remember it won't be very long on the water for the short course.
+- Practise starts, but do them safely, including stopping safely (check behind you first) and not obstructing other crews.
+- Practise bursts of pressure, with pushes in.
+- Practise the crew catching a crab, and what you will call if it happens.
 
 ---
 

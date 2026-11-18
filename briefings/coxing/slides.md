@@ -434,6 +434,7 @@ import intermediateCourse from '../../docs/assets/img/circulation-intermediate.s
 # Obeying the rules
 
 - Keep clear of other crews, both while racing and while warming up.
+- <span class="key">No starts or pieces in the transit lane.</span>
 - Please be on time for your race: late crews risk penalties or a DQ, and the SU may award a row-over if your opponents are late. Races are timed in blocks: aim to be at the start line when your block is set to start.
 
 ---

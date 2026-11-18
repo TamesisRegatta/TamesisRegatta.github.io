@@ -26,6 +26,8 @@ Have you handed your coxing card or other photo ID in at the front?
 - <span class="key">What to do in emergencies.</span>
 - <span class="key">The rules of the regatta.</span>
 - <span class="key">Whom to contact for issues.</span>
+- Your schedule and warm-up plans.
+- Who you're racing: <span v-if="regatta.draw_url">the draw is out at <a href="https://tamesisregatta.org/draw/" target="_blank" rel="noopener">tamesisregatta.org/draw</a></span><span v-else>the draw is not out yet, so watch the mailing lists for it</span>.
 
 <br>
 
@@ -50,17 +52,9 @@ What you must know for this regatta
 
 ---
 
-# Before racing you should also know...
-
-- Your schedule and warm-up plans.
-- Who you're racing.
-- <span v-if="regatta.draw_url">The draw is out: <a href="https://tamesisregatta.org/draw/" target="_blank" rel="noopener">tamesisregatta.org/draw</a></span><span v-else>The draw is not out yet: watch the mailing lists for it</span>.
-- Racing runs from noon Wednesday to Friday, and from 11am on Saturday, until half an hour before sunset.
-
----
-
 # Format of the regatta
 
+- Racing runs from noon Wednesday to Friday, and from 11am on Saturday, until half an hour before sunset.
 - Every crew races a side-by-side heat on the first day.
 - Lose your heat, and you race a repechage, normally the next day.
 - Win your heat or repechage, and you go on to a side-by-side knock-out, up to the final.

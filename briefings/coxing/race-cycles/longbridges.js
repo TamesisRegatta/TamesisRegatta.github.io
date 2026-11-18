@@ -10,7 +10,7 @@
 
 export default {
   title: 'Race cycle: Longbridges',
-  summary: 'Boat bows pointing upstream, straight into the Marshalling Zone (1), pair up and move up to the start (2), start and race, on past the finish line (3), spin at the Head under the marshals\' instruction (4), come back down the transit lane (5), and spin to land bows pointing upstream (6).',
+  summary: 'Boat bows pointing upstream, straight into the Marshalling Zone (1), pair up and move up to the start (2), start and race, on past the finish line (3), spin at the Head as the marshals direct (4), come back down the transit lane (5), and spin to land bows pointing upstream (6).',
   // Where the Senior Umpire stands, for the starter's call.
   starter: [1134.6, 302.1],
   boats: {
@@ -51,7 +51,7 @@ export default {
     },
     {
       title: 'Start and race',
-      text: 'Line up in your lane and keep the stagger the Senior Umpire sets. Go on "Go!", stay in your own lane, and keep going past the finish line.',
+      text: 'Line up in your lane and keep the stagger the SU sets. Go on "Go!", stay in your own lane, and keep going past the finish line.',
       camera: { at: [765, 292], w: 940 },
       moves: {
         // The City station (opp) starts slightly ahead, as in
@@ -74,7 +74,7 @@ export default {
     },
     {
       title: 'Spin at the Head',
-      text: 'Spin at the Head under instruction from the marshals.',
+      text: 'Spin at the Head as the marshals direct.',
       camera: { at: [420, 318], w: 450 },
       moves: {
         lin: [
@@ -89,7 +89,7 @@ export default {
     },
     {
       title: 'Down the transit lane',
-      text: 'Come back down the TRANSIT LANE all the way, past Boathouse Island, the start and the Marshalling Zone. Don\'t get in the way of crews entering the zone.',
+      text: 'Come back down the **transit lane** all the way, past Boathouse Island, the start and the Marshalling Zone. Keep clear of crews entering the zone.',
       camera: { at: [1010, 305], w: 1440 },
       moves: {
         lin: [

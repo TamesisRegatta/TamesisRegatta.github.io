@@ -160,6 +160,12 @@ onBeforeUnmount(() => {
 
 const caption = computed(() => stages[pdf ? 0 : stageIdx.value])
 const su = props.route.starter
+
+// Captions may mark key words as **like this**, shown in the deck's gold bold
+// key style: split them into plain and key parts.
+function parts(text) {
+  return (text ?? '').split(/\*\*(.+?)\*\*/).map((t, i) => ({ text: t, key: i % 2 === 1 }))
+}
 </script>
 
 <template>
@@ -184,11 +190,11 @@ const su = props.route.starter
     </div>
     <div class="race-cycle-caption">
       <template v-if="pdf">
-        <strong>{{ route.title }}.</strong> {{ route.summary }}
+        <strong>{{ route.title }}.</strong> <template v-for="(p, i) in parts(route.summary)" :key="i"><span v-if="p.key" class="key">{{ p.text }}</span><template v-else>{{ p.text }}</template></template>
       </template>
       <template v-else>
         <span class="race-cycle-step">{{ stageIdx }}/{{ last }}</span>
-        <strong>{{ caption.title }}:</strong> {{ caption.text }}
+        <strong>{{ caption.title }}:</strong> <template v-for="(p, i) in parts(caption.text)" :key="i"><span v-if="p.key" class="key">{{ p.text }}</span><template v-else>{{ p.text }}</template></template>
       </template>
     </div>
   </div>

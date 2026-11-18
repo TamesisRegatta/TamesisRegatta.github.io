@@ -10,7 +10,7 @@
 
 export default {
   title: 'Race cycle: Univ raft',
-  summary: 'Boat bows pointing downstream and cross straight to the transit lane (1), spin into the Marshalling Zone and pair up (2), start and race, on past the finish line (3), spin at the Head under the marshals\' instruction (4), come back down the transit lane and spin into the Marshalling Zone just below the start when the Senior Umpire says (5), and follow the next race up the County Station to land at Univ bows pointing upstream (6).',
+  summary: 'Boat bows pointing downstream and cross straight to the transit lane (1), spin into the Marshalling Zone and pair up (2), start and race, on past the finish line (3), spin at the Head as the marshals direct (4), come back down the transit lane and spin into the Marshalling Zone just below the start when the SU directs (5), and follow the next race up the County Station to land at Univ bows pointing upstream (6).',
   // Where the Senior Umpire stands, for the starter's call.
   starter: [1134.6, 302.1],
   boats: {
@@ -31,7 +31,7 @@ export default {
     },
     {
       title: 'Cross to the transit lane',
-      text: 'Push off only when the Univ Marshal tells you, after a race has passed. Cross straight to the TRANSIT LANE, and go down it along the Greenbank.',
+      text: 'Push off only when the Univ Marshal directs you, after a race has passed. Cross straight to the **transit lane**, and go down it along the Greenbank.',
       camera: { at: [1285, 290], w: 600 },
       moves: {
         lin: [
@@ -41,7 +41,7 @@ export default {
     },
     {
       title: 'Spin and pair up',
-      text: 'Spin where the marshals tell you, into the Marshalling Zone (never through the Gut), then pair up and move up to the start.',
+      text: 'Spin where the marshals direct you, into the Marshalling Zone (never through the Gut), then pair up and move up to the start.',
       camera: { at: [1320, 312], w: 520 },
       moves: {
         lin: [
@@ -57,7 +57,7 @@ export default {
     },
     {
       title: 'Start and race',
-      text: 'Line up in your lane and keep the stagger the Senior Umpire sets. Go on "Go!", stay in your own lane, and keep going past the finish line.',
+      text: 'Line up in your lane and keep the stagger the SU sets. Go on "Go!", stay in your own lane, and keep going past the finish line.',
       camera: { at: [765, 292], w: 940 },
       moves: {
         // The City station (opp) starts slightly ahead, as in
@@ -80,7 +80,7 @@ export default {
     },
     {
       title: 'Spin at the Head',
-      text: 'Spin at the Head under instruction from the marshals.',
+      text: 'Spin at the Head as the marshals direct.',
       camera: { at: [420, 318], w: 450 },
       moves: {
         lin: [
@@ -95,7 +95,7 @@ export default {
     },
     {
       title: 'Down the transit lane',
-      text: 'Come back down beside the Meadow and the boathouses in the TRANSIT LANE, and make it clear you want to land. The Senior Umpire may tell you to spin straight into the Marshalling Zone just below the start, in front of other crews.',
+      text: 'Come back down beside the Meadow and the boathouses in the **transit lane**, and make it clear you want to land. The SU may direct you to spin straight into the Marshalling Zone just below the start, in front of other crews.',
       // From the Head to just below the start, where this stage ends.
       camera: { at: [830, 285], w: 940 },
       moves: {
@@ -109,7 +109,7 @@ export default {
     },
     {
       title: 'Follow the next race and land',
-      text: 'When the Senior Umpire tells you, follow the next race up the County Station, and land at Univ with bows pointing upstream.',
+      text: 'When the SU directs you, follow the next race up the County Station, and land at Univ with bows pointing upstream.',
       camera: { at: [1110, 280], w: 320 },
       moves: {
         lin: [

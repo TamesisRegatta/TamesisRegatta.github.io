@@ -17,7 +17,7 @@
 
 export default {
   title: 'Race cycle: Isis Boathouse',
-  summary: 'Come up through the Gut in standard circulation, and cross to the County side when the Gut Marshal tells you (1), pair up and move up to the start (2), start and race, on past the finish line (3), spin at the Head under the marshals\' instruction (4), come all the way back down the transit lane (5), and cross to standard circulation as you enter the Gut (6).',
+  summary: 'Come up through the Gut in standard circulation, and cross to the County side when the Gut Marshal directs you (1), pair up and move up to the start (2), start and race, on past the finish line (3), spin at the Head as the marshals direct (4), come all the way back down the transit lane (5), and cross to standard circulation as you enter the Gut (6).',
   // Where the Senior Umpire stands, for the starter's call.
   starter: [1134.6, 302.1],
   boats: {
@@ -34,7 +34,7 @@ export default {
     },
     {
       title: 'Cross above the Gut',
-      text: 'Wait for the Gut Marshal to tell you, then cross to the County side (reverse circulation), into the Marshalling Zone.',
+      text: 'Wait for the Gut Marshal\'s instruction, then cross to the County side (reverse circulation), into the Marshalling Zone.',
       camera: { at: [1570, 360], w: 380 },
       moves: {
         lin: [
@@ -59,7 +59,7 @@ export default {
     },
     {
       title: 'Start and race',
-      text: 'Line up in your lane and keep the stagger the Senior Umpire sets. Go on "Go!", stay in your own lane, and keep going past the finish line.',
+      text: 'Line up in your lane and keep the stagger the SU sets. Go on "Go!", stay in your own lane, and keep going past the finish line.',
       camera: { at: [765, 292], w: 940 },
       moves: {
         // The City station (opp) starts slightly ahead, as in
@@ -82,7 +82,7 @@ export default {
     },
     {
       title: 'Spin at the Head',
-      text: 'Spin at the Head under instruction from the marshals.',
+      text: 'Spin at the Head as the marshals direct.',
       camera: { at: [420, 318], w: 450 },
       moves: {
         lin: [
@@ -97,7 +97,7 @@ export default {
     },
     {
       title: 'Down the transit lane',
-      text: 'Come all the way back down in the TRANSIT LANE, past Boathouse Island, the start, the Marshalling Zone and Longbridges.',
+      text: 'Come all the way back down in the **transit lane**, past Boathouse Island, the start, the Marshalling Zone and Longbridges.',
       camera: { at: [1010, 305], w: 1440 },
       moves: {
         lin: [

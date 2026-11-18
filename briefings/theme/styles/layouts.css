@@ -61,10 +61,60 @@
 :where(.slidev-layout) li { margin: 0.3em 0; }
 :where(.slidev-layout) p { margin: 0.6em 0; }
 
+/* On slides with the header bar, every gap between blocks is --flow-gap,
+   which utils/flow-gap.js sets per slide, as large as still fits, to spread
+   the content down the slide. 11px, the floor, is the 0.6em above. List items
+   start 0.3em apart, as above, and open up by half as much as the gap grows. */
+.slidev-layout { --flow-gap: 11px; }
+
+:where(.slidev-layout:not(.cover, .section, .alert, .figure)) :is(p, ul, ol, table, img) {
+  margin-top: var(--flow-gap);
+  margin-bottom: var(--flow-gap);
+}
+
+:where(.slidev-layout:not(.cover, .section, .alert, .figure)) li { margin: 0; }
+
+:where(.slidev-layout:not(.cover, .section, .alert, .figure)) :is(li + li, li > ul, li > ol) {
+  margin-top: calc(0.3em + (var(--flow-gap) - 11px) * 0.5);
+}
+
+:where(.slidev-layout:not(.cover, .section, .alert, .figure)) :is(li > ul, li > ol) { margin-bottom: 0; }
+
+/* A paragraph that leads into a list stays with it, as its items do */
+:where(.slidev-layout:not(.cover, .section, .alert, .figure)) p:has(+ :is(ul, ol)) {
+  margin-bottom: calc(0.3em + (var(--flow-gap) - 11px) * 0.5);
+}
+
+:where(.slidev-layout:not(.cover, .section, .alert, .figure)) p + :is(ul, ol) { margin-top: 0; }
+
+/* The first block under the (hidden) title starts at the same height on every
+   slide, however large the gap */
+:where(.slidev-layout:not(.cover, .section, .alert, .figure) > h1:first-child) + :is(p, ul, ol, table, img) { margin-top: 0; }
+
+/* Slidev eases v-click targets with `transition: all`; easing the gap too would
+   change sizes over several frames and keep flow-gap.js refitting, so only the
+   reveal itself is animated */
+.slidev-layout .slidev-vclick-target {
+  transition-property: opacity, transform, translate, scale;
+}
+
 /* Key points, emphasised in colour: <span class="key">...</span>. */
 .slidev-layout .key {
   color: var(--tamesis-link);
   font-weight: 700;
+}
+
+/* A river flag's colour, before its name:
+   <span class="flag" style="--flag: #c62828" aria-hidden="true"></span>. */
+.slidev-layout .flag {
+  display: inline-block;
+  width: 2em;
+  height: 1.3em;
+  margin-right: 0.5em;
+  vertical-align: -0.3em;
+  background: var(--flag);
+  border: 1px solid var(--tamesis-black);
+  border-radius: 2px;
 }
 
 /* For slides with a lot of text: `class: dense` in the slide's frontmatter. */
@@ -72,9 +122,6 @@
   font-size: 1rem;
   line-height: 1.4;
 }
-
-:where(.slidev-layout.dense) li { margin: 0.15em 0; }
-:where(.slidev-layout.dense) p { margin: 0.4em 0; }
 
 /* Section divider: black, large yellow title. */
 .slidev-layout.section {

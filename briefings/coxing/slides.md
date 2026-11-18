@@ -695,9 +695,7 @@ General advice for preparing and racing
 
 <ClipPlayer name="crab-2025-womens-final" alt="Early in the 2025 women's final, with the two crews racing side by side, one crew catches a crab." />
 
-<p class="text-center">2025 women's final: an early crab takes about a minute to recover from fully (the middle plays at double speed).</p>
-
-<p class="text-center key">Talk through with your crew, and ideally practise, what everyone does when someone catches a crab.</p>
+<p class="text-center key">Talk through, and ideally practise, what your crew does after a crab.</p>
 
 ---
 

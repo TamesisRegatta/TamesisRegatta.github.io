@@ -99,9 +99,47 @@ What you must know for this regatta
 # Safety: First priority
 
 - Risk assessment: please read it (<https://tamesisregatta.org/risk-assessment/>).
-- Medics at all times, at Race Desk and on the medical launch: find any marshal.
-- If you have equipment problems, talk to a marshal as soon as possible.
-- Klaxons: <span class="key">always follow marshals' instructions</span>.
+- Medics at all times, at Race Desk and on the medical launch.
+- Marshals, on the water and on land, are your first point of contact for any problem, including with equipment: they can radio Race Desk.
+- <span class="key">Always follow marshals' instructions.</span>
+
+---
+
+# In an emergency
+
+<span class="key">If you see</span> any of these, alert the nearest marshal straight away, so that they can sound the klaxon:
+
+- A rower in the water.
+- Someone badly hurt or unwell.
+- A collision, or a boat stopped or capsized on the course.
+- Anything else blocking the course.
+
+<span class="key">If you hear a klaxon</span>, stop racing immediately, and wait for marshals' instructions.
+
+---
+layout: alert
+class: text-center
+---
+
+<script setup>
+// The klaxon sound is a file in coxing/public/media/, served from the deck's
+// own base URL (see the README for its source and licence). The PDF can't
+// play it, so it links to the published file instead. The exporter loads the
+// deck with ?print, which with hash routing Slidev's own isPrintMode does not
+// see.
+const klaxon = import.meta.env.BASE_URL + 'media/klaxon.mp3'
+const klaxonUrl = 'https://tamesisregatta.org' + klaxon
+const inPdf = new URLSearchParams(window.location.search).has('print')
+</script>
+
+If a marshal needs to stop your race, they will fire a loud
+
+<div class="text-8xl font-800 leading-tight my-6">KLAXON</div>
+
+<p class="font-700">All crews on the water stop immediately, and wait for marshals' instructions.</p>
+
+<audio v-if="!inPdf" controls preload="none" :src="klaxon" class="mx-auto mt-4"></audio>
+<p v-if="inPdf" class="text-base">Listen to it: <a :href="klaxonUrl">{{ klaxonUrl }}</a></p>
 
 ---
 
@@ -402,31 +440,6 @@ Side-by-side: 'enough' buoys marking the mid-race area, and more buoys marking o
 </div>
 
 ---
-layout: alert
-class: text-center
----
-
-<script setup>
-// The klaxon sound is a file in coxing/public/media/, served from the deck's
-// own base URL (see the README for its source and licence). The PDF can't
-// play it, so it links to the published file instead. The exporter loads the
-// deck with ?print, which with hash routing Slidev's own isPrintMode does not
-// see.
-const klaxon = import.meta.env.BASE_URL + 'media/klaxon.mp3'
-const klaxonUrl = 'https://tamesisregatta.org' + klaxon
-const inPdf = new URLSearchParams(window.location.search).has('print')
-</script>
-
-If a marshal needs to stop your race, they will fire a loud
-
-<div class="text-8xl font-800 leading-tight my-6">KLAXON</div>
-
-<p class="font-700">All crews on the water stop immediately, and wait for marshals' instructions.</p>
-
-<audio v-if="!inPdf" controls preload="none" :src="klaxon" class="mx-auto mt-4"></audio>
-<p v-if="inPdf" class="text-base">Listen to it: <a :href="klaxonUrl">{{ klaxonUrl }}</a></p>
-
----
 
 # At the finish line
 
@@ -453,7 +466,7 @@ If a marshal needs to stop your race, they will fire a loud
 # Race Desk and problems
 
 - Blade clashes in races may lead to appeals.
-- Equipment failure: discuss with Racedesk as soon as possible. They may not be able to reschedule, though.
+- Equipment failure: tell the nearest marshal as soon as possible, and they can radio Race Desk. Race Desk may not be able to reschedule, though.
 - Equipment conflicts (adjacent races): also discuss with Racedesk.
 - Register <span class="key">all substitutions</span> before you boat: on the entry system up to the online deadline, then in person at Racedesk.
 - A crew that races as a friendly crew stays friendly from then on.
@@ -641,7 +654,7 @@ General advice for preparing and racing
 
 - Email <a :href="'mailto:' + regatta.contact.email">{{ regatta.contact.email }}</a> (Event Organisers: {{ regatta.roles.regatta_captains.name }}).
 - Race Desk: Merton Small Boats bay (please leave the SU to run the racing: appeals go through Race Desk).
-- Marshals: along the racing course (see maps). Note that they may need to get permission to change race times from the Senior Umpire.
+- Marshals: along the course and at the boathouses (see maps). They are your first point of contact, and can radio Race Desk.
 - First Aid: at Race Desk, and with all medics and medical launches.
 - Rules, event plan and maps: <https://tamesisregatta.org/>.
 - Keep an eye on the mailing lists for announcements if weather or conditions change: the next day's format is confirmed by 5pm.

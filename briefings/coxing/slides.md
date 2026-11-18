@@ -400,7 +400,6 @@ import intermediateCourse from '../../docs/assets/img/circulation-intermediate.s
 
 - Keep clear of other crews, both while racing and while warming up.
 - Please be on time for your race: late crews risk penalties or a DQ, and the Senior Umpire may award a row-over if your opponents are late. Races are timed in blocks: aim to be at the start line when your block is set to start.
-- Any appeals need to follow the procedure in the rules.
 
 ---
 
@@ -446,7 +445,7 @@ Side-by-side: 'enough' buoys marking the mid-race area, and more buoys marking o
 - Row through the finish line, and keep paddling until you are fully clear of it.
 - It's a straight finish, with no stagger.
 - The race is decided by the bows: the finish is a white post, the clacker, which clacks as each crew crosses.
-- If you wish to appeal the race, raise your hand at the finish.
+- To appeal the result, for example after a blade clash, raise your arm as you cross the finish line: the finish judge passes the appeal to the Race Committee, whose decision is final.
 - Dead heat: the finish marshal tells you, and you go straight back to the start to re-row.
 - Listen to marshals and stop as soon as you're asked.
 - Make sure the whole crew knows when your next race is before leaving the river.
@@ -465,7 +464,6 @@ Side-by-side: 'enough' buoys marking the mid-race area, and more buoys marking o
 
 # Race Desk and problems
 
-- Blade clashes in races may lead to appeals.
 - Equipment failure: tell the nearest marshal as soon as possible, and they can radio Race Desk. Race Desk may not be able to reschedule, though.
 - Equipment conflicts (adjacent races): also discuss with Racedesk.
 - Register <span class="key">all substitutions</span> before you boat: on the entry system up to the online deadline, then in person at Racedesk.
@@ -653,7 +651,7 @@ General advice for preparing and racing
 # Contact
 
 - Email <a :href="'mailto:' + regatta.contact.email">{{ regatta.contact.email }}</a> (Event Organisers: {{ regatta.roles.regatta_captains.name }}).
-- Race Desk: Merton Small Boats bay (please leave the SU to run the racing: appeals go through Race Desk).
+- Race Desk: Merton Small Boats bay (please leave the SU to run the racing).
 - Marshals: along the course and at the boathouses (see maps). They are your first point of contact, and can radio Race Desk.
 - First Aid: at Race Desk, and with all medics and medical launches.
 - Rules, event plan and maps: <https://tamesisregatta.org/>.

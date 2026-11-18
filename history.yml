@@ -1,0 +1,24 @@
+# Results of past regattas, from 2022, when Linacre Boat Club started hosting
+# Tamesis, newest first. Rendered on the History page (docs/history.md) by
+# history_results() in main.py.
+#
+# Each year is either raced or cancelled; a cancelled year gives why, as a
+# note. Each event of a raced year (men, women) lists its final, winner first,
+# and its small final (the 3rd and 4th place playoff), 3rd place first:
+#
+#   men:
+#     final: [Magdalen A, University A]
+#     small_final: [Wadham A, Keble B]
+#
+# A race not filled in yet shows "Results to follow".
+years:
+  - year: 2025
+    status: raced
+  - year: 2024
+    status: cancelled
+    note: high stream
+  - year: 2023
+    status: cancelled
+    note: high stream
+  - year: 2022
+    status: raced

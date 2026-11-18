@@ -106,6 +106,15 @@ _RISK_LEVEL_LABELS = {
 }
 
 
+# The events and races shown for each year on the History page, with the
+# places each race decides.
+_HISTORY_EVENTS = (("men", "Men's"), ("women", "Women's"))
+_HISTORY_RACES = (
+    ("final", "Final", ("1st", "2nd")),
+    ("small_final", "Small final", ("3rd", "4th")),
+)
+
+
 def define_env(env):
     dates = env.variables["dates"]
     dates["year"] = dates["regatta_start"].year
@@ -227,3 +236,44 @@ def define_env(env):
         # The wrapper lets the table scroll on its own on a narrow screen,
         # rather than the whole page scrolling sideways (extra.css).
         return f'<div class="risk-matrix-wrap"><table class="risk-matrix">{"".join(rows)}</table></div>'
+
+    @env.macro
+    def history_results() -> str:
+        """Past regattas from history.yml, newest first. Each year is a
+        Markdown heading, so it is in the page's table of contents, followed
+        by why it was cancelled, or by each event's final and small final."""
+        out = []
+        for year in env.variables["history"]["years"]:
+            out.append(f"## {year['year']}\n")
+            status = year.get("status")
+            if status == "cancelled":
+                note = html.escape(str(year.get("note") or ""))
+                out.append(f'<p class="tr-history-cancelled">Cancelled{": " + note if note else ""}.</p>\n')
+                continue
+            if status != "raced":
+                raise ValueError(f"history.yml: {year['year']} has unknown status {status!r}")
+            events = []
+            for key, label in _HISTORY_EVENTS:
+                event = year.get(key) or {}
+                rows = []
+                for race, race_label, places in _HISTORY_RACES:
+                    crews = event.get(race) or []
+                    if crews and len(crews) != 2:
+                        raise ValueError(f"history.yml: {year['year']} {key} {race} needs two crews")
+                    rows.append(f'<tbody><tr><th scope="rowgroup" colspan="2">{race_label}</th></tr>')
+                    if crews:
+                        for place, crew in zip(places, crews):
+                            rows.append(
+                                f'<tr class="tr-place-{place}"><td>{place}</td>'
+                                f"<td>{html.escape(str(crew))}</td></tr>"
+                            )
+                    else:
+                        rows.append('<tr><td colspan="2" class="tr-history-tbc">Results to follow</td></tr>')
+                    rows.append("</tbody>")
+                events.append(
+                    f'<div class="tr-history-event"><h3>{label}</h3>'
+                    f'<table class="tr-history-results"><thead><tr><th scope="col">Place</th>'
+                    f'<th scope="col">Crew</th></tr></thead>{"".join(rows)}</table></div>'
+                )
+            out.append(f'<div class="tr-history-year">{"".join(events)}</div>\n')
+        return "\n".join(out)

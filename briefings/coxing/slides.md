@@ -70,7 +70,7 @@ What you must know for this regatta
 - Win your heat or repechage, and you go on to a side-by-side knock-out, up to the final.
 - Unless conditions require changes, every crew gets at least two races.
 - Friendly crews: in the repechage and later rounds, a competitive crew racing a friendly crew always wins.
-- Conditions may change the format, and the draw, at short notice.
+- Conditions may change the format, and the draw, at short notice: for example, in high wind some or all rounds may become time trials.
 
 ---
 
@@ -388,6 +388,17 @@ import intermediateCourse from '../../docs/assets/img/circulation-intermediate.s
 # Intermediate course circulation
 
 <img :src="intermediateCourse" alt="Intermediate course circulation and placement of marshals">
+
+---
+
+# If we switch to time trials
+
+- Time trials always use the short course. There are no warm-up laps on the water.
+- Boat as usual, go down the City side, and spin into the Marshalling Zone where the marshals direct you, above Longbridges House and clear of the Gut.
+- Line up bow to stern, tucked in to the towpath bank and facing upstream, and move up towards the SU as each crew is started.
+- The racing line is as close to the towpath as possible. A slower crew must move towards the middle of the river to let a faster crew past: impeding a faster crew may mean a time penalty.
+- After the finish, keep going well clear of the line, and don't spin until the Head Marshal tells you to.
+- Come back down the City side, with no more laps, and land as usual. Univ crews wait near St John's Boathouse, on the City side, until the Crossing Marshal tells them to cross.
 
 ---
 

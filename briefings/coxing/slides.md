@@ -20,7 +20,7 @@ Have you handed your coxing card or other photo ID in at the front?
 
 ---
 
-# The Essentials: MAKE SURE YOU KNOW...
+# The Essentials: make sure you know...
 
 - <span class="key">The circulation pattern: it's essential you get this right</span>
 - <span class="key">What to do in emergencies</span>
@@ -201,8 +201,8 @@ import rafts from '../../docs/assets/map/print/boathouse-rafts.svg'
 <img :src="rafts" alt="Boathouse Island rafts: landing on the top 5 rafts, boating from the bottom 6" class="w-full my-2">
 
 <div class="grid grid-cols-2">
-  <ul><li>You <strong>land</strong> on the upstream 5 rafts</li></ul>
-  <ul><li>You <strong>boat</strong> on the downstream 6 rafts</li></ul>
+  <ul><li>You <span class="key">land</span> on the upstream 5 rafts</li></ul>
+  <ul><li>You <span class="key">boat</span> on the downstream 6 rafts</li></ul>
 </div>
 
 <p class="text-center key">Both boating and landing, your bows point downstream</p>
@@ -211,8 +211,8 @@ import rafts from '../../docs/assets/map/print/boathouse-rafts.svg'
 
 # Circulation (Boathouse Island)
 
-- Boat (from downstream rafts) pointing towards the Gut and go down in the TRANSIT LANE. Be aware that there may be crews joining the Transit Lane near the Cherwell cut who have crossed after boating from Univ.
-- STAY ABOVE THE GUT
+- Boat (from downstream rafts) pointing towards the Gut and go down in the <span class="key">transit lane</span>. Be aware that there may be crews joining the transit lane near the Cherwell cut who have crossed after boating from Univ.
+- <span class="key">Stay above the Gut</span>
 - Spin into the Marshalling Zone as the marshals direct, without obstructing other crews, and pair up to await racing.
 - After the race, return beside the Meadow to the landing rafts, and land with bows pointing downstream.
 
@@ -234,7 +234,7 @@ import boathouseIsland from './race-cycles/boathouse-island.js'
 
 - Boat with your bow ball pointing upstream towards the head, directly into the Marshalling Zone.
 - Pair up, and proceed upstream towards the start waiting to race.
-- After the race, spin at the Head, come down by the Meadows then the boathouses, and stay in the TRANSIT LANE. Take care not to obstruct crews entering the Marshalling Zone.
+- After the race, spin at the Head, come down by the Meadows then the boathouses, and stay in the <span class="key">transit lane</span>. Take care not to obstruct crews entering the Marshalling Zone.
 - To land: spin and land with bows pointing upstream. In high stream, spin above the raft and drift back to land.
 - The Longbridges Marshal may tell you to land with bows pointing downstream instead: please follow their instructions.
 
@@ -254,10 +254,10 @@ import longbridges from './race-cycles/longbridges.js'
 
 # Circulation (Univ Raft)
 
-- Boat bow ball pointing towards the Gut. Only push off when instructed to by the Univ Marshal. Cross immediately into the TRANSIT LANE, proceed downstream along the Greenbank.
+- Boat bow ball pointing towards the Gut. Only push off when instructed to by the Univ Marshal. Cross immediately into the <span class="key">transit lane</span>, proceed downstream along the Greenbank.
 - Crews should be in their boat ready to push off before requesting permission from the Univ Marshal, who will then coordinate with the SU so that you can safely push off after a race comes past.
 - Spin as the marshals direct, and pair up to await racing.
-- After the race, spin at the Head, come down beside the Meadows and then the boathouses in the TRANSIT LANE, then spin into the Marshalling Zone (never through the Gut).
+- After the race, spin at the Head, come down beside the Meadows and then the boathouses in the <span class="key">transit lane</span>, then spin into the Marshalling Zone (never through the Gut).
 - Make it clear to the Marshals/Senior Umpire that you wish to land, and they will instruct you to follow a race in the County Station back to Univ, and land bows upstream.
 
 ---
@@ -279,7 +279,7 @@ import univ from './race-cycles/univ.js'
 - The event managed area runs from the Head down to Top Gut on the short course, and to Donnington Bridge on the intermediate course.
 - Below that, crews must follow the OURCs rules for a standard outing.
 - Head upstream in standard circulation through the Gut, and wait for the Gut Marshal's instruction before crossing to reverse circulation above it. Then find your opposition, pair up, and continue upstream towards the start.
-- After the race, spin at the Head, and continue all the way downstream in the TRANSIT LANE.
+- After the race, spin at the Head, and continue all the way downstream in the <span class="key">transit lane</span>.
 - Cross to standard circulation as you enter the Gut, keeping a good lookout for crews and boats coming upstream. Land at the Isis Boathouse in any safe manner.
 
 <p v-if="regatta.amber_flag_racing" class="key">When racing on Low Amber Flag, no crew may boat from or land at a boathouse below the Gut.</p>
@@ -304,7 +304,7 @@ import isisBoathouse from './race-cycles/isis-boathouse.js'
 - <span class="key">On the short course, which all time trials use, no other crew may go through the Gut.</span>
 - On the intermediate course, the Senior Umpires and Race Committee may also allow other crews through the Gut, as far as Donnington Bridge. This will be made clear before each day's racing: if it isn't, you may not go through.
 - When they are allowed through:
-  - any crews heading downstream along the Greenbank cross CAREFULLY to standard circulation when entering the Gut
+  - any crews heading downstream along the Greenbank cross <span class="key">carefully</span> to standard circulation when entering the Gut
   - Longbridges crews may boat with bows pointing downstream
 
 ---
@@ -336,7 +336,7 @@ Side-by-side: 'enough' buoys marking the mid-race area, and more buoys marking o
 - County Station: along the towpath side; City Station: the middle of the river; transit lane: on the City side
 
 <ol type="a">
-  <li>stay out of the <strong>transit lane</strong> COMPLETELY when racing, including blades</li>
+  <li>stay <span class="key">completely</span> out of the <span class="key">transit lane</span> when racing, including blades</li>
   <li>stay in your lane, don't hit the other crew, including blades</li>
 </ol>
 
@@ -350,8 +350,8 @@ class: dense
 
 - The stagger is set by the Senior Umpire, not by you or your coach: please don't try to change it.
 - Not ready? Raise your arm, and lower it as soon as you are.
-- We WILL NOT start a race if you are clearly not straight or ready, or the stagger is not right, so there's no need to panic
-- We WILL start a race if you look ready and are not actively adjusting, even with a hand up, so be ready
+- We <span class="key">will not</span> start a race if you are clearly not straight or ready, or the stagger is not right, so there's no need to panic
+- We <span class="key">will</span> start a race if you look ready and are not actively adjusting, even with a hand up, so be ready
 - The starter names the two crews, then says "Attention" and raises a red flag, then says "Go!" and drops the flag.
 - If the stream is strong command will be shorter: listen to the SU for instructions!
 - False start, or a collision straight off the start: the starter stops you both and restarts the race. Repeated false starts can mean a DQ.
@@ -420,7 +420,7 @@ If a marshal needs to stop your race, they will fire a loud
 - Blade clashes in races may lead to appeals
 - Equipment failure discuss with Racedesk ASAP. They may not be able to reschedule though.
 - Equipment conflicts (adjacent races) also discuss with Racedesk
-- Register ALL SUBSTITUTIONS before you boat: on the entry system up to the online deadline, then in person at Racedesk
+- Register <span class="key">all substitutions</span> before you boat: on the entry system up to the online deadline, then in person at Racedesk
 - A crew that races as a friendly crew stays friendly from then on
 - Racedesk is in the Merton Small Boats bay
   - For problems on the day, try to go in person: They may not get e-mails
@@ -458,10 +458,10 @@ Safety and rules for any outing or event on the river
 
 <span class="key">Coxes lacking lifejackets:</span>
 
-- <span class="key">£50 FINE</span>
+- <span class="key">£50 fine</span>
 - <span class="key">Club Safety Review.</span>
 
-<p class="text-center mt-8">Always do your lifejacket up properly (including crotch strap) and wear it OVER your coat, in line with the OURCs Code of Conduct</p>
+<p class="text-center mt-8">Always do your lifejacket up properly (including crotch strap) and wear it <span class="key">over</span> your coat, in line with the OURCs Code of Conduct</p>
 
 ---
 
@@ -487,7 +487,7 @@ Safety and rules for any outing or event on the river
 
 # Keep to bowside
 
-- STICK CLOSELY TO BOWSIDE in training unless overtaking: this is an existing rule. This includes entry to/exit from the Gut. Tuck back in quickly after overtaking. Practise steering close to the bank.
+- <span class="key">Stick closely to bowside</span> in training unless overtaking: this is an existing rule. This includes entry to/exit from the Gut. Tuck back in quickly after overtaking. Practise steering close to the bank.
 
 ---
 layout: section
@@ -559,7 +559,7 @@ General advice for preparing and racing
 
 <br>
 
-- The next slide has some pointers on calls... this comes SECOND to good steering.
+- The next slide has some pointers on calls... this comes <span class="key">second</span> to good steering.
 
 ---
 
@@ -569,7 +569,7 @@ General advice for preparing and racing
   - Plan a few technique points to make calls on
   - Use a few landmarks: "passing our raft", "end of boathouses"
   - Think about what would motivate you to pull harder! Ask your crew what they would like to hear. Sound confident: rehearse before hand if you need to.
-- Tell your rowers where you are: be honest but sound positive. Anyone can catch a sudden crab! Remember, in novice racing the winner is often the one who DOESN'T make a mistake: see Somerville in the 2022 W final: <https://youtu.be/qIXQKo3uhL8?t=120>
+- Tell your rowers where you are: be honest but sound positive. Anyone can catch a sudden crab! Remember, in novice racing the winner is often the one who <span class="key">doesn't</span> make a mistake: see Somerville in the 2022 W final: <https://youtu.be/qIXQKo3uhL8?t=120>
 
 ---
 

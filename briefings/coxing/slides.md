@@ -514,12 +514,12 @@ General advice for preparing and racing
 
 # Race day timing
 
-- 3 Hours Before: make sure crew has eaten
+- About 3 hours before: make sure your crew has eaten
 - Agree a meeting time and place with your crew
-- 1 hour before race: Arrive at boathouse.
-- 30-40 mins before: hands on (if space on raft)
-- 20-25 (max) mins before: push off
-- 5 mins to go, be queuing for start and ready
+- About an hour before: arrive at the boathouse
+- About 30-40 minutes before: hands on (if there is space on the raft)
+- 20-25 minutes before, and no earlier: push off
+- A few minutes to go: be queuing for the start and ready
 - Race time: Go!
 
 <br>

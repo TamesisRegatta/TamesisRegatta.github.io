@@ -282,6 +282,8 @@ import univ from './race-cycles/univ.js'
 - After the race, spin at the Head, and continue all the way downstream in the TRANSIT LANE.
 - Cross to standard circulation as you enter the Gut, keeping a good lookout for crews and boats coming upstream. Land at the Isis Boathouse in any safe manner.
 
+<p v-if="regatta.amber_flag_racing" class="key">When racing on Low Amber Flag, no crew may boat from or land at a boathouse below the Gut.</p>
+
 ---
 clicks: 6
 ---
@@ -298,7 +300,7 @@ import isisBoathouse from './race-cycles/isis-boathouse.js'
 
 # Transit through the Gut
 
-- Crews based below the Gut, such as at the Isis Boathouse, may always go through the Gut, under the direction of the Gut Marshal.
+- Crews based below the Gut, such as at the Isis Boathouse, may always go through the Gut, as the Gut Marshal directs<span v-if="regatta.amber_flag_racing">, except when racing on Low Amber Flag, when no crew may go through the Gut</span>.
 - <span class="key">On the short course, which all time trials use, no other crew may go through the Gut.</span>
 - On the intermediate course, the Senior Umpires and Race Committee may also allow other crews through the Gut, as far as Donnington Bridge. This will be made clear before each day's racing: if it isn't, you may not go through.
 - When they are allowed through:

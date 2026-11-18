@@ -697,6 +697,9 @@ General advice for preparing and racing
 
 - Practise your warm-up, and remember it won't be very long on the water for the short course.
 - Practise starts, but do them safely, including stopping safely (check behind you first) and not obstructing other crews.
+- Practise going off a quick command: in strong stream the SU may start you quickly.
+- Practise reverse spins, rowing on with stroke side.
+- Practise a fast, firm stop, as you would for a klaxon, and wait for an instruction before going again.
 - Practise bursts of pressure, with pushes in.
 - Practise the crew catching a crab, and what you will call if it happens.
 

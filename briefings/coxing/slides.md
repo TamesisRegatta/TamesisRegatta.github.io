@@ -51,6 +51,7 @@ Have you handed your coxing card or other photo ID in at the front?
 - <span class="key">OURCs:</span> Oxford University Rowing Clubs.
 - <span class="key">Univ:</span> University College, and its boathouse and raft on the Greenbank.
 - <span class="key">The Head:</span> the Head of the River, upstream of the finish.
+- <span class="key">PFD:</span> personal flotation device.
 
 ---
 layout: section
@@ -64,13 +65,22 @@ What you must know for this regatta
 
 # Format of the regatta
 
-- Racing runs from noon Wednesday to Friday, and from 11am on Saturday, until half an hour before sunset.
+- Racing runs from noon each day, Wednesday to Saturday, until half an hour before sunset. If we need to make up time, Saturday's racing may be brought forward to 11am.
 - Every crew races a side-by-side heat on the first day.
 - Lose your heat, and you race a repechage, normally the next day.
 - Win your heat or repechage, and you go on to a side-by-side knock-out, up to the final.
 - Unless conditions require changes, every crew gets at least two races.
-- Friendly crews: in the repechage and later rounds, a competitive crew racing a friendly crew always wins.
+- Friendly crews never knock out competitive crews (next slide).
 - Conditions may change the format, and the draw, at short notice: for example, in high wind some or all rounds may become time trials.
+
+---
+
+# Friendly crews
+
+- A friendly crew has at least 5 novice rowers, and up to 3 non-novices.
+- In a heat, the result stands as raced: a competitive crew that finishes behind a friendly crew goes to the repechage, not out.
+- From the repechage on, a competitive crew racing a friendly crew always progresses.
+- A crew that races as a friendly crew, for example after substituting in a senior rower, stays friendly from then on.
 
 ---
 
@@ -92,7 +102,7 @@ What you must know for this regatta
 
 <p class="text-center key">Lights are required on the water after 15:00 each day: crews without them will be disqualified.</p>
 
-<p class="text-center mt-8 key">Every cox must wear a lifejacket to race</p>
+<p class="text-center mt-8 key">Every cox must wear a PFD to race</p>
 
 ---
 
@@ -112,7 +122,7 @@ What you must know for this regatta
 - A rower in the water.
 - Someone badly hurt or unwell.
 - A collision, or a boat stopped or capsized on the course.
-- Anything else blocking the course.
+- Something in a racing lane that a crew could hit, such as debris, a launch, or a boat that isn't racing.
 
 <span class="key">If you hear a klaxon</span>, stop racing immediately, and wait for marshals' instructions.
 
@@ -191,9 +201,10 @@ Instructions will be given by marshals if required.
 
 # The river flag
 
-- <span class="flag" style="--flag: #c62828" aria-hidden="true"></span><span class="key">Red Flag: no racing.</span>
-- <span class="flag" style="--flag: #f5a300" aria-hidden="true"></span><span v-if="regatta.amber_flag_racing" class="key">Amber Flag: no racing, except on Low Amber Flag on the last two days (next slide).</span><span v-else class="key">Amber Flag: no racing.</span>
+- <span class="flag" style="--flag: linear-gradient(to bottom right, #7cb9e8 50%, #2e8b3e 50%)" aria-hidden="true"></span>Light Blue or Green Flag: racing as normal, with coxes of any status, including N.
 - <span class="flag" style="--flag: #14286e" aria-hidden="true"></span>Dark Blue Flag: racing may continue, with S and X status coxes only, and possibly on a changed course.
+- <span class="flag" style="--flag: #f5a300" aria-hidden="true"></span><span v-if="regatta.amber_flag_racing" class="key">Amber Flag: no racing, except on Low Amber Flag on the last two days (next slide).</span><span v-else class="key">Amber Flag: no racing.</span>
+- <span class="flag" style="--flag: #c62828" aria-hidden="true"></span><span class="key">Red Flag: no racing.</span>
 - The format for the next day's racing is confirmed by 5pm each day, but racing can be called off at shorter notice if conditions get worse.
 - In adverse conditions the Event Committee may let S and X coxes cox more than one crew.
 
@@ -233,9 +244,9 @@ Instructions will be given by marshals if required.
 
 ---
 
-# Circulation
+# Circulation: all racing days
 
-- The course is the same every day with a start somewhere on the Greenbank, at or below Univ, and a finish near the Cox Stone.
+- The start is always on the Greenbank, at or below Univ, and the finish near the Cox Stone.
 - The start may move up or down the Greenbank, depending on factors such as stream and time constraints.
 - Earlier rounds will be a short course, and if conditions permit we will lengthen the course in later rounds.
 - Reverse circulation above the Gut: the transit lane is on the City side for the whole course, and never crosses the racing lanes.
@@ -323,7 +334,7 @@ import boathouseIsland from './race-cycles/boathouse-island.js'
 - Boat with your bow ball pointing upstream towards the Head, directly into the Marshalling Zone.
 - Pair up, and proceed upstream towards the start waiting to race.
 - After the race, spin at the Head, come down by the Meadows then the boathouses, and stay in the <span class="key">transit lane</span>. Take care not to obstruct crews entering the Marshalling Zone.
-- To land: spin and land with bows pointing upstream. In high stream, spin above the raft and drift back to land.
+- To land: spin and land with bows pointing upstream. On Dark Blue Flag, you may spin above the raft and drift back to land, still bows upstream<span v-if="regatta.amber_flag_racing"> (on Low Amber Flag you must)</span>.
 - The Longbridges Marshal may tell you to land with bows pointing downstream instead: please follow their instructions.
 
 ---
@@ -512,9 +523,9 @@ Side-by-side: 'enough' buoys marking the mid-race area, and more buoys marking o
 - Equipment failure: tell the nearest marshal as soon as possible, and they can radio Race Desk. Race Desk may not be able to reschedule, though.
 - Equipment conflicts (adjacent races): discuss with Race Desk.
 - Register <span class="key">all substitutions</span> before you boat: on the entry system up to the online deadline, then in person at Race Desk.
-- A crew that races as a friendly crew stays friendly from then on.
 - Race Desk is in the Merton Small Boats bay.
   - For problems on the day, try to go in person: they may not see emails in time.
+  - Can't get there, for example from Longbridges? Message the Race Desk phone on WhatsApp (preferred), or call it: your captain has the number.
 
 ---
 layout: section
@@ -533,7 +544,7 @@ Safety and rules for any outing or event on the river
   - Move them indoors, get them into dry clothing, and contact the medics.
   - NHS advice: <https://www.nhs.uk/conditions/hypothermia/>.
 - Every crew should bring a dry change of kit for after racing.
-- Coxes sit still in the cold for a long time: wear warm, waterproof layers, with your lifejacket over the top.
+- Coxes sit still in the cold for a long time: wear warm, waterproof layers, with your PFD over the top.
 
 ---
 
@@ -553,14 +564,16 @@ Safety and rules for any outing or event on the river
 
 ---
 
-# Lifejackets
+# PFDs
 
-<span class="key">Coxes lacking lifejackets:</span>
+<span class="key">Coxes without a PFD:</span>
 
 - <span class="key">£50 fine.</span>
 - <span class="key">Club Safety Review.</span>
 
-<p class="text-center mt-8">Always do your lifejacket up properly (including crotch strap) and wear it <span class="key">over</span> your coat, in line with the OURCs Code of Conduct.</p>
+<p class="text-center mt-8">Always fasten your PFD securely and wear it <span class="key">on top of</span> all other clothing, in line with the OURCs Code of Conduct.</p>
+
+<p class="text-center">A lifejacket also needs its crotch strap worn correctly, and must be under 10 years old.</p>
 
 ---
 
@@ -714,7 +727,7 @@ General advice for preparing and racing
 # Contact
 
 - Email <a :href="'mailto:' + regatta.contact.email">{{ regatta.contact.email }}</a> (Event Organisers: {{ regatta.roles.regatta_captains.name }}).
-- Race Desk: Merton Small Boats bay (please leave the SU to run the racing).
+- Race Desk: Merton Small Boats bay, or the Race Desk phone, WhatsApp messages preferred (your captain has the number). Please leave the SU to run the racing.
 - Marshals: along the course and at the boathouses (see maps). They are your first point of contact, and can radio Race Desk.
 - First Aid: at Race Desk, and with all medics and medical launches.
 - Rules, event plan and maps: <https://tamesisregatta.org/>.

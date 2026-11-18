@@ -343,8 +343,6 @@ Side-by-side: 'enough' buoys marking the mid-race area, and more buoys marking o
 <p class="text-center mt-8 key">Fouling (hitting another crew), interference (going into another crew's lane) or safety infringements (going into the transit lane) can result in a DQ.</p>
 
 ---
-class: dense
----
 
 # The start
 

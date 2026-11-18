@@ -8,7 +8,7 @@
 
 export default {
   title: 'Race cycle: Boathouse Island',
-  summary: 'Boat from the downstream rafts and go down the transit lane (1), spin into the Marshalling Zone and pair up (2), start and race, on past the finish line (3), spin at the Head under the marshals\' instruction (4), and come back down the transit lane to land on the upstream rafts (5).',
+  summary: 'Boat from the downstream rafts and go down the transit lane (1), spin into the Marshalling Zone and pair up (2), start and race, on past the finish line (3), spin at the Head as the marshals direct (4), and come back down the transit lane to land on the upstream rafts (5).',
   // Where the Senior Umpire stands, for the starter's call.
   starter: [1134.6, 302.1],
   boats: {
@@ -23,7 +23,7 @@ export default {
     },
     {
       title: 'Down the transit lane',
-      text: 'Push off into the TRANSIT LANE and stay in it, past the start and down the Greenbank.',
+      text: 'Push off into the **transit lane** and stay in it, past the start and down the Greenbank.',
       camera: { at: [1285, 285], w: 600 },
       moves: {
         lin: [
@@ -33,7 +33,7 @@ export default {
     },
     {
       title: 'Spin and pair up',
-      text: 'Spin where the marshals tell you, into the Marshalling Zone (never through the Gut), then pair up and move up to the start.',
+      text: 'Spin where the marshals direct you, into the Marshalling Zone (never through the Gut), then pair up and move up to the start.',
       camera: { at: [1320, 312], w: 520 },
       moves: {
         lin: [
@@ -49,7 +49,7 @@ export default {
     },
     {
       title: 'Start and race',
-      text: 'Line up in your lane and keep the stagger the Senior Umpire sets. Go on "Go!", stay in your own lane, and keep going past the finish line.',
+      text: 'Line up in your lane and keep the stagger the SU sets. Go on "Go!", stay in your own lane, and keep going past the finish line.',
       camera: { at: [765, 292], w: 940 },
       moves: {
         // The City station (opp) starts slightly ahead: it is nearer the
@@ -73,7 +73,7 @@ export default {
     },
     {
       title: 'Spin at the Head',
-      text: 'Spin at the Head under instruction from the marshals.',
+      text: 'Spin at the Head as the marshals direct.',
       camera: { at: [420, 318], w: 450 },
       moves: {
         lin: [
@@ -88,7 +88,7 @@ export default {
     },
     {
       title: 'Return and land',
-      text: 'Come back down beside the Meadow in the TRANSIT LANE, and land on the upstream rafts, bows pointing downstream.',
+      text: 'Come back down beside the Meadow in the **transit lane**, and land on the upstream rafts, bows pointing downstream.',
       camera: { at: [625, 275], w: 620 },
       moves: {
         lin: [

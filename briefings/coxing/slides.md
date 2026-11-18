@@ -48,7 +48,7 @@ Have you handed your coxing card or other photo ID in at the front?
 - <span class="key">SU:</span> Senior Umpire, who starts each race.
 - <span class="key">DQ:</span> disqualification.
 - <span class="key">OURCs:</span> Oxford University Rowing Clubs.
-- <span class="key">Univ:</span> University College, and its boathouse and raft on the Greenbank.
+- <span class="key">Univ:</span> University College, and its boathouse and raft on the towpath side, opposite Boathouse Island.
 - <span class="key">The Head:</span> the Head of the River, upstream of the finish.
 - <span class="key">PFD:</span> personal flotation device.
 
@@ -158,22 +158,22 @@ If a marshal needs to stop your race, they will fire a loud
   <div>
     <p class="font-700 !mb-1">Wednesday</p>
     <ph-cloud-rain class="text-5xl mx-auto" aria-hidden="true" />
-    <p class="!mt-1">Drizzle from 1pm<br>8-9&deg;C, feels like 5&deg;C<br>Gusts to 20 mph</p>
+    <p class="!mt-1">Drizzle from 1pm<br>8-9&deg;C, feels like 5&deg;C<br>Gusts to 20 mph (9 m/s)</p>
   </div>
   <div>
     <p class="font-700 !mb-1">Thursday</p>
     <ph-cloud-sun class="text-5xl mx-auto" aria-hidden="true" />
-    <p class="!mt-1">Drizzle, then brighter<br>3-5&deg;C, feels like 0&deg;C<br>Gusts to 17 mph</p>
+    <p class="!mt-1">Drizzle, then brighter<br>3-5&deg;C, feels like 0&deg;C<br>Gusts to 17 mph (8 m/s)</p>
   </div>
   <div>
     <p class="font-700 !mb-1">Friday</p>
     <ph-cloud-rain class="text-5xl mx-auto" aria-hidden="true" />
-    <p class="!mt-1">Drizzle all day<br>6-9&deg;C, feels like 2-5&deg;C<br>Windy, gusts to 30 mph</p>
+    <p class="!mt-1">Drizzle all day<br>6-9&deg;C, feels like 2-5&deg;C<br>Gusts to 30 mph (13 m/s)</p>
   </div>
   <div>
     <p class="font-700 !mb-1">Saturday</p>
     <ph-cloud class="text-5xl mx-auto" aria-hidden="true" />
-    <p class="!mt-1">Cloudy and dry<br>9-10&deg;C, feels like 5&deg;C<br>Breezy, gusts to 30 mph</p>
+    <p class="!mt-1">Cloudy and dry<br>9-10&deg;C, feels like 5&deg;C<br>Gusts to 30 mph (13 m/s)</p>
   </div>
 </div>
 
@@ -409,8 +409,8 @@ import isisBoathouse from './race-cycles/isis-boathouse.js'
 
 # Transit through the Gut
 
-- Crews based below the Gut, such as at the Isis Boathouse, may always go through the Gut, as the Gut Marshal directs<span v-if="regatta.amber_flag_racing">, except when racing on Low Amber Flag, when no crew may go through the Gut</span>.
-- <span class="key">On the short course, which all time trials use, no other crew may go through the Gut.</span>
+- Crews based below the Gut, such as at the Isis Boathouse, may always go through the Gut, as the Gut Marshal directs<span v-if="regatta.amber_flag_racing">, except when racing on Low Amber Flag, when no crew may</span>.
+- <span class="key">On the short course (at least on Wednesday and Thursday), no other crew may go through the Gut.</span>
 - On the intermediate course, the SUs and Race Committee may also allow other crews through the Gut, as far as Donnington Bridge. This will be made clear before each day's racing: if it isn't, you may not go through.
 - When they are allowed through:
   - Any crews heading downstream along the Greenbank cross <span class="key">carefully</span> to standard circulation when entering the Gut.
@@ -507,16 +507,6 @@ Side-by-side: 'enough' buoys marking the mid-race area, and more buoys marking o
 
 ---
 
-# Landing
-
-- Stay upstream until a raft is free.
-- Don't drift: you can back down if needed.
-- If landing the wrong way from training:
-  - Blades on the raft get out first.
-  - Then they hold the boat for the others.
-
----
-
 # Race Desk and problems
 
 - Equipment failure: tell the nearest marshal as soon as possible, and they can radio Race Desk. Race Desk may not be able to reschedule, though.
@@ -595,12 +585,6 @@ Safety and rules for any outing or event on the river
 - Bankriders must not hold cameras or other devices while cycling, and must give way to pedestrians.
 
 ---
-
-# Keep to bowside
-
-- <span class="key">Stick closely to bowside</span> in training unless overtaking: this is an existing rule. This includes entry to/exit from the Gut. Tuck back in quickly after overtaking. Practise steering close to the bank.
-
----
 layout: section
 ---
 
@@ -631,7 +615,7 @@ General advice for preparing and racing
 - Agree a meeting time and place with your crew.
 - About an hour before: arrive at the boathouse.
 - About 30-40 minutes before: hands on (if there is space on the raft).
-- 20-25 minutes before, and no earlier: push off.
+- No more than 15 minutes before: push off.
 - A few minutes to go: be queuing for the start and ready.
 - Race time: Go!
 

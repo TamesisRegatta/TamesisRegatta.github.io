@@ -282,16 +282,16 @@ import rafts from '../../docs/assets/map/print/boathouse-rafts.svg'
 # Landing at Boathouse Island
 
 - You may need to walk your boat along the island to reach the right raft.
-- When landing, hold the boat from the middle or stern, <span class="key">never by a bow-seat blade</span>, or the stream will swing the stern out into the river.
+- When a crew lands, whoever is on the raft holds the blade of 8 or 6, <span class="key">never 4 or 2</span>, or the stream will swing the stern out into the river.
 
 <div class="grid grid-cols-2 gap-8 text-base text-center">
   <figure>
-    <LandingSwing held="bow" label="A boat landing bows downstream, held at the raft by a bow-seat blade: the stream swings its stern out into the river." />
-    <figcaption>Held by a bow-seat blade: the stern swings out.</figcaption>
+    <LandingSwing held="bow" label="A boat landing bows downstream, held at the raft by the blades of 2 and 4: the stream swings its stern out into the river." />
+    <figcaption>Held by the blade of 2 or 4: the stern swings out.</figcaption>
   </figure>
   <figure>
-    <LandingSwing held="stern" label="A boat landing bows downstream, held from the stern: it stays alongside the raft." />
-    <figcaption>Held from the middle or stern: the boat stays alongside.</figcaption>
+    <LandingSwing held="stern" label="A boat landing bows downstream, held at the raft by the blades of 6 and 8: it stays alongside." />
+    <figcaption>Held by the blade of 6 or 8: the boat stays alongside.</figcaption>
   </figure>
 </div>
 

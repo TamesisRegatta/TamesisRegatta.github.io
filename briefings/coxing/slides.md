@@ -484,7 +484,9 @@ Safety and rules for any outing or event on the river
   - NHS advice: <https://www.nhs.uk/conditions/hypothermia/>.
 - Every crew should bring a dry change of kit for after racing.
 - Coxes sit still in the cold for a long time: wear warm, waterproof layers, with your lifejacket over the top.
-- Water hygiene.
+- Water hygiene:
+  - Cover cuts and blisters with waterproof plasters, wash your hands before eating, and shower after racing.
+  - If you get flu-like symptoms in the weeks after being on the river, see a doctor and mention river water: it can carry Weil's disease (leptospirosis).
 
 ---
 

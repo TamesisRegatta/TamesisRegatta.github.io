@@ -80,6 +80,13 @@
 
 :where(.slidev-layout:not(.cover, .section, .alert, .figure)) :is(li > ul, li > ol) { margin-bottom: 0; }
 
+/* A paragraph that leads into a list stays with it, as its items do */
+:where(.slidev-layout:not(.cover, .section, .alert, .figure)) p:has(+ :is(ul, ol)) {
+  margin-bottom: calc(0.3em + (var(--flow-gap) - 11px) * 0.5);
+}
+
+:where(.slidev-layout:not(.cover, .section, .alert, .figure)) p + :is(ul, ol) { margin-top: 0; }
+
 /* The first block under the (hidden) title starts at the same height on every
    slide, however large the gap */
 :where(.slidev-layout:not(.cover, .section, .alert, .figure) > h1:first-child) + :is(p, ul, ol, table, img) { margin-top: 0; }

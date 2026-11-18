@@ -386,6 +386,17 @@ import isisBoathouse from './race-cycles/isis-boathouse.js'
 
 ---
 
+# Pairing up
+
+- Spin where the marshals direct you, well clear of the Longbridges raft and the bridges, then paddle back up the Greenbank.
+- Once paired, paddle straight up with your opposition: you don't need to be on station until you join the start queue.
+- Not paired yet? Tuck in on the towpath side, and wait for your opposition or a marshal's directions.
+- Be proactive: you don't have to wait your turn to spin. If you see your opposition, stay as close to them as you can, even if that means spinning early.
+- Paired crews are started in the order they are ready, not necessarily the order in the draw.
+- Keep clear of the Longbridges raft at all times.
+
+---
+
 # Transit through the Gut
 
 - Crews based below the Gut, such as at the Isis Boathouse, may always go through the Gut, as the Gut Marshal directs<span v-if="regatta.amber_flag_racing">, except when racing on Low Amber Flag, when no crew may go through the Gut</span>.

@@ -22,14 +22,14 @@ Have you handed your coxing card or other photo ID in at the front?
 
 # The Essentials: MAKE SURE YOU KNOW...
 
-- <span class="key">The circulation pattern: you CANNOT get this wrong</span>
+- <span class="key">The circulation pattern: it's essential you get this right</span>
 - <span class="key">What to do in emergencies</span>
 - <span class="key">The rules of the regatta</span>
 - <span class="key">Whom to contact for issues</span>
 
 <br>
 
-- <u>READ THE RULES AND THE EVENT PLAN</u>: ignorance is no excuse
+- <span class="key">Please read the rules and the event plan</span>: everyone on the water is expected to know them
 - All info available at <https://tamesisregatta.org/>
 
 ---
@@ -81,14 +81,14 @@ What you must know for this regatta
 
 # Checks on the day
 
-- A raft marshal checks your boat before you push off: if it fails, you don't boat
+- A raft marshal checks your boat before you push off: any problems need fixing before you can boat
 - Photo ID for every member of your crew, including you: a printout of their University card or coxing licence. You may have to prove the identity of your crew and/or cox before racing or when you return.
 
 <br>
 
-<p class="text-center key">Lights are required on the water after 15:00 each day. No lights means disqualification.</p>
+<p class="text-center key">Lights are required on the water after 15:00 each day: crews without them will be disqualified.</p>
 
-<p class="text-center mt-8 key">COXES WITHOUT LIFEJACKETS WILL NOT BE ALLOWED TO RACE</p>
+<p class="text-center mt-8 key">Every cox must wear a lifejacket to race</p>
 
 ---
 
@@ -97,7 +97,7 @@ What you must know for this regatta
 - Risk assessment: read this! (<https://tamesisregatta.org/risk-assessment/>)
 - Medics at all times, at Race Desk and on the medical launch: find any marshal
 - If you have equipment problems, talk to a marshal as soon as possible
-- Klaxons... ALWAYS OBEY MARSHAL INSTRUCTIONS
+- Klaxons: <span class="key">always follow marshals' instructions</span>
 
 ---
 
@@ -154,7 +154,7 @@ Instructions will be given by marshals if required
   - Univ: land with bows pointing upstream, under the Univ Marshal
   - Longbridges: land as usual, under the Longbridges Marshal
   - Isis Boathouse: go through the Gut under the Gut Marshal
-- Don't panic, and follow the marshals, not your coach.
+- Stay calm, and follow the marshals' instructions rather than your coach's.
 
 ---
 
@@ -181,7 +181,7 @@ import shortCourse from '../../docs/assets/img/circulation-short.svg'
 
 # Spinning for the regatta
 
-- Spin where marshals tell you to!
+- Spin where the marshals direct you
 - Nearly all your spins will be the other way to usual: row on with stroke side
 - After the race, spin where you are told, and row back close to the Meadows bank
 
@@ -236,7 +236,7 @@ import boathouseIsland from './race-cycles/boathouse-island.js'
 - Pair up, and proceed upstream towards the start waiting to race.
 - After the race, spin at the Head, come down by the Meadows then the boathouses, and stay in the TRANSIT LANE. Take care not to obstruct crews entering the Marshalling Zone.
 - To land: spin and land with bows pointing upstream. In high stream, spin above the raft and drift back to land.
-- The Longbridges Marshal may tell you to land with bows pointing downstream instead: do as they say.
+- The Longbridges Marshal may tell you to land with bows pointing downstream instead: please follow their instructions.
 
 ---
 clicks: 6
@@ -321,9 +321,9 @@ import intermediateCourse from '../../docs/assets/img/circulation-intermediate.s
 
 # Obeying the rules
 
-- Don't get in the way of other crews while racing, or indeed when warming up!
-- Be on time for your race or risk DSQ or penalties: the Senior Umpire may award a row-over if your opponents are late. Note that races are timed in blocks: aim to be at the start line when your block is set to start.
-- Any appeals should adhere to the rules (read them!!)
+- Keep clear of other crews, both while racing and while warming up.
+- Please be on time for your race: late crews risk penalties or DSQ, and the Senior Umpire may award a row-over if your opponents are late. Races are timed in blocks: aim to be at the start line when your block is set to start.
+- Any appeals need to follow the procedure in the rules.
 
 ---
 
@@ -346,10 +346,10 @@ class: dense
 
 # The start
 
-- The stagger is set by the Senior Umpire, not by you or your coach: don't try to change it.
+- The stagger is set by the Senior Umpire, not by you or your coach: please don't try to change it.
 - Not ready? Raise your arm, and lower it as soon as you are.
-- We WILL NOT start a race if you are obviously not straight, ready or stagger is not correct so don't panic
-- We WILL start a race, regardless of hand up, if you look ready and are not actively adjusting so be ready
+- We WILL NOT start a race if you are clearly not straight or ready, or the stagger is not right, so there's no need to panic
+- We WILL start a race if you look ready and are not actively adjusting, even with a hand up, so be ready
 - The starter names the two crews, then says "Attention" and raises a red flag, then says "Go!" and drops the flag.
 - If the stream is strong command will be shorter: listen to the SU for instructions!
 - False start, or a collision straight off the start: the starter stops you both and restarts the race. Repeated false starts can mean DSQ.
@@ -485,7 +485,7 @@ Safety and rules for any outing or event on the river
 
 # Keep to bowside
 
-- STICK CLOSELY TO BOWSIDE in training unless overtaking: this is an existing rule. This includes entry to/exit from the Gut. Tuck back in quickly after overtaking. You need to learn to steer very near the bank.
+- STICK CLOSELY TO BOWSIDE in training unless overtaking: this is an existing rule. This includes entry to/exit from the Gut. Tuck back in quickly after overtaking. Practise steering close to the bank.
 
 ---
 layout: section
@@ -524,7 +524,7 @@ General advice for preparing and racing
 
 <br>
 
-- Do not be late to the start!
+- Aim to reach the start in good time
 
 ---
 
@@ -573,7 +573,7 @@ General advice for preparing and racing
 # After the finish
 
 - Wind down: don't call 'easy there' or 'hold it' or say 'we've won'.
-- Do not lie down in the boat unless you are unwell: you will be mistaken for someone having a medical emergency.
+- Please don't lie down in the boat unless you are unwell: marshals may mistake it for a medical emergency.
 
 ---
 
@@ -601,7 +601,7 @@ General advice for preparing and racing
 # Contact
 
 - Email <a :href="'mailto:' + regatta.contact.email">{{ regatta.contact.email }}</a> (Event Organisers: {{ regatta.roles.regatta_captains.name }})
-- Race Desk: Merton Small Boats bay (Do not badger the SU, they have enough to do. Any appeals must be dealt with through Race Desk)
+- Race Desk: Merton Small Boats bay (please leave the SU to run the racing: appeals go through Race Desk)
 - Marshals: along the racing course (see maps). Note that they may need to get permission to change race times from the Senior Umpire
 - First Aid: at Race Desk, and with all medics and medical launches
 - Rules, event plan and maps: <https://tamesisregatta.org/>

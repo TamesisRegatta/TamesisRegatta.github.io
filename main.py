@@ -108,7 +108,7 @@ _RISK_LEVEL_LABELS = {
 
 # The events and races shown for each year on the History page, with the
 # places each race decides.
-_HISTORY_EVENTS = (("men", "Men's"), ("women", "Women's"))
+_HISTORY_EVENTS = (("women", "Women's"), ("men", "Men's"))
 _HISTORY_RACES = (
     ("final", "Final", ("1st", "2nd")),
     ("small_final", "Small final", ("3rd", "4th")),

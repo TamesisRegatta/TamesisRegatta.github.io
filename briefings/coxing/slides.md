@@ -407,6 +407,17 @@ import isisBoathouse from './race-cycles/isis-boathouse.js'
   - Longbridges crews may boat with bows pointing downstream.
 
 ---
+
+# On the intermediate course
+
+- If conditions permit, later rounds may use the longer intermediate course, as far as Donnington Bridge.
+- Go down the transit lane as usual, looking out for the SU so that you know where the start is.
+- When crews are allowed through the Gut, cross <span class="key">carefully</span> into standard circulation as you enter it.
+- Find your opposition, and spin below the Gut where the marshals direct you, no further down than Donnington Bridge.
+- Come back up through the Gut together, and wait for the Gut Marshal's instruction before crossing into the Marshalling Zone above Longbridges House.
+- Keep clear of the Longbridges raft at all times.
+
+---
 layout: figure
 ---
 

@@ -43,6 +43,16 @@ Have you handed your coxing card or other photo ID in at the front?
 3. **Coxing well:** general advice for preparing and racing.
 
 ---
+
+# Abbreviations
+
+- <span class="key">SU:</span> Senior Umpire, who starts each race.
+- <span class="key">DQ:</span> disqualification.
+- <span class="key">OURCs:</span> Oxford University Rowing Clubs.
+- <span class="key">Univ:</span> University College, and its boathouse and raft on the Greenbank.
+- <span class="key">The Head:</span> the Head of the River, upstream of the finish.
+
+---
 layout: section
 ---
 
@@ -351,7 +361,7 @@ import intermediateCourse from '../../docs/assets/img/circulation-intermediate.s
 # Obeying the rules
 
 - Keep clear of other crews, both while racing and while warming up.
-- Please be on time for your race: late crews risk penalties or disqualification (DQ), and the Senior Umpire may award a row-over if your opponents are late. Races are timed in blocks: aim to be at the start line when your block is set to start.
+- Please be on time for your race: late crews risk penalties or a DQ, and the Senior Umpire may award a row-over if your opponents are late. Races are timed in blocks: aim to be at the start line when your block is set to start.
 - Any appeals need to follow the procedure in the rules.
 
 ---

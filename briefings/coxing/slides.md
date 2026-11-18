@@ -481,7 +481,7 @@ Side-by-side: 'enough' buoys marking the mid-race area, and more buoys marking o
 
 <ClipPlayer name="start-2025-mens-final" alt="The start of the 2025 men's final: both crews sitting ready, with the SU's red flag raised on the left." />
 
-<p class="text-center">2025 men's final: watch the SU's red flag, on the left. It goes up on "Attention", and drops on "Go!".</p>
+<p class="text-center">2025 men's final: listen for the SU's commands, "Attention" then "Go!".</p>
 
 ---
 

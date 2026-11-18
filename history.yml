@@ -22,6 +22,9 @@ years:
     note: high stream
   - year: 2022
     status: raced
+    men:
+      final: [St Hugh's, New College]
+      small_final: [Keble, Pembroke]
     women:
       final: [St Antony's, Somerville]
       small_final: [St Hilda's, Lincoln]

@@ -22,23 +22,23 @@ Have you handed your coxing card or other photo ID in at the front?
 
 # The Essentials: make sure you know...
 
-- <span class="key">The circulation pattern: it's essential you get this right</span>
-- <span class="key">What to do in emergencies</span>
-- <span class="key">The rules of the regatta</span>
-- <span class="key">Whom to contact for issues</span>
+- <span class="key">The circulation pattern: it's essential you get this right.</span>
+- <span class="key">What to do in emergencies.</span>
+- <span class="key">The rules of the regatta.</span>
+- <span class="key">Whom to contact for issues.</span>
 
 <br>
 
-- <span class="key">Please read the rules and the event plan</span>: everyone on the water is expected to know them
-- All info available at <https://tamesisregatta.org/>
+- <span class="key">Please read the rules and the event plan</span>: everyone on the water is expected to know them.
+- All info is available at <https://tamesisregatta.org/>.
 
 ---
 
 # This briefing will cover...
 
-1. **Tamesis {{ regatta.year }}:** what you must know for this regatta: key information, safety, circulation and race day
-2. **Racing on the Isis:** safety and rules for any outing or event on the river
-3. **Coxing well:** general advice for preparing and racing
+1. **Tamesis {{ regatta.year }}:** what you must know for this regatta: key information, safety, circulation and race day.
+2. **Racing on the Isis:** safety and rules for any outing or event on the river.
+3. **Coxing well:** general advice for preparing and racing.
 
 ---
 layout: section
@@ -52,10 +52,10 @@ What you must know for this regatta
 
 # Before racing you should also know...
 
-- Your schedule and warm-up plans
-- Who you're racing
-- <span v-if="regatta.draw_url">The draw is out: <a href="https://tamesisregatta.org/draw/" target="_blank" rel="noopener">tamesisregatta.org/draw</a></span><span v-else>The draw is not out yet: watch the mailing lists for it</span>
-- Racing runs from noon Wednesday to Friday, and from 11am on Saturday, until half an hour before sunset
+- Your schedule and warm-up plans.
+- Who you're racing.
+- <span v-if="regatta.draw_url">The draw is out: <a href="https://tamesisregatta.org/draw/" target="_blank" rel="noopener">tamesisregatta.org/draw</a></span><span v-else>The draw is not out yet: watch the mailing lists for it</span>.
+- Racing runs from noon Wednesday to Friday, and from 11am on Saturday, until half an hour before sunset.
 
 ---
 
@@ -81,7 +81,7 @@ What you must know for this regatta
 
 # Checks on the day
 
-- A raft marshal checks your boat before you push off: any problems need fixing before you can boat
+- A raft marshal checks your boat before you push off: any problems need fixing before you can boat.
 - Photo ID for every member of your crew, including you: a printout of their University card or coxing licence. You may have to prove the identity of your crew and/or cox before racing or when you return.
 
 <br>
@@ -94,23 +94,23 @@ What you must know for this regatta
 
 # Safety: First priority
 
-- Risk assessment: read this! (<https://tamesisregatta.org/risk-assessment/>)
-- Medics at all times, at Race Desk and on the medical launch: find any marshal
-- If you have equipment problems, talk to a marshal as soon as possible
-- Klaxons: <span class="key">always follow marshals' instructions</span>
+- Risk assessment: please read it (<https://tamesisregatta.org/risk-assessment/>).
+- Medics at all times, at Race Desk and on the medical launch: find any marshal.
+- If you have equipment problems, talk to a marshal as soon as possible.
+- Klaxons: <span class="key">always follow marshals' instructions</span>.
 
 ---
 
 # Lightning at Tamesis
 
-- Not yet boated: don't push off, and seek shelter
-- On the water: land as the marshals and umpires direct
-- Mid-race: the Senior Umpire decides whether you stop or finish
-- Once landed, shelter in a boathouse; no one boats again until the Senior Umpire says it is safe
+- Not yet boated: don't push off, and seek shelter.
+- On the water: land as the marshals and umpires direct.
+- Mid-race: the Senior Umpire decides whether you stop or finish.
+- Once landed, shelter in a boathouse; no one boats again until the Senior Umpire says it is safe.
 
 <br>
 
-Instructions will be given by marshals if required
+Instructions will be given by marshals if required.
 
 ---
 
@@ -150,20 +150,20 @@ Instructions will be given by marshals if required
 - Crews still in their boathouses will not boat.
 - No more races are started; crews that have finished spin and land in normal circulation.
 - Then the Senior Umpire and marshals send crews in the Marshalling Zone home, as quickly and safely as possible. <span class="key">This overrides normal circulation</span>:
-  - Boathouse Island: cross to the City side, go up the course, and land with bows pointing upstream
-  - Univ: land with bows pointing upstream, as the Univ Marshal directs
-  - Longbridges: land as usual, as the Longbridges Marshal directs
-  - Isis Boathouse: go through the Gut as the Gut Marshal directs
+  - Boathouse Island: cross to the City side, go up the course, and land with bows pointing upstream.
+  - Univ: land with bows pointing upstream, as the Univ Marshal directs.
+  - Longbridges: land as usual, as the Longbridges Marshal directs.
+  - Isis Boathouse: go through the Gut as the Gut Marshal directs.
 - Stay calm, and follow the marshals' instructions rather than your coach's.
 
 ---
 
 # Circulation
 
-- The course is the same every day with a start somewhere on the Greenbank, at or below Univ, and a finish near the Cox Stone
-- The start may move up or down the Greenbank, depending on factors such as stream and time constraints
-- Earlier rounds will be a short course, and if conditions permit we will lengthen the course in later rounds
-- Reverse circulation above the Gut: the transit lane is on the City side for the whole course, and never crosses the racing lanes
+- The course is the same every day with a start somewhere on the Greenbank, at or below Univ, and a finish near the Cox Stone.
+- The start may move up or down the Greenbank, depending on factors such as stream and time constraints.
+- Earlier rounds will be a short course, and if conditions permit we will lengthen the course in later rounds.
+- Reverse circulation above the Gut: the transit lane is on the City side for the whole course, and never crosses the racing lanes.
 
 ---
 layout: figure
@@ -181,9 +181,9 @@ import shortCourse from '../../docs/assets/img/circulation-short.svg'
 
 # Spinning for the regatta
 
-- Spin where the marshals direct you
-- Nearly all your spins will be the other way to usual: row on with stroke side
-- After the race, spin where you are told, and row back close to the Meadows bank
+- Spin where the marshals direct you.
+- Nearly all your spins will be the other way to usual: row on with stroke side.
+- After the race, spin where you are told, and row back close to the Meadows bank.
 
 ---
 
@@ -201,18 +201,18 @@ import rafts from '../../docs/assets/map/print/boathouse-rafts.svg'
 <img :src="rafts" alt="Boathouse Island rafts: landing on the top 5 rafts, boating from the bottom 6" class="w-full my-2">
 
 <div class="grid grid-cols-2">
-  <ul><li>You <span class="key">land</span> on the upstream 5 rafts</li></ul>
-  <ul><li>You <span class="key">boat</span> on the downstream 6 rafts</li></ul>
+  <ul><li>You <span class="key">land</span> on the upstream 5 rafts.</li></ul>
+  <ul><li>You <span class="key">boat</span> on the downstream 6 rafts.</li></ul>
 </div>
 
-<p class="text-center key">Both boating and landing, your bows point downstream</p>
+<p class="text-center key">Both boating and landing, your bows point downstream.</p>
 
 ---
 
 # Circulation (Boathouse Island)
 
 - Boat (from downstream rafts) pointing towards the Gut and go down in the <span class="key">transit lane</span>. Be aware that there may be crews joining the transit lane near the Cherwell cut who have crossed after boating from Univ.
-- <span class="key">Stay above the Gut</span>
+- <span class="key">Stay above the Gut.</span>
 - Spin into the Marshalling Zone as the marshals direct, without obstructing other crews, and pair up to await racing.
 - After the race, return beside the Meadow to the landing rafts, and land with bows pointing downstream.
 
@@ -304,8 +304,8 @@ import isisBoathouse from './race-cycles/isis-boathouse.js'
 - <span class="key">On the short course, which all time trials use, no other crew may go through the Gut.</span>
 - On the intermediate course, the Senior Umpires and Race Committee may also allow other crews through the Gut, as far as Donnington Bridge. This will be made clear before each day's racing: if it isn't, you may not go through.
 - When they are allowed through:
-  - any crews heading downstream along the Greenbank cross <span class="key">carefully</span> to standard circulation when entering the Gut
-  - Longbridges crews may boat with bows pointing downstream
+  - Any crews heading downstream along the Greenbank cross <span class="key">carefully</span> to standard circulation when entering the Gut.
+  - Longbridges crews may boat with bows pointing downstream.
 
 ---
 layout: figure
@@ -333,14 +333,14 @@ import intermediateCourse from '../../docs/assets/img/circulation-intermediate.s
 
 Side-by-side: 'enough' buoys marking the mid-race area, and more buoys marking off the transit lane.
 
-- County Station: along the towpath side; City Station: the middle of the river; transit lane: on the City side
+- County Station: along the towpath side; City Station: the middle of the river; transit lane: on the City side.
 
 <ol type="a">
-  <li>stay <span class="key">completely</span> out of the <span class="key">transit lane</span> when racing, including blades</li>
-  <li>stay in your lane, don't hit the other crew, including blades</li>
+  <li>Stay <span class="key">completely</span> out of the <span class="key">transit lane</span> when racing, including blades.</li>
+  <li>Stay in your lane, and don't hit the other crew, including blades.</li>
 </ol>
 
-<p class="text-center mt-8 key">Fouling (hitting another crew), interference (going into another crew's lane) or safety infringements (going into the transit lane) can result in a DQ</p>
+<p class="text-center mt-8 key">Fouling (hitting another crew), interference (going into another crew's lane) or safety infringements (going into the transit lane) can result in a DQ.</p>
 
 ---
 class: dense
@@ -350,10 +350,10 @@ class: dense
 
 - The stagger is set by the Senior Umpire, not by you or your coach: please don't try to change it.
 - Not ready? Raise your arm, and lower it as soon as you are.
-- We <span class="key">will not</span> start a race if you are clearly not straight or ready, or the stagger is not right, so there's no need to panic
-- We <span class="key">will</span> start a race if you look ready and are not actively adjusting, even with a hand up, so be ready
+- We <span class="key">will not</span> start a race if you are clearly not straight or ready, or the stagger is not right, so there's no need to panic.
+- We <span class="key">will</span> start a race if you look ready and are not actively adjusting, even with a hand up, so be ready.
 - The starter names the two crews, then says "Attention" and raises a red flag, then says "Go!" and drops the flag.
-- If the stream is strong command will be shorter: listen to the SU for instructions!
+- If the stream is strong, the command will be shorter: listen to the SU for instructions.
 - False start, or a collision straight off the start: the starter stops you both and restarts the race. Repeated false starts can mean a DQ.
 
 ---
@@ -386,7 +386,7 @@ If a marshal needs to stop your race, they will fire a loud
 
 <div class="text-8xl font-800 leading-tight my-6">KLAXON</div>
 
-<p class="font-700">All crews on the water stop immediately, and wait for marshals' instructions</p>
+<p class="font-700">All crews on the water stop immediately, and wait for marshals' instructions.</p>
 
 <audio v-if="!inPdf" controls preload="none" :src="klaxon" class="mx-auto mt-4"></audio>
 <p v-if="inPdf" class="text-base">Listen to it: <a :href="klaxonUrl">{{ klaxonUrl }}</a></p>
@@ -396,9 +396,9 @@ If a marshal needs to stop your race, they will fire a loud
 # At the finish line
 
 - Row through the finish line, and keep paddling until you are fully clear of it.
-- 'Straight finish' (No stagger)
+- It's a straight finish, with no stagger.
 - The race is decided by the bows: the finish is a white post, the clacker, which clacks as each crew crosses.
-- If you wish to appeal the race: raise your hand at finish
+- If you wish to appeal the race, raise your hand at the finish.
 - Dead heat: the finish marshal tells you, and you go straight back to the start to re-row.
 - Listen to marshals and stop as soon as you're asked.
 - Make sure the whole crew knows when your next race is before leaving the river.
@@ -410,20 +410,20 @@ If a marshal needs to stop your race, they will fire a loud
 - Stay upstream until a raft is free.
 - Don't drift: You can back down if needed.
 - If landing the wrong way from training:
-  - Blades on the raft get out first
-  - Then they hold the boat for the others!
+  - Blades on the raft get out first.
+  - Then they hold the boat for the others.
 
 ---
 
 # Race Desk and problems
 
-- Blade clashes in races may lead to appeals
-- Equipment failure discuss with Racedesk ASAP. They may not be able to reschedule though.
-- Equipment conflicts (adjacent races) also discuss with Racedesk
-- Register <span class="key">all substitutions</span> before you boat: on the entry system up to the online deadline, then in person at Racedesk
-- A crew that races as a friendly crew stays friendly from then on
-- Racedesk is in the Merton Small Boats bay
-  - For problems on the day, try to go in person: They may not get e-mails
+- Blade clashes in races may lead to appeals.
+- Equipment failure: discuss with Racedesk as soon as possible. They may not be able to reschedule, though.
+- Equipment conflicts (adjacent races): also discuss with Racedesk.
+- Register <span class="key">all substitutions</span> before you boat: on the entry system up to the online deadline, then in person at Racedesk.
+- A crew that races as a friendly crew stays friendly from then on.
+- Racedesk is in the Merton Small Boats bay.
+  - For problems on the day, try to go in person: they may not see emails in time.
 
 ---
 layout: section
@@ -437,20 +437,20 @@ Safety and rules for any outing or event on the river
 
 # Cold and water
 
-- Weather might be cold: keep a lookout for hypothermia
-  - shivering; pale, cold and dry skin; slurred speech; slow breathing; tiredness or confusion
-  - move them indoors; dry clothing; contact medics
-  - <https://www.nhs.uk/conditions/hypothermia/>
-- Every crew should bring a dry change of kit for after racing
-- Water hygiene
+- Weather might be cold: keep a lookout for hypothermia.
+  - Signs: shivering; pale, cold and dry skin; slurred speech; slow breathing; tiredness or confusion.
+  - Move them indoors, get them into dry clothing, and contact the medics.
+  - NHS advice: <https://www.nhs.uk/conditions/hypothermia/>.
+- Every crew should bring a dry change of kit for after racing.
+- Water hygiene.
 
 ---
 
 # Lightning: 30/30 rule
 
-- seek shelter if the time between seeing a lightning flash and hearing thunder is 30 seconds or less
-- shelter for 30 mins after last clap of thunder
-- take care with anything long and pointy such as blades
+- Seek shelter if the time between seeing a lightning flash and hearing thunder is 30 seconds or less.
+- Shelter for 30 minutes after the last clap of thunder.
+- Take care with anything long and pointy, such as blades.
 
 ---
 
@@ -458,21 +458,21 @@ Safety and rules for any outing or event on the river
 
 <span class="key">Coxes lacking lifejackets:</span>
 
-- <span class="key">£50 fine</span>
+- <span class="key">£50 fine.</span>
 - <span class="key">Club Safety Review.</span>
 
-<p class="text-center mt-8">Always do your lifejacket up properly (including crotch strap) and wear it <span class="key">over</span> your coat, in line with the OURCs Code of Conduct</p>
+<p class="text-center mt-8">Always do your lifejacket up properly (including crotch strap) and wear it <span class="key">over</span> your coat, in line with the OURCs Code of Conduct.</p>
 
 ---
 
 # Boat safety checks
 
-- bow-ball, firmly attached (not just taped)
-- heel restraints/quick release: heels released before they come above horizontal, and shoes can be undone with one hand.
-- boat lights, charged!
-- hatch covers, present!
-- backstays, present
-- Bolts and fittings, tight.
+- Bow ball: firmly attached (not just taped).
+- Heel restraints and quick release: heels released before they come above horizontal, and shoes can be undone with one hand.
+- Boat lights: charged.
+- Hatch covers: present.
+- Backstays: present.
+- Bolts and fittings: tight.
 
 ---
 
@@ -507,36 +507,36 @@ General advice for preparing and racing
 
 ### The night before
 
-- Racing equipment (small bag of tools: adjustable spanner, screwdriver, roll of electrical tape, watch)
-- Know your opposition: Who are they? What do their blades look like? Are you on City or County station?
-- Check the weather: wear appropriate kit
-- Double check timings
+- Racing equipment (small bag of tools: adjustable spanner, screwdriver, roll of electrical tape, watch).
+- Know your opposition: who are they? What do their blades look like? Are you on City or County station?
+- Check the weather, and wear appropriate kit.
+- Double-check timings.
 
 ---
 
 # Race day timing
 
-- About 3 hours before: make sure your crew has eaten
-- Agree a meeting time and place with your crew
-- About an hour before: arrive at the boathouse
-- About 30-40 minutes before: hands on (if there is space on the raft)
-- 20-25 minutes before, and no earlier: push off
-- A few minutes to go: be queuing for the start and ready
+- About 3 hours before: make sure your crew has eaten.
+- Agree a meeting time and place with your crew.
+- About an hour before: arrive at the boathouse.
+- About 30-40 minutes before: hands on (if there is space on the raft).
+- 20-25 minutes before, and no earlier: push off.
+- A few minutes to go: be queuing for the start and ready.
 - Race time: Go!
 
 <br>
 
-- Aim to reach the start in good time
+- Aim to reach the start in good time.
 
 ---
 
 # Warming your crew up to race
 
-- Assume there will be no water warmup
-- The crew should warm up well on land: there is no guarantee of any time to warm up on water
-- Make sure you have practised this beforehand and that your crew gets properly warm
-  - high heart rate
-  - sweating
+- Assume there will be no warm-up on the water.
+- The crew should warm up well on land: there is no guarantee of any time to warm up on the water.
+- Make sure you have practised this beforehand, and that your crew gets properly warm:
+  - High heart rate.
+  - Sweating.
 
 ---
 
@@ -552,9 +552,9 @@ General advice for preparing and racing
 
 # During the race
 
-- Your main job is steering
-- A good line can easily win you the race
-- Crashing/clashing will likely mean you lose the race
+- Your main job is steering.
+- A good line can easily win you the race.
+- Crashing or clashing will likely mean you lose the race.
 - Look down your lane and focus on steering. Don't look directly at the next-door crew (you may veer towards them). Sneak peeks briefly.
 
 <br>
@@ -566,10 +566,10 @@ General advice for preparing and racing
 # Racing Calls
 
 - You can prep and practice a race plan beforehand:
-  - Plan a few technique points to make calls on
-  - Use a few landmarks: "passing our raft", "end of boathouses"
+  - Plan a few technique points to make calls on.
+  - Use a few landmarks: "passing our raft", "end of boathouses".
   - Think about what would motivate you to pull harder! Ask your crew what they would like to hear. Sound confident: rehearse before hand if you need to.
-- Tell your rowers where you are: be honest but sound positive. Anyone can catch a sudden crab! Remember, in novice racing the winner is often the one who <span class="key">doesn't</span> make a mistake: see Somerville in the 2022 W final: <https://youtu.be/qIXQKo3uhL8?t=120>
+- Tell your rowers where you are: be honest but sound positive. Anyone can catch a sudden crab! Remember, in novice racing the winner is often the one who <span class="key">doesn't</span> make a mistake: see Somerville in the 2022 W final: <https://youtu.be/qIXQKo3uhL8?t=120>.
 
 ---
 
@@ -582,9 +582,9 @@ General advice for preparing and racing
 
 # Spinning and crabs
 
-- Row on with stroke side and back down with bow side
+- Row on with stroke side and back down with bow side.
 - Make sure your bowsiders know how to back down!
-- You may not always need to back down, especially if you are trying to cross the river while spinning
+- You may not always need to back down, especially if you are trying to cross the river while spinning.
 
 <br>
 
@@ -603,11 +603,11 @@ General advice for preparing and racing
 
 # Contact
 
-- Email <a :href="'mailto:' + regatta.contact.email">{{ regatta.contact.email }}</a> (Event Organisers: {{ regatta.roles.regatta_captains.name }})
-- Race Desk: Merton Small Boats bay (please leave the SU to run the racing: appeals go through Race Desk)
-- Marshals: along the racing course (see maps). Note that they may need to get permission to change race times from the Senior Umpire
-- First Aid: at Race Desk, and with all medics and medical launches
-- Rules, event plan and maps: <https://tamesisregatta.org/>
+- Email <a :href="'mailto:' + regatta.contact.email">{{ regatta.contact.email }}</a> (Event Organisers: {{ regatta.roles.regatta_captains.name }}).
+- Race Desk: Merton Small Boats bay (please leave the SU to run the racing: appeals go through Race Desk).
+- Marshals: along the racing course (see maps). Note that they may need to get permission to change race times from the Senior Umpire.
+- First Aid: at Race Desk, and with all medics and medical launches.
+- Rules, event plan and maps: <https://tamesisregatta.org/>.
 - Keep an eye on the mailing lists for announcements if weather or conditions change: the next day's format is confirmed by 5pm.
 
 ---

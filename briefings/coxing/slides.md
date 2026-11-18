@@ -101,6 +101,39 @@ What you must know for this regatta
 
 ---
 
+# Race week forecast
+
+<div class="grid grid-cols-4 gap-6 text-center text-base">
+  <div>
+    <p class="font-700 !mb-1">Wednesday</p>
+    <ph-cloud-rain class="text-5xl mx-auto" aria-hidden="true" />
+    <p class="!mt-1">Drizzle from 1pm<br>8-9&deg;C, feels like 5&deg;C<br>Gusts to 20 mph</p>
+  </div>
+  <div>
+    <p class="font-700 !mb-1">Thursday</p>
+    <ph-cloud-sun class="text-5xl mx-auto" aria-hidden="true" />
+    <p class="!mt-1">Drizzle, then brighter<br>3-5&deg;C, feels like 0&deg;C<br>Gusts to 17 mph</p>
+  </div>
+  <div>
+    <p class="font-700 !mb-1">Friday</p>
+    <ph-cloud-rain class="text-5xl mx-auto" aria-hidden="true" />
+    <p class="!mt-1">Drizzle all day<br>6-9&deg;C, feels like 2-5&deg;C<br>Windy, gusts to 30 mph</p>
+  </div>
+  <div>
+    <p class="font-700 !mb-1">Saturday</p>
+    <ph-cloud class="text-5xl mx-auto" aria-hidden="true" />
+    <p class="!mt-1">Cloudy and dry<br>9-10&deg;C, feels like 5&deg;C<br>Breezy, gusts to 30 mph</p>
+  </div>
+</div>
+
+- <span class="key">Cold all week</span>, especially on Thursday: wear warm kit, bring a dry change, and watch for hypothermia.
+- Breezy on Friday and Saturday: expect crosswinds at the start.
+- No thunderstorms forecast, so lightning looks unlikely.
+
+<p class="text-sm" style="color: var(--tamesis-muted)">Our best guess a week ahead: Open-Meteo forecast for Oxford, 11:00-16:00, taken 18 November. Check again the night before you race.</p>
+
+---
+
 # Lightning at Tamesis
 
 - Not yet boated: don't push off, and seek shelter.
@@ -435,11 +468,12 @@ Safety and rules for any outing or event on the river
 
 # Cold and water
 
-- Weather might be cold: keep a lookout for hypothermia.
+- Race week looks cold: keep a lookout for hypothermia.
   - Signs: shivering; pale, cold and dry skin; slurred speech; slow breathing; tiredness or confusion.
   - Move them indoors, get them into dry clothing, and contact the medics.
   - NHS advice: <https://www.nhs.uk/conditions/hypothermia/>.
 - Every crew should bring a dry change of kit for after racing.
+- Coxes sit still in the cold for a long time: wear warm, waterproof layers, with your lifejacket over the top.
 - Water hygiene.
 
 ---

@@ -282,16 +282,16 @@ import rafts from '../../docs/assets/map/print/boathouse-rafts.svg'
 # Landing at Boathouse Island
 
 - You may need to walk your boat along the island to reach the right raft.
-- When landing, hold the boat from the middle or stern, <span class="key">never by a bow-seat blade</span>, or the stream will swing the stern out into the river.
+- When a crew lands, whoever is on the raft holds the blade of 8 or 6, <span class="key">never 4 or 2</span>, or the stream will swing the stern out into the river.
 
 <div class="grid grid-cols-2 gap-8 text-base text-center">
   <figure>
-    <LandingSwing held="bow" label="A boat landing bows downstream, held at the raft by a bow-seat blade: the stream swings its stern out into the river." />
-    <figcaption>Held by a bow-seat blade: the stern swings out.</figcaption>
+    <LandingSwing held="bow" label="A boat landing bows downstream, held at the raft by the blades of 2 and 4: the stream swings its stern out into the river." />
+    <figcaption>Held by the blade of 2 or 4: the stern swings out.</figcaption>
   </figure>
   <figure>
-    <LandingSwing held="stern" label="A boat landing bows downstream, held from the stern: it stays alongside the raft." />
-    <figcaption>Held from the middle or stern: the boat stays alongside.</figcaption>
+    <LandingSwing held="stern" label="A boat landing bows downstream, held at the raft by the blades of 6 and 8: it stays alongside." />
+    <figcaption>Held by the blade of 6 or 8: the boat stays alongside.</figcaption>
   </figure>
 </div>
 
@@ -479,11 +479,9 @@ Side-by-side: 'enough' buoys marking the mid-race area, and more buoys marking o
 
 # Let's look at the start
 
-<div class="text-center text-2xl mt-24">
+<ClipPlayer name="start-2025-mens-final" alt="The start of the 2025 men's final: both crews sitting ready, with the SU's red flag raised on the left." />
 
-<https://www.youtube.com/watch?v=VgSArFfquNk>
-
-</div>
+<p class="text-center">2025 men's final: listen for the SU's commands, "Attention" then "Go!".</p>
 
 ---
 
@@ -670,7 +668,7 @@ General advice for preparing and racing
   - Plan a few technique points to make calls on.
   - Use a few landmarks: "passing our raft", "end of boathouses".
   - Think about what would motivate you to pull harder! Ask your crew what they would like to hear. Sound confident: rehearse beforehand if you need to.
-- Tell your rowers where you are: be honest but sound positive. Anyone can catch a sudden crab! Remember, in novice racing the winner is often the one who <span class="key">doesn't</span> make a mistake: see Somerville in the 2022 W final: <https://youtu.be/qIXQKo3uhL8?t=120>.
+- Tell your rowers where you are: be honest but sound positive. Anyone can catch a sudden crab! Remember, in novice racing the winner is often the one who <span class="key">doesn't</span> make a mistake.
 
 ---
 
@@ -690,6 +688,14 @@ General advice for preparing and racing
 <br>
 
 - If you catch a crab, start rowing again as soon as possible: make sure you talk through with your crew what you are going to do if this happens.
+
+---
+
+# Recovering from a crab
+
+<ClipPlayer name="crab-2025-womens-final" alt="Early in the 2025 women's final, with the two crews racing side by side, one crew catches a crab." />
+
+<p class="text-center key">Talk through, and ideally practise, what your crew does after a crab.</p>
 
 ---
 

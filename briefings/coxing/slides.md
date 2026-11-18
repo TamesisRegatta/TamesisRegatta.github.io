@@ -542,6 +542,7 @@ General advice for preparing and racing
 
 # Lining up well
 
+- Listen for the SU's instructions. Decide beforehand whether your crew will follow the SU directly or you will relay the instructions, and make sure the whole crew knows which.
 - Aim for center of lane well before you get to the start line.
 - Wind may push you sideways: Go to upwind side of your lane if crosswinds.
 - Remember you can back down to straighten as well as row on. Please only use 1 rower at a time to adjust position.

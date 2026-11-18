@@ -104,7 +104,7 @@ What you must know for this regatta
 # Lightning at Tamesis
 
 - Not yet boated: don't push off, and seek shelter
-- On the water: land under marshal and umpire instructions
+- On the water: land as the marshals and umpires direct
 - Mid-race: the Senior Umpire decides whether you stop or finish
 - Once landed, shelter in a boathouse; no one boats again until the Senior Umpire says it is safe
 
@@ -132,8 +132,8 @@ Instructions will be given by marshals if required
 - Coxes must be S status, or X status upgraded more than 12 months before the day.
 - Every crew must have senior rowers (at least 3 full terms of rowing) at bow and 2.
 - No crew may boat from or land at a boathouse below the Gut, or go through the Gut.
-- All crews spin upstream of the Greenbanks Marshal, under the direction of race officials.
-- Longbridges crews spin above their raft under the Longbridges Marshal, and drift back to land with bows pointing upstream.
+- All crews spin upstream of the Greenbanks Marshal, as race officials direct.
+- Longbridges crews spin above their raft, as the Longbridges Marshal directs, and drift back to land with bows pointing upstream.
 
 </div>
 
@@ -151,9 +151,9 @@ Instructions will be given by marshals if required
 - No more races are started; crews that have finished spin and land in normal circulation.
 - Then the Senior Umpire and marshals send crews in the Marshalling Zone home, as quickly and safely as possible. <span class="key">This overrides normal circulation</span>:
   - Boathouse Island: cross to the City side, go up the course, and land with bows pointing upstream
-  - Univ: land with bows pointing upstream, under the Univ Marshal
-  - Longbridges: land as usual, under the Longbridges Marshal
-  - Isis Boathouse: go through the Gut under the Gut Marshal
+  - Univ: land with bows pointing upstream, as the Univ Marshal directs
+  - Longbridges: land as usual, as the Longbridges Marshal directs
+  - Isis Boathouse: go through the Gut as the Gut Marshal directs
 - Stay calm, and follow the marshals' instructions rather than your coach's.
 
 ---
@@ -213,7 +213,7 @@ import rafts from '../../docs/assets/map/print/boathouse-rafts.svg'
 
 - Boat (from downstream rafts) pointing towards the Gut and go down in the TRANSIT LANE. Be aware that there may be crews joining the Transit Lane near the Cherwell cut who have crossed after boating from Univ.
 - STAY ABOVE THE GUT
-- Spin under marshal instructions into the Marshalling Zone, without obstructing other crews, and pair up to await racing.
+- Spin into the Marshalling Zone as the marshals direct, without obstructing other crews, and pair up to await racing.
 - After the race, return beside the Meadow to the landing rafts, and land with bows pointing downstream.
 
 ---
@@ -256,7 +256,7 @@ import longbridges from './race-cycles/longbridges.js'
 
 - Boat bow ball pointing towards the Gut. Only push off when instructed to by the Univ Marshal. Cross immediately into the TRANSIT LANE, proceed downstream along the Greenbank.
 - Crews should be in their boat ready to push off before requesting permission from the Univ Marshal, who will then coordinate with the SU so that you can safely push off after a race comes past.
-- Spin under marshal instructions and pair up to await racing.
+- Spin as the marshals direct, and pair up to await racing.
 - After the race, spin at the Head, come down beside the Meadows and then the boathouses in the TRANSIT LANE, then spin into the Marshalling Zone (never through the Gut).
 - Make it clear to the Marshals/Senior Umpire that you wish to land, and they will instruct you to follow a race in the County Station back to Univ, and land bows upstream.
 

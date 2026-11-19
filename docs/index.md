@@ -20,6 +20,7 @@ Greenbank to the Cox Stone, and takes place from
 | Scratch deadline (full refund) | {{ when(dates.scratch_deadline) }} |
 | Draw published{% if draw_url %}: [view the draw :material-open-in-new:](/draw/){ .plausible-event-name--Draw target="_blank" rel="noopener" title="Opens the draw on Google Sheets, in a new tab" }{% else %} (our aim, but not guaranteed){% endif %} | {{ when(dates.draw_published) }} |
 | Coxing briefing ({{ venues.coxing_briefing }}) | {{ when(dates.coxing_briefing) }} |
+| Additional coxing briefing ({{ venues.coxing_briefing_extra }}) | {{ when(dates.coxing_briefing_extra) }} |
 | Marshal briefing ({{ venues.marshal_briefing }}) | {{ when(dates.marshal_briefing) }} |
 | Racing | {{ when(dates.regatta_start, dates.regatta_end) }} |
 | Awards ceremony, on Boathouse Island, near Race Desk | {{ when(dates.awards_ceremony, about=True) }} |

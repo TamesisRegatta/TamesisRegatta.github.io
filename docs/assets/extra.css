@@ -975,6 +975,39 @@ iframe.tr-analytics {
   color: var(--md-default-fg-color);
 }
 
+/* Each crew's blade badge beside its name, largest for the winners and
+   stepping down to 4th place (docs/assets/img/blades/, picked by
+   history_results()) */
+.md-typeset .tr-history-results tr[class^="tr-place-"] td {
+  vertical-align: middle;
+}
+
+/* The badge sits in a slot as wide as the 1st place badge (2:1), so the
+   names line up whatever the badge's size. */
+.md-typeset .tr-history-results .tr-crew {
+  display: grid;
+  grid-template-columns: 4.8em auto;
+  align-items: center;
+  column-gap: 0.6em;
+}
+
+.md-typeset .tr-history-results .tr-blade {
+  width: auto;
+  height: 1.7em;
+}
+
+.md-typeset .tr-history-results .tr-place-1st .tr-blade {
+  height: 2.4em;
+}
+
+.md-typeset .tr-history-results .tr-place-2nd .tr-blade {
+  height: 2.15em;
+}
+
+.md-typeset .tr-history-results .tr-place-3rd .tr-blade {
+  height: 1.9em;
+}
+
 .md-typeset .tr-history-tbc,
 .md-typeset .tr-history-cancelled {
   color: var(--md-default-fg-color--light);

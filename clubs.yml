@@ -1,0 +1,42 @@
+# The OURCs college boat clubs, by their OURCs code, with the names the
+# History page uses for them (history.yml lists crews by these names).
+#
+# Each club has a blade badge in docs/assets/img/blades/: <CODE>.svg, or
+# <CODE>-M.svg and <CODE>-W.svg where its men's and women's blades differ.
+# history_results() in main.py picks the badge for the event, and fails the
+# build if a crew's club or badge is missing.
+BAL: Balliol
+BRC: Brasenose
+CHB: Christ Church
+COO: Corpus Christi
+EXC: Exeter
+GTM: Green Templeton
+HEC: Hertford
+JEO: Jesus
+KEB: Keble
+LMH: Lady Margaret Hall
+LIN: Linacre
+LIC: Lincoln
+MAG: Magdalen
+MAN: Mansfield
+MER: Merton
+NEC: New College
+ORO: Oriel
+PMB: Pembroke
+QCO: Queen's
+RPC: Regent's Park
+SBH: Reuben
+SAC: St Anne's
+SAY: St Antony's
+SCO: St Catherine's
+SEH: St Edmund Hall
+SHI: St Hilda's
+SHG: St Hugh's
+SJO: St John's
+SPC: St Peter's
+SOM: Somerville
+TRO: Trinity
+UCO: University
+WAD: Wadham
+WOO: Wolfson
+WRO: Worcester

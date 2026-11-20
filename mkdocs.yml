@@ -130,6 +130,8 @@ plugins:
         - risk_matrix: risk_matrix.yml
         # Past results, for the History page: {{ history.years }}
         - history: history.yml
+        # The OURCs college clubs by code, for the History page's blade badges
+        - clubs: clubs.yml
   - exporter:
       formats:
         pdf:

@@ -114,6 +114,10 @@ _HISTORY_RACES = (
     ("small_final", "Small final", ("3rd", "4th")),
 )
 
+# Where a club's blade badge differs between its men's and women's crews, the
+# badge file carries this suffix for the event (BAL.svg, but WRO-M.svg).
+_BLADE_SUFFIX = {"men": "-M", "women": "-W"}
+
 
 def _material_icon(name: str) -> str:
     """One of the icons bundled with Material for MkDocs, as inline SVG
@@ -254,6 +258,21 @@ def define_env(env):
         by why it was cancelled, or by each event's final and small final,
         with a link to the final's video if it has one."""
         youtube = _material_icon("fontawesome/brands/youtube")
+        blades_dir = Path(env.conf["docs_dir"]) / "assets" / "img" / "blades"
+        club_codes = {name: code for code, name in env.variables["clubs"].items()}
+
+        def blade(year, crew, event):
+            """The crew's club's blade badge for the event, beside its name.
+            Decorative (empty alt), as the name follows it in text."""
+            name = str(crew)
+            code = club_codes.get(name) or club_codes.get(name.rsplit(" ", 1)[0])  # "Magdalen A"
+            if code is None:
+                raise ValueError(f"history.yml: {year} {event}: no club named {name!r} in clubs.yml")
+            for stem in (code + _BLADE_SUFFIX[event], code):
+                if (blades_dir / f"{stem}.svg").is_file():
+                    return f'<img class="tr-blade" src="/assets/img/blades/{stem}.svg" alt="" width="64" height="32">'
+            raise ValueError(f"no blade badge for {code} in {blades_dir}")
+
         out = []
         for year in env.variables["history"]["years"]:
             out.append(f"## {year['year']}\n")
@@ -290,7 +309,8 @@ def define_env(env):
                         for place, crew in zip(places, crews):
                             rows.append(
                                 f'<tr class="tr-place-{place}"><td>{place}</td>'
-                                f"<td>{html.escape(str(crew))}</td></tr>"
+                                f'<td><span class="tr-crew">{blade(year["year"], crew, key)}'
+                                f"{html.escape(str(crew))}</span></td></tr>"
                             )
                     else:
                         rows.append('<tr><td colspan="2" class="tr-history-tbc">Results to follow</td></tr>')

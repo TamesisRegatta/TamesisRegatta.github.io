@@ -815,8 +815,8 @@ table.risk-matrix td {
 }
 
 /* Nav: section dividers, a "Safety documents" one above Event Plan, marking
-   off the documents for officials from the pages for crews, and a "Past
-   regattas" one above History (see the nav in mkdocs.yml). Each item that
+   off the documents for officials from the pages for crews, and an "Oxford
+   rowing" one above History and Blade Colours (see the nav in mkdocs.yml). Each item that
    starts a section names it in --tr-nav-section. The current page's own link
    is "./", so each such item is found two ways: as the item linking to its
    page (on every other page), or as the item after the one before it (on its
@@ -828,7 +828,7 @@ table.risk-matrix td {
 
 .md-nav--primary > .md-nav__list > .md-nav__item:has(> a[href$="river-notices/"]) + .md-nav__item,
 .md-nav--primary > .md-nav__list > .md-nav__item:has(> a[href$="history/"]) {
-  --tr-nav-section: "Past regattas";
+  --tr-nav-section: "Oxford rowing";
 }
 
 /* No section named, no content, so no divider */
@@ -1006,6 +1006,32 @@ iframe.tr-analytics {
 
 .md-typeset .tr-history-results .tr-place-3rd .tr-blade {
   height: 1.9em;
+}
+
+/* Blade Colours page (docs/blades.md, rendered by blade_badges() in main.py):
+   each club under its own heading, with its badge, or its men's and women's
+   badges side by side, at up to 10rem wide each and narrower on a phone. */
+.md-typeset .tr-blade-pics {
+  display: flex;
+  gap: 1rem;
+}
+
+.md-typeset .tr-blade-pic {
+  flex: 0 1 10rem;
+  min-width: 0;
+}
+
+.md-typeset .tr-blade-pic img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.md-typeset .tr-blade-variant {
+  display: block;
+  margin-top: 0.2rem;
+  color: var(--md-default-fg-color--light);
+  font-size: 0.7rem;
 }
 
 .md-typeset .tr-history-tbc,

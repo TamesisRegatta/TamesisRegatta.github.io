@@ -1,42 +1,118 @@
-# The OURCs college boat clubs, by their OURCs code, with the names the
-# History page uses for them (history.yml lists crews by these names).
+# The OURCs college boat clubs, by their OURCs code: each club's name, as the
+# History page uses it (history.yml lists crews by these names), and a
+# description of its blade badge, for the Blade Colours page's alt text.
 #
 # Each club has a blade badge in docs/assets/img/blades/: <CODE>.svg, or
-# <CODE>-M.svg and <CODE>-W.svg where its men's and women's blades differ.
-# history_results() in main.py picks the badge for the event, and fails the
-# build if a crew's club or badge is missing.
-BAL: Balliol
-BRC: Brasenose
-CHB: Christ Church
-COO: Corpus Christi
-EXC: Exeter
-GTM: Green Templeton
-HEC: Hertford
-JEO: Jesus
-KEB: Keble
-LMH: Lady Margaret Hall
-LIN: Linacre
-LIC: Lincoln
-MAG: Magdalen
-MAN: Mansfield
-MER: Merton
-NEC: New College
-ORO: Oriel
-PMB: Pembroke
-QCO: Queen's
-RPC: Regent's Park
-SBH: Reuben
-SAC: St Anne's
-SAY: St Antony's
-SCO: St Catherine's
-SEH: St Edmund Hall
-SHI: St Hilda's
-SHG: St Hugh's
-SJO: St John's
-SPC: St Peter's
-SOM: Somerville
-TRO: Trinity
-UCO: University
-WAD: Wadham
-WOO: Wolfson
-WRO: Worcester
+# <CODE>-M.svg and <CODE>-W.svg where its men's and women's blades differ,
+# described under "blades" as men and women. The badges show the blade's tip
+# at the left. history_results() and blade_badges() in main.py fail the build
+# if a club or badge is missing.
+BAL:
+  name: Balliol
+  blade: Navy, with red below a diagonal from the bottom left to the top right corner.
+BRC:
+  name: Brasenose
+  blade: Plain black.
+CHB:
+  name: Christ Church
+  blade: Plain navy.
+COO:
+  name: Corpus Christi
+  blade: Navy, with two crimson stripes near the tip.
+EXC:
+  name: Exeter
+  blade: Plain red.
+GTM:
+  name: Green Templeton
+  blade: Split corner to corner, green below and navy above, divided by a yellow band.
+HEC:
+  name: Hertford
+  blade: Dark red, with two white stripes near the tip.
+JEO:
+  name: Jesus
+  blade: Plain green.
+KEB:
+  name: Keble
+  blade: White, with a red chevron near the tip, pointing away from it.
+LMH:
+  name: Lady Margaret Hall
+  blade: Navy, with a thin yellow wedge pointing in from the middle of the end away from the tip.
+LIN:
+  name: Linacre
+  blade: Yellow, with a black diagonal cross from corner to corner.
+LIC:
+  name: Lincoln
+  blade: Navy, with a light blue band at the tip, and a thin light blue wedge pointing in from the middle of the other end.
+MAG:
+  name: Magdalen
+  blade: Black, with a white lily with yellow stamens and a green stem near the tip.
+MAN:
+  name: Mansfield
+  blade: Red, with a yellow cross near the tip, each of its arms ending in a smaller cross.
+MER:
+  name: Merton
+  blade: White, with a small purple cross near the tip.
+NEC:
+  name: New College
+  blade: Purple, with two gold stripes near the tip.
+ORO:
+  name: Oriel
+  blade: Navy, with two white stripes near the tip.
+PMB:
+  name: Pembroke
+  blade: White, with a pink band at the tip.
+QCO:
+  name: Queen's
+  blade: Three horizontal bands, navy, white and navy.
+RPC:
+  name: Regent's Park
+  blade: Red, with a white Scandinavian cross, its upright near the tip.
+SBH:
+  name: Reuben
+  blade: White, with a navy stripe and a green stripe near the tip.
+SAC:
+  name: St Anne's
+  blade: Red, with a grey band at the tip.
+SAY:
+  name: St Antony's
+  blade: Yellow at the tip, then a black stripe, then red.
+SCO:
+  name: St Catherine's
+  blade: Light blue, with a red spiked wheel near the tip.
+SEH:
+  name: St Edmund Hall
+  blade: Pale yellow, with a red cross near the tip, its arms flaring into pointed ends.
+SHI:
+  name: St Hilda's
+  blade: Navy, with a white triangle in the corner at the top of the tip.
+SHG:
+  name: St Hugh's
+  blade: Navy, with a yellow triangle edged in white at the tip, pointing away from it.
+SJO:
+  name: St John's
+  blade: Navy, with a white shield divided into quarters by a navy cross, near the tip.
+SPC:
+  name: St Peter's
+  blades:
+    men: White, with a diagonal green band with a yellow centre stripe across the bottom corner of the tip.
+    women: Green, with two crossed yellow keys near the tip.
+SOM:
+  name: Somerville
+  blade: Red, with two black stripes near the tip.
+TRO:
+  name: Trinity
+  blade: Navy, with one white stripe near the tip.
+UCO:
+  name: University
+  blade: Navy, with a gold cross near the tip, its arms flaring into pointed ends.
+WAD:
+  name: Wadham
+  blade: White, with a light blue cross near the tip, its arms widening outwards.
+WOO:
+  name: Wolfson
+  blade: Yellow, with one red stripe near the tip.
+WRO:
+  name: Worcester
+  blades:
+    men: Black, with a pink cross near the tip, its arms widening outwards.
+    women: Pink, with a black cross near the tip, its arms widening outwards.

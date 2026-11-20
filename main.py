@@ -259,7 +259,7 @@ def define_env(env):
         with a link to the final's video if it has one."""
         youtube = _material_icon("fontawesome/brands/youtube")
         blades_dir = Path(env.conf["docs_dir"]) / "assets" / "img" / "blades"
-        club_codes = {name: code for code, name in env.variables["clubs"].items()}
+        club_codes = {club["name"]: code for code, club in env.variables["clubs"].items()}
 
         def blade(year, crew, event):
             """The crew's club's blade badge for the event, beside its name.
@@ -321,4 +321,39 @@ def define_env(env):
                     f'<th scope="col">Crew</th></tr></thead>{"".join(rows)}</table></div>'
                 )
             out.append(f'<div class="tr-history-year">{"".join(events)}</div>\n')
+        return "\n".join(out)
+
+    @env.macro
+    def blade_badges() -> str:
+        """Every club's blade badge from clubs.yml, in order of club name. Each
+        club is a Markdown heading, so it is in the page's table of contents,
+        followed by its OURCs code and its badge. A club whose men's and
+        women's blades differ shows both side by side, women's first as on the
+        History page. Each badge links to its SVG file, and its alt text
+        describes the design."""
+        blades_dir = Path(env.conf["docs_dir"]) / "assets" / "img" / "blades"
+        clubs = sorted(env.variables["clubs"].items(), key=lambda c: c[1]["name"].casefold())
+        out = []
+        for code, club in clubs:
+            name = club["name"]
+            if "blades" in club:
+                badges = [(code + _BLADE_SUFFIX[event], label, club["blades"][event]) for event, label in _HISTORY_EVENTS]
+            else:
+                badges = [(code, None, club["blade"])]
+            pics = []
+            for stem, label, design in badges:
+                if not (blades_dir / f"{stem}.svg").is_file():
+                    raise ValueError(f"clubs.yml: no blade badge {stem}.svg in {blades_dir}")
+                whose = f"{name} {label.lower()}" if label else name
+                pic = (
+                    f'<a href="/assets/img/blades/{stem}.svg"><img src="/assets/img/blades/{stem}.svg" '
+                    f'alt="{html.escape(whose)} blade: {html.escape(design)}" width="200" height="100"></a>'
+                )
+                if label:
+                    pic += f'<span class="tr-blade-variant">{label}</span>'
+                pics.append(f'<div class="tr-blade-pic">{pic}</div>')
+            out.append(
+                f"## {name}\n\n`{code}`\n\n"
+                f'<div class="tr-blade-pics">{"".join(pics)}</div>\n'
+            )
         return "\n".join(out)

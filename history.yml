@@ -12,6 +12,9 @@
 #
 # A race not filled in yet shows "Results to follow". An event's final may
 # link to its video on YouTube, as final_video.
+#
+# Crews are named by their club's name in clubs.yml (optionally followed by
+# a crew letter, as in "Magdalen A"), which gives each crew its blade badge.
 years:
   - year: 2025
     status: raced

@@ -114,6 +114,10 @@ _HISTORY_RACES = (
     ("small_final", "Small final", ("3rd", "4th")),
 )
 
+# Where a club's blade badge differs between its men's and women's crews, the
+# badge file carries this suffix for the event (BAL.svg, but WRO-M.svg).
+_BLADE_SUFFIX = {"men": "-M", "women": "-W"}
+
 
 def _material_icon(name: str) -> str:
     """One of the icons bundled with Material for MkDocs, as inline SVG
@@ -254,6 +258,21 @@ def define_env(env):
         by why it was cancelled, or by each event's final and small final,
         with a link to the final's video if it has one."""
         youtube = _material_icon("fontawesome/brands/youtube")
+        blades_dir = Path(env.conf["docs_dir"]) / "assets" / "img" / "blades"
+        club_codes = {club["name"]: code for code, club in env.variables["clubs"].items()}
+
+        def blade(year, crew, event):
+            """The crew's club's blade badge for the event, beside its name.
+            Decorative (empty alt), as the name follows it in text."""
+            name = str(crew)
+            code = club_codes.get(name) or club_codes.get(name.rsplit(" ", 1)[0])  # "Magdalen A"
+            if code is None:
+                raise ValueError(f"history.yml: {year} {event}: no club named {name!r} in clubs.yml")
+            for stem in (code + _BLADE_SUFFIX[event], code):
+                if (blades_dir / f"{stem}.svg").is_file():
+                    return f'<img class="tr-blade" src="/assets/img/blades/{stem}.svg" alt="" width="64" height="32">'
+            raise ValueError(f"no blade badge for {code} in {blades_dir}")
+
         out = []
         for year in env.variables["history"]["years"]:
             out.append(f"## {year['year']}\n")
@@ -290,7 +309,8 @@ def define_env(env):
                         for place, crew in zip(places, crews):
                             rows.append(
                                 f'<tr class="tr-place-{place}"><td>{place}</td>'
-                                f"<td>{html.escape(str(crew))}</td></tr>"
+                                f'<td><span class="tr-crew">{blade(year["year"], crew, key)}'
+                                f"{html.escape(str(crew))}</span></td></tr>"
                             )
                     else:
                         rows.append('<tr><td colspan="2" class="tr-history-tbc">Results to follow</td></tr>')
@@ -301,4 +321,39 @@ def define_env(env):
                     f'<th scope="col">Crew</th></tr></thead>{"".join(rows)}</table></div>'
                 )
             out.append(f'<div class="tr-history-year">{"".join(events)}</div>\n')
+        return "\n".join(out)
+
+    @env.macro
+    def blade_badges() -> str:
+        """Every club's blade badge from clubs.yml, in order of club name. Each
+        club is a Markdown heading, so it is in the page's table of contents,
+        followed by its OURCs code and its badge. A club whose men's and
+        women's blades differ shows both side by side, women's first as on the
+        History page. Each badge links to its SVG file, and its alt text
+        describes the design."""
+        blades_dir = Path(env.conf["docs_dir"]) / "assets" / "img" / "blades"
+        clubs = sorted(env.variables["clubs"].items(), key=lambda c: c[1]["name"].casefold())
+        out = []
+        for code, club in clubs:
+            name = club["name"]
+            if "blades" in club:
+                badges = [(code + _BLADE_SUFFIX[event], label, club["blades"][event]) for event, label in _HISTORY_EVENTS]
+            else:
+                badges = [(code, None, club["blade"])]
+            pics = []
+            for stem, label, design in badges:
+                if not (blades_dir / f"{stem}.svg").is_file():
+                    raise ValueError(f"clubs.yml: no blade badge {stem}.svg in {blades_dir}")
+                whose = f"{name} {label.lower()}" if label else name
+                pic = (
+                    f'<a href="/assets/img/blades/{stem}.svg"><img src="/assets/img/blades/{stem}.svg" '
+                    f'alt="{html.escape(whose)} blade: {html.escape(design)}" width="200" height="100"></a>'
+                )
+                if label:
+                    pic += f'<span class="tr-blade-variant">{label}</span>'
+                pics.append(f'<div class="tr-blade-pic">{pic}</div>')
+            out.append(
+                f"## {name}\n\n`{code}`\n\n"
+                f'<div class="tr-blade-pics">{"".join(pics)}</div>\n'
+            )
         return "\n".join(out)

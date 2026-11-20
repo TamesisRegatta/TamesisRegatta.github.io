@@ -815,8 +815,8 @@ table.risk-matrix td {
 }
 
 /* Nav: section dividers, a "Safety documents" one above Event Plan, marking
-   off the documents for officials from the pages for crews, and a "Past
-   regattas" one above History (see the nav in mkdocs.yml). Each item that
+   off the documents for officials from the pages for crews, and an "Oxford
+   rowing" one above History and Blade Colours (see the nav in mkdocs.yml). Each item that
    starts a section names it in --tr-nav-section. The current page's own link
    is "./", so each such item is found two ways: as the item linking to its
    page (on every other page), or as the item after the one before it (on its
@@ -828,7 +828,7 @@ table.risk-matrix td {
 
 .md-nav--primary > .md-nav__list > .md-nav__item:has(> a[href$="river-notices/"]) + .md-nav__item,
 .md-nav--primary > .md-nav__list > .md-nav__item:has(> a[href$="history/"]) {
-  --tr-nav-section: "Past regattas";
+  --tr-nav-section: "Oxford rowing";
 }
 
 /* No section named, no content, so no divider */
@@ -973,6 +973,65 @@ iframe.tr-analytics {
 .md-typeset .tr-history-results .tr-place-1st td {
   font-weight: 700;
   color: var(--md-default-fg-color);
+}
+
+/* Each crew's blade badge beside its name, largest for the winners and
+   stepping down to 4th place (docs/assets/img/blades/, picked by
+   history_results()) */
+.md-typeset .tr-history-results tr[class^="tr-place-"] td {
+  vertical-align: middle;
+}
+
+/* The badge sits in a slot as wide as the 1st place badge (2:1), so the
+   names line up whatever the badge's size. */
+.md-typeset .tr-history-results .tr-crew {
+  display: grid;
+  grid-template-columns: 4.8em auto;
+  align-items: center;
+  column-gap: 0.6em;
+}
+
+.md-typeset .tr-history-results .tr-blade {
+  width: auto;
+  height: 1.7em;
+}
+
+.md-typeset .tr-history-results .tr-place-1st .tr-blade {
+  height: 2.4em;
+}
+
+.md-typeset .tr-history-results .tr-place-2nd .tr-blade {
+  height: 2.15em;
+}
+
+.md-typeset .tr-history-results .tr-place-3rd .tr-blade {
+  height: 1.9em;
+}
+
+/* Blade Colours page (docs/blades.md, rendered by blade_badges() in main.py):
+   each club under its own heading, with its badge, or its men's and women's
+   badges side by side, at up to 10rem wide each and narrower on a phone. */
+.md-typeset .tr-blade-pics {
+  display: flex;
+  gap: 1rem;
+}
+
+.md-typeset .tr-blade-pic {
+  flex: 0 1 10rem;
+  min-width: 0;
+}
+
+.md-typeset .tr-blade-pic img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.md-typeset .tr-blade-variant {
+  display: block;
+  margin-top: 0.2rem;
+  color: var(--md-default-fg-color--light);
+  font-size: 0.7rem;
 }
 
 .md-typeset .tr-history-tbc,

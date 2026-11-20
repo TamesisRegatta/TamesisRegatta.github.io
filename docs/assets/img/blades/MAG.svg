@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 100">
+  <title>Magdalen blade</title>
+  <!-- Magdalen (MAG): black, a white lily with yellow stamens and a green stem. Drawn from the OURCs College Blade Colours chart (TT24). -->
+  <defs>
+    <clipPath id="badge"><rect width="200" height="100" rx="9"/></clipPath>
+    <linearGradient id="sheen" x2="0" y2="1">
+      <stop offset="0" stop-color="#fff" stop-opacity=".1"/>
+      <stop offset=".45" stop-color="#fff" stop-opacity="0"/>
+      <stop offset=".55" stop-color="#000" stop-opacity="0"/>
+      <stop offset="1" stop-color="#000" stop-opacity=".07"/>
+    </linearGradient>
+    <linearGradient id="bevel" x2=".35" y2="1">
+      <stop offset="0" stop-color="#fff" stop-opacity=".38"/>
+      <stop offset=".5" stop-color="#fff" stop-opacity="0"/>
+      <stop offset=".5" stop-color="#000" stop-opacity="0"/>
+      <stop offset="1" stop-color="#000" stop-opacity=".2"/>
+    </linearGradient>
+    <!-- One stamen: a drop with its round head about the origin and its point
+         downwards; the side arcs meet the head tangentially -->
+    <path id="stamen" d="M0 5.78A13.81 13.81 0 0 0 1.27 0 1.27 1.27 0 0 0 -1.27 0 13.81 13.81 0 0 0 0 5.78Z"/>
+  </defs>
+  <g clip-path="url(#badge)">
+    <!-- Design: the lily is symmetric about x = 52; the stem curves away to the right -->
+    <rect x="-4" y="-4" width="208" height="108" fill="#000000"/>
+    <path d="M52 70.68V76.73A3.85 3.85 0 0 0 55.85 80.58H62.18" fill="none" stroke="#10963D" stroke-width="3.3" stroke-linecap="round"/>
+    <!-- The cup and side petals, then the central petal; the black slits are the gaps between them.
+         Each half of the cup is six arcs, each meeting the next tangentially, so the outline is
+         smooth everywhere except at the two horn tips. -->
+    <path d="M47.33 62.98A55.2 55.2 0 0 0 36.93 37.24 5.9 5.9 0 0 0 27.04 37.75 26.5 26.5 0 0 1 25 40.78 13.26 13.26 0 0 1 37.63 50 100.5 100.5 0 0 1 41 64.08 11.15 11.15 0 0 0 52 73.4 11.15 11.15 0 0 0 63 64.08 100.5 100.5 0 0 1 66.37 50 13.26 13.26 0 0 1 79 40.78 26.5 26.5 0 0 1 76.96 37.75 5.9 5.9 0 0 0 67.07 37.24 55.2 55.2 0 0 0 56.67 62.98Z" fill="#FFFFFF"/>
+    <path d="M52 23.1 62.18 33.28A75 75 0 0 0 56.4 62.98V65.18H47.6V62.98A75 75 0 0 0 41.83 33.28Z" fill="#FFFFFF"/>
+    <!-- Three stamens on the left, mirrored to the right; the middle pair is larger -->
+    <g fill="#F3EC26">
+      <use href="#stamen" transform="translate(41.25 19.52) rotate(-30)"/>
+      <use href="#stamen" transform="translate(33.7 24.98) rotate(-30) scale(1.45)"/>
+      <use href="#stamen" transform="translate(24.33 28.56) rotate(-34)"/>
+      <g transform="matrix(-1 0 0 1 104 0)">
+        <use href="#stamen" transform="translate(41.25 19.52) rotate(-30)"/>
+        <use href="#stamen" transform="translate(33.7 24.98) rotate(-30) scale(1.45)"/>
+        <use href="#stamen" transform="translate(24.33 28.56) rotate(-34)"/>
+      </g>
+    </g>
+    <!-- Finish: the same in every badge -->
+    <rect width="200" height="100" fill="url(#sheen)"/>
+    <rect x="3" y="3" width="194" height="94" rx="6" fill="none" stroke="url(#bevel)" stroke-width="6"/>
+  </g>
+  <rect x="1" y="1" width="198" height="98" rx="8" fill="none" stroke="#000" stroke-opacity=".6" stroke-width="2"/>
+  <rect x=".5" y=".5" width="199" height="99" rx="8.5" fill="none" stroke="#fff" stroke-opacity=".28"/>
+</svg>

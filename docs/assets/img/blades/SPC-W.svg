@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 100">
+  <title>St Peter's women's blade</title>
+  <!-- St Peter's women (SPC): green, two crossed yellow keys, bits at the top. Drawn from the OURCs College Blade Colours chart (TT24) and a photograph of the keys, in St Peter's men's green and yellow. -->
+  <defs>
+    <clipPath id="badge"><rect width="200" height="100" rx="9"/></clipPath>
+    <linearGradient id="sheen" x2="0" y2="1">
+      <stop offset="0" stop-color="#fff" stop-opacity=".1"/>
+      <stop offset=".45" stop-color="#fff" stop-opacity="0"/>
+      <stop offset=".55" stop-color="#000" stop-opacity="0"/>
+      <stop offset="1" stop-color="#000" stop-opacity=".07"/>
+    </linearGradient>
+    <linearGradient id="bevel" x2=".35" y2="1">
+      <stop offset="0" stop-color="#fff" stop-opacity=".38"/>
+      <stop offset=".5" stop-color="#fff" stop-opacity="0"/>
+      <stop offset=".5" stop-color="#000" stop-opacity="0"/>
+      <stop offset="1" stop-color="#000" stop-opacity=".2"/>
+    </linearGradient>
+    <!-- One key, horizontal, bow on the left, shaft along y = 0, 122 long.
+         Bow: the loop (ellipses, curls and tangent lines, filleted into the
+         shaft), an egg-shaped knob filleted into the shaft, and two curls,
+         the lower the upper flipped. Bit end: a rectangular collar, the shaft
+         running on as a bar, and a bit with two plus-shaped slots and a notch. -->
+    <g id="key">
+      <path d="M25.2 -0.5L28.69 -4.97A8.2 8.2 0 0 0 29.19 -14.35 16.53 22.32 0 1 0 29.19 14.35 8.2 8.2 0 0 0 28.69 4.97L25.2 0.5H22.93V1.5A3 3 0 0 1 25.29 2.65L27.71 5.74A6.95 6.95 0 0 1 27.01 15.06 13.88 18.5 0 1 1 27.01 -15.06 6.95 6.95 0 0 1 27.71 -5.74L25.29 -2.65A3 3 0 0 1 22.93 -1.5V-0.5Z"/>
+      <rect x="10" y="-1.5" width="112" height="3"/>
+      <path d="M17.61 -1.5A2.6 2.6 0 0 1 15.55 -2.52A3.8 4 0 1 0 15.55 2.52A2.6 2.6 0 0 1 17.61 1.5Z"/>
+      <path d="M18.81 -1.5A10.9 10.9 0 0 1 18.05 -10.94A2.04 2.04 0 1 1 20.73 -8.33A3.55 3.55 0 0 0 22.08 -1.5V0H18.81Z"/>
+      <path transform="scale(1 -1)" d="M18.81 -1.5A10.9 10.9 0 0 1 18.05 -10.94A2.04 2.04 0 1 1 20.73 -8.33A3.55 3.55 0 0 0 22.08 -1.5V0H18.81Z"/>
+      <rect x="93.5" y="-3.5" width="4" height="7"/>
+      <path d="M100.5 1H118V5H112V3.5H109V5H105V7.5H109V9H112V7.5H118V15H112V13.5H109V15H105V17.5H109V19H112V17.5H118V21H100.5V12.5H107.5V10H100.5Z"/>
+    </g>
+  </defs>
+  <g clip-path="url(#badge)">
+    <!-- Design: the key turned 45 degrees, bow bottom left; then the same key mirrored about the
+         crossing point, so the keys cross at a right angle -->
+    <rect x="-4" y="-4" width="208" height="108" fill="#0AA233"/>
+    <g fill="#FCE804">
+      <use href="#key" transform="translate(54 47.76) scale(0.65) rotate(-45) translate(-61 0)"/>
+      <use href="#key" transform="translate(54 47.76) scale(-0.65 0.65) rotate(-45) translate(-61 0)"/>
+    </g>
+    <!-- Finish: the same in every badge -->
+    <rect width="200" height="100" fill="url(#sheen)"/>
+    <rect x="3" y="3" width="194" height="94" rx="6" fill="none" stroke="url(#bevel)" stroke-width="6"/>
+  </g>
+  <rect x="1" y="1" width="198" height="98" rx="8" fill="none" stroke="#000" stroke-opacity=".6" stroke-width="2"/>
+  <rect x=".5" y=".5" width="199" height="99" rx="8.5" fill="none" stroke="#fff" stroke-opacity=".28"/>
+</svg>

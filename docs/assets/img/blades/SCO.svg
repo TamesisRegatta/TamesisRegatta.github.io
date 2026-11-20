@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 100">
+  <title>St Catherine's blade</title>
+  <!-- St Catherine's (SCO): light blue, a red Catherine wheel. Drawn from the OURCs College Blade Colours chart (TT24). -->
+  <defs>
+    <clipPath id="badge"><rect width="200" height="100" rx="9"/></clipPath>
+    <linearGradient id="sheen" x2="0" y2="1">
+      <stop offset="0" stop-color="#fff" stop-opacity=".1"/>
+      <stop offset=".45" stop-color="#fff" stop-opacity="0"/>
+      <stop offset=".55" stop-color="#000" stop-opacity="0"/>
+      <stop offset="1" stop-color="#000" stop-opacity=".07"/>
+    </linearGradient>
+    <linearGradient id="bevel" x2=".35" y2="1">
+      <stop offset="0" stop-color="#fff" stop-opacity=".38"/>
+      <stop offset=".5" stop-color="#fff" stop-opacity="0"/>
+      <stop offset=".5" stop-color="#000" stop-opacity="0"/>
+      <stop offset="1" stop-color="#000" stop-opacity=".2"/>
+    </linearGradient>
+    <!-- One upright spoke and one spike, about the wheel's centre. The spoke
+         fills a sixth of the hub ring (radius 3 to 5); its sides are one
+         concave arc, mirrored, from the hub ring to its end, which is
+         concentric with the outer ring. The spike has a radial side, a base
+         concentric with the outer ring, and a straight hypotenuse. -->
+    <path id="spoke" d="M-1.5 -2.6 -2.5 -4.33A45.5 45.5 0 0 0 -2.75 -19.31 19.5 19.5 0 0 1 2.75 -19.31 45.5 45.5 0 0 0 2.5 -4.33L1.5 -2.6A3 3 0 0 0 -1.5 -2.6Z"/>
+    <path id="spike" d="M-2 -27.93A28 28 0 0 1 2 -27.93L2.29 -31.92Z"/>
+  </defs>
+  <g clip-path="url(#badge)">
+    <!-- Design: the spoke and spike, each rotated through sixths of a turn about (52, 50) -->
+    <rect x="-4" y="-4" width="208" height="108" fill="#5BC9FC"/>
+    <g transform="translate(52 50)" fill="#9F041B">
+      <circle r="23.75" fill="none" stroke="#9F041B" stroke-width="4.5"/>
+      <circle r="1.75"/>
+      <!-- The hub ring the spokes form, drawn whole as well so no seam shows where they meet -->
+      <circle r="4" fill="none" stroke="#9F041B" stroke-width="2"/>
+      <use href="#spoke"/>
+      <use href="#spoke" transform="rotate(60)"/>
+      <use href="#spoke" transform="rotate(120)"/>
+      <use href="#spoke" transform="rotate(180)"/>
+      <use href="#spoke" transform="rotate(240)"/>
+      <use href="#spoke" transform="rotate(300)"/>
+      <use href="#spike"/>
+      <use href="#spike" transform="rotate(60)"/>
+      <use href="#spike" transform="rotate(120)"/>
+      <use href="#spike" transform="rotate(180)"/>
+      <use href="#spike" transform="rotate(240)"/>
+      <use href="#spike" transform="rotate(300)"/>
+    </g>
+    <!-- Finish: the same in every badge -->
+    <rect width="200" height="100" fill="url(#sheen)"/>
+    <rect x="3" y="3" width="194" height="94" rx="6" fill="none" stroke="url(#bevel)" stroke-width="6"/>
+  </g>
+  <rect x="1" y="1" width="198" height="98" rx="8" fill="none" stroke="#000" stroke-opacity=".6" stroke-width="2"/>
+  <rect x=".5" y=".5" width="199" height="99" rx="8.5" fill="none" stroke="#fff" stroke-opacity=".28"/>
+</svg>

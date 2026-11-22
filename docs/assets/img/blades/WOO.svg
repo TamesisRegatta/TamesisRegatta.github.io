@@ -1,6 +1,12 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 100">
   <title>Wolfson blade</title>
   <!-- Wolfson (WOO): yellow, one red stripe at the tip. Drawn from the OURCs College Blade Colours chart (TT24). -->
+  <!-- Dedicated to the public domain under CC0 1.0: https://creativecommons.org/publicdomain/zero/1.0/ -->
+  <metadata>
+    <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:cc="http://creativecommons.org/ns#">
+      <cc:Work rdf:about=""><cc:license rdf:resource="http://creativecommons.org/publicdomain/zero/1.0/"/></cc:Work>
+    </rdf:RDF>
+  </metadata>
   <defs>
     <clipPath id="badge"><rect width="200" height="100" rx="9"/></clipPath>
     <linearGradient id="sheen" x2="0" y2="1">

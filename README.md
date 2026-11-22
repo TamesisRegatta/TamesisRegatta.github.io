@@ -121,3 +121,4 @@ Each keeps its licence beside it, as the licences require.
 | [d3-zoom](https://github.com/d3/d3-zoom) and its eight D3 dependencies, unmodified, versions in the file's header | `docs/assets/vendor/d3/` | ISC, and BSD-3-Clause for d3-ease (`LICENSE`) |
 | Oxford Isis Maps by Bernard Tao | `docs/assets/map/`, `scripts/courses/` | CC BY 3.0; the attribution drawn on the map must stay visible |
 | Gas fog horn by Joseph Sardin, [BigSoundBank](https://bigsoundbank.com/), lengthened to one 10-second blast | `briefings/coxing/public/media/klaxon.mp3` | CC0 1.0 |
+| Boat check photos (heel restraints, bow balls, cox's PFD), from the previous marshal briefing's slides, which credited them to packer.dsl.pipex.com/rowing and the Janousek website | `briefings/marshal/media/` (all but `radio.jpg`) | Unknown: replace with our own photos |

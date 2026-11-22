@@ -21,5 +21,10 @@ The video clips play in the slides; the PDF links to them instead.
 
 ## Marshal briefing
 
-Coming soon.
-The briefing is on {{ dates.marshal_briefing | ukdatetime }}, {{ venues.marshal_briefing }}.
+On {{ dates.marshal_briefing | ukdatetime }}, {{ venues.marshal_briefing }}.
+Part 1 is for every marshal; Part 2 has a slide for each position, which is your guide on the day.
+
+- [:material-presentation-play: View the slides](/briefings/marshal/)
+- [:material-file-download-outline: Download the slides (PDF)](/briefings/marshal/tamesis-marshal-briefing.pdf){ download="tamesis-marshal-briefing.pdf" }
+
+The klaxon sound plays in the slides; the PDF links to it instead.

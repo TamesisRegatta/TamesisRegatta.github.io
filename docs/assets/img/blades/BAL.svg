@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 100">
   <title>Balliol blade</title>
-  <!-- Balliol (BAL): navy, red below a diagonal from the bottom edge near the tip to the top right corner. Drawn from the OURCs College Blade Colours chart (TT24). -->
+  <!-- Balliol (BAL): navy, red below a diagonal from the tip's bottom corner to the top right corner. Drawn from the OURCs College Blade Colours chart (TT24). -->
   <defs>
     <clipPath id="badge"><rect width="200" height="100" rx="9"/></clipPath>
     <linearGradient id="sheen" x2="0" y2="1">
@@ -19,7 +19,7 @@
   <g clip-path="url(#badge)">
     <!-- Design -->
     <rect x="-4" y="-4" width="208" height="108" fill="#0C0E49"/>
-    <path d="M8.64 104 207.36 -4H208V104Z" fill="#EB1C24"/>
+    <path d="M-8 104 208 -4V104Z" fill="#EB1C24"/>
     <!-- Finish: the same in every badge -->
     <rect width="200" height="100" fill="url(#sheen)"/>
     <rect x="3" y="3" width="194" height="94" rx="6" fill="none" stroke="url(#bevel)" stroke-width="6"/>

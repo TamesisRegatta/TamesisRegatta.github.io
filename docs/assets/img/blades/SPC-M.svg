@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 100">
   <title>St Peter's men's blade</title>
-  <!-- St Peter's men (SPC): white, a diagonal green band with a yellow centre stripe across the tip's bottom corner. Drawn from the OURCs College Blade Colours chart (TT24). -->
+  <!-- St Peter's men (SPC): white, a diagonal green band with a yellow centre stripe running into the tip's bottom corner. Drawn from the OURCs College Blade Colours chart (TT24). -->
   <defs>
     <clipPath id="badge"><rect width="200" height="100" rx="9"/></clipPath>
     <linearGradient id="sheen" x2="0" y2="1">
@@ -19,9 +19,9 @@
   <g clip-path="url(#badge)">
     <!-- Design -->
     <rect x="-4" y="-4" width="208" height="108" fill="#FFFFFF"/>
-    <path d="M74.54 -4H97.54L-24.94 104H-47.94Z" fill="#0AA233"/>
-    <path d="M97.54 -4H120.54L-1.94 104H-24.94Z" fill="#FCE804"/>
-    <path d="M120.54 -4H143.54L21.06 104H-1.94Z" fill="#0AA233"/>
+    <path d="M74.18 -4H97.18L-15.68 104H-38.68Z" fill="#0AA233"/>
+    <path d="M97.18 -4H120.18L7.32 104H-15.68Z" fill="#FCE804"/>
+    <path d="M120.18 -4H143.18L30.32 104H7.32Z" fill="#0AA233"/>
     <!-- Finish: the same in every badge -->
     <rect width="200" height="100" fill="url(#sheen)"/>
     <rect x="3" y="3" width="194" height="94" rx="6" fill="none" stroke="url(#bevel)" stroke-width="6"/>

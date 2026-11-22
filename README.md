@@ -106,6 +106,11 @@ Its layouts are `cover` (with `draft: true` for a "not for circulation" band unt
 
 `overrides` in `briefings/package.json` lift `dompurify` and `image-size` past security advisories Slidev has not picked up; remove each once `npm ls` shows Slidev on a fixed version.
 
+## Blade badges
+
+The clubs' blade badges in `docs/assets/img/blades/` are Fergus Cooper's personal project, hosted here because the History page uses them, and are dedicated by Fergus to the public domain under CC0 1.0, with the legal code beside them in `LICENSE`.
+Each SVG says so in a comment and in machine-readable `<metadata>`; give a new badge the same block.
+
 ## Third-party assets
 
 Each keeps its licence beside it, as the licences require.

@@ -10,7 +10,7 @@ The slides from the {{ dates.year }} briefings, to look back on or catch up with
 
 ## Coxing briefing
 
-Given on {{ dates.coxing_briefing | ukdatetime }}, in the {{ venues.coxing_briefing }}.
+Given on {{ dates.coxing_briefing | ukdatetime }}, in the {{ venues.coxing_briefing }}, and again on {{ dates.coxing_briefing_extra | ukdatetime }}, {{ venues.coxing_briefing_extra }}.
 Every cox must attend, or be exempted (see the [rule on coxing licences and the briefing](rules.md#coxing-licence)).
 Exempted coxes must review the slides, especially the circulation pattern.
 

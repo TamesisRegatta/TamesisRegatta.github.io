@@ -5,8 +5,8 @@ layout: cover
 presenters:
   - Fergus Cooper
   - Sydney Rose
-when: coxing_briefing
-venue: Gulbenkian Lecture Theatre
+when: coxing_briefing_extra
+venue: online via MS Teams
 download: true
 exportFilename: tamesis-coxing-briefing
 favicon: /assets/img/favicon.svg
@@ -15,7 +15,7 @@ drawings:
   persist: false
 ---
 
-Have you handed your coxing card or other photo ID in at the front?
+Please put your name and college in the Teams chat.
 
 ---
 
@@ -157,31 +157,31 @@ If a marshal needs to stop your race, they will fire a loud
 <div class="grid grid-cols-4 gap-6 text-center text-base">
   <div>
     <p class="font-700 !mb-1">Wednesday</p>
-    <ph-cloud-rain class="text-5xl mx-auto" aria-hidden="true" />
-    <p class="!mt-1">Drizzle from 1pm<br>8-9&deg;C, feels like 5&deg;C<br>Gusts to 20 mph (9 m/s)</p>
+    <ph-cloud class="text-5xl mx-auto" aria-hidden="true" />
+    <p class="!mt-1">Cloudy and dry<br>4-5&deg;C, feels like 0-1&deg;C<br>Gusts to 15 mph (7 m/s)</p>
   </div>
   <div>
     <p class="font-700 !mb-1">Thursday</p>
-    <ph-cloud-sun class="text-5xl mx-auto" aria-hidden="true" />
-    <p class="!mt-1">Drizzle, then brighter<br>3-5&deg;C, feels like 0&deg;C<br>Gusts to 17 mph (8 m/s)</p>
+    <ph-cloud class="text-5xl mx-auto" aria-hidden="true" />
+    <p class="!mt-1">Cloudy and dry<br>4&deg;C, feels like 0&deg;C<br>Gusts to 15 mph (7 m/s)</p>
   </div>
   <div>
     <p class="font-700 !mb-1">Friday</p>
     <ph-cloud-rain class="text-5xl mx-auto" aria-hidden="true" />
-    <p class="!mt-1">Drizzle all day<br>6-9&deg;C, feels like 2-5&deg;C<br>Gusts to 30 mph (13 m/s)</p>
+    <p class="!mt-1">Drizzle from 1pm<br>4&deg;C, feels like -1&deg;C<br>Gusts to 23 mph (10 m/s)</p>
   </div>
   <div>
     <p class="font-700 !mb-1">Saturday</p>
-    <ph-cloud class="text-5xl mx-auto" aria-hidden="true" />
-    <p class="!mt-1">Cloudy and dry<br>9-10&deg;C, feels like 5&deg;C<br>Gusts to 30 mph (13 m/s)</p>
+    <ph-cloud-rain class="text-5xl mx-auto" aria-hidden="true" />
+    <p class="!mt-1">Light rain from 1pm<br>5-6&deg;C, feels like 3&deg;C<br>Gusts to 16 mph (7 m/s)</p>
   </div>
 </div>
 
-- <span class="key">Cold all week</span>, especially on Thursday: wear warm kit, bring a dry change, and watch for hypothermia.
-- Breezy on Friday and Saturday: expect crosswinds at the start.
+- <span class="key">Cold all week</span>, especially on Friday: wear warm kit, bring a dry change, and watch for hypothermia.
+- Breezy on Friday: expect crosswinds at the start.
 - No thunderstorms forecast, so lightning looks unlikely.
 
-<p class="text-sm" style="color: var(--tamesis-muted)">Our best guess a week ahead: Open-Meteo forecast for Oxford, 11:00-16:00, taken 18 November. Check again the night before you race.</p>
+<p class="text-sm" style="color: var(--tamesis-muted)">Our best guess three days ahead: Open-Meteo forecast for Oxford, 11:00-16:00, taken 22 November. Check again the night before you race.</p>
 
 ---
 

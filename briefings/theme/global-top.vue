@@ -14,11 +14,19 @@ function fill(title) {
 }
 </script>
 
+<!-- A slide with `contingency: true` in its frontmatter (one that applies only
+     if something unusual happens; see components/Contingency.vue) gets a grey
+     header bar, tagged as such. -->
 <template>
-  <div v-if="!full.includes($nav.currentLayout)" class="tamesis-header">
+  <div
+    v-if="!full.includes($nav.currentLayout)"
+    class="tamesis-header"
+    :class="{ 'tamesis-header-contingency': $nav.currentSlideRoute.meta?.slide?.frontmatter?.contingency }"
+  >
     <span class="tamesis-header-title">
       {{ fill($nav.currentSlideRoute.meta?.slide?.title || '') }}
     </span>
+    <span v-if="$nav.currentSlideRoute.meta?.slide?.frontmatter?.contingency" class="tamesis-header-tag">Unlikely, but be ready</span>
     <img :src="logo" alt="Tamesis Regatta" class="tamesis-header-logo">
   </div>
 </template>
@@ -34,7 +42,7 @@ function fill(title) {
   border-bottom: 4px solid var(--tamesis-yellow);
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  gap: 1rem;
   padding: 0 2rem;
   z-index: 10;
 }
@@ -43,9 +51,27 @@ function fill(title) {
   color: var(--tamesis-yellow);
   font-size: 1.75rem;
   font-weight: 600;
+  margin-right: auto;
 }
 
 .tamesis-header-logo {
   height: var(--tamesis-logo-height);
+}
+
+.tamesis-header-contingency {
+  background: var(--tamesis-contingency-header);
+  border-bottom-style: dashed;
+}
+
+.tamesis-header-tag {
+  color: white;
+  border: 2px dashed white;
+  border-radius: 4px;
+  padding: 0.1rem 0.6rem;
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  white-space: nowrap;
 }
 </style>

@@ -11,6 +11,13 @@
   --tamesis-bg: #ffffff;
   --tamesis-tint: #fef6dc;
 
+  /* "Unlikely, but be ready" (components/Contingency.vue, and the header bar
+     of a slide with `contingency: true`) */
+  --tamesis-contingency-bg: #f1f1f1;
+  --tamesis-contingency-border: #8a8a8a;
+  --tamesis-contingency-text: #4a4a4a;
+  --tamesis-contingency-header: #4d4d4d;
+
   --tamesis-header-height: 72px;
   --tamesis-logo-height: 52px;
 

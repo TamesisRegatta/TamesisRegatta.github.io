@@ -108,7 +108,8 @@ What every marshal needs to know
 
 <br>
 
-- <span class="key">Everyone gets:</span> a high-visibility bib, a two-way radio, a klaxon, and a clipboard with your position's duties, the race schedule, blade colours and contact numbers.
+- <span class="key">Everyone gets:</span> a two-way radio, a klaxon, and a clipboard with your position's duties, the race schedule, blade colours and contact numbers.
+- <span class="key">Everyone except the Tower Marshal (6) also gets</span> a high-visibility bib.
 - <span class="key">Some positions also get:</span> a loudhailer (see your position's slide).
 
 ---
@@ -616,7 +617,7 @@ check: 2nd, after the Head.
 On the towpath side, at the finish line, near the Cox Stone.
 
 - <span class="key">Decide who has won</span>: sound the clacker as the winning boat's bow crosses the line, however small the margin.
-- Tell the SU and Race Desk the result. Dead heat: tell both crews to go straight back to the start to re-row.
+- Dead heat: tell both crews to go straight back to the start to re-row.
 - <span class="key">Appeals:</span> a cox raises their arm as they cross the line. Note it, and pass it to Race Desk.
 - Move crews on up to the Head Marshal, well clear of the line before they spin.
 - Hold an N status crew whose bankrider has stopped for an incident, as Race Desk directs.
@@ -627,6 +628,27 @@ On the towpath side, at the finish line, near the Cox Stone.
 <li><b>Time trials:</b> you are also given a stopwatch. Time each crew across the line, with the Finish Timer (2A) as a backup.</li>
 </ul>
 </Contingency>
+
+---
+layout: position
+tag: Not a safety marshal
+x: 0.256
+y: 0.360
+alt: "Map close-up: the finish line on the towpath side, where the Results Marshal stands with the Finish Marshal (2)"
+kit: Bib, radio (on its own channel to Race Desk), clipboard.
+check: Not in the river check.
+---
+
+# Results Marshal
+
+With the Finish Marshal (2), at the finish line.
+Not one of the numbered safety marshals: <span class="key">your job is to get the results right</span>.
+
+- Your radio is on <span class="key">a different channel</span> from the marshals', and you talk only to Race Desk.
+- After each race, tell Race Desk <span class="key">the winner, the station it won on (City or County), and the verdict</span>: 6 inches, a canvas, 2 lengths, clear water, and so on.
+- For example: "Race Desk, result: Linacre won on County, by a canvas."
+- <span class="key">Appeals:</span> watch for a cox raising their arm as they cross the line, and note it. The Race Committee may ask you what you saw.
+- You have no klaxon, but <span class="key">keep an eye out</span>: if you see danger, tell the Finish Marshal at once.
 
 ---
 layout: position
@@ -701,13 +723,14 @@ layout: position
 x: 0.576
 y: 0.211
 alt: "Map close-up: the Tower Marshal (6) on a boathouse roof at the downstream end of Boathouse Island"
-kit: Bib, radio, clipboard, klaxon.
+kit: Radio, clipboard, klaxon, green flag.
 check: 6th, after Boathouses B.
 ---
 
 # (6) Tower
 
 On the roof of a boathouse at the downstream end of Boathouse Island, with the best view of the racing.
+<span class="key">No high-visibility bib</span>: wear dark clothing, so your green flag stands out against it.
 
 - <span class="key">Watch every race for safety and fairness</span>: you are the first point of contact for appeals, and you liaise with the Race Committee about them.
 - Work with the Univ Marshal: tell them when a race has gone far enough past for a Univ crew to boat, and help check a raft is clear for a Univ crew to land.

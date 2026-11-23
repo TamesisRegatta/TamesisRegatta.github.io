@@ -12,11 +12,16 @@ function fill(title) {
   return title.replace(/\{\{\s*regatta\.([\w.]+)\s*\}\}/g,
     (whole, path) => path.split('.').reduce((value, key) => value?.[key], event) ?? whole)
 }
+
+function tag(frontmatter) {
+  return frontmatter?.tag || (frontmatter?.contingency ? 'Unlikely, but be ready' : '')
+}
 </script>
 
 <!-- A slide with `contingency: true` in its frontmatter (one that applies only
      if something unusual happens; see components/Contingency.vue) gets a grey
-     header bar, tagged as such. -->
+     header bar, tagged as such. Any slide can instead give its own tag, such as
+     `tag: Not a safety marshal`, which keeps the black bar. -->
 <template>
   <div
     v-if="!full.includes($nav.currentLayout)"
@@ -26,7 +31,7 @@ function fill(title) {
     <span class="tamesis-header-title">
       {{ fill($nav.currentSlideRoute.meta?.slide?.title || '') }}
     </span>
-    <span v-if="$nav.currentSlideRoute.meta?.slide?.frontmatter?.contingency" class="tamesis-header-tag">Unlikely, but be ready</span>
+    <span v-if="tag($nav.currentSlideRoute.meta?.slide?.frontmatter)" class="tamesis-header-tag">{{ tag($nav.currentSlideRoute.meta?.slide?.frontmatter) }}</span>
     <img :src="logo" alt="Tamesis Regatta" class="tamesis-header-logo">
   </div>
 </template>
@@ -63,9 +68,13 @@ function fill(title) {
   border-bottom-style: dashed;
 }
 
+.tamesis-header-contingency .tamesis-header-tag {
+  border-style: dashed;
+}
+
 .tamesis-header-tag {
   color: white;
-  border: 2px dashed white;
+  border: 2px solid white;
   border-radius: 4px;
   padding: 0.1rem 0.6rem;
   font-size: 0.8rem;

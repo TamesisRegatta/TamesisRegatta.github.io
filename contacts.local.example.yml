@@ -18,6 +18,8 @@ phone:
   city_of_oxford_rc: ""
   iffley_lock: ""
   epione_medical: ""
+  # The Race Desk phone, in the footer of the marshal guides' PDF.
+  race_desk: ""
 
 email:
   sydney_rose: ""

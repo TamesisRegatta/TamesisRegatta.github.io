@@ -28,3 +28,5 @@ Part 1 is for every marshal; Part 2 has a slide for each position, which is your
 - [:material-file-download-outline: Download the slides (PDF)](/briefings/marshal/tamesis-marshal-briefing.pdf){ download="tamesis-marshal-briefing.pdf" }
 
 The klaxon sound plays in the slides; the PDF links to it instead.
+
+The [:material-clipboard-text-outline: marshal guides](marshal-guides.md) have a page for each position, as on your clipboard on the day.

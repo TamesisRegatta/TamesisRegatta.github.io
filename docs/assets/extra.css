@@ -1064,3 +1064,148 @@ iframe.tr-analytics {
     content: " (next)";
   }
 }
+
+/* Marshal guides (docs/marshal-guides.md): one sheet per position, in a
+   <div class="tr-guide">, laid out like the old Word guides, which had the
+   logo and title across the top of each page and bold section headings. The
+   position's heading has a thick yellow rule and the logo at its right (no
+   filled band, to save toner); the paragraph under it (the location, then
+   <br> and the kit, as one paragraph, since Paged.js leaves a gap between
+   two) sits in a tinted box; and each section heading has a thinner yellow
+   rule. In the river check order (the paragraph after the "River checks"
+   heading), the marshal's own position, in bold, is highlighted.
+
+   In PDFs the whole document is on the named page "guide": narrower
+   margins, no page numbers, and a footer line. Each sheet starts a new page,
+   with smaller, tighter text so that it fits on one A4 page, and sits at the
+   bottom of its page (a flex column as tall as the page area, with its
+   content at the end), so that a top-clip clipboard covers only blank paper. */
+@page guide {
+  margin: 10mm 12mm;
+
+  /* No page number. An empty string, not none: in Paged.js, none here also
+     drops the footer line in @bottom-left. */
+  @bottom-right {
+    content: "";
+  }
+
+  /* The footer line (.tr-guide-footer, with the Race Desk phone, withheld
+     in the public version), as a Paged.js running element. */
+  @bottom-left {
+    content: element(guideFooter);
+  }
+}
+
+.tr-guide-footer {
+  display: none;
+}
+
+@media print {
+  .md-typeset .tr-guide-footer {
+    display: block;
+    position: running(guideFooter);
+    margin: 0;
+    font-size: 8pt;
+    color: #666666;
+  }
+}
+
+[data-md-color-scheme="default"] {
+  --tr-guide-tint: #fef6dc;
+}
+
+[data-md-color-scheme="slate"] {
+  --tr-guide-tint: rgba(251, 193, 23, 0.12);
+}
+
+.md-typeset .tr-guide {
+  -webkit-print-color-adjust: exact;
+  print-color-adjust: exact;
+}
+
+.md-typeset .tr-guide h2 {
+  margin: 2.5em 0 0;
+  padding: 0.4em 4em 0.4em 0;
+  background: url("img/tamesis_logo.svg") no-repeat right center / auto 2.4em;
+  border-bottom: 0.3rem solid #fbc117;
+  font-weight: 700;
+}
+
+.md-typeset .tr-guide h2 + p {
+  margin: 0;
+  padding: 0.5em 0.8em;
+  background: var(--tr-guide-tint, #fef6dc);
+  border-left: 0.25rem solid #fbc117;
+}
+
+.md-typeset .tr-guide h3 {
+  margin: 1.2em 0 0.5em;
+  padding-bottom: 0.15em;
+  border-bottom: 0.15rem solid #fbc117;
+  font-weight: 700;
+}
+
+.md-typeset .tr-guide h3[id^="river-checks"] + p {
+  color: var(--md-default-fg-color--light);
+  font-size: 0.9em;
+}
+
+/* The table of contents lists only the positions, not the same five
+   sections under each of them. The whole nested nav is hidden, not just its
+   list: an empty nav keeps a negative margin that pulls the links too close
+   together to be 24 px targets (WCAG 2.5.8). */
+body:has(.tr-guide) .md-nav--secondary .md-nav__item > .md-nav {
+  display: none;
+}
+
+.md-typeset .tr-guide h3[id^="river-checks"] + p strong {
+  padding: 0 0.25em;
+  background: #fbc117;
+  border-radius: 0.15rem;
+  color: #000000;
+}
+
+@media print {
+  /* Each element, not the article itself, which would start with a blank
+     page in the default page style. */
+  .md-typeset:has(.tr-guide) > * {
+    page: guide;
+  }
+
+  /* 277 mm is the page area (297 mm less the 10 mm margins); a little less
+     leaves room for rounding, which would otherwise push a sheet onto a
+     second page. */
+  .md-typeset .tr-guide {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    height: 274mm;
+    break-before: page;
+    font-size: 0.59rem;
+    line-height: 1.4;
+  }
+
+  .md-typeset .tr-guide h2 {
+    margin-top: 0;
+  }
+
+  .md-typeset .tr-guide h3 {
+    margin: 0.9em 0 0.35em;
+  }
+
+  .md-typeset .tr-guide p {
+    margin: 0.35em 0;
+  }
+
+  .md-typeset .tr-guide h2 + p {
+    margin: 0;
+  }
+
+  .md-typeset .tr-guide ul {
+    margin: 0.35em 0;
+  }
+
+  .md-typeset .tr-guide li {
+    margin-bottom: 0.15em;
+  }
+}
